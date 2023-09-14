@@ -1,0 +1,76 @@
+\documentclass[10pt, DIV=10, headtopline=0.08em, headsepline=0.04em, headinclude, BCOR=6mm]{scrbook}
+
+\input{preamble}
+
+\loadglsentries[main]{glossary.tex}
+
+\usepackage{layouts}
+
+\usepackage{subfiles}
+
+\begin{document}
+
+% Laden der Titelseite
+%{
+\KOMAoptions{twoside=false}
+\subfile{titlepage.tex}
+\KOMAoptions{twoside}
+%}
+%
+% Wie in Büchern: Seitennummerierung in kleinen römischen Zahlen; Kapitel und Abschnitte ohne Nummerierung
+\frontmatter
+
+%\listoftodos
+%\clearpage
+%
+% Einbinden einer kurzen Zusammenfassung
+\subfile{chapters/abstract.tex}
+%
+% Erstellen des Inhaltsverzeichnisses ohne Hyperlinkboxen
+{\hypersetup{hidelinks}\tableofcontents}%
+
+\clearpage
+\setglossarysection{section}
+\printglossaries
+
+%
+%
+% Laden der Motivation
+\subfile{chapters/motivation.tex}
+
+\section*{Conventions}
+Throughout the text of this thesis scalars are written in italic $s$, and vectors in bold italic $\vb*{v}$.
+%Furthermore, Hartree atomic units are used in general and only in selected instances it is deviated from this: $\hbar = m_\mathrm{e} = \mathrm e = \nicefrac{4\pi}{\varepsilon_0} = 1$.
+%\newpage
+\nonfrenchspacing
+
+%
+% Beginn des eigentlichen Inhalts: Seitennummern arabisch, Kapitel und Abschnitte werden numeriert
+\mainmatter
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\subfile{chapters/conclusion.tex}
+
+%
+% Ende des Inhalts und Übergang zur Literatur sowie anderen Listen
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\backmatter
+% Nicht nötig, aber zur Vollständigkeit: Einbindung einer Liste aller Grafiken und Tabellen
+%\chapter*{Listings}
+%\addcontentsline{toc}{chapter}{Listings}
+%\listoffigures
+%\listoftables
+
+% Laden einer Danksagung
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\subfile{chapters/acknowledgement.tex}
+%
+% Eine Selbstständigkeitserklärung
+%\includepdf{eidesstattlicheerklaerung_unterschrieben.pdf}
+
+\end{document}%
