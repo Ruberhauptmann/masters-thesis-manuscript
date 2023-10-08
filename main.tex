@@ -1,76 +1,82 @@
-\documentclass[10pt, DIV=10, headtopline=0.08em, headsepline=0.04em, headinclude, BCOR=6mm]{scrbook}
+\documentclass[
+    a4paper,
+    11pt,
+    DIV=calc,
+    numbers=noenddot,
+    headsepline=0.04em,
+    headinclude,
+    BCOR=6mm,
+    titlepage=firstiscover,
+]{scrbook}
 
-\input{preamble}
+\input{preamble} % load the tex file with the preamble
 
-\loadglsentries[main]{glossary.tex}
+\input{notation} % load the tex file with the notation shortcuts
 
-\usepackage{layouts}
+\loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
 
 \begin{document}
-
-% Laden der Titelseite
-%{
-\KOMAoptions{twoside=false}
+% Load the titlepage
 \subfile{titlepage.tex}
-\KOMAoptions{twoside}
-%}
-%
-% Wie in Büchern: Seitennummerierung in kleinen römischen Zahlen; Kapitel und Abschnitte ohne Nummerierung
+
+% Start frontmatter: page numbering in small roman numerals, dont number chapters and sections
 \frontmatter
 
-%\listoftodos
-%\clearpage
-%
-% Einbinden einer kurzen Zusammenfassung
-\subfile{chapters/abstract.tex}
-%
-% Erstellen des Inhaltsverzeichnisses ohne Hyperlinkboxen
-{\hypersetup{hidelinks}\tableofcontents}%
-
+% List the todos (comment this out in the final version!)
+\listoftodos
 \clearpage
+
+% Include the abstract
+\subfile{chapters/abstract.tex}
+
+% Print the table of contents (without link boxes)
+\hypersetup{hidelinks}
+\tableofcontents
+\clearpage
+
+% Print the glossary and acronym
 \setglossarysection{section}
 \printglossaries
 
-%
-%
-% Laden der Motivation
+% Load motivation
 \subfile{chapters/motivation.tex}
 
+% Define the conventions in the work
 \section*{Conventions}
-Throughout the text of this thesis scalars are written in italic $s$, and vectors in bold italic $\vb*{v}$.
+Throughout the text of this thesis scalars are written in italic \(s\)s, and vectors in bold italic \(\vec{v}\).
 %Furthermore, Hartree atomic units are used in general and only in selected instances it is deviated from this: $\hbar = m_\mathrm{e} = \mathrm e = \nicefrac{4\pi}{\varepsilon_0} = 1$.
-%\newpage
+\newpage
 \nonfrenchspacing
 
-%
-% Beginn des eigentlichen Inhalts: Seitennummern arabisch, Kapitel und Abschnitte werden numeriert
+% Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
 \renewcommand{\thechapter}{\Roman{chapter}}
 
+% Inclusion of all the chapters
 \subfile{chapters/conclusion.tex}
 
-%
-% Ende des Inhalts und Übergang zur Literatur sowie anderen Listen
+% Print the bibliography
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 
+% Beginning of the backmatter
 \backmatter
-% Nicht nötig, aber zur Vollständigkeit: Einbindung einer Liste aller Grafiken und Tabellen
+
+% Include lists of the figures and tables (optional)
 %\chapter*{Listings}
 %\addcontentsline{toc}{chapter}{Listings}
 %\listoffigures
 %\listoftables
 
-% Laden einer Danksagung
+% Include the acknowledgement
 \chapter*{Acknowledgement}
 \addcontentsline{toc}{chapter}{Acknowledgement}
 \subfile{chapters/acknowledgement.tex}
-%
-% Eine Selbstständigkeitserklärung
-%\includepdf{eidesstattlicheerklaerung_unterschrieben.pdf}
 
-\end{document}%
+% Include the Selbstständigkeitserklärung
+%\includepdf{eidesstattlicheerklaerung_unterschrieben.pdf}
+\end{document}

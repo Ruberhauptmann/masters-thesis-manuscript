@@ -1,264 +1,192 @@
-% fix scr error
+% For fixing errors with the scrbook class
 \usepackage{scrhack}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Kopf- und Fußzeilen definieren
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[autooneside = false]{scrlayer-scrpage}
-    \ohead{\headmark}
-    \ofoot{\pagemark}
-    \automark[section]{chapter}
-    \renewcommand{\autodot}{}
-    \addtokomafont{pagenumber}{\bfseries}
-	\addtokomafont{disposition}{\rmfamily}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Um ToDos einfügen zu können
+% Language and font settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[linecolor=myyellow,backgroundcolor = myyellow]{todonotes}
+\usepackage[english]{babel} % set document language to English
+
+% If the document is not compiled with XeLaTeX, we need to enable input and output for special characters
+\usepackage{ifxetex}
+\ifxetex
+    \usepackage{fontspec} % enables selection of fonts in XeLaTeX
+\else
+    \usepackage[T1]{fontenc} % to encode glyphs like ä,ö,ü in the output font
+    \usepackage{lmodern} % use latin modern font (its prettier!)
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Sprach-, Schrift- und Formatierungseinstellungen
+% Setup various aspects of the layout
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[english]{babel}
-%
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{ulem}
-	\normalem
-%
-%\usepackage{layouts}
-\usepackage{multicol}
-\usepackage{floatrow}
-\usepackage{ragged2e}
-\usepackage{framed}
-%\usepackage[titles]{tocloft}
-%    \newfloatcommand{capbtabbox}{table}[][\FBwidth]
-\floatsetup[table]{capposition=top}
-\usepackage{perpage}
-\usepackage[defaultlines=2,all]{nowidow}
-\usepackage{lipsum,blindtext}
-%
-\renewcommand{\thechapter}{\Roman{chapter}} % Kapitel mit römischen Zahlen (I, II, III, IV, ...)
-%
-\setlength{\parindent}{0em} % Einzug am Beginn eines Paragraphs
-\setlength{\parskip}{0.9ex} % Abstände zwischen Paragraphen
-\setlength{\itemsep}{0.1ex} % Abstände zwischen Stichpunkten in Listen
-\setlength{\fboxsep}{0.6em}
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2} % Einbinden bis zu \subsections im Inhaltsverzeichnis
-\RedeclareSectionCommands[tocdynnumwidth]{chapter,section,subsection} % Repariert die Einzüge der Kapitelzahlen im Inhaltsverzeichnis
-\usepackage{enumerate}
+\renewcommand{\thechapter}{\Roman{chapter}} % chapters with roman numerals (I, II, III, IV, ...)
+
+\setlength{\parindent}{0em} % no indentation at the start of paragraphs
+\setlength{\parskip}{0.9ex} % create a little distance between paragraphs
+\setlength{\fboxsep}{0.6em} % create a bit more distance between an fbox and the text in it
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Mathe- und Physikdinge
+% Define header and footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amssymb, amsmath, amsfonts, amsthm, mathtools, nicefrac, bm, dsfont, mathrsfs}
-\usepackage{empheq}
-\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
-\usepackage{tensor}
-\usepackage{fixmath}
-\usepackage{siunitx}
-\sisetup{range-phrase=-, range-units=single}
-\DeclareSIUnit{\rydberg}{Ry}
-\usepackage{braket,physics}
-	\renewcommand{\vec}[1]{\vb*{#1}}
-    \newcommand{\mat}[1]{\textbf{#1}}
-	\renewcommand{\flatfrac}[2]{\nicefrac{#1}{#2}}
-\usepackage{textgreek}
-\usepackage{dutchcal}
-	\newcommand{\ess}{\mathcal{s}}
-	\newcommand{\err}{\mathcal{r}}
-\numberwithin{equation}{chapter} %Gleichungstags haben das Format <Kapitelzahl>.<Gleichungszahl>
-
-\newcommand{\ope}[1]{\hat{#1}}
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles % clear default page style
+\ihead[]{\headmark} % chapter/section title on the inner side
+\ohead[]{\pagemark} % page number on the outer side
+\cfoot[\pagemark]{} % pagenumber in the center footer for the 'plain' pagestyle (per default, this gets used for pages on the beginning of chapters)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Grafikeinbindungen
+% Some automatic enhancements for the documents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{pgfplots}
-    \pgfplotsset{compat = 1.15}
-\usepackage{rotating}
-\usepackage{graphicx}
-\usepackage{epsfig}
-\graphicspath{{images/}}
-\usepackage{tikz}
-\usetikzlibrary{calc,shapes.geometric,shapes.arrows,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
-%\usetikzlibrary{external}
-    %\tikzexternalize[prefix=images/diagrams/]
-% Fixing the todonotes for tikzexternalize since it depends on tikz XD
-%\makeatletter
-    %\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
-%\makeatother
-\usepackage{letltxmacro}
-\LetLtxMacro{\oldmissingfigure}{\missingfigure}
-\renewcommand{\missingfigure}[2][]{\tikzexternaldisable\oldmissingfigure[#1]{#2}\tikzexternalenable}
-\usepackage{float}
-\usepackage{pdfpages}
+\usepackage{microtype} % enables microtype refinements, makes the text body look prettier overall
+\usepackage[defaultlines=2, all]{nowidow} % avoids widows (single lines at the top of a page) and orphans (single lines at the bottom of a page)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bibliographie
+% Add commands to fine tune some aspects of the document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[style=numeric-comp,sorting=none,giveninits=true]{biblatex}
-	\addbibresource{bibliography.bib} %lädt die .bib-Datei als Literaturdatei
-	% Gibt die URL nur an, wenn keine DOI vorgegeben ist (vermeidet Dopplungen)
-	\renewbibmacro*{doi+eprint+url}{%
-                                	\printfield{doi}%
-                                	\newunit\newblock%
-                                	\iffieldundef{doi}{%
-                                                	   \usebibmacro{eprint}%
-                                                	   \iffieldundef{eprint}{\usebibmacro{url+urldate}}{}%
-                                		              }{}%
-                                	}
+\usepackage{ragged2e} % gives commands \Centering, \RaggedRight, \RaggedLeft (and corresponding environments), which support hyphenation and thus look prettier
+\usepackage{enumitem} % provides user control over the layout of the three basic list environments
+
+\usepackage{perpage} % provides a mechanism to reset counters per page and/or keep their occurences sorted in order of appearance on the page
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Farbeinstellungen für Hyperlinks und Pythoncode
+% Setup maths and physics things
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{xcolor}
-    \definecolor{myred}  {HTML}{A3061E}
-    \definecolor{myblue} {RGB} {0,63,119}
-    \definecolor{myyellow} {cmy} {0,0.263,0.741}
-    \definecolor{mygreen} {HTML}{0B6E4F}
-    \colorlet{myorange} {myyellow!60!myred}
-    \colorlet{myviolett} {myred!50!myblue!80}
-    \definecolor{UHHred}  {HTML}{E2001A}
-    \definecolor{UHHblue}  {HTML}{0271BB}
-    \definecolor{UHHblack}  {HTML}{000000}
-    \definecolor{UHHgray}  {HTML}{3B515B}
-%für Python code
-\usepackage{listings}
-	\lstdefinestyle{python}{
-	language         = Python                   ,
-	basicstyle       = \ttfamily                ,
-	keywordstyle     = \color{myred}            ,
-	identifierstyle  = \color{myblue}           ,
-	stringstyle      = \color{mygreen}          ,
-	commentstyle     = \color{black!50}         ,
-	numberstyle      = \color{black!50}\tiny    ,
-	numbers          = left                     ,
-	belowcaptionskip = \baselineskip            ,
-	}
-%
-\usepackage{caption}
-    \captionsetup{%
-        tableposition=top,%
-        font=small,%
-        format=plain,%
-        labelfont=bf,%
-        labelsep=colon,%
-        margin=10pt,%
-        textfont=sl,%
-        singlelinecheck=true%
-    }
-\usepackage{subcaption}
-\usepackage{sidenotes}
+\usepackage{amssymb} % provides a number of symbols
+\usepackage{amsmath} % provides enhancements for documents with mathematical formulas, e.g. the align environment
+\usepackage{amsfonts} % provides a font with all kinds of mathematical symbols
+\usepackage{amsthm} % provides a possibility to define theorem environments
+
+\usepackage{mathtools} % provide several tools for math typesetting as an extension to amsmath
+\usepackage{nicefrac} % provides a tool for typesetting inline fractions as a/b
+\usepackage{bm} % provides the \bm command to typeset any symbol in bold
+
+\usepackage{tensor} % provides typesetting for tensors
+\usepackage{braket} % provides typesetting for braket notation
+\usepackage{siunitx} % support to typeset units
+\sisetup{
+    range-phrase=-,
+    range-units=single
+} % options for typesetting things like 1-5cm
+
+\numberwithin{equation}{chapter} % number equations as <chapter>.<equationnumber>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Referenzierungsspaß, farbige Fußnotenmarker u.Ä.
+% Setup inclusion of graphics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{csquotes}
-\usepackage{hyperref}
-\makeatletter
-\def\@footnotecolor{green}
-\define@key{Hyp}{footnotecolor}{%
-    \HyColor@HyperrefColor{#1}\@footnotecolor%
-    }
-\def\@footnotemark{%
-    \leavevmode
-    \ifhmode\edef\@x@sf{\the\spacefactor}\nobreak\fi
-    \stepcounter{Hfootnote}%
-    \global\let\Hy@saved@currentHref\@currentHref
-    \hyper@makecurrent{Hfootnote}%
-    \global\let\Hy@footnote@currentHref\@currentHref
-    \global\let\@currentHref\Hy@saved@currentHref
-    \hyper@linkstart{footnote}{\Hy@footnote@currentHref}%
-    \@makefnmark
-    \hyper@linkend
-    \ifhmode\spacefactor\@x@sf\fi
-    \relax
-    }%
-\makeatother
-    \hypersetup{
-      linkcolor = black,
-      %linkcolor = UHHblue,
-      citecolor  = black,
-      %citecolor  = purple,
-      urlcolor   = black,
-      %urlcolor   = myblue,
-      colorlinks = true,
-    }
-\usepackage{cleveref}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\MakePerPage{footnote} %Fußnoten werden am Ende jeder Seite statt am Ende des Dokuments angezeigt
+\usepackage{tikz} % general graphics package for LaTeX
+
+\usepackage{pgfplots} % package to draw axes and labeled plots
+\pgfplotsset{compat=1.18} % recommended by pgfplots: set compatibility to the newest version
+
+\usepackage{graphicx} % gives \includegraphics command
+\usepackage{epsfig} % use eps files in figures
+\graphicspath{images/} % setup path for inclusion of images
+
+\usepackage[export]{adjustbox} % give options to \includegraphics to align images (for the two logos in the titlepage)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Verschönern der Epigraphen
+% Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{epigraph,varwidth}
-\renewcommand{\epigraphsize}{\small}
-\setlength{\epigraphwidth}{0.8\textwidth}
-\renewcommand{\textflush}{flushright}
-\renewcommand{\sourceflush}{flushright}
-\newcommand{\epitextfont}{\itshape}
-\newcommand{\episourcefont}{\scshape}
-
-\makeatletter
-\newsavebox{\epi@textbox}
-\newsavebox{\epi@sourcebox}
-\newlength\epi@finalwidth
-\renewcommand{\epigraph}[2]{%
-  \vspace{\beforeepigraphskip}
-  {\epigraphsize\begin{\epigraphflush}
-   \epi@finalwidth=\z@
-   \sbox\epi@textbox{%
-     \varwidth{\epigraphwidth}
-     \begin{\textflush}\epitextfont#1\end{\textflush}
-     \endvarwidth
-   }%
-   \epi@finalwidth=\wd\epi@textbox
-   \sbox\epi@sourcebox{%
-     \varwidth{\epigraphwidth}
-     \begin{\sourceflush}\episourcefont#2\end{\sourceflush}%
-     \endvarwidth
-   }%
-   \ifdim\wd\epi@sourcebox>\epi@finalwidth 
-     \epi@finalwidth=\wd\epi@sourcebox
-   \fi
-   \leavevmode\vbox{
-     \hb@xt@\epi@finalwidth{\hfil\box\epi@textbox}
-     \vskip1.75ex
-     \hrule height \epigraphrule
-     \vskip.75ex
-     \hb@xt@\epi@finalwidth{\hfil\box\epi@sourcebox}
-   }%
-   \end{\epigraphflush}
-   \vspace{\afterepigraphskip}}}
-\makeatother
+\usepackage[
+    style=numeric-comp,
+    sorting=none,
+    giveninits=true
+]{biblatex} % use biblatex with a numeric (compact) style, given in the order of citation and abbreviation of given names
+\addbibresource{bibliography.bib} % include the bibliography (compatible to subfiles!)
+\renewbibmacro*{doi+eprint+url}{
+    \printfield{doi}
+    \newunit\newblock
+    \iffieldundef{doi}{
+        \usebibmacro{eprint}
+        \iffieldundef{eprint}{\usebibmacro{url+urldate}}{}%
+    }{}
+}% only print URL if there is no DOI
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Reperatur von Problemchen der Listings
+% Color definitions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\listoftables{%
-    \section*{\listtablename}%
-    \addcontentsline{toc}{section}{\listtablename}%
-    \@mkboth{\MakeUppercase\listtablename}%
-        {\MakeUppercase\listtablename}%
-    \@starttoc{lot}%
-}
-\renewcommand\listoffigures{%
-    \section*{\listfigurename}%
-    \addcontentsline{toc}{section}{\listfigurename}%
-    \@mkboth{\MakeUppercase\listfigurename}%
-        {\MakeUppercase\listfigurename}%
-    \@starttoc{lof}%
-}
-\makeatother
+\usepackage{xcolor} % to define and use colors
 
+% Define some custom colors
+\definecolor{myred}{HTML}{A3061E}
+\definecolor{myblue}{HTML}{003F77}
+\definecolor{myyellow}{HTML}{FFBC42}
+\definecolor{mygreen}{HTML}{0B6E4F}
+\colorlet{myorange}{myyellow!60!myred}
+\colorlet{myviolett}{myred!50!myblue!80}
+
+% Define colors from the UHH branding
+\definecolor{UHHred}{HTML}{E2001A}
+\definecolor{UHHblue}{HTML}{0271BB}
+\definecolor{UHHblack}{HTML}{000000}
+\definecolor{UHHgray}{HTML}{3B515B}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define environments for code listings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings} % to use and define code listings
+\lstdefinestyle{python}{
+    language=Python,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{myred},
+	identifierstyle=\color{myblue},
+	stringstyle=\color{mygreen},
+	commentstyle=\color{black!50},
+	numberstyle=\color{black!50}\tiny,
+	numbers=left,
+	belowcaptionskip=\baselineskip,
+} % code environment for python code
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setup of floats and captions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption} % allows control of caption for float environments
+\captionsetup{
+    font=small,
+    format=plain,
+    labelfont=bf,
+    labelsep=colon,
+    margin=10pt,
+    textfont=sl,
+    singlelinecheck=true,
+} % setup the caption for floats
+
+\usepackage{booktabs} % package to typeset prettier tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Things for referencing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref} % enables use of hyperlinks
+\hypersetup{
+    linkcolor = UHHblue,
+    citecolor  = purple,
+    urlcolor   = myblue,
+    colorlinks = true,
+} % define colors for links
+
+\usepackage{csquotes} % provides \enquote command to do quotes automatically
+\usepackage{cleveref} % provides \cref (and \Cref) command, to automatically write out references, depending on the type of reference (figure, equation, etc.)
+% must be loaded after hyperref!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setup of epigraphs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{epigraph} % package to use the \epigraph command
+\renewcommand{\epigraphsize}{\small} % set up font size for epigraphs
+\setlength{\epigraphwidth}{0.35\textwidth} % set up width of epigraphs
+\renewcommand{\textflush}{flushright} % flush epigraph text to the right
+\renewcommand{\sourceflush}{flushright} % flush sources of epigraphs to the right
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setup of the glossary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[acronym]{glossaries}
 \makeglossaries
 
-\usepackage{booktabs}
-
-\usepackage{xspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To put in todos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[
+    linecolor=myyellow,
+    backgroundcolor=myyellow
+]{todonotes}

@@ -1,36 +1,44 @@
 \documentclass[main.tex]{subfiles}
 
 \begin{document}
+\KOMAoptions{twoside=false}
 \begin{titlepage}
-    \includegraphics[width=6cm]{images/up-uhh-logo-u-2010-u-farbe-u-cmyk}\par
-    \vspace{4\baselineskip}
+    \begin{minipage}{0.01\textwidth}
+        \rule{1pt}{\textheight}
+    \end{minipage}
+    \begin{minipage}{0.9\textwidth}
+        \includegraphics[width=5cm, valign=c]{images/logos/up-uhh-logo-u-2010-u-farbe-u-cmyk}
+        \includegraphics[width=4cm, valign=c]{images/logos/UU_logo_CMYK}\par
+        \vspace{4\baselineskip}
 
-    %\begin{addmargin}[4cm]{-1cm}
-    \begin{center}
-        {\Large\textcolor{UHHred}{Bachelorthesis}\par}
+    \begin{FlushLeft}
+        {\Large\textcolor{UHHred}{Master thesis}\par}
 
-        {\Huge Optimization of the Quantum Espresso Density Functional Theory Code for parallel execution on the PHYSnet-Cluster\par}
+        {\Huge Title\par}
 
-        \vspace{1\baselineskip}
+       \vspace{1\baselineskip}
         
-        {\Large Optimierung des Quantum Espresso Dichte-Funktional Theorie Codes für die parallele Ausführung auf dem PHYSnet-Cluster\par}
+        {\Large Title Deutsch\par}
 
         \vspace{4\baselineskip}
 
-        vorgelegt von\par
+        vorgelegt von
 
         {\Large\textsc{Tjark Sievers}\par}
-    \end{center}
-    %\end{addmargin}
+    \end{FlushLeft}
 
     \vfill
+    
+    \begin{FlushLeft}
+        Fakultät: Mathematik, Informatik und Naturwissenschaften\par
+        Fachbereich: Physik\par
+        Studiengang: Physik\par
+        Matrikelnummer: 7147558
 
-    Fakultät: Mathematik, Informatik und Naturwissenschaften\par
-    Fachbereich: Physik\par
-    Studiengang: Physik\par
-    Matrikelnummer: 7147558\par
- 
-    Erstgutachter: Prof.\,Dr.\,Tim Wehling \par
-    Zweitgutachterin: Prof.\,Dr.\,Daria Gorelova \par
+        Erstgutachter: Prof.\,Dr.\,Annica Black-Schaffer (Uppsala University) \par
+        Zweitgutachterin: Prof.\,Dr.\,Tim Wehling \par
+    \end{FlushLeft}
+    \end{minipage}
 \end{titlepage}
+\KOMAoptions{twoside=true}
 \end{document}
