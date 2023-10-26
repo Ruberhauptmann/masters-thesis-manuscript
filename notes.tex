@@ -1,0 +1,46 @@
+\documentclass[
+    a4paper,
+    11pt,
+    DIV=calc,
+    numbers=noenddot,
+    headsepline=0.04em,
+    headinclude,
+    BCOR=6mm,
+    titlepage=firstiscover,
+]{scrbook}
+
+\input{preamble} % load the tex file with the preamble
+
+\input{notation} % load the tex file with the notation shortcuts
+
+\loadglsentries[main]{glossary.tex} % load glossary entries
+
+\usepackage{subfiles}
+
+\begin{document}
+% List the todos (comment this out in the final version!)
+\listoftodos
+\clearpage
+
+% Print the table of contents (without link boxes)
+\hypersetup{hidelinks}
+\tableofcontents
+\clearpage
+
+% Print the glossary and acronym
+\setglossarysection{section}
+\printglossaries
+
+% Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
+\mainmatter
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+% Print the bibliography
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+% Beginning of the backmatter
+\backmatter
+\end{document}
