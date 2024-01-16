@@ -7,5 +7,6 @@ all:
 chapters:
 	cd chapters && latexmk -auxdir=out/ -xelatex *.tex
 
-%.pdf: %.tex
-	latexmk -auxdir=out/ -xelatex -pvc $*.tex
+.PHONY: all
+%.pdf: $(wildcard res/**/*)
+	latexmk -auxdir=out/ -xelatex $*.tex

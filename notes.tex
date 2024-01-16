@@ -8,6 +8,7 @@
     BCOR=6mm,
     titlepage=firstiscover,
 ]{scrbook}
+\usepackage{stmaryrd}
 
 \input{preamble} % load the tex file with the preamble
 
@@ -34,6 +35,8 @@
 % Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
 \renewcommand{\thechapter}{\Roman{chapter}}
+
+\input{notes/d-wave-superconductivity}
 
 % Print the bibliography
 \cleardoublepage
