@@ -12,11 +12,15 @@
 
 \input{preamble} % load the tex file with the preamble
 
+\addbibresource{notes/bibliography_notes.bib} % include the bibliography (compatible to subfiles!)
+
 \input{notation} % load the tex file with the notation shortcuts
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
+
+\graphicspath{notes/images/} % setup path for inclusion of images
 
 \begin{document}
 % List the todos (comment this out in the final version!)

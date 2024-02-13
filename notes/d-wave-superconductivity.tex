@@ -1,14 +1,25 @@
-\chapter{d-wave Superconductivity}
+\chapter{d-wave Superconductivity}\label{ch:d-wave-superconductivity}
 
-Source: Coleman - Intro to many-body physics, ch. 15
+Source: \citeauthor{Coleman_2015} -~\citetitle{Coleman_2015}~\cite[ch.\,15]{Coleman_2015}
 
-\section{BCS theory with momentum dependent coupling}
+\section{BCS theory with momentum dependent coupling}\label{sec:bcs-theory-with-momentum-dependent-coupling}
 
 Starting point is a BCS-Hamiltonian with momentum-dependent coupling term \(V_{\vb{k}, \vb{k}^{\prime}}\):
 \begin{equation}
     H = \sum_{\vb{k}, \sigma} \epsilon_{\vb{k}} c_{\vb{k} \sigma}^{\dagger} c_{\vb{k} \sigma} +
     \sum_{\vb{k}, \vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}} c_{\vb{k} \uparrow}^{\dagger} c_{-\vb{k} \downarrow}^{\dagger} c_{-\vb{k}^{\prime} \downarrow} c_{\vb{k}^{\prime} \uparrow}
+    \label{eq:BCS Hamiltonian with momentum-dependent coupling}
 \end{equation}
+The original idea by Bardeen, Cooper and Schrieffer uses the coupling
+\begin{equation}
+    V_{\vb{k}, \vb{k}^{\prime}} =
+    \begin{cases}
+         - \frac{g_0}{V} \;,\; \vert \epsilon_{\vb{k}} \vert < \omega_D \\
+         0 \;
+    \end{cases}
+    \label{eq:coupling in original BCS theory}
+\end{equation}
+
 \todo{Point out specific difference to BCS theory!}
 Then similar process as for BCS theory without the momentum-dependent term (Hubbard-Stratonovich decoupling, minimization of mean-field free energy).
 Gives self-consistent equation for the gap function:
@@ -102,7 +113,7 @@ We split up the interaction into the symmetric and asymmetric parts \todo{How ex
     &\coloneq \left( V_{\vb{k}, \vb{k}^{\prime}}^S + V_{\vb{k}, \vb{k}^{\prime}}^T \right) \Psi_{\vb{k}}^{\dagger} \Psi_{\vb{k}^{\prime}}
     \;,
 \end{align}
-where we have defined the BCS pairing interction in the singlet and triplet channel:
+where we have defined the BCS pairing interaction in the singlet and triplet channel:
 \begin{equation}
     V_{\vb{k}, \vb{k}^{\prime}}^{S, T} = \frac{1}{2} \left( V_{\vb{k} - \vb{k}^{\prime}} \pm V_{\vb{k} + \vb{k}^{\prime}} \right)
 \end{equation}
@@ -124,15 +135,15 @@ With everything we write the unequal spin pairing as:
 \end{align}
 The equal spin pairing also includes triplet pairing (these are wrapped up in the vectors \(\vb{\Psi}\) \todo{vector arrows over the psi (or bold)}) and all in all the BCS pairing potential is:
 \begin{align}
-    H_{\text{BCS}} = \sum_{\vb{k} \vb{k}^{\prime} \in \frac{1}{2} \text{BZ}} \left[ V_{\vb{k}, \vb{k}^{\prime}}^S \Psi_{\vb{k}}^{S \dagger} \Psi_{\vb{k}^{\prime}}^{S} + V_{\vb{k}, \vb{k}^{\prime}}^T \vec{\Psi}_{\vb{k}}^{T \dagger} \cdot \vec{\Psi}_{\vb{k}^{\prime}}^{T} \right]
+    V_{\text{BCS}} = \sum_{\vb{k} \vb{k}^{\prime} \in \frac{1}{2} \text{BZ}} \left[ V_{\vb{k}, \vb{k}^{\prime}}^S \Psi_{\vb{k}}^{S \dagger} \Psi_{\vb{k}^{\prime}}^{S} + V_{\vb{k}, \vb{k}^{\prime}}^T \vec{\Psi}_{\vb{k}}^{T \dagger} \cdot \vec{\Psi}_{\vb{k}^{\prime}}^{T} \right]
 \end{align}
 In real materials we mostly see singlet pairing \todo{How can we access that information in experiment?} \todo{Source for that?}, in this case we can just write:
 \begin{equation}
-    H = \sum_{\vb{k} \vb{k}^{\prime} \in \frac{1}{2} \text{BZ}} V_{\vb{k}, \vb{k}^{\prime}}^S
+    V_{\text{BCS}} = \sum_{\vb{k} \vb{k}^{\prime} \in \frac{1}{2} \text{BZ}} V_{\vb{k}, \vb{k}^{\prime}}^S
     (c_{\vb{k} \uparrow}^{\dagger}
     c_{-\vb{k} \downarrow}^{\dagger})
     (c_{-\vb{k}^{\prime} \downarrow}
-    c_{\vb{k}^{\prime} \uparrow}^{\dagger})
+    c_{\vb{k}^{\prime} \uparrow})
 \end{equation}
 
 
@@ -196,32 +207,32 @@ Looking at the gap equation
     \Delta_{\vb{k}} = - \sum_{\vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}}  \frac{\Delta_{\vb{k}^{\prime}}}{2 E_{\vb{k}^{\prime}}} \tanh{\left(\frac{\beta E_{\vb{k}}}{2}\right)}
     \;,
 \end{equation}
-we see that it preserves the symmetries of the pair (\(\hat{=}\) symmetries of \(\Delta_{\vb{k}}\)).
+we see that the interaction preserves the symmetries of the pair (\(\hat{=}\) symmetries of \(\Delta_{\vb{k}}\)).
 \todo{Why is the symmetry preserved? And why are the symmetries of the pair conserved? Are these the same as of \(\Delta_k\)?}
 We divide the interaction into two parts:
 \begin{align}
-    V_{\vb{k} \vb{k}^{\prime}}^S &= U - \frac{3 J}{4} (c_x + c_y)(c_{x^{\prime}} + c_{y^{\prime}}) \\
-    V_{\vb{k} \vb{k}^{\prime}}^D &= -\frac{3 J}{2} (c_x - c_y)(c_{x^{\prime}} - c_{y^{\prime}}) \\
-    V_{\vb{k} \vb{k}^{\prime}}^S + V_{\vb{k} \vb{k}^{\prime}}^D &= U - \frac{3 J}{4} (c_x c_{x^{\prime}} + c_x c_{y^{\prime}} + c_{x^{\prime}} c_y + c_y c_{y^{\prime}}) \\
+    V_{\vb{k}, \vb{k}^{\prime}}^S &= U - \frac{3 J}{4} (c_x + c_y)(c_{x^{\prime}} + c_{y^{\prime}}) \\
+    V_{\vb{k}, \vb{k}^{\prime}}^D &= -\frac{3 J}{2} (c_x - c_y)(c_{x^{\prime}} - c_{y^{\prime}}) \\
+    V_{\vb{k}, \vb{k}^{\prime}}^S + V_{\vb{k}, \vb{k}^{\prime}}^D &= U - \frac{3 J}{4} (c_x c_{x^{\prime}} + c_x c_{y^{\prime}} + c_{x^{\prime}} c_y + c_y c_{y^{\prime}}) \\
     &- \frac{3 J}{4} (c_x c_{x^{\prime}} - c_x c_{y^{\prime}} - c_{x^{\prime}} c_y + c_y c_{y^{\prime}}) \\
     &= U - \frac{3 J}{2} (c_x c_{x^{\prime}} + c_y c_{y^{\prime}}) = V_{\vb{k}, \vb{k}^{\prime}}
 \end{align}
 We call \(\frac{3 J}{4} (c_x  + c_y)(c_{x^{\prime}} + c_{y^{\prime}})\) the extended s-wave term.
 The s-wave term is invariant under \(\SI{90}{\degree}\) rotations of \(\vb{k}\) or \(\vb{k}^{\prime}\), whereas the d-wave term changes sign \todo{Calculate that}:
 \begin{align}
-    V_{\vb{k} \vb{k}^{\prime}}^S &= V_{\vb{k} R\vb{k}^{\prime}}^S \\
-    V_{\vb{k} \vb{k}^{\prime}}^D &= -V_{\vb{k} R\vb{k}^{\prime}}^D
+    V_{\vb{k}, \vb{k}^{\prime}}^S &= V_{\vb{k} R\vb{k}^{\prime}}^S \\
+    V_{\vb{k}, \vb{k}^{\prime}}^D &= -V_{\vb{k} R\vb{k}^{\prime}}^D
 \end{align}
 with \(R\vb{k} = (-k_y, k_x)\).
 Another point to note is that in the d-wave term, there is no onsite Coulomb interaction.
-So a condensate with d-wave symmetry,
+So a condensate with d-wave symmetry \todo{Can an s-wave condensate also appear? How is it decided what symmetry the condensate has?},
 \begin{align}
     \Delta_{\vb{k}}^D &= \Delta_D (c_x - c_y) \\
     \Delta_{R\vb{k}}^D &= -\Delta_{\vb{k}}^D
 \end{align}
 couples to cooper pairs via d-wave interaction \todo{What is the relationship between gap and interaction? aka where does this equation come from?}, because
 \begin{equation}
-    \sum_{\vb{k}^{\prime}} V_{\vb{k} \vb{k}^{\prime}}^S \Delta_{\vb{k}^{\prime}}^D (\ldots) = 0
+    \sum_{\vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}}^S \Delta_{\vb{k}^{\prime}}^D (\ldots) = 0
 \end{equation}
 (see gap equation, it preserves the symmetry of the pair).
 A condensate with extended s-wave symmetry
@@ -230,10 +241,17 @@ A condensate with extended s-wave symmetry
 \end{equation}
 vanishes when integrated with the d-wave part of the interaction.
 This means the two types of pairing are symmetry decoupled and moreover, the symmetry of the d-wave pair decouples against the local Coulomb pseudopotential.
-The quasiparticle \todo{What quasiparticle?} energy for the d-wave condensate is \todo{Insert image here!}:
+The quasiparticle \todo{What quasiparticle?} energy for the d-wave condensate is:
 \begin{equation}
     E_{\vb{k}} = \sqrt{\epsilon_{\vb{k}}^2 + \Delta_{\vb{k}}^2 (c_y - c_x)^2}
 \end{equation}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{notes/images/energy dispersion d-wave}
+    \caption{}
+    \label{fig:d-wave dispersion}
+\end{figure}
+\todo{What exactly is shown in the figure?}
 It vanishes at intersections of nodes (where \(\Delta_{\vb{k}} = 0\)) and the Fermi surface (where \(\epsilon_{\vb{k}} = 0\)).
 At these points the dispersion can be linearized, they form Dirac cones of excitations with a relativistic dispersion \todo{What is the exact dispersion?}.
 We can approximately solve the gap equation and get
@@ -247,4 +265,10 @@ The quasiparticle energy is then
 \end{equation}
 The d-wave density of states does not have a clear gap, but instead a V-shaped structure.
 This linear DOS across the gap is due to the Dirac cones.
-\todo{Insert image here!}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{notes/images/density of states d-wave}
+    \caption{}
+    \label{fig:d-wave density of states}
+\end{figure}
+\todo{How does the DOS compare with real materials? Do we have the V-shaped structure?}
