@@ -1,6 +1,10 @@
 .DS_Store
 .idea/
 
+*.slg
+*.sls
+*.slo
+
 ## ist files from glossaries
 *.ist
 
