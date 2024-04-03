@@ -23,14 +23,15 @@
 \graphicspath{notes/images/} % setup path for inclusion of images
 
 \begin{document}
-% List the todos (comment this out in the final version!)
-\listoftodos
 \clearpage
 
 % Print the table of contents (without link boxes)
 \hypersetup{hidelinks}
 \tableofcontents
 \clearpage
+
+% List the todos (comment this out in the final version!)
+\listoftodos
 
 % Print the glossary and acronym
 \setglossarysection{section}
@@ -39,6 +40,8 @@
 % Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
 \renewcommand{\thechapter}{\Roman{chapter}}
+
+\input{notes/eg-x-model}
 
 \input{notes/greens_functions}
 
