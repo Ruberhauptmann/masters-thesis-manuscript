@@ -11,20 +11,37 @@ So in the unit cell of the hexagonal actually has two atoms.
 Primitive lattice vectors of the hexagonal lattice:
 \begin{align}
     \vb{a}_1 &= \frac{a_0}{2} \begin{pmatrix} 3 \\ \sqrt{3} \end{pmatrix} \\
-    \vb{a}_2 &= \frac{a_0}{2} \begin{pmatrix} 3 \\ -\sqrt{3} \end{pmatrix} \\
+    \vb{a}_2 &= \frac{a_0}{2} \begin{pmatrix} 3 \\ -\sqrt{3} \end{pmatrix}
 \end{align}
 with \(a_0 = \SI{1.42}{\angstrom}\) the distance between nearest neighbours.
 
-Vectors to the nearest-neighbor \(B_l\) (\(l = 1, 2, 3,\)) from atom \(A_i\):
+\todo{Image here}
+
+Vectors to the nearest-neighbor \(B_i\) (\(i = 1, 2, 3,\)) atoms from atom \(A\):
 \begin{align}
-    \vb{\updelta} =
+    \vb{\delta}_{AB, 1} =
 \end{align}
 
+Vectors to the nearest-neighbor \(A_i\) (\(i = 1, 2, 3,\)) atoms from atom \(B\):
+\begin{align}
+    \vb{\delta}_{BA, 1} =
+\end{align}
+
+The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice can be found by rotating \(\vb{a}_1\) six times by \(\nicefrac{1}{6} * 2\pi = \nicefrac{\pi}{3}\):
+\begin{align}
+    \vb{\delta}_{AA, 1} &= \vb{a}_1 = \frac{a_0}{2} \begin{pmatrix} 3 \\ \sqrt{3} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{\pi}{3})} \\ \cos{(\frac{\pi}{3})} \end{pmatrix} \\
+    \vb{\delta}_{AA, 2} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{2\pi}{3})} \\ \cos{(\frac{2\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \frac{\sqrt{3}}{2} \\ -\frac{1}{2} \end{pmatrix} \\
+    \vb{\delta}_{AA, 3} &= \sqrt{3} a_0 \begin{pmatrix} \sin{\pi} \\ \cos{\pi} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} 0 \\ -1 \end{pmatrix} \\
+    \vb{\delta}_{AA, 4} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{4\pi}{3})} \\ \cos{(\frac{4\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} -\frac{\sqrt{3}}{2} \\ -\frac{1}{2} \end{pmatrix} \\
+    \vb{\delta}_{AA, 5} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{5\pi}{3})} \\ \cos{(\frac{5\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} -\frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix} \\
+    \vb{\delta}_{AA, 6} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(2\pi)} \\ \cos{(2\pi)} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+\end{align}
 
 \section{EG-X Model}\label{sec:eg-x-model}
 
 Graphene lattice and a site X\@.
 Real-life motivation: layer of graphene on top of a substrate of another material (which provides the additional X atoms).
+There is no spin-orbit coupling considered in the model (according to Niklas) when mapping to substrates Sn or Pb, it could be necessary (but does not the qualitative result?).
 
 Without interaction:
 \begin{equation}
@@ -79,26 +96,43 @@ We get:
     &= -\frac{t_X}{2} \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} \sum_{\vb{k}, \vb{k}^{\prime}} e^{-\iu \vb{k} \vb{r}_i} d_{\vb{k}, \sigma}^{\dagger} e^{\iu \vb{k}^{\prime} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \\
     &= -\frac{t_X}{2} \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
     &= -\frac{t_X}{2} \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} N \delta_{\vb{k}, \vb{k}^{\prime}} \\
-    &= -\frac{t_X}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}}
+    &= -\frac{t_X}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
 \end{align}
-Using the expressions for the vectors of neighbouring Graphene atoms from section~\ref{sec:lattice-structure-of-graphene}, we can calculate the so called structural factor \todo{Really called this way?}:
+The nearest neighbours for \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from section~\ref{sec:lattice-structure-of-graphene}.
+With that, we can calculate the structure factor:
 \begin{align}
-    \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} &=
+    f_{\mathrm{X}} (\vb{k}) &= \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
+    = e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
+    + e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
+    + e^{\iu \sqrt{3} a_0 (-k_y)} \\
+    &+ e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
+    + e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
+    + e^{\iu \sqrt{3} a_0 k_y} \\
+    &= 2 \cos{(\sqrt{3} a_0 k_y)} + 2 e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \\
+    &+ 2 e^{-\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \\
+    &= 2 \cos{(\sqrt{3} a_0 k_y)} + 4 \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \cos{(\frac{3}{2} a_0 k_y)}
 \end{align}
+Same for
 
 
 \todo{Put matrix formulation here}
 
 Doing the same for the hoppings between the \(A\) and \(B\) Graphene sites as well as the hybridisaton between \(\mathrm{X}\) and Graphene \(A\) lattice sites, we get:
 \begin{align}
-    H_0 =
+    H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
+    \begin{pmatrix}
+        0 & -\frac{t_{Gr}}{2} f_{Gr} & V \\
+        -\frac{t_{Gr}}{2} f_{Gr}^* & 0 & 0 \\
+        V & 0 & \frac{t_X}{2} f_{X}
+    \end{pmatrix} \begin{pmatrix} c_{k, \sigma}^{A} \\ c_{k, \sigma}^{B} \\ d_{k, \sigma} \end{pmatrix}
+    \label{eq:EG-X Hamiltonian non-interacting matrix}
 \end{align}
-
-The band structure for the non-interacting EG-X model is easily obtained by diagonalising the matrix \todo{reference here!}.
+The band structure for the non-interacting EG-X model is easily obtained by diagonalising the matrix in eq.~\ref{eq:EG-X Hamiltonian non-interacting matrix}.
 This was done in fig.~\ref{fig:EG-X model non-interacting bands}.
 
 Values used for calculation:
 \begin{itemize}
+    \item \(a_0 = 1\)
     \item \(t_{\mathrm{Gr}} = 1\)
     \item \(t_{\mathrm{X}} = 0.01\)
 \end{itemize}
