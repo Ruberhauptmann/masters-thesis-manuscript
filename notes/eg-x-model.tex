@@ -10,16 +10,26 @@ So in the unit cell of the hexagonal actually has two atoms.
 
 Primitive lattice vectors of the hexagonal lattice:
 \begin{align}
-    \vb{a}_1 &= \frac{a_0}{2} \begin{pmatrix} 3 \\ \sqrt{3} \end{pmatrix} \\
-    \vb{a}_2 &= \frac{a_0}{2} \begin{pmatrix} 3 \\ -\sqrt{3} \end{pmatrix}
+    \vb{a}_1 &= \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \\
+    \vb{a}_2 &= \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
 \end{align}
-with \(a_0 = \SI{1.42}{\angstrom}\) the distance between nearest neighbours.
+with lattice constant \(a \approx \SI{2.46}{\angstrom}\) (distance between unit cells).
+Have
+\begin{equation}
+    a = \sqrt{3} a_0
+\end{equation}
+with the nearest-neighbour distance \(a_0\).
 
-\todo{Image here}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/graphene lattice}
+    \caption{Graphene lattice structure}
+    \label{fig:graphene lattice structure}
+\end{figure}
 
 Vectors to the nearest-neighbor \(B_i\) (\(i = 1, 2, 3,\)) atoms from atom \(A\):
 \begin{align}
-    \vb{\delta}_{AB, 1} =
+    \vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix}, \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}, \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
 \end{align}
 
 Vectors to the nearest-neighbor \(A_i\) (\(i = 1, 2, 3,\)) atoms from atom \(B\):
@@ -29,13 +39,38 @@ Vectors to the nearest-neighbor \(A_i\) (\(i = 1, 2, 3,\)) atoms from atom \(B\)
 
 The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice can be found by rotating \(\vb{a}_1\) six times by \(\nicefrac{1}{6} * 2\pi = \nicefrac{\pi}{3}\):
 \begin{align}
-    \vb{\delta}_{AA, 1} &= \vb{a}_1 = \frac{a_0}{2} \begin{pmatrix} 3 \\ \sqrt{3} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{\pi}{3})} \\ \cos{(\frac{\pi}{3})} \end{pmatrix} \\
-    \vb{\delta}_{AA, 2} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{2\pi}{3})} \\ \cos{(\frac{2\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} \frac{\sqrt{3}}{2} \\ -\frac{1}{2} \end{pmatrix} \\
-    \vb{\delta}_{AA, 3} &= \sqrt{3} a_0 \begin{pmatrix} \sin{\pi} \\ \cos{\pi} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} 0 \\ -1 \end{pmatrix} \\
-    \vb{\delta}_{AA, 4} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{4\pi}{3})} \\ \cos{(\frac{4\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} -\frac{\sqrt{3}}{2} \\ -\frac{1}{2} \end{pmatrix} \\
-    \vb{\delta}_{AA, 5} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(\frac{5\pi}{3})} \\ \cos{(\frac{5\pi}{3})} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} -\frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix} \\
-    \vb{\delta}_{AA, 6} &= \sqrt{3} a_0 \begin{pmatrix} \sin{(2\pi)} \\ \cos{(2\pi)} \end{pmatrix} = \sqrt{3} a_0 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+    \vb{\delta}_{AA, 1} &= \vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} = a \begin{pmatrix} \frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix} = a \begin{pmatrix} \sin{(\frac{\pi}{6})} \\ \cos{(\frac{\pi}{6})} \end{pmatrix} \\
+    \vb{\delta}_{AA, 2} &= a \begin{pmatrix} \sin{(\frac{3\pi}{6})} \\ \cos{(\frac{3\pi}{6})} \end{pmatrix} = a \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+    \vb{\delta}_{AA, 3} &= a \begin{pmatrix} \sin{(\frac{5\pi}{6})} \\ \cos{(\frac{5\pi}{6})} \end{pmatrix} = a \begin{pmatrix} \frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix} \\
+    \vb{\delta}_{AA, 4} &= a \begin{pmatrix} \sin{(\frac{7\pi}{6})} \\ \cos{(\frac{7\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -\frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix} \\
+    \vb{\delta}_{AA, 5} &= a \begin{pmatrix} \sin{(\frac{9\pi}{6})} \\ \cos{(\frac{9\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -1 \\ 0 \end{pmatrix} \\
+    \vb{\delta}_{AA, 6} &= a \begin{pmatrix} \sin{(\frac{11\pi}{6})} \\ \cos{(\frac{11\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix}
 \end{align}
+
+The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
+\begin{align}
+    \vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
+    \vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0
+    \;,
+\end{align}
+so we have:
+\begin{align}
+    \vb{b}_1 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \\
+    \vb{b}_2 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
+\end{align}
+Points of high symmetry in the Brillouin zone are:
+\begin{align}
+    \Gamma &= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+    \mathrm{M} &= \frac{\pi}{3 a_0} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \\
+    \mathrm{K} &= \frac{2\pi}{3 a_0} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
+\end{align}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/graphene brillouin_zone}
+    \caption{Graphene Brillouin Zone}
+    \label{fig:graphene Brillouin zone}
+\end{figure}
 
 \section{EG-X Model}\label{sec:eg-x-model}
 
@@ -99,31 +134,48 @@ We get:
     &= -\frac{t_X}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
 \end{align}
 The nearest neighbours for \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from section~\ref{sec:lattice-structure-of-graphene}.
-With that, we can calculate the structure factor:
+With that, we can calculate \todo{Do the calculation right!}:
 \begin{align}
-    f_{\mathrm{X}} (\vb{k}) &= \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
-    = e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
+    f_{\mathrm{X}} (\vb{k}) &= -\frac{t_X}{2} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
+    = -\frac{t_X}{2} \left( e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
     + e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 (-k_y)} \\
-    &+ e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
+    + e^{\iu \sqrt{3} a_0 (-k_y)} \right.  \\
+    &+ \left. e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
     + e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 k_y} \\
-    &= 2 \cos{(\sqrt{3} a_0 k_y)} + 2 e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \\
-    &+ 2 e^{-\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \\
-    &= 2 \cos{(\sqrt{3} a_0 k_y)} + 4 \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \cos{(\frac{3}{2} a_0 k_y)}
+    + e^{\iu \sqrt{3} a_0 k_y} \right) \\
+    &= -\frac{t_X}{2} \left( 2 \cos{(\sqrt{3} a_0 k_y)} + 2 e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \right. \\
+    &+ \left. 2 e^{-\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \right) \\
+    &= -t_X \left( \cos{(\sqrt{3} a_0 k_y)} + 2 \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \cos{(\frac{3}{2} a_0 k_x)} \right)
 \end{align}
-Same for
-
-
-\todo{Put matrix formulation here}
-
-Doing the same for the hoppings between the \(A\) and \(B\) Graphene sites as well as the hybridisaton between \(\mathrm{X}\) and Graphene \(A\) lattice sites, we get:
+We can do the same for the hopping between Graphene sites, for example :
 \begin{align}
-    H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
+    -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} c_{i, \sigma}^{(B), \dagger} c_{j, \sigma^{\prime}}^{(A)}
+    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(B), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
+    &= -\frac{t_{GR}}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}}
+\end{align}
+We note
+\begin{align}
+    \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} = \left( \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}} \right)^*
+\end{align}
+and calculate \todo{Do the calculation right!}
+\begin{align}
+    f_{Gr} = -\frac{t_{Gr}}{2} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} =
+\end{align}
+
+Doing the same for the hoppings between the \(A\) and \(B\) Graphene sites as well as the hybridisaton between \(\mathrm{X}\) and Graphene \(A\) lattice sites,
+
+
+
+
+we get:
+\begin{align}
+    H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}}
+    \\
+    &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
     \begin{pmatrix}
-        0 & -\frac{t_{Gr}}{2} f_{Gr} & V \\
-        -\frac{t_{Gr}}{2} f_{Gr}^* & 0 & 0 \\
-        V & 0 & \frac{t_X}{2} f_{X}
+        0 & f_{Gr} & V \\
+        f_{Gr}^* & 0 & 0 \\
+        V & 0 & f_{X}
     \end{pmatrix} \begin{pmatrix} c_{k, \sigma}^{A} \\ c_{k, \sigma}^{B} \\ d_{k, \sigma} \end{pmatrix}
     \label{eq:EG-X Hamiltonian non-interacting matrix}
 \end{align}
