@@ -34,7 +34,7 @@ Vectors to the nearest-neighbor \(B_i\) (\(i = 1, 2, 3,\)) atoms from atom \(A\)
 
 Vectors to the nearest-neighbor \(A_i\) (\(i = 1, 2, 3,\)) atoms from atom \(B\):
 \begin{align}
-    \vb{\delta}_{BA, 1} =
+    \vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix}, \vb{\delta}_{BA, 2} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix}, \vb{\delta}_{BA, 3} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix}
 \end{align}
 
 The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice can be found by rotating \(\vb{a}_1\) six times by \(\nicefrac{1}{6} * 2\pi = \nicefrac{\pi}{3}\):
@@ -61,8 +61,8 @@ so we have:
 Points of high symmetry in the Brillouin zone are:
 \begin{align}
     \Gamma &= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
-    \mathrm{M} &= \frac{\pi}{3 a_0} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \\
-    \mathrm{K} &= \frac{2\pi}{3 a_0} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
+    \mathrm{M} &= \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \\
+    \mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
 \end{align}
 
 \begin{figure}[htb]
@@ -134,40 +134,47 @@ We get:
     &= -\frac{t_X}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
 \end{align}
 The nearest neighbours for \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from section~\ref{sec:lattice-structure-of-graphene}.
-With that, we can calculate \todo{Do the calculation right!}:
+With that, we can calculate:
 \begin{align}
-    f_{\mathrm{X}} (\vb{k}) &= -\frac{t_X}{2} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
-    = -\frac{t_X}{2} \left( e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 (-k_y)} \right.  \\
-    &+ \left. e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x - \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 (-\frac{\sqrt{3}}{2} k_x + \frac{1}{2} k_y)}
-    + e^{\iu \sqrt{3} a_0 k_y} \right) \\
-    &= -\frac{t_X}{2} \left( 2 \cos{(\sqrt{3} a_0 k_y)} + 2 e^{\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \right. \\
-    &+ \left. 2 e^{-\iu \sqrt{3} a_0 (\frac{\sqrt{3}}{2} k_x)} \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \right) \\
-    &= -t_X \left( \cos{(\sqrt{3} a_0 k_y)} + 2 \cos{(\frac{\sqrt{3}}{2} a_0 k_y)} \cos{(\frac{3}{2} a_0 k_x)} \right)
+    f_{\mathrm{X}} (\vb{k}) &= -\frac{t_X}{2} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}} \\
+    &= -\frac{t_X}{2} \left( e^{\iu a (\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})}
+    + e^{\iu a k_x}
+    + e^{\iu a (\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
+    \right. \\
+    &+ \left. e^{\iu a (-\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
+    + e^{-\iu a k_x}
+    + e^{\iu a (-\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})} \right) \\
+    &= -\frac{t_X}{2} \left( 2 \cos{(a k_x)} + 2 e^{\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} + 2 e^{-\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} \right) \\
+    &= -t_X \left( \cos{(a k_x)} + 2 \cos{(\frac{a}{2} k_x)} \cos{(\sqrt{3} \frac{ a}{2} k_y)} \right)
 \end{align}
 We can do the same for the hopping between Graphene sites, for example :
 \begin{align}
-    -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} c_{i, \sigma}^{(B), \dagger} c_{j, \sigma^{\prime}}^{(A)}
-    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(B), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
-    &= -\frac{t_{GR}}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}}
+    -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} c_{i, \sigma}^{(A), \dagger} c_{j, \sigma^{\prime}}^{(B)}
+    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(A), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
+    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}}
 \end{align}
 We note
 \begin{align}
-    \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} = \left( \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}} \right)^*
+    \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} = \left( \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}} \right)^* = \sum_{\vb{\delta}_{BA}} e^{-\iu \vb{k} \vb{\delta}_{BA}}
 \end{align}
-and calculate \todo{Do the calculation right!}
+and calculate
 \begin{align}
-    f_{Gr} = -\frac{t_{Gr}}{2} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} =
+    f_{Gr} &= -\frac{t_{Gr}}{2} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} \\
+    &= -\frac{t_{Gr}}{2} \left(
+    e^{\iu \frac{a}{\sqrt{3}} k_y} +
+    e^{\iu \frac{a}{2\sqrt{3}} (\sqrt{3} k_x - k_y)} +
+    e^{\iu \frac{a}{2\sqrt{3}} (-\sqrt{3} k_x - k_y)} \right) \\
+    &= -\frac{t_{Gr}}{2} \left(
+    e^{\iu \frac{a}{\sqrt{3}} k_y} +
+    e^{-\iu \frac{a}{2\sqrt{3}} k_y} \left(
+        e^{\iu \frac{a}{2} k_x} + e^{-\iu \frac{a}{2} k_x}
+    \right) \right) \\
+    &= -\frac{t_{Gr}}{2} \left(
+    e^{\iu \frac{a}{\sqrt{3}} k_y} +
+    2 e^{-\iu \frac{a}{2\sqrt{3}} k_y}
+    \cos{(\frac{a}{2} k_x)} \right)
 \end{align}
-
-Doing the same for the hoppings between the \(A\) and \(B\) Graphene sites as well as the hybridisaton between \(\mathrm{X}\) and Graphene \(A\) lattice sites,
-
-
-
-
-we get:
+All together, we get:
 \begin{align}
     H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}}
     \\
@@ -197,4 +204,6 @@ Values used for calculation:
     \caption{Bands of the non-interacting EG-X model. All the bands are spin-degenerate.}
     \label{fig:EG-X model non-interacting bands}
 \end{figure}
+
+\section{BCS Theory on the EG-X Model}\label{sec:bcs-theory-on-the-eg-x-model}
 
