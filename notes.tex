@@ -22,6 +22,7 @@
 \graphicspath{notes/images/} % setup path for inclusion of images
 
 \begin{document}
+\frontmatter
 \clearpage
 
 % Print the table of contents (without link boxes)
@@ -29,28 +30,24 @@
 \tableofcontents
 \clearpage
 
-% List the todos (comment this out in the final version!)
+% List the todos
 \listoftodos
-
-% Print the glossary and acronym
-\setglossarysection{section}
-\printglossaries
 
 % Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
 \renewcommand{\thechapter}{\Roman{chapter}}
 
-\input{notes/eg-x-model}
-
 \input{notes/greens_functions}
-
-\input{notes/dmft}
 
 \input{notes/superconductivity}
 
 \input{notes/d-wave-superconductivity}
 
 \input{notes/coherence_length_and_penetration_depth}
+
+\input{notes/dmft}
+
+\input{notes/eg-x-model}
 
 % Print the bibliography
 \cleardoublepage
@@ -60,4 +57,10 @@
 
 % Beginning of the backmatter
 \backmatter
+
+% Print list of symbols
+\setglossarysection{chapter}
+\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
+
+
 \end{document}

@@ -47,6 +47,13 @@ The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on t
     \vb{\delta}_{AA, 6} &= a \begin{pmatrix} \sin{(\frac{11\pi}{6})} \\ \cos{(\frac{11\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix}
 \end{align}
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/graphene brillouin_zone}
+    \caption{Graphene Brillouin Zone}
+    \label{fig:graphene Brillouin zone}
+\end{figure}
+
 The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
 \begin{align}
     \vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
@@ -65,20 +72,20 @@ Points of high symmetry in the Brillouin zone are:
     \mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
 \end{align}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/graphene brillouin_zone}
-    \caption{Graphene Brillouin Zone}
-    \label{fig:graphene Brillouin zone}
-\end{figure}
 
 \section{EG-X Model}\label{sec:eg-x-model}
 
 Graphene lattice and a site X\@.
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/eg-x lattice}
+    \caption{EG-X model}
+    \label{fig:eg-x model}
+\end{figure}
 Real-life motivation: layer of graphene on top of a substrate of another material (which provides the additional X atoms).
 There is no spin-orbit coupling considered in the model (according to Niklas) when mapping to substrates Sn or Pb, it could be necessary (but does not the qualitative result?).
 
-Without interaction:
+Without interaction \todo{Spin-orbit coupling, drop second spin index?}:
 \begin{equation}
     H_0 = -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}}
     -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} \left(
@@ -200,10 +207,28 @@ Values used for calculation:
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\textwidth]{notes/images/EG_X bands}
+    \includegraphics[width=\textwidth]{images/EG_X bands_tGr_1_tX_0.01}
     \caption{Bands of the non-interacting EG-X model. All the bands are spin-degenerate.}
     \label{fig:EG-X model non-interacting bands}
 \end{figure}
 
 \section{BCS Theory on the EG-X Model}\label{sec:bcs-theory-on-the-eg-x-model}
+
+Define sublattice index
+\begin{equation}
+    \alpha = 1, 2, 3
+\end{equation}
+with \(1 \hateq \mathrm{Gr}_1, 2 \hateq \mathrm{Gr}_2, 3 \hateq \mathrm{X}\).
+Then we can write the non-interacting term as
+\begin{equation}
+    H_0 = - \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
+\end{equation}
+with the matrix \todo{Does that make sense?}
+\begin{equation}
+    \mat{t} = \begin{pmatrix}
+                  0 & t_{\mathrm{Gr}} & 0 \\
+                  t_{\mathrm{Gr}} & 0 & -V \delta_{ij} \\
+                  0 & -V \delta_{ij} & t_{\mathrm{X}} \\
+    \end{pmatrix}
+\end{equation}
 

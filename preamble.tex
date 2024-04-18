@@ -183,8 +183,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setup of the glossary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[acronym, symbols]{glossaries}
-\makeglossaries
+\usepackage[symbols,nogroupskip,sort=use,indexonlyfirst]{glossaries-extra}
+\makenoidxglossaries
+\newglossarystyle{symbolstyle}{%
+ \setglossarystyle{long3col}% base it on the long3col style
+  \renewenvironment{theglossary}%
+    {\begin{longtable}{@{\extracolsep{\fill}}llc}}%
+    {\end{longtable}}%
+ \renewcommand*{\glossaryheader}{%
+  \bfseries Symbol&\bfseries Meaning&
+  \bfseries Definition\tabularnewline\endhead}%
+  \renewcommand{\glossentry}[2]{%
+    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
+    \glossentrydesc{##1} \glsentryuseri{##1} & ##2\tabularnewline
+  }%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % To put in todos

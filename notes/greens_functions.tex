@@ -2,15 +2,11 @@
 
 Source: \cite{Bruus_Flensberg_2004}
 
-From TRIQS tutorial:
-As you can see, the behavior of the imaginary part is very different for the two values of $U$. When
-$U$ is small, the system is a metal and the imaginary part extrapolated to zero goes to a finite value.
-Instead, for large $U$, the system is a Mott insulator and the imaginary part goes to zero. The reason
-is that the extrapolation to zero is directly proportional to the density of states at the chemical
-potential. If the system is gapped, the density is zero; if the system is a metal, there is spectral
-weight and the density is finite. Therefore, even on the Matsubara axis, one has a way to decide if the
-system is metallic or not.
+\todo{Definitions of GFs}
 
+\todo{Imaginary time and frequency}
+
+For doing calculations for finite temperatures: introduce imaginary time \gls{imaginary time}.
 
 Most general non-interacting electronic Hamiltonian in second quantization:
 \begin{equation}
@@ -19,6 +15,15 @@ Most general non-interacting electronic Hamiltonian in second quantization:
 with lattice coordinates \(i, j\) and spin \(\sigma\).
 
 \todo{Show how Green's functions can be used to describe many-body effects -> Spectral function, self-energy}
+
+From TRIQS tutorial:
+As you can see, the behavior of the imaginary part is very different for the two values of $U$. When
+$U$ is small, the system is a metal and the imaginary part extrapolated to zero goes to a finite value.
+Instead, for large $U$, the system is a Mott insulator and the imaginary part goes to zero. The reason
+is that the extrapolation to zero is directly proportional to the density of states at the chemical
+potential. If the system is gapped, the density is zero; if the system is a metal, there is spectral
+weight and the density is finite. Therefore, even on the Matsubara axis, one has a way to decide if the
+system is metallic or not. \todo{Source for that connection between self energy and DOS}
 
 One particle Green's function (many-body object, coming from the Hubbard model):
 \begin{equation}

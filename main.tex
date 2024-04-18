@@ -18,15 +18,15 @@
 \usepackage{subfiles}
 
 \begin{document}
-% Load the titlepage
-\subfile{titlepage.tex}
-
 % Start frontmatter: page numbering in small roman numerals, dont number chapters and sections
 \frontmatter
 
+% Load the titlepage
+\subfile{titlepage.tex}
+
 % List the todos (comment this out in the final version!)
-\listoftodos
-\clearpage
+%\listoftodos
+%\clearpage
 
 % Include the abstract
 \subfile{chapters/abstract.tex}
@@ -37,19 +37,13 @@
 \tableofcontents
 \clearpage
 
-% Print the glossary and acronym
-\setglossarysection{section}
-\printglossaries
-
 % Load motivation
 \subfile{chapters/motivation.tex}
+\newpage
 
 % Define the conventions in the work
-\section*{Conventions}
-Throughout the text of this thesis scalars are written in italic \(s\)s, and vectors in bold italic \(\vec{v}\).
-%Furthermore, Hartree atomic units are used in general and only in selected instances it is deviated from this: $\hbar = m_\mathrm{e} = \mathrm e = \nicefrac{4\pi}{\varepsilon_0} = 1$.
+\input{conventions}
 \newpage
-\nonfrenchspacing
 
 % Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
@@ -69,9 +63,14 @@ Throughout the text of this thesis scalars are written in italic \(s\)s, and vec
 % Beginning of the backmatter
 \backmatter
 
+% Print list of symbols
+\setglossarysection{chapter}
+\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
+%\printglossary[type=\acronymtype, title=List of Abbreviations]
+%\printglossary[type=\glossarytype, title=Glossary]
+
 % Include lists of the figures and tables (optional)
 %\chapter*{Listings}
-%\addcontentsline{toc}{chapter}{Listings}
 %\listoffigures
 %\listoftables
 
