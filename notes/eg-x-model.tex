@@ -214,6 +214,8 @@ Values used for calculation:
 
 \section{BCS Theory on the EG-X Model}\label{sec:bcs-theory-on-the-eg-x-model}
 
+\subsection{BdG Hamiltonian}
+
 Define sublattice index
 \begin{equation}
     \alpha = 1, 2, 3
@@ -232,3 +234,101 @@ with the matrix \todo{Does that make sense?}
     \end{pmatrix}
 \end{equation}
 
+Add chemical potential (to control filling):
+\begin{equation}
+    -\mu \sum_{i \alpha \sigma} n_{i \alpha \sigma}
+\end{equation}
+
+Also write the interaction part with \(\alpha\) (with changed signs -> to keep in line with papers about the attractive Hubbard model):
+\begin{equation}
+    H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow} c_{i\alpha \downarrow} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
+\end{equation}
+
+with Nambu spinor
+\begin{equation}
+    \Psi_{\vb{k}} =
+    \begin{pmatrix}
+        c_{1, \vb{k} \uparrow} \\
+        c_{2, \vb{k} \uparrow} \\
+        c_{3, \vb{k} \uparrow} \\
+        c_{1, -\vb{k} \downarrow}^{\dagger} \\
+        c_{2, -\vb{k} \downarrow}^{\dagger} \\
+        c_{3, -\vb{k} \downarrow}^{\dagger} \\
+    \end{pmatrix}
+\end{equation}
+we have:
+\begin{equation}
+    H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}
+\end{equation}
+with
+\begin{equation}
+    \mathcal{H} (\vb{k}) =
+    \begin{pmatrix}
+        H_{0, \uparrow} - \mu & \Delta \\
+        \Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
+    \end{pmatrix}
+\end{equation}
+with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
+
+\subsection{BdG Hamiltonian in band basis}
+
+Use transformation
+\begin{equation}
+    G =
+\end{equation}
+where the is made up of the eigenvectors of \(\mat{H}_{\sigma}\) for a given \(\vb{k}\):
+\begin{equation}
+    \mat{G} = 
+    \begin{pmatrix}
+        \vb{G}_1 & \vb{G}_2 & \vb{G}_3
+    \end{pmatrix}
+\end{equation}
+
+with that:
+\begin{equation}
+    \mat{G}^{\dagger}_{\sigma} (\vb{k}) \mat{H}_{\sigma} (\vb{k}) \mat{G}_{\sigma} (\vb{k}) =
+    \begin{pmatrix}
+        \epsilon_1 & 0 & 0 \\
+        0 & \epsilon_2 & 0 \\
+        0 & 0 & \epsilon_3
+    \end{pmatrix}
+\end{equation}
+
+So the 
+
+
+\subsection{Self-consistent calculation of the superconducting gaps}
+
+Compare~\cite[ch. 10]{Bruus_Flensberg_2004}.
+Notable here: Multiple bands, and the gaps in each band depend in a complicated manner on the parameters \(U_{\alpha}\) and the orbital Green's functions.
+
+Define normal Green's function:
+\begin{equation}
+    \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) = -\braket{T_{\tau} d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{equation}
+Anomalous Green's function:
+\begin{equation}
+    \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) = -\braket{T_{\tau} d_{n -\vb{k} \downarrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{equation}
+
+Equations of motion (Heisenberg equation), follow~\cite[ch. 17]{Bruus_Flensberg_2004}:
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) &= -\delta (\tau) + \braket{T_{\tau} \left[d_{n \vb{k} \uparrow}, H\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
+    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &= \braket{T_{\tau} \left[d_{n -\vb{k} \downarrow}, H\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{align}
+
+Calculate the commutators:
+\begin{align}
+    \left[ d \right]
+\end{align}
+
+All in all:
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &= -\delta(\tau) - \xi_{n \vb{k}} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
+    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \tau)
+\end{align}
+Fourier transform:
+\begin{align}
+    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &= -1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
+    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \tau)
+\end{align}
