@@ -234,15 +234,36 @@ with the matrix \todo{Does that make sense?}
     \end{pmatrix}
 \end{equation}
 
-Add chemical potential (to control filling):
+Add chemical potential (to control filling \(n = \frac{N_{\uparrow} + N_{\downarrow}}{N_{\mathrm{sites}}}\) ):
 \begin{equation}
     -\mu \sum_{i \alpha \sigma} n_{i \alpha \sigma}
 \end{equation}
 
 Also write the interaction part with \(\alpha\) (with changed signs -> to keep in line with papers about the attractive Hubbard model):
 \begin{equation}
-    H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow} c_{i\alpha \downarrow} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
+    H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
 \end{equation}
+Fourier transformation:
+\begin{equation}
+    H_{int} = - \frac{1}{N^2} \sum_{\alpha, \vb{k}_{1, 2, 3, 4}} U_{\alpha} e^{\iu (\vb{k}_1 + \vb{k}_4 - \vb{k}_1 - \vb{k}_3) r_{i \alpha}}  c_{\vb{k}_1 \alpha \uparrow}^{\dagger} c_{\vb{k}_3 \alpha \downarrow}^{\dagger} c_{\vb{k}_2 \alpha \downarrow} c_{\vb{k}_4 \alpha \uparrow}
+\end{equation}
+Imposing zero-momentum pairing: \(\vb{k}_1 + \vb{k}_3 = 0\) and \(\vb{k}_2 + \vb{k}_4 = 0\):
+\begin{align}
+    H_{int} = - \sum_{\alpha, \vb{k}, \vb{k}^{\prime}} U_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}
+\end{align}
+Mean-field approximation:
+\begin{align}
+    H_{int} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
+\end{align}
+with
+\begin{align}
+    \Delta_{\alpha} &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}} \\
+    \Delta_{\alpha}^* &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{\vb{k}^{\prime} \alpha \uparrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow}^{\dagger}}
+\end{align}
+This gives the BCS mean field Hamiltonian:
+\begin{align}
+    H_{BCS} =
+\end{align}
 
 with Nambu spinor
 \begin{equation}
@@ -329,6 +350,57 @@ All in all:
 \end{align}
 Fourier transform:
 \begin{align}
-    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &= -1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
-    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \tau)
+    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= -1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n) \\
+    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n)
+\end{align}
+This algebraic expression can be easily solved:
+\begin{align}
+    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}} (-1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n))
+\end{align}
+\begin{align}
+    (-\iu \omega_n - \xi_{n \vb{k}} - \frac{\vert\Delta_{n}\vert^2}{-\iu \omega_n + \xi_{n \vb{k}}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}} \\
+    (\frac{(-\iu \omega_n - \xi_{n \vb{k}} )(-\iu \omega_n + \xi_{n \vb{k}}) - \vert\Delta_{n}\vert^2}{-\iu \omega_n + \xi_{n \vb{k}}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}}
+\end{align}
+\begin{align}
+    \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{(-\iu \omega_n - \xi_{n \vb{k}} )(-\iu \omega_n + \xi_{n \vb{k}}) - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-\Delta_{n}^*}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-\Delta_{n}^*}{(\iu \omega_n)^2 - E_{n \vb{k}}}
+\end{align}
+\begin{align}
+    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= -1 + \frac{-\vert\Delta_{n}\vert^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-(\iu \omega_n)^2 + \xi_{n \vb{k}}^2 + \vert\Delta_{n}\vert^2 -\vert\Delta_{n}\vert^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-(\iu \omega_n)^2 + \xi_{n \vb{k}}^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{(\iu \omega_n + \xi_{n \vb{k}})(-\iu \omega_n + \xi_{n \vb{k}})}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2}
+\end{align}
+\begin{align}
+    \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - E_{n \vb{k}}}
+\end{align}
+with the energies \(E_{n \vb{k}} = \pm \sqrt{\xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2}\).
+
+To calculate the band gap in band \(n\):
+\begin{align}
+    \Delta_n (\vb{k}) &= -\sum_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \Delta_{\alpha} [G_{-k \downarrow}]_{\alpha n}^* \\
+    &= -\sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \braket{c_{-k^{\prime} \alpha \downarrow} c_{k^{\prime} \alpha \uparrow}} [G_{-k \downarrow}]_{\alpha n}^* \\
+    &= -\sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* \sum_{m} [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}}
+\end{align}
+Can now use \(\mathcal{F}\) and fourier-transform:
+\begin{align}
+    \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}} &= \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \tau = 0^+) \\
+    &= \frac{1}{\beta} \sum_{\iu \omega_n} e^{-\iu \omega_n 0^+} \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \iu \omega_n)
+\end{align}
+The summation over the Matsubara frequencies can be solved via the Residue theorem (the poles \(z_0\) of \(\mathcal{F}\) are the energies \(\pm E_{m \vb{k}}\)):
+\begin{align}
+    &\frac{1}{\beta} \sum_{\iu \omega_n} e^{-\iu \omega_n 0^+} \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \iu \omega_n) \\
+    &= \sum_{z_0 \text{poles of} \mathcal{F}} e^{-z_0 0^+} n_{F} (z_0) Res_{z_0} \mathcal{F}_{m \downarrow m \uparrow}^*  (\vb{k}^{\prime}, z_0) \\
+    &= e^{-E_{m \vb{k}} 0^+} n_{F} (E_{m \vb{k}}) Res_{E_{m \vb{k}}} \frac{-\Delta_{m}^*}{(\iu \omega_n)^2 - E_{m \vb{k}}}
+    + e^{E_{m \vb{k}} 0^+} n_{F} (-E_{m \vb{k}}) Res_{-E_{m \vb{k}}} \frac{-\Delta_{m}^*}{(\iu \omega_n)^2 - E_{m \vb{k}}}
+\end{align}
+with residue:
+\begin{equation}
+    Res_{E_{m \vb{k}}} \frac{1}{(\iu \omega_n)^2 - z_0^2} = \frac{1}{\pdif{z}\vert_{z_0 = E_{m \vb{k}}} ((\iu \omega)^2 - z_0^2)} = \frac{1}{2 E_{m \vb{k}}}
+\end{equation}
+So we have
+\begin{align}
+    \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}} &= -\Delta_m^* \left(\frac{n_F (E_{m \vb{k}})}{2 E_{m \vb{k}}} - \frac{n_F (-E_{m \vb{k}})}{2 E_{m \vb{k}}}\right)
 \end{align}
