@@ -262,9 +262,10 @@ with
 \end{align}
 This gives the BCS mean field Hamiltonian:
 \begin{align}
-    H_{BCS} =
+    H_{BCS} = \sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta} c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}
+    -\mu \sum_{\vb{k} \alpha \sigma} n_{\vb{k} \alpha \sigma}
+    + \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
 \end{align}
-
 with Nambu spinor
 \begin{equation}
     \Psi_{\vb{k}} =
@@ -285,7 +286,7 @@ with
 \begin{equation}
     \mathcal{H} (\vb{k}) =
     \begin{pmatrix}
-        H_{0, \uparrow} - \mu & \Delta \\
+        H_{0, \uparrow} (\vb{k}) - \mu & \Delta \\
         \Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
     \end{pmatrix}
 \end{equation}
@@ -295,9 +296,9 @@ with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\D
 
 Use transformation
 \begin{equation}
-    G =
+    c_{\vb{k} \alpha \sigma}^{\dagger} = \sum_{n} [\mat{G}]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
 \end{equation}
-where the is made up of the eigenvectors of \(\mat{H}_{\sigma}\) for a given \(\vb{k}\):
+where the columns are made up of the eigenvectors of \(\mat{H}_{0, \sigma}\) for a given \(\vb{k}\):
 \begin{equation}
     \mat{G} = 
     \begin{pmatrix}
@@ -307,16 +308,40 @@ where the is made up of the eigenvectors of \(\mat{H}_{\sigma}\) for a given \(\
 
 with that:
 \begin{equation}
-    \mat{G}^{\dagger}_{\sigma} (\vb{k}) \mat{H}_{\sigma} (\vb{k}) \mat{G}_{\sigma} (\vb{k}) =
+    \mat{G}^{\dagger}_{\sigma} (\vb{k}) \mat{H}_{0, \sigma} (\vb{k}) \mat{G}_{\sigma} (\vb{k}) =
     \begin{pmatrix}
         \epsilon_1 & 0 & 0 \\
         0 & \epsilon_2 & 0 \\
         0 & 0 & \epsilon_3
     \end{pmatrix}
 \end{equation}
-
-So the 
-
+So the kinetic part of the BdG Hamiltonian becomes:
+\begin{align}
+    &\sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta}
+    \sum_{n} [\mat{G} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
+    \sum_{m} [\mat{G} (\vb{k})]_{\beta m} d_{m \vb{k} \sigma}
+    -\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+    &= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma}
+   \sum_{\alpha \beta} [\mat{G} (\vb{k})]_{\alpha n}^* [H_{0, \sigma} (\vb{k})]_{\alpha \beta} [\mat{G} (\vb{k})]_{\beta m}
+    -\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+    &= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma} \epsilon_{n} \delta_{n m}
+    -\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+    &= \sum_{n \vb{k} \sigma} \epsilon_{n} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
+    -\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+    &\eqqcolon \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
+\end{align}
+with \(\xi_{\vb{k}} \coloneqq \epsilon_{\vb{k}} - \mu\).
+The pairing terms become (only looking at pairing of two electrons in the same band?):
+\begin{align}
+    \sum_{\vb{k} \alpha} \Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger}
+    &= \sum_{\vb{k} \alpha} \Delta_{\alpha} \sum_n [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \uparrow}^{\dagger} \sum_m [\mat{G}_{\downarrow} (-\vb{k})]_{\beta m}^* d_{m -\vb{k} \downarrow}^{\dagger} \\
+    &= -\sum_{n \vb{k}} \Delta_n d_{n \vb{k} \uparrow}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger}
+\end{align}
+with gap \(\Delta_n (\vb{k}) = -\sum_{\alpha} [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* \Delta_{\alpha} [\mat{G}_{\downarrow} (-\vb{k})]_{\alpha n}^*\) for band \(n\).
+\begin{align}
+    \sum_{\vb{k} \alpha} \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow}
+    &= -\sum_{n \vb{k}} \Delta_n^* d_{n -\vb{k} \downarrow} d_{n \vb{k} \uparrow}
+\end{align}
 
 \subsection{Self-consistent calculation of the superconducting gaps}
 
@@ -362,15 +387,47 @@ To calculate the commutators, use the relation (for operators \(A\), \(B\), \(C\
     &= - \xi_{n \vb{k}} d_{n \vb{k} \uparrow}^{\dagger}
 \end{align}
 
+\begin{align}
+    &\left[d_{n -\vb{k} \downarrow}, -\sum_{m \vb{k}^{\prime}} \Delta_{m}^* d_{m -\vb{k}^{\prime} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \right] \\
+    &= -\sum_{m \vb{k}^{\prime}} \Delta_{m}^*
+    \left(\{d_{n -\vb{k} \downarrow}, d_{m -\vb{k}^{\prime} \downarrow}\} - d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} \right) d_{m \vb{k}^{\prime} \uparrow} \\
+    &- d_{m -\vb{k}^{\prime} \downarrow} \left(\{ d_{m \vb{k}^{\prime} \uparrow}, d_{n -\vb{k} \downarrow}\} - d_{n -\vb{k} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \right) \\
+    &= -\sum_{m \vb{k}^{\prime}} \Delta_{m}^* \left( \delta_{n -\vb{k} \downarrow, m -\vb{k}^{\prime} \downarrow} - d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} \right) d_{m \vb{k}^{\prime} \uparrow} + d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \\
+    &= - \Delta_n^* d_{n \vb{k} \uparrow}
+\end{align}
+
+\begin{align}
+    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &=
+    -\xi_{n \vb{k}} \braket{T_{\tau} (d_{n -\vb{k} \downarrow}^{\dagger} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0))} - \Delta_n^* \braket{T_{\tau} (d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0))} \\
+    &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau)
+\end{align}
+
+Similarly:
+\begin{align}
+    \left[ d_{n -\vb{k} \uparrow}, H_0 \right]
+    &= \sum_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \xi_{n^{\prime} \vb{k}^{\prime}} \left[ d_{n -\vb{k} \downarrow}^{\dagger}, d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \right] \\
+    &= \xi_{n} d_{n \vb{k} \uparrow}^{\dagger}
+\end{align}
+\begin{align}
+    &\left[d_{n -\vb{k} \uparrow}, -\sum_{m \vb{k}^{\prime}} \Delta_{m} d_{m -\vb{k}^{\prime} \uparrow}^{\dagger} d_{m -\vb{k}^{\prime} \downarrow}^{\dagger} \right] \\
+    &= - \Delta_n d_{n -\vb{k} \downarrow}^{\dagger}
+\end{align}
+
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &=
+    -\delta(\tau) + \xi_{n \vb{k}} \braket{T_{\tau} d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger}} - \Delta_n \braket{T_{\tau} d_{n -\vb{k} \downarrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
+    &= -\delta(\tau) - \xi_{n \vb{k}} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
+\end{align}
+
 All in all:
 \begin{align}
     \pdif{\tau} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &= -\delta(\tau) - \xi_{n \vb{k}} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
-    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \tau)
+    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau)
 \end{align}
 Fourier transform:
 \begin{align}
     (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= -1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n) \\
-    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \Delta_{n}^* \mathcal{G}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n)
+    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \iu \omega_n)
 \end{align}
 This algebraic expression can be easily solved:
 \begin{align}
@@ -429,6 +486,14 @@ The \(n_F\) term can be written as:
     &= \frac{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime} }}}{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}} \frac{1}{e^{\beta E_{m \vb{k}^{\prime}}} + 1} - \frac{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}}{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}} \frac{1}{e^{-\beta E_{m \vb{k}^{\prime}}} + 1} \\
     &= \frac{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime}}} - e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}}{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}} + e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime} }}} \\
     &= -\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}
+\end{align}
+This results in the self-concistency equation for the gap:
+\begin{align}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{E_{m \vb{k}^{\prime}}}
+\end{align}
+Using time-reversal symmetry \([G_{-\vb{k} \downarrow}]_{\alpha m}^* = [G_{\vb{k} \uparrow}]_{\alpha m}\) this expression gets a bit simpler:
+\begin{align}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} \vert[G_{k \uparrow}]_{\alpha n} \vert^2 \vert[G_{k^{\prime} \uparrow}]_{\alpha m} \vert^2 \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{E_{m \vb{k}^{\prime}}}
 \end{align}
 
 \subsection{Computational Implementation}
