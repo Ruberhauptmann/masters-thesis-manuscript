@@ -72,7 +72,6 @@ Points of high symmetry in the Brillouin zone are:
     \mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
 \end{align}
 
-
 \section{EG-X Model}\label{sec:eg-x-model}
 
 Graphene lattice and a site X\@.
@@ -111,6 +110,10 @@ We can also introduce an onsite Hubbard interaction:
     H_{\mathrm{int}} = U_{\mathrm{X}} \sum_{i} d_{i, \uparrow}^{\dagger} d_{i, \downarrow}^{\dagger} d_{i, \downarrow} d_{i, \uparrow}
     + U_{\mathrm{Gr}} \sum_{i, \epsilon=A, B} c_{i, \uparrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{\epsilon} c_{i, \uparrow}^{\epsilon}
 \end{equation}
+
+\subsection{Review: Hubbard model on the honeycomb lattice}\label{subsec:review:-hubbard-model-on-the-honeycomb-lattice}
+
+\todo{Write review for Hubbard model on the honeycomb lattice}
 
 \subsection{Band structure of the non-interacting EG-X model}\label{subsec:band-structure-of-the-non-interacting-eg-x-model}
 
@@ -452,7 +455,7 @@ This algebraic expression can be easily solved:
     \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
     &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - E_{n \vb{k}}}
 \end{align}
-with the energies \(E_{n \vb{k}} = \pm \sqrt{\xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2}\).
+with the energies \(E_{n \vb{k}} = \pm \sqrt{\xi_{n \vb{k}}^2 + \vert\Delta_{n}\vert^2}\).
 
 To calculate the band gap in band \(n\):
 \begin{align}

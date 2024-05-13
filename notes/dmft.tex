@@ -4,4 +4,20 @@ Source: \citeauthor{Georges_Kotliar_Krauth_Rozenberg_1996} -~\citetitle{Georges_
 
 With help from~\cite{Schüler} and~\cite{Werner} to make it more concise.
 
+Most general non-interacting electronic Hamiltonian in second quantization:
+\begin{equation}
+    H_0 = \sum_{i, j, \sigma}
+\end{equation}
+with lattice coordinates \(i, j\) and spin \(\sigma\).
 
+One particle Green's function (many-body object, coming from the Hubbard model):
+\begin{equation}
+    G(\vb{k}, \iu \omega_n) = \frac{1}{\iu \omega_n + \mu - \epsilon_{\vb{k}} - \Sigma(\vb{k}, \iu \omega_n)}
+\end{equation}
+with the self energy \(\Sigma(\iu \omega_n)\) coming from the solution of the effect on-site problem:
+
+The Dyson equation
+\begin{equation}
+    G(\vb{k}, \iu \omega_n) = \left( G_0 (\vb{k}, \iu \omega_n) - \Sigma(\vb{k}, \iu \omega_n)\right)^{-1}
+\end{equation}
+relates the non-interacting Greens function \(G_0 (\vb{k}, \iu \omega_n)\) and the fully-interacting Greens function \(G (\vb{k}, \iu \omega_n)\) (inversion of a matrix!).
