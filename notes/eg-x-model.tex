@@ -1,12 +1,17 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+
+\begin{document}
+
 \chapter{EG-X Model}\label{ch:eg-x-model}
 
 \section{Lattice Structure of Graphene}\label{sec:lattice-structure-of-graphene}
 
-Following~\cite{Yang_Li_Lee_Ng_2018}.
+Structure of honeycomb lattice following~\cite{Yang_Li_Lee_Ng_2018}.
 
 Monolayer graphene forms a hexagonal lattice.
-This is formed by two triangular sub lattices.
-So in the unit cell of the hexagonal actually has two atoms.
+%This is formed by two triangular sub lattices.
+%So in the unit cell of the hexagonal actually has two atoms.
 
 Primitive lattice vectors of the hexagonal lattice:
 \begin{align}
@@ -82,21 +87,21 @@ Graphene lattice and a site X\@.
     \label{fig:eg-x model}
 \end{figure}
 Real-life motivation: layer of graphene on top of a substrate of another material (which provides the additional X atoms).
-There is no spin-orbit coupling considered in the model (according to Niklas) when mapping to substrates Sn or Pb, it could be necessary (but does not the qualitative result?).
+There is no spin-orbit coupling considered in the model (but when according to Niklas: when mapping to substrates Sn or Pb, it could be necessary (but does not the qualitative result?)).
 
 Without interaction \todo{Spin-orbit coupling, drop second spin index?}:
-\begin{equation}
-    H_0 = -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}}
+\begin{align}
+    H_0 &= -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}} + \mathrm{h.c.}
     -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} \left(
     c_{i, \sigma}^{(A), \dagger} c_{j, \sigma^{\prime}}^{(B)} +
-    c_{j, \sigma^{\prime}}^{(B), \dagger} c_{i, \sigma}^{(A)}
-    \right)
-    + V \sum_{i, \sigma \sigma^{\prime}} \left(
+    c_{j, \sigma^{\prime}}^{(B), \dagger} c_{i, \sigma}^{(A)} + \mathrm{h.c.}
+    \right) \\
+    &+ V \sum_{i, \sigma \sigma^{\prime}} \left(
     d_{i, \sigma}^{\dagger} c_{i, \sigma^{\prime}}^{(A)} +
     c_{i, \sigma}^{(A), \dagger} d_{i, \sigma^{\prime}}
     \right)
     \label{eq:EG-X model Hamiltonian non-interacting}
-\end{equation}
+\end{align}
 with:
 \begin{itemize}
     \item \(d\) operators on the X atom
@@ -120,8 +125,11 @@ We can also introduce an onsite Hubbard interaction:
 To treat eq.~\ref{eq:EG-X model Hamiltonian non-interacting}, we first write out the sums over nearest neighbours \(\langle i, j \rangle\) explicitly, writing \(\vb{\delta}_{\mathrm{X}}, \vb{\delta}_{\epsilon}\) (\(\epsilon = A, B\)) for the connections to the nearest neighbours of the \(\mathrm{X}\) atoms and Graphene \(A, B\) sites.
 Doing the calculation for the example of the \(\mathrm{X}\) atoms:
 \begin{align}
-    -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}}
-    &= -\frac{t_X}{2} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\delta_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \delta_{\mathrm{X}}, \sigma^{\prime}} \label{eq:EG-X model X atoms nearest neighbours written out} \\
+    &-t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} (d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}} + d_{j, \sigma}^{\dagger} d_{i, \sigma^{\prime}}) \\
+    &= -\frac{t_X}{2} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\delta_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \delta_{\mathrm{X}}, \sigma^{\prime}}
+    -\frac{t_X}{2} \sum_{j,\sigma, \sigma^{\prime}} \sum_{\delta_{\mathrm{X}}} d_{j, \sigma}^{\dagger} d_{j + \delta_{\mathrm{X}}, \sigma^{\prime}} \\
+    &= -t_X \sum_{i,\sigma, \sigma^{\prime}} \sum_{\delta_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \delta_{\mathrm{X}}, \sigma^{\prime}}
+    \label{eq:EG-X model X atoms nearest neighbours written out}
 \end{align}
 (The factor \(\nicefrac{1}{2}\) is to account for double counting when going to the sum over all lattice sites \(i\))
 
@@ -137,31 +145,31 @@ with the completeness relation:
 \end{equation}
 We get:
 \begin{align}
-    -\frac{t_X}{2} \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \vb{\delta}_{\mathrm{X}}, \sigma^{\prime}}
-    &= -\frac{t_X}{2} \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} \sum_{\vb{k}, \vb{k}^{\prime}} e^{-\iu \vb{k} \vb{r}_i} d_{\vb{k}, \sigma}^{\dagger} e^{\iu \vb{k}^{\prime} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \\
-    &= -\frac{t_X}{2} \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
-    &= -\frac{t_X}{2} \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} N \delta_{\vb{k}, \vb{k}^{\prime}} \\
-    &= -\frac{t_X}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
+    -t_X \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \vb{\delta}_{\mathrm{X}}, \sigma^{\prime}}
+    &= -t_X \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} \sum_{\vb{k}, \vb{k}^{\prime}} e^{-\iu \vb{k} \vb{r}_i} d_{\vb{k}, \sigma}^{\dagger} e^{\iu \vb{k}^{\prime} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \\
+    &= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
+    &= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} N \delta_{\vb{k}, \vb{k}^{\prime}} \\
+    &= -t_X \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
 \end{align}
 The nearest neighbours for \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from section~\ref{sec:lattice-structure-of-graphene}.
 With that, we can calculate:
 \begin{align}
-    f_{\mathrm{X}} (\vb{k}) &= -\frac{t_X}{2} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}} \\
-    &= -\frac{t_X}{2} \left( e^{\iu a (\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})}
+    f_{\mathrm{X}} (\vb{k}) &= -t_X \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}} \\
+    &= -t_X \left( e^{\iu a (\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})}
     + e^{\iu a k_x}
     + e^{\iu a (\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
     \right. \\
     &+ \left. e^{\iu a (-\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
     + e^{-\iu a k_x}
     + e^{\iu a (-\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})} \right) \\
-    &= -\frac{t_X}{2} \left( 2 \cos{(a k_x)} + 2 e^{\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} + 2 e^{-\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} \right) \\
-    &= -t_X \left( \cos{(a k_x)} + 2 \cos{(\frac{a}{2} k_x)} \cos{(\sqrt{3} \frac{ a}{2} k_y)} \right)
+    &= -t_X \left( 2 \cos{(a k_x)} + 2 e^{\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} + 2 e^{-\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} \right) \\
+    &= -2t_X \left( \cos{(a k_x)} + 2 \cos{(\frac{a}{2} k_x)} \cos{(\sqrt{3} \frac{ a}{2} k_y)} \right)
 \end{align}
 We can do the same for the hopping between Graphene sites, for example :
 \begin{align}
     -t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} c_{i, \sigma}^{(A), \dagger} c_{j, \sigma^{\prime}}^{(B)}
-    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(A), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
-    &= -\frac{t_{\mathrm{Gr}}}{2} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}}
+    &= -t_{\mathrm{Gr}} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(A), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
+    &= -t_{\mathrm{Gr}} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}}
 \end{align}
 We note
 \begin{align}
@@ -169,26 +177,24 @@ We note
 \end{align}
 and calculate
 \begin{align}
-    f_{Gr} &= -\frac{t_{Gr}}{2} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} \\
-    &= -\frac{t_{Gr}}{2} \left(
+    f_{Gr} &= -t_{Gr} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} \\
+    &= -t_{Gr} \left(
     e^{\iu \frac{a}{\sqrt{3}} k_y} +
     e^{\iu \frac{a}{2\sqrt{3}} (\sqrt{3} k_x - k_y)} +
     e^{\iu \frac{a}{2\sqrt{3}} (-\sqrt{3} k_x - k_y)} \right) \\
-    &= -\frac{t_{Gr}}{2} \left(
+    &= -t_{Gr} \left(
     e^{\iu \frac{a}{\sqrt{3}} k_y} +
     e^{-\iu \frac{a}{2\sqrt{3}} k_y} \left(
         e^{\iu \frac{a}{2} k_x} + e^{-\iu \frac{a}{2} k_x}
     \right) \right) \\
-    &= -\frac{t_{Gr}}{2} \left(
+    &= -t_{Gr} \left(
     e^{\iu \frac{a}{\sqrt{3}} k_y} +
     2 e^{-\iu \frac{a}{2\sqrt{3}} k_y}
     \cos{(\frac{a}{2} k_x)} \right)
 \end{align}
 All together, we get:
 \begin{align}
-    H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}}
-    \\
-    &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
+    H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
     \begin{pmatrix}
         0 & f_{Gr} & V \\
         f_{Gr}^* & 0 & 0 \\
@@ -206,7 +212,7 @@ Values used for calculation:
     \item \(t_{\mathrm{X}} = 0.01\)
 \end{itemize}
 \(V\) is the control parameter.
-(According to Niklas), a range from \(V = 0.1\) to \(V = 2\) can be crudely onto real experimental materials.
+(According to Niklas), a range from \(V = 0.1\) to \(V = 2\) can be mapped onto materials in experiment.
 
 \begin{figure}[t]
     \centering
@@ -237,12 +243,12 @@ with the matrix \todo{Does that make sense?}
     \end{pmatrix}
 \end{equation}
 
-Add chemical potential (to control filling \(n = \frac{N_{\uparrow} + N_{\downarrow}}{N_{\mathrm{sites}}}\) ):
+Add chemical potential:
 \begin{equation}
     -\mu \sum_{i \alpha \sigma} n_{i \alpha \sigma}
 \end{equation}
 
-Also write the interaction part with \(\alpha\) (with changed signs -> to keep in line with papers about the attractive Hubbard model):
+Also write the interaction part with \(\alpha\) (with changed signs compared to Niklas, to keep in line with papers about the attractive Hubbard model):
 \begin{equation}
     H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
 \end{equation}
@@ -250,7 +256,7 @@ Fourier transformation:
 \begin{equation}
     H_{int} = - \frac{1}{N^2} \sum_{\alpha, \vb{k}_{1, 2, 3, 4}} U_{\alpha} e^{\iu (\vb{k}_1 + \vb{k}_4 - \vb{k}_1 - \vb{k}_3) r_{i \alpha}}  c_{\vb{k}_1 \alpha \uparrow}^{\dagger} c_{\vb{k}_3 \alpha \downarrow}^{\dagger} c_{\vb{k}_2 \alpha \downarrow} c_{\vb{k}_4 \alpha \uparrow}
 \end{equation}
-Imposing zero-momentum pairing: \(\vb{k}_1 + \vb{k}_3 = 0\) and \(\vb{k}_2 + \vb{k}_4 = 0\):
+Impose zero-momentum pairing: \(\vb{k}_1 + \vb{k}_3 = 0\) and \(\vb{k}_2 + \vb{k}_4 = 0\):
 \begin{align}
     H_{int} = - \sum_{\alpha, \vb{k}, \vb{k}^{\prime}} U_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}
 \end{align}
@@ -334,7 +340,7 @@ So the kinetic part of the BdG Hamiltonian becomes:
     &\eqqcolon \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
 \end{align}
 with \(\xi_{\vb{k}} \coloneqq \epsilon_{\vb{k}} - \mu\).
-The pairing terms become (only looking at pairing of two electrons in the same band?):
+The pairing terms become (I set \(n = m\) here, which seems only sensible, but I dont have a real reason why?):
 \begin{align}
     \sum_{\vb{k} \alpha} \Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger}
     &= \sum_{\vb{k} \alpha} \Delta_{\alpha} \sum_n [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \uparrow}^{\dagger} \sum_m [\mat{G}_{\downarrow} (-\vb{k})]_{\beta m}^* d_{m -\vb{k} \downarrow}^{\dagger} \\
@@ -344,6 +350,12 @@ with gap \(\Delta_n (\vb{k}) = -\sum_{\alpha} [\mat{G}_{\uparrow} (\vb{k})]_{\al
 \begin{align}
     \sum_{\vb{k} \alpha} \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow}
     &= -\sum_{n \vb{k}} \Delta_n^* d_{n -\vb{k} \downarrow} d_{n \vb{k} \uparrow}
+\end{align}
+
+So the BdG Hamiltonian is:
+\begin{align}
+    H_{BdG} = \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
+    -\sum_{n \vb{k}} (\Delta_n^* d_{n -\vb{k} \downarrow} d_{n \vb{k} \uparrow} + \Delta_n d_{n \vb{k} \uparrow}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger})
 \end{align}
 
 \subsection{Self-consistent calculation of the superconducting gaps}
@@ -362,8 +374,8 @@ Anomalous Green's function:
 
 Equations of motion (Heisenberg equation), follow~\cite[ch. 17]{Bruus_Flensberg_2004}:
 \begin{align}
-    \pdif{\tau} \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) &= -\delta (\tau) + \braket{T_{\tau} \left[d_{n \vb{k} \uparrow}, H\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
-    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &= \braket{T_{\tau} \left[d_{n -\vb{k} \downarrow}, H\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+    \pdif{\tau} \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) &= -\delta (\tau) + \braket{T_{\tau} \left[d_{n \vb{k} \uparrow}, H_{BdG}\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
+    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &= \braket{T_{\tau} \left[d_{n -\vb{k} \downarrow}, H_{BdG}\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
 \end{align}
 
 To calculate the commutators, use the relation (for operators \(A\), \(B\), \(C\)):
@@ -460,8 +472,8 @@ with the energies \(E_{n \vb{k}} = \pm \sqrt{\xi_{n \vb{k}}^2 + \vert\Delta_{n}\
 To calculate the band gap in band \(n\):
 \begin{align}
     \Delta_n (\vb{k}) &= -\sum_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \Delta_{\alpha} [G_{-k \downarrow}]_{\alpha n}^* \\
-    &= -\sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \braket{c_{-k^{\prime} \alpha \downarrow} c_{k^{\prime} \alpha \uparrow}} [G_{-k \downarrow}]_{\alpha n}^* \\
-    &= -\sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* \sum_{m} [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}}
+    &= \sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \braket{c_{-k^{\prime} \alpha \downarrow} c_{k^{\prime} \alpha \uparrow}} [G_{-k \downarrow}]_{\alpha n}^* \\
+    &= \sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* \sum_{m} [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}}
 \end{align}
 Can now use \(\mathcal{F}\) and fourier-transform:
 \begin{align}
@@ -526,3 +538,5 @@ so that accessing a certain element takes the form:
     \Re{\Delta_n (\vb{k})} &= x\left[\mathrm{index}(\vb{k}) + \frac{\mathrm{len}(x) \cdot n}{6} \right] \\
     \Im{\Delta_n (\vb{k})} &= x\left[\mathrm{index}(\vb{k}) + \frac{\mathrm{len}(x) \cdot n}{6} + \frac{1}{2} \mathrm{len}(x) \right]
 \end{align}
+
+\end{document}

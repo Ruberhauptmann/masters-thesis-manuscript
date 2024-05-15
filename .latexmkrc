@@ -1,7 +1,6 @@
 @default_files = ('main.tex');
 
 $aux_dir = 'out';
-$emulate_aux = 1;
 $do_cd = 1;
 
 $pdflatex=q/xelatex -synctex=1 %O %S/;
