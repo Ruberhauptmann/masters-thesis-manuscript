@@ -504,11 +504,11 @@ The \(n_F\) term can be written as:
 \end{align}
 This results in the self-concistency equation for the gap:
 \begin{align}
-    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{E_{m \vb{k}^{\prime}}}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{2 E_{m \vb{k}^{\prime}}}
 \end{align}
 Using time-reversal symmetry \([G_{-\vb{k} \downarrow}]_{\alpha m}^* = [G_{\vb{k} \uparrow}]_{\alpha m}\) this expression gets a bit simpler:
 \begin{align}
-    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} \vert[G_{k \uparrow}]_{\alpha n} \vert^2 \vert[G_{k^{\prime} \uparrow}]_{\alpha m} \vert^2 \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{E_{m \vb{k}^{\prime}}}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} \vert[G_{k \uparrow}]_{\alpha n} \vert^2 \vert[G_{k^{\prime} \uparrow}]_{\alpha m} \vert^2 \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{2 E_{m \vb{k}^{\prime}}}
 \end{align}
 
 \subsection{Computational Implementation}
