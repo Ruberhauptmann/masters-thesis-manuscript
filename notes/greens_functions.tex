@@ -14,17 +14,35 @@ Have different kinds of Green's functions, for example the retarded Green's func
     G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (t^{\prime})\}}
 \end{equation}
 They give the amplitude of a particle inserted at point \(\vb{r}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{r}\) at time \(t\).
+For time-independent Hamiltonians and systems in equilibrium, the GFs only depend on time differences:
+\begin{equation}
+    G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = G^R (\vb{r} \sigma, \vb{r}^{\prime} \sigma^{\prime}, t - t^{\prime})
+\end{equation}
+So we can take \(t^{\prime} = 0\) and consider \(t\) as the only free variable:
+\begin{equation}
+    G^R (\vb{r}\sigma, \vb{r}^{\prime} \sigma^{\prime}, t) = -\iu \Theta(t) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (0)\}}
+\end{equation}
 In a translation invariant system: can use \(\vb{k}\) as a natural basis set:
 \begin{equation}
-    G^R (\vb{k}, \sigma t, \sigma^{\prime} t^{\prime}) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma}^{\dagger} (t^{\prime})\}}
+    G^R (\vb{k}, \sigma, \sigma^{\prime} t) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma^{\prime}}^{\dagger} (0)\}}
+\end{equation}
+Define Fourier-transform:
+\begin{equation}
+    G^R (\vb{k}, \sigma, \sigma^{\prime}, \omega) = \int_{-\infty}^{\infty} \odif{t} G^R (\vb{k}, \sigma, \sigma^{\prime} t)
 \end{equation}
 Can define the spectral function from this:
 \begin{equation}
     A(\vb{k} \sigma, \omega) = -2 \Im G^R (\vb{k} \sigma, \omega)
 \end{equation}
-\todo{Energy dependent retarded GF}
+Looking at the diagonal elements of \(G^R\) here.
+The spectral function can be thought of as the energy resolution of a particle with energy \(\omega\).
+This mean, for non-interacting systems, the spectral function is a delta-function around the single-particle energies:
+\begin{equation}
+    A_0 (\vb{k} \sigma, \omega) = 2\pi \delta (\omega - \epsilon_{\vb{k} \sigma})
+\end{equation}
+For interacting systems this is not true, but \(A\) can still be peaked.
 
-\todo{Show GFs can be relatex to observables}
+\todo{Show GFs can be related to observables}
 
 Mathematical technique to calculate retarded GFs involves defining GFs on imaginary times \gls{imaginary time}:
 \begin{equation}
@@ -32,8 +50,6 @@ Mathematical technique to calculate retarded GFs involves defining GFs on imagin
 \end{equation}
 where \(\tau\) is real and has the dimension time.
 This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
-
-\todo{Definitions of Matsubara GFs}
 
 Define imaginary time/Matsubara GF \gls{matsubara correlation function}:
 \begin{equation}
@@ -70,7 +86,19 @@ Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Mats
 
 \todo{equations of motion for Matsubara GF}
 
-\todo{A bit of perturbation theory -> Dyson equation and self-energy}
+
+\section{Perturbation theory, Dyson equation}
+
+\todo{Short introduction to diagrams}
+
+\todo{Self energy}
+
+\todo{Dyson equation}
+
+Dyson equation:
+\begin{equation}
+    \mathcal{G}_{\sigma} (\vb{k}, \iu \omega_n) = \frac{\mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n)}{1 - \mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n) \Sigma_{\sigma} (\vb{k}, \iu \omega_n)} = \frac{1}{\iu \omega_n - \xi_{\vb{k} - \Sigma_{\sigma} (\vb{k}, \iu \omega_n)}}
+\end{equation}
 
 
 \section{Nambu-Gorkov GF}
