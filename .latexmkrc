@@ -1,8 +1,6 @@
 @default_files = ('main.tex');
 
-$aux_dir = 'out';
 $do_cd = 1;
 
-$pdflatex=q/xelatex -synctex=1 %O %S/;
-$pdf_mode = 1;
+$pdf_mode = 5;
 $dvi_mode = $postscript_mode = 0;

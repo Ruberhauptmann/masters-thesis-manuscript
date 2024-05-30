@@ -1,0 +1,193 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+
+\begin{document}
+
+\chapter{EG-X Model - Trying BCS theory}
+
+\section{BCS Theory on the EG-X Model}\label{sec:bcs-theory-on-the-eg-x-model}
+
+\subsection{Self-consistent calculation of the superconducting gaps}
+
+\textbf{This does not really work! I neglect interband pairing at some point, so i throw away 6 out of 9 gap equations I have, also the GF ansatz works with diagonal Matsubara GFs, so I dont think it works here.}
+
+Compare~\cite[ch. 10]{Bruus_Flensberg_2004}.
+Notable here: Multiple bands, and the gaps in each band depend in a complicated manner on the parameters \(U_{\alpha}\) and the orbital Green's functions.
+
+Define normal Green's function:
+\begin{equation}
+    \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) = -\braket{T_{\tau} d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{equation}
+Anomalous Green's function:
+\begin{equation}
+    \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) = -\braket{T_{\tau} d_{n -\vb{k} \downarrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{equation}
+
+Equations of motion (Heisenberg equation), follow~\cite[ch. 17]{Bruus_Flensberg_2004}:
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau) &= -\delta (\tau) + \braket{T_{\tau} \left[d_{n \vb{k} \uparrow}, H_{BdG}\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
+    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &= \braket{T_{\tau} \left[d_{n -\vb{k} \downarrow}, H_{BdG}\right] (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)}
+\end{align}
+
+To calculate the commutators, use the relation (for operators \(A\), \(B\), \(C\)):
+\begin{align}
+    [A, BC] = ABC - BCA = (\{A, B\} - BA) C - B(\{C, A\} - AC)
+\end{align}
+
+\begin{align}
+    \left[ d_{n -\vb{k} \downarrow}^{\dagger}, H_0 \right]
+    &= \sum_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \xi_{n^{\prime} \vb{k}^{\prime}} \left[ d_{n -\vb{k} \downarrow}^{\dagger}, d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \right] \\
+    &= \sum_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \xi_{n^{\prime} \vb{k}^{\prime}}
+    \left(
+        \{d_{n -\vb{k} \downarrow}^{\dagger}, d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} \} - d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger}
+    \right) d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \\
+    &- d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger}
+    \left(
+        \{ d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}, d_{n -\vb{k} \downarrow}^{\dagger} \} - d_{n -\vb{k} \downarrow}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}
+    \right) \\
+    &= \sum_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \xi_{n^{\prime} \vb{k}^{\prime}}
+    \left(- d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}
+    - d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger}
+    \delta_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}, n -\vb{k} \uparrow}
+    + d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \right) \\
+    &= - \xi_{n \vb{k}} d_{n \vb{k} \uparrow}^{\dagger}
+\end{align}
+
+\begin{align}
+    &\left[d_{n -\vb{k} \downarrow}, -\sum_{m \vb{k}^{\prime}} \Delta_{m}^* d_{m -\vb{k}^{\prime} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \right] \\
+    &= -\sum_{m \vb{k}^{\prime}} \Delta_{m}^*
+    \left(\{d_{n -\vb{k} \downarrow}, d_{m -\vb{k}^{\prime} \downarrow}\} - d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} \right) d_{m \vb{k}^{\prime} \uparrow} \\
+    &- d_{m -\vb{k}^{\prime} \downarrow} \left(\{ d_{m \vb{k}^{\prime} \uparrow}, d_{n -\vb{k} \downarrow}\} - d_{n -\vb{k} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \right) \\
+    &= -\sum_{m \vb{k}^{\prime}} \Delta_{m}^* \left( \delta_{n -\vb{k} \downarrow, m -\vb{k}^{\prime} \downarrow} - d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} \right) d_{m \vb{k}^{\prime} \uparrow} + d_{m -\vb{k}^{\prime} \downarrow} d_{n -\vb{k} \downarrow} d_{m \vb{k}^{\prime} \uparrow} \\
+    &= - \Delta_n^* d_{n \vb{k} \uparrow}
+\end{align}
+
+\begin{align}
+    \pdif{\tau} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) &=
+    -\xi_{n \vb{k}} \braket{T_{\tau} (d_{n -\vb{k} \downarrow}^{\dagger} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0))} - \Delta_n^* \braket{T_{\tau} (d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0))} \\
+    &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau)
+\end{align}
+
+Similarly:
+\begin{align}
+    \left[ d_{n -\vb{k} \uparrow}, H_0 \right]
+    &= \sum_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \xi_{n^{\prime} \vb{k}^{\prime}} \left[ d_{n -\vb{k} \downarrow}^{\dagger}, d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}}^{\dagger} d_{n^{\prime} \vb{k}^{\prime} \sigma^{\prime}} \right] \\
+    &= \xi_{n} d_{n \vb{k} \uparrow}^{\dagger}
+\end{align}
+\begin{align}
+    &\left[d_{n -\vb{k} \uparrow}, -\sum_{m \vb{k}^{\prime}} \Delta_{m} d_{m -\vb{k}^{\prime} \uparrow}^{\dagger} d_{m -\vb{k}^{\prime} \downarrow}^{\dagger} \right] \\
+    &= - \Delta_n d_{n -\vb{k} \downarrow}^{\dagger}
+\end{align}
+
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &=
+    -\delta(\tau) + \xi_{n \vb{k}} \braket{T_{\tau} d_{n \vb{k} \uparrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger}} - \Delta_n \braket{T_{\tau} d_{n -\vb{k} \downarrow} (\tau) d_{n \vb{k} \uparrow}^{\dagger} (0)} \\
+    &= -\delta(\tau) - \xi_{n \vb{k}} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
+\end{align}
+
+All in all:
+\begin{align}
+    \pdif{\tau} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) &= -\delta(\tau) - \xi_{n \vb{k}} \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \tau) + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \tau) \\
+    \pdif{\tau} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) &= \xi_{n \vb{k}} \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \tau) + \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \tau)
+\end{align}
+Fourier transform:
+\begin{align}
+    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= -1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n) \\
+    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \Delta_{n}^* \mathcal{G}_{n\uparrow n\uparrow} (\vb{k}, \iu \omega_n)
+\end{align}
+This algebraic expression can be easily solved:
+\begin{align}
+    (-\iu \omega_n - \xi_{n \vb{k}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}} (-1 + \Delta_{n} \mathcal{F}_{n\downarrow n\uparrow} (\vb{k}, \iu \omega_n))
+\end{align}
+\begin{align}
+    (-\iu \omega_n - \xi_{n \vb{k}} - \frac{\vert\Delta_{n}\vert^2}{-\iu \omega_n + \xi_{n \vb{k}}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}} \\
+    (\frac{(-\iu \omega_n - \xi_{n \vb{k}} )(-\iu \omega_n + \xi_{n \vb{k}}) - \vert\Delta_{n}\vert^2}{-\iu \omega_n + \xi_{n \vb{k}}}) \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{-\iu \omega_n + \xi_{n \vb{k}}}
+\end{align}
+\begin{align}
+    \mathcal{F}_{n \downarrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{-\Delta_{n}^*}{(-\iu \omega_n - \xi_{n \vb{k}} )(-\iu \omega_n + \xi_{n \vb{k}}) - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-\Delta_{n}^*}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-\Delta_{n}^*}{(\iu \omega_n)^2 - E_{n \vb{k}}}
+\end{align}
+\begin{align}
+    (-\iu \omega_n + \xi_{n \vb{k}}) \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= -1 + \frac{-\vert\Delta_{n}\vert^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-(\iu \omega_n)^2 + \xi_{n \vb{k}}^2 + \vert\Delta_{n}\vert^2 -\vert\Delta_{n}\vert^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{-(\iu \omega_n)^2 + \xi_{n \vb{k}}^2}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{(\iu \omega_n + \xi_{n \vb{k}})(-\iu \omega_n + \xi_{n \vb{k}})}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2}
+\end{align}
+\begin{align}
+    \mathcal{G}_{n \uparrow n \uparrow} (\vb{k}, \iu \omega_n) &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - \xi_{n \vb{k}}^2 - \vert\Delta_{n}\vert^2} \\
+    &= \frac{\iu \omega + \xi_{n \vb{k}}}{(\iu \omega_n)^2 - E_{n \vb{k}}}
+\end{align}
+with the energies \(E_{n \vb{k}} = \pm \sqrt{\xi_{n \vb{k}}^2 + \vert\Delta_{n}\vert^2}\).
+
+To calculate the band gap in band \(n\):
+\begin{align}
+    \Delta_n (\vb{k}) &= -\sum_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \Delta_{\alpha} [G_{-k \downarrow}]_{\alpha n}^* \\
+    &= \sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* \braket{c_{-k^{\prime} \alpha \downarrow} c_{k^{\prime} \alpha \uparrow}} [G_{-k \downarrow}]_{\alpha n}^* \\
+    &= \sum_{\alpha \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* \sum_{m} [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}}
+\end{align}
+Can now use \(\mathcal{F}\) and fourier-transform:
+\begin{align}
+    \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}} &= \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \tau = 0^+) \\
+    &= \frac{1}{\beta} \sum_{\iu \omega_n} e^{-\iu \omega_n 0^+} \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \iu \omega_n)
+\end{align}
+The summation over the Matsubara frequencies can be solved via the Residue theorem (the poles \(z_0\) of \(\mathcal{F}\) are the energies \(\pm E_{m \vb{k}}\)):
+\begin{align}
+    &\frac{1}{\beta} \sum_{\iu \omega_n} e^{-\iu \omega_n 0^+} \mathcal{F}_{m \downarrow m \uparrow}^* (\vb{k}^{\prime}, \iu \omega_n) \\
+    &= \sum_{z_0 \mathrm{poles of} \mathcal{F}} e^{-z_0 0^+} n_{F} (z_0) Res_{z_0} \mathcal{F}_{m \downarrow m \uparrow}^*  (\vb{k}^{\prime}, z_0) \\
+    &= e^{-E_{m \vb{k}} 0^+} n_{F} (E_{m \vb{k}}) Res_{E_{m \vb{k}}} \frac{-\Delta_{m}}{(\iu \omega_n)^2 - E_{m \vb{k}}}
+    + e^{E_{m \vb{k}} 0^+} n_{F} (-E_{m \vb{k}}) Res_{-E_{m \vb{k}}} \frac{-\Delta_{m}}{(\iu \omega_n)^2 - E_{m \vb{k}}}
+\end{align}
+with residue:
+\begin{equation}
+    Res_{E_{m \vb{k}}} \frac{1}{(\iu \omega_n)^2 - z_0^2} = \frac{1}{\pdif{z}\vert_{z_0 = E_{m \vb{k}}} ((\iu \omega)^2 - z_0^2)} = \frac{1}{2 E_{m \vb{k}}}
+\end{equation}
+So we have
+\begin{align}
+    \braket{d_{-k^{\prime} m \downarrow} d_{k^{\prime} m \uparrow}} &= -\Delta_m \left(\frac{n_F (E_{m \vb{k}})}{2 E_{m \vb{k}}} - \frac{n_F (-E_{m \vb{k}})}{2 E_{m \vb{k}}}\right)
+\end{align}
+The \(n_F\) term can be written as:
+\begin{align}
+    n_F(E_{m \vb{k}^{\prime}}) - n_F(-E_{m \vb{k}^{\prime}}) &= \frac{1}{e^{\beta E_{m \vb{k}^{\prime}}} + 1} - \frac{1}{e^{-\beta E_{m \vb{k}^{\prime}}} + 1} \\
+    &= \frac{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime} }}}{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}} \frac{1}{e^{\beta E_{m \vb{k}^{\prime}}} + 1} - \frac{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}}{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}} \frac{1}{e^{-\beta E_{m \vb{k}^{\prime}}} + 1} \\
+    &= \frac{e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime}}} - e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}}}{e^{\frac{1}{2} \beta E_{m \vb{k}^{\prime}}} + e^{-\frac{1}{2} \beta E_{m \vb{k}^{\prime} }}} \\
+    &= -\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}
+\end{align}
+This results in the self-concistency equation for the gap:
+\begin{align}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} [G_{k \uparrow}]_{\alpha n}^* [G_{-k \downarrow}]_{\alpha n}^* [G_{-k^{\prime} \downarrow}]_{\alpha m} [G_{k^{\prime} \uparrow}]_{\alpha m} \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{2 E_{m \vb{k}^{\prime}}}
+\end{align}
+Using time-reversal symmetry \([G_{-\vb{k} \downarrow}]_{\alpha m}^* = [G_{\vb{k} \uparrow}]_{\alpha m}\) this expression gets a bit simpler:
+\begin{align}
+    \Delta_n (\vb{k}) = \sum_{\alpha m \vb{k}^{\prime}} U_{\alpha} \vert[G_{k \uparrow}]_{\alpha n} \vert^2 \vert[G_{k^{\prime} \uparrow}]_{\alpha m} \vert^2 \Delta_{m} (\vb{k}^{\prime}) \frac{\tanh{(\frac{\beta E_{m \vb{k}^{\prime}}}{2})}}{2 E_{m \vb{k}^{\prime}}}
+\end{align}
+
+\subsection{Computational Implementation}
+
+Use scipys \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fixed_point.html}{\texttt{fixed\_point}} solver to solve the gap equation self-consistently.
+
+Flatten \(\Delta_n (\vb{k})\) the following way, to put it into the solver (\(\vb{k}\) discretized in some way):
+\begin{equation}
+    x = \begin{pmatrix}
+        \Re{(\Delta_1 (\vb{k}_1))} \\
+        \Re{(\Delta_1 (\vb{k}_2))} \\
+        \vdots \\
+        \Re{(\Delta_2(\vb{k}_1))} \\
+        \vdots \\
+        \Re{(\Delta_3(\vb{k}_1))} \\
+        \vdots \\
+        \Im{(\Delta_1(\vb{k}_1))} \\
+        \vdots \\
+        \Im{(\Delta_2(\vb{k}_1))} \\
+        \vdots \\
+        \Im{(\Delta_3(\vb{k}_1))} \\
+        \vdots \\
+    \end{pmatrix}
+\end{equation}
+so that accessing a certain element takes the form:
+\begin{align}
+    \Re{\Delta_n (\vb{k})} &= x\left[\mathrm{index}(\vb{k}) + \frac{\mathrm{len}(x) \cdot n}{6} \right] \\
+    \Im{\Delta_n (\vb{k})} &= x\left[\mathrm{index}(\vb{k}) + \frac{\mathrm{len}(x) \cdot n}{6} + \frac{1}{2} \mathrm{len}(x) \right]
+\end{align}
+
+\end{document}

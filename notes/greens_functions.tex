@@ -55,7 +55,11 @@ Define imaginary time/Matsubara GF \gls{matsubara correlation function}:
 \begin{equation}
     \mathcal{C}_{A B} (\tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
 \end{equation}
-with time-ordering operator in imaginary time: \todo{ordering operator}
+with time-ordering operator in imaginary time:
+\begin{equation}
+    T_{\tau} (A(\tau) B(\tau^{\prime})) = \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau)
+\end{equation}
+so that operators with later `times' go to the left.
 
 Can prove from properties of Matsubara GF, that they are only defined for
 \begin{equation}
@@ -76,16 +80,17 @@ with fermionic/bosonic Matsubara frequencies
 
 \todo{How to resolve ambiguity at borders of integral}
 
-\todo{Connection to real-time GFs}
-
-Extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
+It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
+So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
+\begin{equation}
+    \mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
+\end{equation}
+So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
 Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value) ~\cite[8.3.4]{Bruus_Flensberg_2004}.
-
 
 \todo{single-particle Matsubara GF}
 
 \todo{equations of motion for Matsubara GF}
-
 
 \section{Perturbation theory, Dyson equation}
 
@@ -102,6 +107,8 @@ Dyson equation:
 
 
 \section{Nambu-Gorkov GF}
+
+Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
 
 \todo{More general introduction into NG GFs, how they look like, what they describe etc.}
 
