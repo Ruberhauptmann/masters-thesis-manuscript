@@ -18,7 +18,7 @@ Then we can write the non-interacting term as
 \begin{equation}
     H_0 = - \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
 \end{equation}
-with the matrix \todo{Does that make sense?}
+with the matrix
 \begin{equation}
     \mat{t} = \begin{pmatrix}
                   0 & t_{\mathrm{Gr}} & 0 \\
@@ -124,22 +124,94 @@ So the kinetic part of the BdG Hamiltonian becomes:
     &\eqqcolon \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
 \end{align}
 with \(\xi_{\vb{k}} \coloneqq \epsilon_{\vb{k}} - \mu\).
-The pairing terms become (I set \(n = m\) here, which seems only sensible, but I dont have a real reason why?):
+The pairing terms become:
 \begin{align}
     \sum_{\vb{k} \alpha} \Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger}
     &= \sum_{\vb{k} \alpha} \Delta_{\alpha} \sum_n [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \uparrow}^{\dagger} \sum_m [\mat{G}_{\downarrow} (-\vb{k})]_{\beta m}^* d_{m -\vb{k} \downarrow}^{\dagger} \\
-    &= -\sum_{n \vb{k}} \Delta_n d_{n \vb{k} \uparrow}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger}
-\end{align}
-with gap \(\Delta_n (\vb{k}) = -\sum_{\alpha} [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* \Delta_{\alpha} [\mat{G}_{\downarrow} (-\vb{k})]_{\alpha n}^*\) for band \(n\).
-\begin{align}
-    \sum_{\vb{k} \alpha} \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow}
-    &= -\sum_{n \vb{k}} \Delta_n^* d_{n -\vb{k} \downarrow} d_{n \vb{k} \uparrow}
+    &=
 \end{align}
 
-So the BdG Hamiltonian is:
+So that:
+\begin{equation}
+    \mathcal{H} (\vb{k}) =
+    \begin{pmatrix}
+        \epsilon_{\vb{k}} - \mu & G^{\dagger} \Delta G\\
+        G^{\dagger} \Delta^{\dagger} G & -\epsilon_{\vb{k}} + \mu
+    \end{pmatrix}
+\end{equation}
+with
+\begin{equation}
+    \epsilon_{\vb{k}} =
+    \begin{pmatrix}
+        \epsilon_1 (\vb{k}) & 0 & 0 \\
+        0 & \epsilon_2 (\vb{k}) & 0 \\
+        0 & 0 & \epsilon_3 (\vb{k}) \\
+    \end{pmatrix}
+\end{equation}
+
+Concrete example for transformation of gaps from orbital to band basis at \(\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\).
+There, the non-interacting part becomes simply:
 \begin{align}
-    H_{BdG} = \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
-    -\sum_{n \vb{k}} (\Delta_n^* d_{n -\vb{k} \downarrow} d_{n \vb{k} \uparrow} + \Delta_n d_{n \vb{k} \uparrow}^{\dagger} d_{n -\vb{k} \downarrow}^{\dagger})
+\mathcal{H}_0 &=
+\begin{pmatrix}
+    0 & 0 & V \\
+    0 & 0 & 0 \\
+    V & 0 & 3 t_X
+\end{pmatrix}
 \end{align}
+The eigenvalue problem can be solved e.g.~via sympy:
+\begin{equation}
+   G =
+   \begin{pmatrix}
+       \frac{- 3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{- 3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} \\
+       0 & 1 & 0 \\
+       \frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}}
+   \end{pmatrix}
+\end{equation}
+So for \(V \to 0\):
+\begin{equation}
+    G =
+    \begin{pmatrix}
+        -1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{pmatrix}
+\end{equation}
+but for \(V > 0\), there are off-diagonal elements, e.g.~\(V = 0.1\):
+\begin{equation}
+    G =
+    \begin{pmatrix}
+        -0.7578 & 0 & 0.6526 \\
+        0 & 1 & 0 \\
+        0.6526 & 0 & 0.7578
+    \end{pmatrix}
+\end{equation}
+So the transformation of the gap from orbital to band space reads:
+\begin{equation}
+    G^{\dagger} \Delta G =
+    \begin{pmatrix}
+       \frac{3 \Delta_{1} t_{X} - 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} \\
+       0 & \Delta_{2} & 0 \\
+       \frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{- 3 \Delta_{1} t_{X} + 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}}
+   \end{pmatrix}
+\end{equation}
+So in particular there is no interband pairing for \(V \to 0\):
+\begin{equation}
+    G^{\dagger} \Delta G =
+    \begin{pmatrix}
+        \Delta_1 & 0 & 0 \\
+        0 & \Delta_{2} & 0 \\
+        0 & 0 & \Delta_3
+    \end{pmatrix}
+\end{equation}
+But for \(V > 0\), there is interband pairing (e.g. \(V = 0.1\)):
+\begin{equation}
+    G^{\dagger} \Delta G =
+    \begin{pmatrix}
+        0.5742 \Delta_{1} + 0.4258 \Delta_{3} & 0 & - 0.4945 \Delta_{1} + 0.4945 \Delta_{3} \\
+        0 & \Delta_{2} & 0 \\
+        - 0.4945 \Delta_{1} + 0.4945 \Delta_{3} & 0 & 0.4258 \Delta_{1} + 0.5742 \Delta_{3}
+    \end{pmatrix}
+\end{equation}
 
 \end{document}

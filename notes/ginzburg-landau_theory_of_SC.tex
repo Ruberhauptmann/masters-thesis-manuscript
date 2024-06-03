@@ -2,9 +2,12 @@
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
-\chapter{Coherence length and penetration depth in strongly correlated superconductors}\label{ch:coherence-length-and-penetration-depth-in-strongly-correlated-superconductors}
 
-\todo{Put in source}
+\chapter{Ginzburg-Landau theory of superconductivity}
+
+\section{Coherence length and penetration depth in strongly correlated superconductors}
+
+\cite{wittBypassingLatticeBCSBEC2024}
 
 Order parameter (OP) of a superconducting condensate with FMP has the form
 \begin{equation}
@@ -71,6 +74,8 @@ The order parameter description is good at length scales above \(\xi_0\), the co
 
 \subsection{Landau theory}
 
+\todo{Rest of Landau theory}
+
 Landau theory
 
 Going from a one to a \(n\)-component order parameters, we can actually
@@ -100,7 +105,15 @@ Will see later: well-defined phase is associated with persistent currents or sup
 
 \subsection{Ginzburg-Landau theory I: Ising order}
 
-\todo{Short introduction for one-component order parameter, so the connection to complex order parameters gets clear}
+Landau theory: energy cost of a uniform order parameter, more general theory needs to account for inhomogenous order parameters, in which the amplitude varies or direction of order parameter is twisted -> GL theory.
+First: one-component, `Ising' order parameter.
+GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), \(f_{GL} [\psi, \Delta \psi] = \frac{s}{2} \vert \Delta \psi \vert^2 + f_L [\psi(s)]\), or in full:
+\begin{equation}
+    f_{GL} [\psi, \Delta \psi, h] = \frac{s}{2} (\Delta \psi)^2 + \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4 - h \psi
+\end{equation}
+\todo{What is the \(h\) here?}
+GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
+\todo{length scale/correlation length}
 
 \subsection{Ginzburg-Landau theory II: complex order and superflow}
 
@@ -111,10 +124,10 @@ Heart of discussion: emergence of a `macroscopic wavefunction', where the micros
     \braket{\psi (x)} = \psi (x) = \vert \psi (x) \vert e^{\iu \theta(x)}
 \end{equation}
 Magnitude determines density of particles in the superfluid:
+\todo{More info on that? Does that come later in chapter?}
 \begin{equation}
     \vert \psi(x) \vert^2 = n_s (x)
 \end{equation}
-\todo{More info on that? Does that come later in chapter?}
 Twist/gradient of phase determines superfluid velocity:
 \begin{equation}
     \vb{v}_s (x) = \frac{\hbar}{m} \Delta \phi (x)
@@ -123,7 +136,32 @@ We will derive this later in the chapter.
 Counterintuitive from quantum mechanics: GL suggested that \(\Phi(x)\) is a macroscopic manifestation of a macroscopic number of particles condensed into precisely the same quantum state.
 Emergent phenomenon, collective properties of mater not a-priori self-evident from microscopic physics.
 
-\todo{Here: rest of notes from Goodnotes}
+GL free energy density for superfluid (with one added term in comparison to Landau energy):
+\begin{equation}
+    f_{GL} [\psi, \Delta \psi] = \frac{\hbar^2}{2m} \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
+\end{equation}
+Interpreted as energy density of a condensate of bosons in which the field operator behaves as a complex order parameter.
+\todo{energy density of bosonic field? -> for comparison!}
+Gives interpretation of gradient term as kinetic energy:
+\begin{equation}
+    s \vert \Delta \psi \vert^2 = \frac{\hbar^2}{2m} \braket{\Delta \hat{\psi}^{\dagger} \Delta \hat{\psi}} \implies s = \frac{\hbar^2}{2m}
+\end{equation}
+As in Ising order: correlation length/GL-coherence length governs characteristic range of amplitude fluctuations of the order parameter:
+\begin{equation}
+    \xi = \sqrt{\frac{s}{\vert r \vert}} = \sqrt{\frac{\hbar^2}{2m \vert r \vert}} = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
+\end{equation}
+\todo{Compare with Ising order, especially dependence on \(T\)}
+where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
+Beyond this length: only phase fluctuations survive.
+\todo{Compare with Ising order. Is that derived or postulated?}
+Freeze out fluctuations in amplitude (no \(x\)-dependence in amplitude) \(\psi(x) = \sqrt{n_s} e^{\iu \phi(x)}\), then \(\Delta \psi = \iu \Delta \phi \psi\) and \(\vert \Delta \psi \vert^2 = n_s (\Delta \phi)^2\), dependency of kinetic energy on the phase twist is (bringing it into the form \(\frac{m}{2} v^2\)):
+\begin{equation}
+    \frac{\hbar^2 n_s}{2m} (\Delta \phi)^2 = \frac{m n_s}{2} (\frac{\hbar}{m} \Delta \phi)^2
+\end{equation}
+So twist of phase results in increase in kinetic energy, associated with a superfluid velocity:
+\begin{equation}
+    \vb{v}_s = \frac{\hbar}{m} \Delta \phi
+\end{equation}
 
 \todo{Coherent states/Interpretation of states/Off-diagonal long-range order}
 
