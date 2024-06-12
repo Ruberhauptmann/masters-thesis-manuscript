@@ -7,53 +7,17 @@
 
 \section{Coherence length and penetration depth in strongly correlated superconductors}
 
-\cite{wittBypassingLatticeBCSBEC2024}
+From~\cite{wittBypassingLatticeBCSBEC2024}.
 
-Order parameter (OP) of a superconducting condensate with FMP has the form
+In most materials: Cooper pairs do not carry finite center-of-mass momentum.
+In presence of e.g.\ external fields or magnetism: SC states with FMP might arise.
+
+Theory/procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
+Constrain for FF-type pairing:
 \begin{equation}
-    \Psi_{\vb{q}} (\vb{r}) = \vert \Psi_{\vb{q}} \vert e^{i \vb{q} \vb{r}}
+    \psi_{\vb{q}} (\vb{r}) = \vert \psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
 \end{equation}
-where \(\vb{q}\) is the center-of-mass momentum of Cooper pairs.
 
-FMP is well known from Fulde-Ferrel-Larkin-Ovchinnikov (FFLO) theory, where the single-momentum phase used here corresponds to FF-type pairing. \todo{What does that mean? More details on FFLO theory}
-
-\section{Ginzburg-Landau description}
-
-First: Motivate how the FMP constraint relates to \(\lambda_L\) and \(\xi_0\).
-
-GL low-order expansion of the free energy density \(f_{\mathrm{GL}}\) in terms of the FMP-constrained OP reads
-\begin{equation}
-    1
-\end{equation}
-\todo{Fill in equation}
-\todo{More details on GL theory in general}
-
-
-The temperature dependent correlation length \(\xi\) appears as the natural length scale of the amplitude mode (\(\propto \alpha\)) and kinetic energy term
-\begin{equation}
-    \xi (T) =
-\end{equation}
-\todo{Fill in equation}
-with the zero temperature value \(\xi_0\) being the coherence length.
-
-%“length scale associated with this breakdown is ξ and can, therefore, be inferred from the q-dependent OP suppression √”
-
-%“he q-dependent OP suppression. We employ, here, the criterion ξ = 1/(√2|Q|) with Q such that |ΨQ/Ψ0| = 1/√2 The finite cen”
-
-%“| = finite center-of-mass momentum of the Cooper pairs is concomitant with the flow of a charge supercurrent jq ∝ ∂fGL/∂q ∝ |Ψq|2q This current density is a non”
-
-%j“∝ ∝ || current density is a non-monotonous function of q with a maximum called depairing current density jdp”
-
-%“jdp is related to the London penetration depth via λL(T) = s Φ0 3√3πµ0ξjdp = λL,0 1 − T Tc 4!− 2”
-%“microscopic description, we acquire the OP and supercurrent density from the components of the Nambu-Gor’kov Green function G with FMP constraint. Nambu spinors † †”
-
-%“G Nambu spinors ψ† k,q = (c† k+ q 2 ↑, c−k+ q 2 ↓) duced which”
-
-%“corresponding Green function is a 2 × 2 matrix Gq(τ, k) = −⟨Tτψk,q(τ )ψ† k,q⟩ = Gq(τ, k) Fq(τ, k) F∗ q (τ, k) −Gq(−τ, −k)”
-
-%“normal (anomalous) Green function G (F) components on imaginary time τ take over the q-dependence.”
-
-%“local anomalous Green function |Ψq| ≡ [Floc q (τ = 0−)]αα = X k ⟨cαk+ q 2 ↑cα−k+ q 2 ↓⟩” From microscopic treatment we get order parameter, the from that we get penetration depth and coherence length in GL theory?
 
 \section{Phase transitions and broken symmetry}
 
@@ -61,7 +25,7 @@ Following~\cite[ch. 11]{colemanIntroductionManyBodyPhysics2015}.
 
 \subsection{Order parameter concept}
 
-Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) are associated with the development of an order parameter when the temperature drops below the transition temperature \(T_C\) \todo{This works also for phase transitions not dependent of temperatures, so e.g.\ in pressures?}
+Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) are associated with the development of an order parameter when the temperature drops below the transition temperature \(T_C\).
 \begin{equation}
     \vert \psi \vert =
     \begin{cases}
@@ -74,12 +38,20 @@ The order parameter description is good at length scales above \(\xi_0\), the co
 
 \subsection{Landau theory}
 
-\todo{Rest of Landau theory}
+Basic idea of Landau theory: write free energy as function \(F[\psi]\) of the order parameter.
+Region of small \(\psi\), expand free energy of many-body system as simple polynomial:
+\begin{equation}
+    f_{L} = \frac{1}{V} F[\psi] = \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4
+\end{equation}
+Provided \(r\) and \(u\) are greater that \(0\): minimum of \(f_L [\psi])\) lies at \(\psi = 0\).
+Landau theory assumes: at phase transition temperature \(r\) changes sign, so:
+\begin{equation}
+    r = a(T - T_C)
+\end{equation}
+Two minima for free energy function for \(T < T_C\).
+\todo{Could put a bit more into here about second order phase transition}
 
-Landau theory
-
-Going from a one to a \(n\)-component order parameters, we can actually
-
+Going from a one to a \(n\)-component order parameters, OP acquires directions and magnitude.
 Particularly important example: complex or two component order parameter in superfluids and superconductors:
 \begin{equation}
     \psi = \psi_1 + \iu \psi_2 = \vert \psi \vert e^{\iu \phi}
@@ -88,6 +60,11 @@ The Landau free energy takes the form:
 \begin{equation}
     f[\psi] = r(\psi^* \psi) + \frac{u}{2} (\psi^* \psi)^2
 \end{equation}
+As before:
+\begin{equation}
+    r = a(T - T_C)
+\end{equation}
+
 Figure~\ref{fig:Landau free energy mexican hat potential} shows the Landau free energy as function of \(\psi\).
 
 \begin{figure}[t]
@@ -97,6 +74,10 @@ Figure~\ref{fig:Landau free energy mexican hat potential} shows the Landau free 
     \label{fig:Landau free energy mexican hat potential}
 \end{figure}
 
+Rotational symmetry, because free energy is independent of the global phase of the OP:
+\begin{equation}
+    f [\psi] = f [e^{\iu a } \psi]
+\end{equation}
 In this `Mexican hat' potential: order parameter can be rotated continuously from one broken-symmetry state to another.
 If we want the phase to be rigid, we need to introduce an
 There is a topological argument for the fact that the phase is rigid.
@@ -113,6 +94,9 @@ GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), 
 \end{equation}
 \todo{What is the \(h\) here?}
 GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
+Dimensional analysis shows: \(\frac{c}{r} = L^2\) \todo{What is c?} has dimension of length squared.
+Length scale introduced by
+
 \todo{length scale/correlation length}
 
 \subsection{Ginzburg-Landau theory II: complex order and superflow}
@@ -163,18 +147,25 @@ So twist of phase results in increase in kinetic energy, associated with a super
     \vb{v}_s = \frac{\hbar}{m} \Delta \phi
 \end{equation}
 
-\todo{Coherent states/Interpretation of states/Off-diagonal long-range order}
+For interpretation of superfluid states: coherent states.
+These are eigenstates of the field operator
+\begin{equation}
+	\hat{\psi}(x) \ket{\psi} = \psi (x) \ket{\psi} 
+\end{equation}
+and don't have a definite particle number.
+Importantly, this small uncertainty in particle number enables a high degree of precision in phase (which is the property of a condensate).
 
 Phase rigidity and superflow: in GL theory, energy is sensitive to a twist of the phase.
 Substitute \(\psi = \vert \psi \vert e^{\iu \phi}\) into GL free energy, gradient term is:
 \begin{equation}
-    \Delta \psi = ()
+    \Delta \psi = (\Delta \vert \psi \vert + \iu \Delta \phi \vert \psi \vert) e^{\iu \phi}
 \end{equation}
+So:
+\begin{equation}
+	f_{GL}  = \frac{\hbar}{2m} \vert \psi \vert^2 (\Delta \phi)^2 + \left[ \frac{\hbar}{2m} (\Delta \vert \psi \vert)^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4 \right]
+\end{equation}
+The second term resembles GL functional for an Ising order parameter, describes energy cost of variations in the magnitude of the order parameter.
 
 \todo{Here: particle-current operator, especially for coherent state, connection with phase twist}
-
-\subsection{Ginzburg-Landau theory III: charged fields}
-
-\todo{Here: Meissner effect, etc}
 
 \end{document}
