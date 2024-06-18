@@ -5,7 +5,7 @@
 
 \chapter{EG-X Model with interactions}
 
-\section{BdG Hamiltonian and free energy}
+\section{BdG}
 
 \subsection{BdG Hamiltonian}
 
@@ -84,6 +84,7 @@ with
     \end{pmatrix}
 \end{equation}
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
+
 
 \subsection{BdG Hamiltonian in band basis}
 
@@ -213,5 +214,31 @@ But for \(V > 0\), there is interband pairing (e.g. \(V = 0.1\)):
         - 0.4945 \Delta_{1} + 0.4945 \Delta_{3} & 0 & 0.4258 \Delta_{1} + 0.5742 \Delta_{3}
     \end{pmatrix}
 \end{equation}
+
+\section{Grand potential}
+
+See \cite{peottaSuperfluidityTopologicallyNontrivial2015}, especially supplementary material, notes 1 and 3.
+
+Mean-Field Hamiltonian (with the last two terms due to exchange of anticommuting fermion operators and the term quadratic in the expectation value from the mean-field decoupling respectively):
+\begin{equation}
+	H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}} + \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U}
+\end{equation}
+The second term is the trace of the non-interacting Hamiltonian.
+
+Thermodynamic grand potential (which at zero temperature is equivalent to the mean-field energy):
+\begin{align}
+	\Omega (T, \Delta) &= -\frac{1}{\beta} \ln{Z_{\Omega}} = -\frac{1}{\beta} \ln{\Tr(e^{-\beta H_{MF}})} \\
+	&= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{\beta} \ln{\Tr(e^{-\beta \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}})}
+\end{align}
+Zero temperature limit:
+\begin{align}
+	\Omega (\Delta) &= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{2} \sum_{\vb{k}} \Tr([\vert \mathcal{H}_{\vb{k}} \vert])
+\end{align}
+where a function of a matrix \(H\) (such as taking the absolute value of the BdG Hamiltonian \(\mathcal{H}_{\vb{k}}\)) is defined for the diagonal matrix of eigenvalues \(D\) and the unitary matrix \(U\) that diagonalizes \(H\):
+\begin{equation}
+	f(H) = U f(D) U^{\dagger}
+\end{equation}
+The route to finding the value of the order parameter for a fixed interaction \(U\) is minimizing the grand potential with respect to \(\Delta\).
+
 
 \end{document}

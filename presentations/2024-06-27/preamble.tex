@@ -49,6 +49,7 @@
     range-phrase=-,
     range-units=single
 } % options for typesetting things like 1-5cm
+\usepackage{derivative} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setup inclusion of graphics
@@ -72,7 +73,6 @@
     sorting=none,
     giveninits=true
 ]{biblatex} % use biblatex with a numeric (compact) style, given in the order of citation and abbreviation of given names
-\addbibresource{../../bibliography.bib} % include the bibliography (compatible to subfiles!)
 \renewbibmacro*{doi+eprint+url}{
     \printfield{doi}
     \newunit\newblock

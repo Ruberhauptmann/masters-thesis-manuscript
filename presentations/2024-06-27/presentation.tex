@@ -1,6 +1,8 @@
 \documentclass[aspectratio=169]{beamer}
 
-\input{preamble}
+\include{preamble}
+
+\addbibresource{Presentation.bib}
 
 \input{notation}
 
@@ -53,60 +55,182 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Flat Bands - A Road to High TC Superconductivity?}
+	From review \cite{tormaSuperconductivitySuperfluidityQuantum2022}
 	
-	\begin{columns}
-		\begin{column}{0.4\textwidth}
-			\begin{equation}
-				T_C \propto \exp{(- \frac{1}{U n_0 (E_F)})}
-			\end{equation}
-			\end{column}
-			\begin{column}{0.6\textwidth}
-			\end{column}
-	\end{columns}
+	Goal for superconductivity (in terms of technical applications): High transition temperatures
+	
+	Routes to achieve that:
+	\begin{itemize}
+		\item Explore classes of materials that show high \(T_C\) (e.g. Cuprates)
+		\item More recent: take simpler and more tunable systems following simple theory guidelines based on flat bands and quantum geometry
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	%\frametitle{Flat Bands - A Road to High TC Superconductivity?}
+	
+	In BCS theory for dispersive bands:
+	\begin{equation}
+		T_C \propto \exp{(- \frac{1}{U n_0 (E_F)})}
+	\end{equation}
+			
+	In flat bands it is predicted (energy dispersion is constant as function of momentum \(\vb{k}\)):
+	\begin{equation}
+		T_C \propto U
+	\end{equation}
+	This is due to the high density of states near the Fermi level and vanishing kinetic energy, so that interaction effects dominate
+	
+	This is true for cases where the interaction is larger than the band width
 \end{frame}
 
 \begin{frame}	
 	Twisted bilayer materials, in particular twisted bilayer graphene: flat bands can be tuned by changing the twist angle
 	
+	\begin{figure}
+		\includegraphics[width=0.3\textwidth]{figs/TBG band structure}
+	\end{figure}
+
+	\begin{figure}
+		\includegraphics[width=0.3\textwidth]{figs/TBG SC experiment}
+	\end{figure}
+	
 	Experiment: \cite{caoUnconventionalSuperconductivityMagicangle2018}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Transport in flat-band systems}
+	%\frametitle{Transport in flat-band systems}
 	
-	aka Superfluid weight
+	Critical temperature is only one aspect of superconductivity: under this temperature, there is Cooper pairing, but this does not necessarily mean there is a supercurrent
+	
+	Especially in flat-band systems: group velocity for the non-interacting particles \(v_g = \pdv{\epsilon}{\vb{k}}\), so these dont move
 \end{frame}
 
 \begin{frame}
-	\frametitle{Quantum geometry and superfluidity}
+	%\frametitle{Quantum geometry and superfluidity}
 	
-	aka Quantum metric
+	Electrodynamic properties of SC materials captured by:
+	\begin{equation}
+		\vb{j} = -D_S \vb{A}
+	\end{equation}
+	with current density \(\vb{j}\), vector potential \(\vb{A}\) and superfluid weight \(D_S\)
+	
+	Describes quantitative description of phenomena of SC (perfect diamagnetism, perfect conductivity), so non-zero superfluid weight is criterion of superconductivity
+	
+	In single-band BCS theory:
+	\begin{equation}
+		D_{s, ij} \sim \int \pdv{\epsilon}{k_i,k_j}
+	\end{equation}
+	Vanishes for a flat band!
+	
+	
 \end{frame}
 
 \begin{frame}
-	\frametitle{My work so far}
+	
+	
+	Quantum metric determines overlap of Wannier functions, so finite quantum metric means overlap of Wannier functions, so that transport is possible
+\end{frame}
+
+\begin{frame}
+	%\frametitle{Quantum metric general}
+	
+	Introduction:
+	
+	Take Hamiltonian \(\{H(\lambda)\}\) with dependence on some parameters \(\lambda = (\lambda_1, \lambda_2, \ldots)\)
+	
+	Have eigenenergies \(E_n (\lambda)\) and eigenstates \(\ket{\phi_n (\lambda)}\)
+	
+	Upon infinitesimally varying \(\odif{\lambda}\), define quantum distance:
+	\begin{align}
+		\odif{s}^2 &= \vert \vert \psi (\lambda + \odif{\lambda}) \vert \vert^2 = \braket{\fdif{\psi} | \fdif{\psi}} = \braket{\pdif*{\mu} \psi | \pdif*{\nu} \psi} \odif{\lambda^{\mu}} \odif{\lambda^{\nu}} \\
+		&= (\gamma_{\mu \nu} + \iu \sigma_{\mu \nu}) \odif{\lambda^{\mu}} \odif{\lambda^{\nu}}
+	\end{align}
+	To ensure that gauge invariance, add term:
+	\begin{equation}
+		g_{\mu \nu} (\lambda) \coloneqq \gamma_{\mu \nu} (\lambda) - \beta_{\mu} (\lambda) \beta_{\nu} (\lambda)
+	\end{equation}
+	with Berry connection \(\beta_{\mu} (\lambda) \iu \braket{\phi(\lambda) | \pdif{\mu} \phi(\lambda)}\)
+
+	For two states \(\lambda_I\) and \(\lambda_F\), quantum distance between them:
+	\begin{align}
+		\vert \braket{\psi (\lambda_F) | \psi(\lambda_I)} \vert = 1 - \frac{1}{2} \int_{\lambda_I}^{\lambda_F} g_{\mu \nu} (\lambda) \odif{\lambda^{\mu}} \odif{\lambda^{\nu}}
+	\end{align}
+\end{frame}
+
+\begin{frame}
+	Concretely, for example in lattice systems:
+	
+	Measures distance between close points on the band 
+\end{frame}
+
+\begin{frame}
+	%\frametitle{My system}
+	
+	Model:
+	\begin{figure}
+		\includegraphics[width=0.3\textwidth]{figs/EG-X structure}
+	\end{figure}
+	Hexagonal lattice with an additional orbital on one of the sites in the BZ
+	
+	Non-interacting Hamiltonian:
+	\begin{align}
+		H_0 &= -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} d_{i, \sigma}^{\dagger} d_{j, \sigma^{\prime}}
+		-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}}
+		c_{i, \sigma}^{(A), \dagger} c_{j, \sigma^{\prime}}^{(B)} +
+		c_{j, \sigma^{\prime}}^{(B), \dagger} c_{i, \sigma}^{(A)} \\
+		&+ V \sum_{i, \sigma \sigma^{\prime}} \left(
+		d_{i, \sigma}^{\dagger} c_{i, \sigma^{\prime}}^{(A)} +
+		c_{i, \sigma}^{(A), \dagger} d_{i, \sigma^{\prime}}
+		\right)
+		\label{eq:EG-X model Hamiltonian non-interacting}
+	\end{align}
+	
+	Material motivation: Graphene on top of a substrate, different substrates give different values of \(V\)
+\end{frame}
+
+\begin{frame}
+	
+	Band structure:
+	
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figs/EG_X bands_tGr_1_tX_0.01}
+	\end{figure}
+
+	Important feature:
+	\begin{itemize}
+		\item Flat band
+		\item Hybridization \(V\) determines 
+		\item Bands are mixed between the Graphene and X orbitals
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	Add local Hubbard interaction:
+	\begin{equation}
+		H_{\mathrm{int}} = U_{\mathrm{X}} \sum_{i} d_{i, \uparrow}^{\dagger} d_{i, \downarrow}^{\dagger} d_{i, \downarrow} d_{i, \uparrow}
+		+ U_{\mathrm{Gr}} \sum_{i, \epsilon=A, B} c_{i, \uparrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{\epsilon} c_{i, \uparrow}^{\epsilon}
+	\end{equation}
 \end{frame}
 	
 \begin{frame}
 	\frametitle{Outlook}
 	
-	Superfluid phase stiffness and coherence length from finite-momentum constraint
+	Recent preprint by Niklas \cite{wittBypassingLatticeBCSBEC2024}, DMFT calculations on A3C60, getting superfluid weight and coherence length from a finite-momentum constraint on the pairing 
 	
-	Connection to old and recent Peotta/Töma papers
+	Also recent preprint by Peotta/Törma \cite{penttilaFlatbandRatioQuantum2024} DMFT on Lieb lattice (Flat band system), getting superfluid weight, analysing geometric contribution for finite temperature
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Suggestions for Hamburg after 3 months in Sweden}
-\end{frame}
+%\begin{frame}
+%	\frametitle{Suggestions for Hamburg after 3 months in Sweden}
+%\end{frame}
 
 
 \begin{frame}
 	\frametitle{Summary}
 	
 	\begin{itemize}
-		\item Flat bands
+		\item Flat bands offer a route
 	\end{itemize}
 
 \end{frame}
