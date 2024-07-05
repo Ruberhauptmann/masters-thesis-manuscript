@@ -8,6 +8,8 @@
     BCOR=6mm,
     titlepage=firstiscover,
     toc=flat,
+    bibliography=totoc,
+    listof=leveldown,
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
@@ -51,51 +53,35 @@
 \renewcommand{\thechapter}{\Roman{chapter}}
 
 % Inclusion of all the chapters
+\subfile{chapters/superconductivity.tex}
 
 \subfile{chapters/model.tex}
 
-%\subfile{notes/greens_functions}
-
-%\subfile{notes/superconductivity}
-
-%\subfile{notes/d-wave-superconductivity}
-
-%\subfile{notes/ginzburg-landau_theory_of_SC.tex}
-
-%\subfile{notes/dmft}
-
-%\subfile{notes/hubbard_model}
-
-%\subfile{notes/eg-x-model_structure_and_noninteracting}
-
-%\subfile{notes/eg-x-model_BdG_and_MF_energy}
-
-%\subfile{notes/eg-x-model_try_with_BCS}
-
 \subfile{chapters/conclusion.tex}
 
+% Appendix
 \appendix
 \subfile{chapters/egx_structure.tex}
 
 % Print the bibliography
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 
 % Beginning of the backmatter
 \backmatter
 
 % Print list of symbols
-\setglossarysection{chapter}
-\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
+%\setglossarysection{chapter}
+%\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
 %\printglossary[type=\acronymtype, title=List of Abbreviations]
 %\printglossary[type=\glossarytype, title=Glossary]
 
 % Include lists of the figures and tables (optional)
-%\chapter*{Listings}
-%\listoffigures
-%\listoftables
+\chapter*{Listings}
+\listoffigures
+\listoftables
 
 % Include the acknowledgement
 \chapter*{Acknowledgement}

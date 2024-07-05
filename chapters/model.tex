@@ -38,6 +38,8 @@ This describes the
 		\caption{Graphene lattice structure}
 		\label{fig:graphene lattice structure}
 	\end{subfigure}
+	\caption{EG-X model and Hexagonal lattice structure}
+	\label{fig:structures eg-x model and hexagonal lattice structure}
 \end{figure}
 In material terms, this can be thought of as a sheet of graphene on top of another material, providing the additional \(\mathrm{X}\) atoms, but in this thesis the model will be taken as a toy model, providing certain favorable aspects.
 
@@ -50,8 +52,8 @@ Monolayer graphene forms a hexagonal lattice as seen in \cref{fig:graphene latti
 This is formed by two triangular sub lattices, so the unit cell of the hexagonal lattice has two atoms.
 The primitive vectors of the hexagonal lattice are
 \begin{align}
-	\vb{a}_1 &= \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \notag\\
-	\vb{a}_2 &= \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
+	\vb{a}_1 &= \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} ,\;
+	\vb{a}_2 = \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
 	\;,
 \end{align}
 with lattice constant \(a \approx \qty{2.46}{\angstrom}\) for graphene.
@@ -62,14 +64,14 @@ The distance between nearest neighbor is
 
 The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
 \begin{align}
-	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \notag\\
+	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \; \text{and} \notag\\
 	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0
 	\;,
 \end{align}
 so
 \begin{align}
-	\vb{b}_1 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \notag\\
-	\vb{b}_2 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
+	\vb{b}_1 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} ,\;
+	\vb{b}_2 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
 	\;.
 \end{align}
 \todo{Graphic for primitive BZ}
@@ -78,10 +80,9 @@ so
 
 Points of high symmetry in the Brillouin zone are:
 \begin{align}
-	\Gamma &= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
-	\mathrm{M} &= \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \\
-	\mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
-	\;.
+	\Gamma &= \begin{pmatrix} 0 \\ 0 \end{pmatrix} ,\;
+	\mathrm{M} = \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} ,\;
+	\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \;.
 \end{align}
 
 \begin{figure}[t]

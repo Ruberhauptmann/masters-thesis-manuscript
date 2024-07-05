@@ -7,14 +7,11 @@
 In the following chapter, the model Hamiltonian
 \begin{align}
 	H_0 = &-t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma} d_{i, \sigma}^{\dagger} d_{j, \sigma}
-	-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma} \left(
-	c_{i, \sigma}^{(A), \dagger} c_{j, \sigma}^{(B)} +
-	c_{j, \sigma^{\prime}}^{(B), \dagger} c_{i, \sigma}^{(A)} \right) \notag \\
-	&+ V \sum_{i, \sigma} d_{i, \sigma}^{\dagger} c_{i, \sigma}^{(A)} + \mathrm{h.c.} \label{eq:EG-X model Hamiltonian non-interacting appendix}
+	-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma}
+	c_{i, \sigma}^{(A), \dagger} c_{j, \sigma}^{(B)}
+	+ V \sum_{i, \sigma} d_{i, \sigma}^{\dagger} c_{i, \sigma}^{(A)} + \mathrm{h.c.} \label{eq:EG-X model Hamiltonian non-interacting appendix}
 \end{align}
-will be treated via Fourier transform.
-
-The first step is to write out the sums over nearest neighbors \(\langle i, j \rangle\) explicitly, writing \(\vb{\delta}_{\mathrm{X}}, \vb{\delta}_{\epsilon}\) (\(\epsilon = A, B\)) for the vectors to the nearest neighbors of the \(\mathrm{X}\) atoms and Graphene \(A, B\) sites.
+will be treated to obtain the band structure. The first step is to write out the sums over nearest neighbors \(\langle i, j \rangle\) explicitly, writing \(\vb{\delta}_{\mathrm{X}}, \vb{\delta}_{\epsilon}\) (\(\epsilon = A, B\)) for the vectors to the nearest neighbors of the \(\mathrm{X}\) atoms and Graphene \(A, B\) sites.
 Doing the calculation for example of the \(\mathrm{X}\) atoms:
 \begin{align}
 	-t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma} (d_{i, \sigma}^{\dagger} d_{j, \sigma} + d_{j, \sigma}^{\dagger} d_{i, \sigma})
@@ -24,48 +21,49 @@ Doing the calculation for example of the \(\mathrm{X}\) atoms:
 	\label{eq:EG-X model X atoms nearest neighbours written out}
 \end{align}
 The factor \(\nicefrac{1}{2}\) in \cref{eq:EG-X model X atoms nearest neighbor sum double counting} is to account for double counting when going to the sum over all lattice sites \(i\).
-By relabeling \(j \to i\) in the second sum, we then get \cref{eq:EG-X model X atoms nearest neighbours written out}.
+By relabeling \(j \to i\) in the second sum, the two sum are the same and \cref{eq:EG-X model X atoms nearest neighbours written out} is obtained.
 Using now the discrete Fourier transform
 \begin{align}
-	c_{i} &= \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i}} c_{\vb{k}} \notag\\
-	c_{i}^{\dagger} &= \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{-\iu \vb{k} \vb{r}_{i}} c_{\vb{k}}^{\dagger}
+	c_{i} &= \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i}} c_{\vb{k}} ,\;
+	c_{i}^{\dagger} = \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{-\iu \vb{k} \vb{r}_{i}} c_{\vb{k}}^{\dagger}
 \end{align}
-with the completeness relation:
+with the completeness relation
 \begin{equation}
 	\sum_{i} e^{\iu \vb{k} \vb{r}_{i}} e^{-\iu \vb{k}^{\prime} \vb{r}_{i}} = N \delta_{\vb{k}, \vb{k}^{\prime}}
 	\;,
 \end{equation}
 \cref{eq:EG-X model X atoms nearest neighbours written out} reads:
 \begin{align}
-	-t_X \frac{1}{N} \sum_{i,\sigma} \sum_{\vb{\delta}_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \vb{\delta}_{\mathrm{X}}, \sigma^{\prime}}
-	&= -t_X \frac{1}{N} \sum_{i,\sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} \sum_{\vb{k}, \vb{k}^{\prime}} e^{-\iu \vb{k} \vb{r}_i} d_{\vb{k}, \sigma}^{\dagger} e^{\iu \vb{k}^{\prime} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \\
-	&= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
-	&= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} d_{\vb{k}, \sigma}^{\dagger}  e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma^{\prime}} N \delta_{\vb{k}, \vb{k}^{\prime}} \\
-	&= -t_X \sum_{\vb{k}, \sigma, \sigma^{\prime}}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma^{\prime}} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}}
+	-t_X \frac{1}{N} \sum_{i,\sigma} \sum_{\vb{\delta}_{\mathrm{X}}} d_{i, \sigma}^{\dagger} d_{i + \vb{\delta}_{\mathrm{X}}, \sigma}
+	&= -t_X \frac{1}{N} \sum_{i,\sigma} \sum_{\vb{k}, \vb{k}^{\prime}, \vb{\delta}_{\mathrm{X}}} \left(e^{-\iu \vb{k} \vb{r}_i} d_{\vb{k}, \sigma}^{\dagger} \right) \left(e^{\iu \vb{k}^{\prime} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} d_{\vb{k}^{\prime}, \sigma} \right) \\
+	&= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \vb{\delta}_{\mathrm{X}}, \sigma} d_{\vb{k}, \sigma}^{\dagger}   d_{\vb{k}^{\prime}, \sigma} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
+	&= -t_X \frac{1}{N} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma}  d_{\vb{k}, \sigma}^{\dagger}  d_{\vb{k}^{\prime}, \sigma} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k}^{\prime} \vb{\delta}_{\mathrm{X}}} \left(N \delta_{\vb{k}, \vb{k}^{\prime}} \right)\\
+	&= -t_X \sum_{\vb{k}, \sigma}  d_{\vb{k}, \sigma}^{\dagger}d_{\vb{k}, \sigma} \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}} \;.
 \end{align}
-
-
-The nearest neighbours for \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from section~\ref{sec:lattice-structure-of-graphene}.
-With that, we can calculate:
+This part is now diagonal in \(\vb{k}\) space.
+The nearest neighbours vectors \(\vb{\delta}_{\mathrm{X}}\) for the \(\mathrm{X}\) atoms are the vectors \(\vb{\delta}_{AA, i}\) from \cref{sec:lattice-structure-of-graphene}.
+With that, the sum over \(\vb{\delta}_{\mathrm{X}}\) can be explicitly calculated:
+\todo{Correct exp expressions}
+\todo{Example for a vector product}
 \begin{align}
 	f_{\mathrm{X}} (\vb{k}) &= -t_X \sum_{\vb{\delta}_{\mathrm{X}}} e^{\iu \vb{k} \vb{\delta}_{\mathrm{X}}} \\
-	&= -t_X \left( e^{\iu a (\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})}
+	&= -t_X \left[ \exp\left(\iu a \left(\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2}\right)\right)
 	+ e^{\iu a k_x}
 	+ e^{\iu a (\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
 	\right. \\
 	&+ \left. e^{\iu a (-\frac{k_x}{2} - \frac{\sqrt{3} k_y}{2})}
 	+ e^{-\iu a k_x}
-	+ e^{\iu a (-\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})} \right) \\
+	+ e^{\iu a (-\frac{k_x}{2} + \frac{\sqrt{3} k_y}{2})} \right] \\
 	&= -t_X \left( 2 \cos{(a k_x)} + 2 e^{\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} + 2 e^{-\iu a \frac{\sqrt{3} k_y}{2}} \cos{(\frac{a}{2} k_x)} \right) \\
-	&= -2t_X \left( \cos{(a k_x)} + 2 \cos{(\frac{a}{2} k_x)} \cos{(\sqrt{3} \frac{ a}{2} k_y)} \right)
+	&= -2t_X \left( \cos{(a k_x)} + 2 \cos{(\frac{a}{2} k_x)} \cos{(\sqrt{3} \frac{ a}{2} k_y)} \right) \;.
 \end{align}
-We can do the same for the hopping between Graphene sites, for example :
+The same can be done for the hopping between Graphene sites, for example :
 \begin{align}
 	-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma \sigma^{\prime}} c_{i, \sigma}^{(A), \dagger} c_{j, \sigma^{\prime}}^{(B)}
 	&= -t_{\mathrm{Gr}} \sum_{i, \sigma \sigma^{\prime}} \sum_{\vb{\delta}_{AB}} c_{i, \sigma}^{(A), \dagger} c_{i + \vb{\delta}_{AB} , \sigma^{\prime}}^{(B)} \\
 	&= -t_{\mathrm{Gr}} \sum_{\vb{k}, \sigma, \sigma^{\prime}}  c_{\vb{k}, \sigma}^{(A) \dagger} c_{\vb{k}, \sigma^{\prime}}^{(B)} \sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}}
 \end{align}
-We note
+We note \todo{Show that!}
 \begin{align}
 	\sum_{\vb{\delta}_{AB}} e^{\iu \vb{k} \vb{\delta}_{AB}} = \left( \sum_{\vb{\delta}_{BA}} e^{\iu \vb{k} \vb{\delta}_{BA}} \right)^* = \sum_{\vb{\delta}_{BA}} e^{-\iu \vb{k} \vb{\delta}_{BA}}
 \end{align}
