@@ -2,20 +2,6 @@
 \usepackage{scrhack}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Language and font settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[english]{babel} % set document language to English
-
-% If the document is not compiled with XeLaTeX, we need to enable input and output for special characters
-\usepackage{ifxetex}
-\ifxetex
-    \usepackage{fontspec} % enables selection of fonts in XeLaTeX
-\else
-    \usepackage[T1]{fontenc} % to encode glyphs like ä,ö,ü in the output font
-    \usepackage{lmodern} % use latin modern font (its prettier!)
-\fi
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setup various aspects of the layout
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thechapter}{\Roman{chapter}} % chapters with roman numerals (I, II, III, IV, ...)
@@ -29,10 +15,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Define header and footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{scrlayer-scrpage}
+\usepackage[headsepline=false]{scrlayer-scrpage}
 \clearpairofpagestyles % clear default page style
-\ihead[]{\headmark} % chapter/section title on the inner side
-\ohead[]{\pagemark} % page number on the outer side
+%\KOMAoptions{headwidth=\textwidth+4cm:0pt}
+\lehead{\mbox{\llap{\small\pagemark\kern2em}\headmark\hfil}}
+\rohead{\mbox{\hfil{\headmark}\rlap{\small\kern2em\pagemark}}}
+%\ihead[]{\headmark\hspace*{11pt}\pagemark} % chapter/section title and page number on the inner side
 \cfoot[\pagemark]{} % pagenumber in the center footer for the 'plain' pagestyle (per default, this gets used for pages on the beginning of chapters)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,7 +167,7 @@
 \usepackage{epigraph} % package to use the \epigraph command
 \renewcommand{\epigraphsize}{\small} % set up font size for epigraphs
 \setlength{\epigraphwidth}{0.8\textwidth} % set up width of epigraphs
-\setlength\epigraphrule{0pt} % remove line under epigraph
+\setlength\epigraphrule{0.1pt} % remove line under epigraph
 \renewcommand{\textflush}{center} % flush epigraph text to the right
 \renewcommand{\sourceflush}{center} % flush sources of epigraphs to the right
 
@@ -210,3 +198,39 @@
     backgroundcolor=myyellow,
     %disable
 ]{todonotes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Language and font settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fontspec} % enables selection of fonts in XeLaTeX
+\setmainfont{texgyrepagella}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+\setsansfont{texgyreheros}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}
+\setmonofont{texgyrecursor}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+
+\setkomafont{disposition}{\scshape} % Set small caps for chapter, section and subsection titles
+\setkomafont{pagehead}{\upshape\scshape}
+
+
+

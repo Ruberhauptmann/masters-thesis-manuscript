@@ -1,3 +1,4 @@
+% !TEX xelatex
 \documentclass[
     a4paper,
     11pt,
@@ -40,17 +41,18 @@
 \tableofcontents
 \clearpage
 
-% Load motivation
-\subfile{chapters/motivation.tex}
-\newpage
 
 % Define the conventions in the work
-\input{conventions}
-\newpage
+%\input{conventions}
+%\newpage
 
 % Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
 \mainmatter
 \renewcommand{\thechapter}{\Roman{chapter}}
+
+% Load motivation
+\subfile{chapters/motivation.tex}
+\newpage
 
 % Inclusion of all the chapters
 \subfile{chapters/superconductivity.tex}
