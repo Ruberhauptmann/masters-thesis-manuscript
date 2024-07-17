@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../notes.tex]{subfiles}
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
@@ -6,27 +6,50 @@
 \chapter{Superconductivity}
 
 This chapter gives an introduction to the phenomenology and theory of superconductivity.
-Superconductivity describes the phenomenon of the electrical resistance of a metal suddenly dropping to zero below a critical temperature.
+Superconductivity describes the phenomenon of the electrical resistance of a material suddenly dropping to zero below a critical temperature \(T_C\).
 
-At the beginning of the 20th century, 
+Superconductivity as a phenomenon is very interesting.
 
-\todo{More details on history}
+Current technical applications often rely on the 
 
-Discovered in mercury in 1911 by Heike Onnes \cite{onnes1911further}.
+The largest commercial application to date is in magnetic resonance imaging, a medical technique using strong magnetic fields and field gradients \cite{rinckMagneticResonanceMedicine}.
 
-Discovery of Meissner effect, perfect expulsion of external magnetic fields in 1933 \cite{meissnerNeuerEffektBei1933}.
+Technical applications in 
 
-\todo{Does Meissner effect lead to supercurrent?}
+From a theoretical perspective, superconductivity is fascinating
 
 \todo{Some words: why is SC interesting?}
 
-\todo{SC today, strongly correlated SC}
+At the end of the 19th and the beginning of the 20th century, cooling technology made great progress.
+Liquifying gases, were able to reach temperatures as low as \(\qty{4}{\kelvin}\) (the boiling point of Helium).
+Using that, SC was discovered in mercury in 1911 by Heike Onnes \cite{onnesFurtherExperimentsLiquid1991}.
+Discovery of Meissner effect, perfect expulsion of external magnetic fields in 1933 \cite{meissnerNeuerEffektBei1933}.
+This started almost half a century of intensive theoretical research, which culminated in John Bardeen, Leon Cooper and J. Robert Schrieffer developing the microscopic theory now know as BCS theory \cite{bardeenTheorySuperconductivity1957}.
 
-\section{BCS Theory}
+1986 and 1987: discovery of superconductivity with very high \(T_C\) found in cuprates \cite{bednorzPossibleHighTcSuperconductivity1986,uchidaHighTcSuperconductivity1987}.
+Cuprate superconductors are  
+\cite{rybickiPerspectivePhaseDiagram2016}
+\todo{A bit more explanation what cuprates are}.
+
+Theoretical description using BCS-theory based on an attractive interaction mediated by phonons could not explain this.
+For this reason, the term `unconventional superconductors' for them.
+
+Some key experimental facts are established in high \(T_C\) SC: there is Cooper pairing, ordered normal state is very important for SC, phenomenon of `Pseudogap' is defining \cite{yanaseTheorySuperconductivityStrongly2003}.
+
+\todo{Unconventional SC, what is the same, what is different, what makes it difficult to grasp}
+
+Today, still many unanswered questions in unconventional SC \cite{zhouHightemperatureSuperconductivity2021}.
+
+\todo{Open questions in unconventional SC}
+
+This chapter: introduction to BCS theory in \cref{sec:bcs-theory} and GL-theory in \cref{sec:Ginzburg-Landau theory of superconductivity}.
+
+
+\section{BCS Theory}\label{sec:bcs-theory}
 
 Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
 
-Theoretical description of SC: 1957 by Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
+Theoretical description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 Description is based on the fact, that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
 These bound electrons show bosonic behaviour and 
 \todo{Why supercurrent?}
@@ -44,15 +67,12 @@ Surprisingly, it
 \todo{Mean field level can already explain a lot}
 
 BCS-theory gave a microscopic explanation to a phenomenological description of superconductivity pioneered by Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
-This descriptions is based on a one-particle wavefunction \(\phi (x)\)
+This descriptions is based on a one-particle wave function \(\phi (x)\)
 
 Later, this one-particle wa
 vefunction was identified as the order parameter in the developing GL-theory of phase transitions \cite{landauTheorySuperconductivity1965}.
 GL-theory is discussed in more detail in \cref{sec:Ginzburg-Landau theory of superconductivity}.
 This explains the Meissner effect and in turn the supercurrent.
-
-\todo{More recent developments: strongly correlated superconductors}
-
 
 \section{Ginzburg-Landau theory of superconductivity,Phase transitions and broken symmetry }\label{sec:Ginzburg-Landau theory of superconductivity}
 
@@ -95,8 +115,6 @@ Two minima for free energy function for \(T < T_C\).
 With this, we can extract \(T_C\) from the knowledge of the dependence of \(\vert \psi \vert^2\) on \(T\) via a linear fit.
 This is only valid for an area near \(T_C\) (where Landau theory holds), but can be used to get \(T_C\) from microscopic theories.
 
-\todo{Could put a bit more into here about second order phase transition}
-
 Going from a one to a \(n\)-component order parameters, OP acquires directions and magnitude.
 Particularly important example: complex or two component order parameter in superfluids and superconductors:
 \begin{equation}
@@ -136,12 +154,14 @@ Landau theory: energy cost of a uniform order parameter, more general theory nee
 First: one-component, `Ising' order parameter.
 GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), \(f_{GL} [\psi, \Delta \psi] = \frac{s}{2} \vert \Delta \psi \vert^2 + f_L [\psi(s)]\), or in full:
 \begin{equation}
-	f_{GL} [\psi, \Delta \psi, h] = \frac{s}{2} (\Delta \psi)^2 + \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4 - h \psi
+	f_{GL} [\psi, \Delta \psi, h] = \frac{s}{2} (\Delta \psi)^2 + \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4
 \end{equation}
-\todo{What is the \(h\) here?}
 GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
-Dimensional analysis shows: \(\frac{c}{r} = L^2\) \todo{What is c?} has dimension of length squared.
-Length scale introduced by
+%Dimensional analysis shows: \(\frac{s}{r} = L^2\) has dimension of length squared.
+Length scale introduced by the gradient term: correlation length
+\begin{equation}
+	d
+\end{equation}
 
 \todo{length scale/correlation length}
 
@@ -224,6 +244,8 @@ The second term resembles GL functional for an Ising order parameter, describes 
 
 \section{Coherence length and penetration depth in strongly correlated superconductors}
 
+Is that a good fit here?
+
 From~\cite{wittBypassingLatticeBCSBEC2024}.
 
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
@@ -234,5 +256,7 @@ Constrain for FF-type pairing:
 \begin{equation}
 	\psi_{\vb{q}} (\vb{r}) = \vert \psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
 \end{equation}
+
+\todo{Finish up the discussion of Niklas paper}
 
 \end{document}
