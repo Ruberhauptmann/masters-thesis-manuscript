@@ -4,6 +4,130 @@
 \begin{document}
 \chapter{Dynamical Mean-Field Theory}\label{ch:dynamical-mean-field-theory}
 
+\section{Green's Function Formalism}
+
+Following~\cite{bruusManyBodyQuantumTheory2004}
+
+Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
+
+Have different kinds of Green's functions, for example the retarded Green's function:
+\begin{equation}
+	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (t^{\prime})\}}
+\end{equation}
+They give the amplitude of a particle inserted at point \(\vb{r}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{r}\) at time \(t\).
+For time-independent Hamiltonians and systems in equilibrium, the GFs only depend on time differences:
+\begin{equation}
+	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = G^R (\vb{r} \sigma, \vb{r}^{\prime} \sigma^{\prime}, t - t^{\prime})
+\end{equation}
+So we can take \(t^{\prime} = 0\) and consider \(t\) as the only free variable:
+\begin{equation}
+	G^R (\vb{r}\sigma, \vb{r}^{\prime} \sigma^{\prime}, t) = -\iu \Theta(t) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (0)\}}
+\end{equation}
+In a translation invariant system: can use \(\vb{k}\) as a natural basis set:
+\begin{equation}
+	G^R (\vb{k}, \sigma, \sigma^{\prime} t) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma^{\prime}}^{\dagger} (0)\}}
+\end{equation}
+Define Fourier-transform:
+\begin{equation}
+	G^R (\vb{k}, \sigma, \sigma^{\prime}, \omega) = \int_{-\infty}^{\infty} \odif{t} G^R (\vb{k}, \sigma, \sigma^{\prime} t)
+\end{equation}
+Can define the spectral function from this:
+\begin{equation}
+	A(\vb{k} \sigma, \omega) = -2 \Im G^R (\vb{k} \sigma, \omega)
+\end{equation}
+Looking at the diagonal elements of \(G^R\) here.
+The spectral function can be thought of as the energy resolution of a particle with energy \(\omega\).
+This mean, for non-interacting systems, the spectral function is a delta-function around the single-particle energies:
+\begin{equation}
+	A_0 (\vb{k} \sigma, \omega) = 2\pi \delta (\omega - \epsilon_{\vb{k} \sigma})
+\end{equation}
+For interacting systems this is not true, but \(A\) can still be peaked.
+
+\todo{Show GFs can be related to observables}
+
+Mathematical technique to calculate retarded GFs involves defining GFs on imaginary times \gls{imaginary time}:
+\begin{equation}
+	t \to -\iu \tau
+\end{equation}
+where \(\tau\) is real and has the dimension time.
+This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
+
+Define imaginary time/Matsubara GF \gls{matsubara correlation function}:
+\begin{equation}
+	\mathcal{C}_{A B} (\tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
+\end{equation}
+with time-ordering operator in imaginary time:
+\begin{equation}
+	T_{\tau} (A(\tau) B(\tau^{\prime})) = \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau)
+\end{equation}
+so that operators with later `times' go to the left.
+
+Can prove from properties of Matsubara GF, that they are only defined for
+\begin{equation}
+	-\beta < \tau < \beta
+\end{equation}
+Due to this, the Fourier transform of the Matsubara GF is defined on discrete values:
+\begin{equation}
+	\mathcal{C}_{A B} (\iu \omega_n) = \int_{0}^{\beta} \odif{\tau}
+\end{equation}
+with fermionic/bosonic Matsubara frequencies
+\begin{equation}
+	\omega_n =
+	\begin{cases}
+		\frac{2n \pi}{\beta} \, \text{for bosons} \\
+		\frac{(2n + 1)\pi}{\beta} \, \text{for fermions}
+	\end{cases}
+\end{equation}
+
+\todo{How to resolve ambiguity at borders of integral}
+
+It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
+So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
+\begin{equation}
+	\mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
+\end{equation}
+So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
+Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value) ~\cite[8.3.4]{bruusManyBodyQuantumTheory2004}.
+
+\todo{single-particle Matsubara GF}
+
+\todo{equations of motion for Matsubara GF}
+
+\section{Perturbation theory, Dyson equation}
+
+\todo{Short introduction to diagrams}
+
+\todo{Self energy}
+
+\todo{Dyson equation}
+
+Dyson equation:
+\begin{equation}
+	\mathcal{G}_{\sigma} (\vb{k}, \iu \omega_n) = \frac{\mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n)}{1 - \mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n) \Sigma_{\sigma} (\vb{k}, \iu \omega_n)} = \frac{1}{\iu \omega_n - \xi_{\vb{k} - \Sigma_{\sigma} (\vb{k}, \iu \omega_n)}}
+\end{equation}
+
+
+\section{Nambu-Gorkov GF}
+
+Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
+
+\todo{More general introduction into NG GFs, how they look like, what they describe etc.}
+
+Order parameter can be chosen as the anomalous GF:
+\begin{equation}
+	\Psi = F^{\mathrm{loc}} (\tau = 0^-)
+\end{equation}
+or the superconducting gap
+\begin{equation}
+	\Delta = Z \Sigma^{\mathrm{AN}}
+\end{equation}
+that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) and quasiparticle weight \(Z\)
+\todo{Sources for these?}
+
+\todo{How to get quasiparticle weight?}
+
+\section{DMFT}
+
 Following \cite{georgesDynamicalMeanfieldTheory1996}.
 
 Most general non-interacting electronic Hamiltonian in second quantization:

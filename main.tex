@@ -3,7 +3,8 @@
     a4paper,
     11pt,
     DIV=calc,
-    numbers=noenddot,    bibliography=totoc,
+    numbers=noenddot,
+    bibliography=totoc,
     listof=leveldown,
     headinclude,
     titlepage=firstiscover,
@@ -14,7 +15,7 @@
 
 \input{preamble} % load the tex file with the preamble
 
-\addbibresource{\subfix{bibliography.bib}}
+\addbibresource{bibliography.bib}
 
 \input{notation} % load the tex file with the notation shortcuts
 
@@ -59,8 +60,6 @@
 \subfile{chapters/superconductivity.tex}
 
 \subfile{chapters/model.tex}
-
-\subfile{chapters/mean field treatment.tex}
 
 \subfile{chapters/conclusion.tex}
 
