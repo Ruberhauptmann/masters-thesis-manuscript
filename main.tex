@@ -15,12 +15,13 @@
 
 \input{preamble} % load the tex file with the preamble
 
+\addbibresource{bibliography.bib}
+
 \input{notation} % load the tex file with the notation shortcuts
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
-\addbibresource{\subfix{bibliography.bib}}
 
 \begin{document}
 % Start frontmatter: page numbering in small roman numerals, dont number chapters and sections
@@ -59,8 +60,6 @@
 \subfile{chapters/superconductivity.tex}
 
 \subfile{chapters/model.tex}
-
-\subfile{chapters/mean field treatment.tex}
 
 \subfile{chapters/conclusion.tex}
 
