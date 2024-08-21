@@ -85,6 +85,27 @@ with
 \end{equation}
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
 
+\subsection{Derivative of the normal state Hamiltonian}
+
+For calculation of quantum metric: need derivative of the BdG and normal state Hamiltonian w.r.t. \(k_x\) and \(k_y\).
+\begin{equation}
+	H_0 = \begin{pmatrix}
+		0 & f_{\mathrm{Gr}} (\vb{k})& V \\
+		f_{\mathrm{Gr}}^* (\vb{k}) & 0 & 0 \\
+		V & 0 & f_{\mathrm{X}} (\vb{k}) \\
+	\end{pmatrix}
+\end{equation}
+So need derivatives of \(f_{\mathrm{Gr}}\) and \(f_{\mathrm{X}}\):
+\begin{align}
+	\pdif{k_x}{f_{\mathrm{Gr}} (\vb{k})} &= -t_{\mathrm{Gr}} 2 e^{-\iu \frac{a}{2\sqrt{3} k_y}} \left(-\frac{a}{2} \sin{(\frac{a}{2} k_x)}\right) = t_{\mathrm{Gr}} e^{-\iu \frac{a}{2\sqrt{3} k_y}} \sin{(\frac{a}{2} k_x)} \\
+	\pdif{k_y}{f_{\mathrm{Gr}} (\vb{k})} &= -t_{\mathrm{Gr}} \left(
+		\iu \frac{a}{\sqrt{3}} e^{\iu \frac{a}{\sqrt{3} k_y}} - 2 \iu \frac{a}{2\sqrt{3}} e^{-\iu \frac{a}{2\sqrt{3} k_y}} \cos{(\frac{a}{2} k_x)}
+	\right) \\
+	&= -t_{\mathrm{Gr}} \iu \frac{a}{\sqrt{3}}  \left(e^{\iu \frac{a}{\sqrt{3} k_y}} - e^{-\iu \frac{a}{2\sqrt{3} k_y}} \cos{(\frac{a}{2} k_x)} \right) \\
+	\pdif{k_x}{f_{\mathrm{X}} (\vb{k})} &= -2 t_{\mathrm{X}} (-a \sin{(a k_x)} - 2 \frac{a}{2} \sin{(\frac{a}{2})} \cos{(\sqrt{3} \frac{a}{2} k_y)}) \\
+	&= 2 a t_{\mathrm{X}} (\sin{(a k_x)} + \sin{(\frac{a}{2})} \cos{(\sqrt{3} \frac{a}{2} k_y)}) \\
+	\pdif{k_y}{f_{\mathrm{X}} (\vb{k})} &= -2 t_{\mathrm{X}} (-\sqrt{3} \frac{a}{2} \sin{(\sqrt{3} \frac{a}{2} k_y)}) = \sqrt{3} t_{\mathrm{X}} a \sin{(\sqrt{3} \frac{a}{2} k_y)}
+\end{align}
 
 \subsection{BdG Hamiltonian in band basis}
 

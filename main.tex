@@ -3,7 +3,8 @@
     a4paper,
     11pt,
     DIV=calc,
-    numbers=noenddot,    bibliography=totoc,
+    numbers=noenddot,
+    bibliography=totoc,
     listof=leveldown,
     headinclude,
     titlepage=firstiscover,
@@ -14,13 +15,12 @@
 
 \input{preamble} % load the tex file with the preamble
 
-\addbibresource{\subfix{bibliography.bib}}
-
 \input{notation} % load the tex file with the notation shortcuts
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
+\addbibresource{\subfix{bibliography.bib}}
 
 \begin{document}
 % Start frontmatter: page numbering in small roman numerals, dont number chapters and sections
