@@ -26,295 +26,10 @@ The defining feature of these systems are flat electronic bands due to folding o
 Superconductivity in these systems is enhanced due to the fact that in the flat bands, interactions between the electrons are very strongly enhanced.
 Thus these systems are a very interesting playground to study strongly correlation effects in general and superconductivity in particular.
 
-This chapter: introduction to the mean-field BCS theory in \cref{sec:bcs-theory}, supercurrent in \cref{sec:superfluid weight}, GL-theory in \cref{sec:Ginzburg-Landau theory of superconductivity} and description of a method to treat certain aspects of strongly-correlated superconductivity from a microsopic standpoint away from the mean-field level in \cref{sec:coherence length in strongly correlated superconductors}.
-
-\section{BCS Theory}\label{sec:bcs-theory}
-
-Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
-
-Theoretical description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
-Description is based on the fact, that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
-These bound electrons show bosonic behaviour and 
-\todo{Why supercurrent?}
-
-\todo{BCS hamiltonian, pairing}
-This model Hamiltonian
-
-\todo{Mean-field}
-It can be connected to 
-
-\todo{Phonon interaction}
-The final element in this description was the origin of the attractive interaction between electrons, which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
-This so-called BCS-theory of superconductivity is very successful in explaining experimental results in many compounds, 
-Surprisingly, it
-\todo{Mean field level can already explain a lot}
-
-BCS-theory gave a microscopic explanation to a phenomenological description of superconductivity pioneered by Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
-This descriptions is based on a one-particle wave function \(\phi (x)\)
-
-Later, this one-particle wa
-vefunction was identified as the order parameter in the developing GL-theory of phase transitions \cite{landauTheorySuperconductivity1965}.
-GL-theory is discussed in more detail in \cref{sec:Ginzburg-Landau theory of superconductivity}.
-This explains the Meissner effect and in turn the supercurrent.
-
-\subsection{BCS theory as a mean field-theory (Hubbard model)}
-
-Hubbard model is the simplest model for interactions
-
-\cite{qinHubbardModelComputational2022}
-
-\todo{Some relevance of the repulsive Hubbard model}
-
-\todo{Motivation for taking a negative U}
-
-\cite{micnasSuperconductivityNarrowbandSystems1990}
-
-\todo{Phase diagram }
-
-\todo{BCS mean field theory on the Hubbard model}
-
-\todo{Derivation for superfluid weight in this case?}
-
-\subsection{Multi-band BCS theory on the Hubbard model}
-
-\todo{Do general multi-band BCS theory}
-
-Define sublattice index
-\begin{equation}
-	\alpha = 1, 2, 3
-\end{equation}
-with \(1 \hateq \mathrm{Gr}_1, 2 \hateq \mathrm{Gr}_2, 3 \hateq \mathrm{X}\).
-Then we can write the non-interacting term as
-\begin{equation}
-	H_0 = - \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
-\end{equation}
-with the matrix
-\begin{equation}
-	\mat{t} = \begin{pmatrix}
-		0 & t_{\mathrm{Gr}} & 0 \\
-		t_{\mathrm{Gr}} & 0 & -V \delta_{ij} \\
-		0 & -V \delta_{ij} & t_{\mathrm{X}} \\
-	\end{pmatrix}
-\end{equation}
-
-Add chemical potential:
-\begin{equation}
-	-\mu \sum_{i \alpha \sigma} n_{i \alpha \sigma}
-\end{equation}
-
-Also write the interaction part with \(\alpha\) (with changed signs compared to Niklas, to keep in line with papers about the attractive Hubbard model):
-\begin{equation}
-	H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
-\end{equation}
-Fourier transformation:
-\begin{equation}
-	H_{int} = - \frac{1}{N^2} \sum_{\alpha, \vb{k}_{1, 2, 3, 4}} U_{\alpha} e^{\iu (\vb{k}_1 + \vb{k}_4 - \vb{k}_1 - \vb{k}_3) r_{i \alpha}}  c_{\vb{k}_1 \alpha \uparrow}^{\dagger} c_{\vb{k}_3 \alpha \downarrow}^{\dagger} c_{\vb{k}_2 \alpha \downarrow} c_{\vb{k}_4 \alpha \uparrow}
-\end{equation}
-Impose zero-momentum pairing: \(\vb{k}_1 + \vb{k}_3 = 0\) and \(\vb{k}_2 + \vb{k}_4 = 0\):
-\begin{align}
-	H_{int} = - \sum_{\alpha, \vb{k}, \vb{k}^{\prime}} U_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}
-\end{align}
-Mean-field approximation:
-\begin{align}
-	H_{int} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
-\end{align}
-with
-\begin{align}
-	\Delta_{\alpha} &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}} \\
-	\Delta_{\alpha}^* &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{\vb{k}^{\prime} \alpha \uparrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow}^{\dagger}}
-\end{align}
-This gives the BCS mean field Hamiltonian:
-\begin{align}
-	H_{BCS} = \sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta} c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{\vb{k} \alpha \sigma}
-	+ \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
-\end{align}
-with Nambu spinor
-\begin{equation}
-	\Psi_{\vb{k}} =
-	\begin{pmatrix}
-		c_{1, \vb{k} \uparrow} \\
-		c_{2, \vb{k} \uparrow} \\
-		c_{3, \vb{k} \uparrow} \\
-		c_{1, -\vb{k} \downarrow}^{\dagger} \\
-		c_{2, -\vb{k} \downarrow}^{\dagger} \\
-		c_{3, -\vb{k} \downarrow}^{\dagger} \\
-	\end{pmatrix}
-\end{equation}
-we have:
-\begin{equation}
-	H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}
-\end{equation}
-with
-\begin{equation}
-	\mathcal{H} (\vb{k}) =
-	\begin{pmatrix}
-		H_{0, \uparrow} (\vb{k}) - \mu & \Delta \\
-		\Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
-	\end{pmatrix}
-\end{equation}
-with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
+This chapter: introduction to the mean-field BCS theory in \cref{sec:bcs-theory}, GL-theory in \cref{sec:Ginzburg-Landau theory of superconductivity} and
 
 
-\subsection{BdG Hamiltonian in band basis}
-
-Use transformation
-\begin{equation}
-	c_{\vb{k} \alpha \sigma}^{\dagger} = \sum_{n} [\mat{G}]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
-\end{equation}
-where the columns are made up of the eigenvectors of \(\mat{H}_{0, \sigma}\) for a given \(\vb{k}\):
-\begin{equation}
-	\mat{G} = 
-	\begin{pmatrix}
-		\vb{G}_1 & \vb{G}_2 & \vb{G}_3
-	\end{pmatrix}
-\end{equation}
-
-with that:
-\begin{equation}
-	\mat{G}^{\dagger}_{\sigma} (\vb{k}) \mat{H}_{0, \sigma} (\vb{k}) \mat{G}_{\sigma} (\vb{k}) =
-	\begin{pmatrix}
-		\epsilon_1 & 0 & 0 \\
-		0 & \epsilon_2 & 0 \\
-		0 & 0 & \epsilon_3
-	\end{pmatrix}
-\end{equation}
-So the kinetic part of the BdG Hamiltonian becomes:
-\begin{align}
-	&\sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta}
-	\sum_{n} [\mat{G} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
-	\sum_{m} [\mat{G} (\vb{k})]_{\beta m} d_{m \vb{k} \sigma}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
-	&= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma}
-	\sum_{\alpha \beta} [\mat{G} (\vb{k})]_{\alpha n}^* [H_{0, \sigma} (\vb{k})]_{\alpha \beta} [\mat{G} (\vb{k})]_{\beta m}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
-	&= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma} \epsilon_{n} \delta_{n m}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
-	&= \sum_{n \vb{k} \sigma} \epsilon_{n} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
-	&\eqqcolon \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
-\end{align}
-with \(\xi_{\vb{k}} \coloneqq \epsilon_{\vb{k}} - \mu\).
-The pairing terms become:
-\begin{align}
-	\sum_{\vb{k} \alpha} \Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger}
-	&= \sum_{\vb{k} \alpha} \Delta_{\alpha} \sum_n [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \uparrow}^{\dagger} \sum_m [\mat{G}_{\downarrow} (-\vb{k})]_{\beta m}^* d_{m -\vb{k} \downarrow}^{\dagger} \\
-	&=
-\end{align}
-
-So that:
-\begin{equation}
-	\mathcal{H} (\vb{k}) =
-	\begin{pmatrix}
-		\epsilon_{\vb{k}} - \mu & G^{\dagger} \Delta G\\
-		G^{\dagger} \Delta^{\dagger} G & -\epsilon_{\vb{k}} + \mu
-	\end{pmatrix}
-\end{equation}
-with
-\begin{equation}
-	\epsilon_{\vb{k}} =
-	\begin{pmatrix}
-		\epsilon_1 (\vb{k}) & 0 & 0 \\
-		0 & \epsilon_2 (\vb{k}) & 0 \\
-		0 & 0 & \epsilon_3 (\vb{k}) \\
-	\end{pmatrix}
-\end{equation}
-
-Concrete example for transformation of gaps from orbital to band basis at \(\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\).
-There, the non-interacting part becomes simply:
-\begin{align}
-	\mathcal{H}_0 &=
-	\begin{pmatrix}
-		0 & 0 & V \\
-		0 & 0 & 0 \\
-		V & 0 & 3 t_X
-	\end{pmatrix}
-\end{align}
-The eigenvalue problem can be solved e.g.~via sympy:
-\begin{equation}
-	G =
-	\begin{pmatrix}
-		\frac{- 3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{- 3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} \\
-		0 & 1 & 0 \\
-		\frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}}
-	\end{pmatrix}
-\end{equation}
-So for \(V \to 0\):
-\begin{equation}
-	G =
-	\begin{pmatrix}
-		-1 & 0 & 0 \\
-		0 & 1 & 0 \\
-		0 & 0 & 1
-	\end{pmatrix}
-\end{equation}
-but for \(V > 0\), there are off-diagonal elements, e.g.~\(V = 0.1\):
-\begin{equation}
-	G =
-	\begin{pmatrix}
-		-0.7578 & 0 & 0.6526 \\
-		0 & 1 & 0 \\
-		0.6526 & 0 & 0.7578
-	\end{pmatrix}
-\end{equation}
-So the transformation of the gap from orbital to band space reads:
-\begin{equation}
-	G^{\dagger} \Delta G =
-	\begin{pmatrix}
-		\frac{3 \Delta_{1} t_{X} - 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} \\
-		0 & \Delta_{2} & 0 \\
-		\frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{- 3 \Delta_{1} t_{X} + 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}}
-	\end{pmatrix}
-\end{equation}
-So in particular there is no interband pairing for \(V \to 0\):
-\begin{equation}
-	G^{\dagger} \Delta G =
-	\begin{pmatrix}
-		\Delta_1 & 0 & 0 \\
-		0 & \Delta_{2} & 0 \\
-		0 & 0 & \Delta_3
-	\end{pmatrix}
-\end{equation}
-But for \(V > 0\), there is interband pairing (e.g. \(V = 0.1\)):
-\begin{equation}
-	G^{\dagger} \Delta G =
-	\begin{pmatrix}
-		0.5742 \Delta_{1} + 0.4258 \Delta_{3} & 0 & - 0.4945 \Delta_{1} + 0.4945 \Delta_{3} \\
-		0 & \Delta_{2} & 0 \\
-		- 0.4945 \Delta_{1} + 0.4945 \Delta_{3} & 0 & 0.4258 \Delta_{1} + 0.5742 \Delta_{3}
-	\end{pmatrix}
-\end{equation}
-
-\subsection{Grand potential}
-
-See \cite{peottaSuperfluidityTopologicallyNontrivial2015}, especially supplementary material, notes 1 and 3.
-
-Mean-Field Hamiltonian (with the last two terms due to exchange of anticommuting fermion operators and the term quadratic in the expectation value from the mean-field decoupling respectively):
-\begin{equation}
-	H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}} + \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U}
-\end{equation}
-The second term is the trace of the non-interacting Hamiltonian.
-
-Thermodynamic grand potential (which at zero temperature is equivalent to the mean-field energy):
-\begin{align}
-	\Omega (T, \Delta) &= -\frac{1}{\beta} \ln{Z_{\Omega}} = -\frac{1}{\beta} \ln{\Tr(e^{-\beta H_{MF}})} \\
-	&= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{\beta} \ln{\Tr(e^{-\beta \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}})}
-\end{align}
-Zero temperature limit:
-\begin{align}
-	\Omega (\Delta) &= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{2} \sum_{\vb{k}} \Tr([\vert \mathcal{H}_{\vb{k}} \vert])
-\end{align}
-where a function of a matrix \(H\) (such as taking the absolute value of the BdG Hamiltonian \(\mathcal{H}_{\vb{k}}\)) is defined for the diagonal matrix of eigenvalues \(D\) and the unitary matrix \(U\) that diagonalizes \(H\):
-\begin{equation}
-	f(H) = U f(D) U^{\dagger}
-\end{equation}
-The route to finding the value of the order parameter for a fixed interaction \(U\) is minimizing the grand potential with respect to \(\Delta\).
-
-
-\section{Transport in superconductors: superfluid weight}\label{sec:superfluid weight}
-
-
-\section{Ginzburg-Landau theory of superconductivity, phase transitions and broken symmetry }\label{sec:Ginzburg-Landau theory of superconductivity}
+\section{Ginzburg-Landau theory of superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
 Following~\cite[ch. 11]{colemanIntroductionManyBodyPhysics2015}.
 
@@ -331,7 +46,9 @@ Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, su
 Landau theory does not need microscopic expression for order parameter, it provides corse-grained description of the properties of matter.
 The order parameter description is good at length scales above \(\xi_0\), the coherence length (e.g.\ size of Cooper pairs for SC).
 
-\subsection{Landau theory}
+\subsection{Ginzburg-Landau theory}
+
+\paragraph{Landau theory}
 
 Basic idea of Landau theory: write free energy as function \(F[\psi]\) of the order parameter.
 Region of small \(\psi\), expand free energy of many-body system as simple polynomial:
@@ -388,7 +105,7 @@ There is a topological argument for the fact that the phase is rigid.
 This leads to Ginzburg-Landau theory.
 Will see later: well-defined phase is associated with persistent currents or superflow.
 
-\subsection{Ginzburg-Landau theory I: Ising order}
+\paragraph{Ginzburg-Landau theory}
 
 Landau theory: energy cost of a uniform order parameter, more general theory needs to account for inhomogenous order parameters, in which the amplitude varies or direction of order parameter is twisted -> GL theory.
 First: one-component, `Ising' order parameter.
@@ -405,7 +122,7 @@ Length scale introduced by the gradient term: correlation length
 
 \todo{length scale/correlation length}
 
-\subsection{Ginzburg-Landau theory II: complex order and superflow}
+\paragraph{Complex order and superflow}
 
 Now: GL theory of complex or two-component order parameters, so superfluids and superconductors.
 Heart of discussion: emergence of a `macroscopic wavefunction', where the microscopic field operators \(\hat{\psi}(x)\) acquire an expectation value:
@@ -482,12 +199,7 @@ The second term resembles GL functional for an Ising order parameter, describes 
 \todo{Here: particle-current operator, especially for coherent state, connection with phase twist}
 
 
-
-
-
-\section{Coherence length and penetration depth in strongly correlated superconductors}\label{sec:coherence length in strongly correlated superconductors}
-
-Is that a good fit here?
+\section{Superconducting length scales from the constraint of finite-momentum pairing}
 
 From~\cite{wittBypassingLatticeBCSBEC2024}.
 
@@ -501,5 +213,59 @@ Constrain for FF-type pairing:
 \end{equation}
 
 \todo{Finish up the discussion of Niklas paper}
+
+\section{Mean-field theory of superconductivity}\label{sec:bcs-theory}
+
+\subsection{BCS theory}
+
+Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
+
+Theoretical description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
+Description is based on the fact, that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
+These bound electrons show bosonic behaviour and 
+\todo{Why supercurrent in BCS theory?}
+
+\todo{BCS hamiltonian, pairing}
+This model Hamiltonian
+
+The final element in this description was the origin of the attractive interaction between electrons, which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
+This so-called BCS-theory of superconductivity is very successful in explaining experimental results in many compounds, 
+Surprisingly, it
+\todo{What is explained by phononic pairing}
+
+\todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
+
+%BCS-theory gave a microscopic explanation to a phenomenological description of superconductivity pioneered by Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
+%This descriptions is based on a one-particle wave function \(\phi (x)\)
+
+%Later, this one-particle wavefunction was identified as the order parameter in the developing GL-theory of phase transitions \cite{landauTheorySuperconductivity1965}.
+%GL-theory is discussed in more detail in \cref{sec:Ginzburg-Landau theory of superconductivity}.
+%This explains the Meissner effect and in turn the supercurrent.
+
+\subsection{Mean field-theory on the attractive Hubbard model}
+
+Hubbard model is the simplest model for interactions
+
+\cite{qinHubbardModelComputational2022}
+
+\todo{Some relevance of the repulsive Hubbard model}
+
+\todo{Motivation for taking a negative U}
+
+\cite{micnasSuperconductivityNarrowbandSystems1990}
+
+\todo{Phase diagram }
+
+\paragraph{Multi-band BCS theory on the Hubbard model}
+
+\todo{General multi-band mean field theory theory}
+
+\paragraph{Self-consistent solution}
+
+\todo{How to solve mean field theory self-consistently}
+
+\paragraph{Finite momentum}
+
+\todo{How to include finite momentum}
 
 \end{document}
