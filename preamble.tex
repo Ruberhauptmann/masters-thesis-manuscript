@@ -82,7 +82,8 @@
     style=numeric-comp,
     sorting=none,
     giveninits=true,
-    backref=true
+    backref=true,
+    defernumbers=true
 ]{biblatex} % use biblatex with a numeric (compact) style, given in the order of citation and abbreviation of given names
 \renewbibmacro*{doi+eprint+url}{
     \printfield{doi}
@@ -92,6 +93,8 @@
         \iffieldundef{eprint}{\usebibmacro{url+urldate}}{}%
     }{}
 }% only print URL if there is no DOI
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Color definitions
