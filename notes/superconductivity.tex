@@ -258,6 +258,55 @@ Hubbard model is the simplest model for interactions
 
 \paragraph{Multi-band BCS theory on the Hubbard model}
 
+Fourier transformation:
+\begin{equation}
+	H_{int} = - \frac{1}{N^2} \sum_{\alpha, \vb{k}_{1, 2, 3, 4}} U_{\alpha} e^{\iu (\vb{k}_1 + \vb{k}_4 - \vb{k}_1 - \vb{k}_3) r_{i \alpha}}  c_{\vb{k}_1 \alpha \uparrow}^{\dagger} c_{\vb{k}_3 \alpha \downarrow}^{\dagger} c_{\vb{k}_2 \alpha \downarrow} c_{\vb{k}_4 \alpha \uparrow}
+\end{equation}
+Impose zero-momentum pairing: \(\vb{k}_1 + \vb{k}_3 = 0\) and \(\vb{k}_2 + \vb{k}_4 = 0\):
+\begin{align}
+	H_{int} = - \sum_{\alpha, \vb{k}, \vb{k}^{\prime}} U_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}
+\end{align}
+Mean-field approximation:
+\begin{align}
+	H_{int} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
+\end{align}
+with
+\begin{align}
+	\Delta_{\alpha} &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{-\vb{k}^{\prime} \alpha \downarrow} c_{\vb{k}^{\prime} \alpha \uparrow}} \\
+	\Delta_{\alpha}^* &= - U_{\alpha} \sum_{\vb{k}^{\prime}} \braket{c_{\vb{k}^{\prime} \alpha \uparrow}^{\dagger} c_{-\vb{k}^{\prime} \alpha \downarrow}^{\dagger}}
+\end{align}
+This gives the BCS mean field Hamiltonian:
+\begin{align}
+	H_{BCS} = \sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta} c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}
+	-\mu \sum_{\vb{k} \alpha \sigma} n_{\vb{k} \alpha \sigma}
+	+ \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
+\end{align}
+with Nambu spinor
+\begin{equation}
+	\Psi_{\vb{k}} =
+	\begin{pmatrix}
+		c_{1, \vb{k} \uparrow} \\
+		c_{2, \vb{k} \uparrow} \\
+		c_{3, \vb{k} \uparrow} \\
+		c_{1, -\vb{k} \downarrow}^{\dagger} \\
+		c_{2, -\vb{k} \downarrow}^{\dagger} \\
+		c_{3, -\vb{k} \downarrow}^{\dagger} \\
+	\end{pmatrix}
+\end{equation}
+we have:
+\begin{equation}
+	H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}
+\end{equation}
+with
+\begin{equation}
+	\mathcal{H} (\vb{k}) =
+	\begin{pmatrix}
+		H_{0, \uparrow} (\vb{k}) - \mu & \Delta \\
+		\Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
+	\end{pmatrix}
+\end{equation}
+with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
+
 \todo{General multi-band mean field theory theory}
 
 \paragraph{Self-consistent solution}

@@ -1,0 +1,166 @@
+\documentclass[../notes.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+
+\begin{document}
+
+\chapter{Trash}
+
+Collection of some notes that could maybe be relevant, but really arent right now.
+
+\section{Dressed Graphene model}
+
+\subsection{BdG Hamiltonian in band basis}
+
+Use transformation
+\begin{equation}
+	c_{\vb{k} \alpha \sigma}^{\dagger} = \sum_{n} [\mat{G}]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
+\end{equation}
+where the columns are made up of the eigenvectors of \(\mat{H}_{0, \sigma}\) for a given \(\vb{k}\):
+\begin{equation}
+	\mat{G} = 
+	\begin{pmatrix}
+		\vb{G}_1 & \vb{G}_2 & \vb{G}_3
+	\end{pmatrix}
+\end{equation}
+
+with that:
+\begin{equation}
+	\mat{G}^{\dagger}_{\sigma} (\vb{k}) \mat{H}_{0, \sigma} (\vb{k}) \mat{G}_{\sigma} (\vb{k}) =
+	\begin{pmatrix}
+		\epsilon_1 & 0 & 0 \\
+		0 & \epsilon_2 & 0 \\
+		0 & 0 & \epsilon_3
+	\end{pmatrix}
+\end{equation}
+So the kinetic part of the BdG Hamiltonian becomes:
+\begin{align}
+	&\sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta}
+	\sum_{n} [\mat{G} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \sigma}^{\dagger}
+	\sum_{m} [\mat{G} (\vb{k})]_{\beta m} d_{m \vb{k} \sigma}
+	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+	&= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma}
+	\sum_{\alpha \beta} [\mat{G} (\vb{k})]_{\alpha n}^* [H_{0, \sigma} (\vb{k})]_{\alpha \beta} [\mat{G} (\vb{k})]_{\beta m}
+	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+	&= \sum_{m n \vb{k} \sigma} d_{n \vb{k} \sigma}^{\dagger} d_{m \vb{k} \sigma} \epsilon_{n} \delta_{n m}
+	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+	&= \sum_{n \vb{k} \sigma} \epsilon_{n} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
+	-\mu \sum_{\vb{k} \alpha \sigma} n_{n \vb{k} \sigma} \\
+	&\eqqcolon \sum_{n \vb{k} \sigma} \xi_{\vb{k}} d_{n \vb{k} \sigma}^{\dagger} d_{n \vb{k} \sigma}
+\end{align}
+with \(\xi_{\vb{k}} \coloneqq \epsilon_{\vb{k}} - \mu\).
+The pairing terms become:
+\begin{align}
+	\sum_{\vb{k} \alpha} \Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger}
+	&= \sum_{\vb{k} \alpha} \Delta_{\alpha} \sum_n [\mat{G}_{\uparrow} (\vb{k})]_{\alpha n}^* d_{n \vb{k} \uparrow}^{\dagger} \sum_m [\mat{G}_{\downarrow} (-\vb{k})]_{\beta m}^* d_{m -\vb{k} \downarrow}^{\dagger} \\
+	&=
+\end{align}
+
+So that:
+\begin{equation}
+	\mathcal{H} (\vb{k}) =
+	\begin{pmatrix}
+		\epsilon_{\vb{k}} - \mu & G^{\dagger} \Delta G\\
+		G^{\dagger} \Delta^{\dagger} G & -\epsilon_{\vb{k}} + \mu
+	\end{pmatrix}
+\end{equation}
+with
+\begin{equation}
+	\epsilon_{\vb{k}} =
+	\begin{pmatrix}
+		\epsilon_1 (\vb{k}) & 0 & 0 \\
+		0 & \epsilon_2 (\vb{k}) & 0 \\
+		0 & 0 & \epsilon_3 (\vb{k}) \\
+	\end{pmatrix}
+\end{equation}
+
+Concrete example for transformation of gaps from orbital to band basis at \(\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\).
+There, the non-interacting part becomes simply:
+\begin{align}
+	\mathcal{H}_0 &=
+	\begin{pmatrix}
+		0 & 0 & V \\
+		0 & 0 & 0 \\
+		V & 0 & 3 t_X
+	\end{pmatrix}
+\end{align}
+The eigenvalue problem can be solved e.g.~via sympy:
+\begin{equation}
+	G =
+	\begin{pmatrix}
+		\frac{- 3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{- 3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} \\
+		0 & 1 & 0 \\
+		\frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} + \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}} & 0 & \frac{2 V}{\sqrt{4 V^{2} + \left(3 t_{X} - \sqrt{4 V^{2} + 9 t_{X}^{2}}\right)^{2}}}
+	\end{pmatrix}
+\end{equation}
+So for \(V \to 0\):
+\begin{equation}
+	G =
+	\begin{pmatrix}
+		-1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}
+\end{equation}
+but for \(V > 0\), there are off-diagonal elements, e.g.~\(V = 0.1\):
+\begin{equation}
+	G =
+	\begin{pmatrix}
+		-0.7578 & 0 & 0.6526 \\
+		0 & 1 & 0 \\
+		0.6526 & 0 & 0.7578
+	\end{pmatrix}
+\end{equation}
+So the transformation of the gap from orbital to band space reads:
+\begin{equation}
+	G^{\dagger} \Delta G =
+	\begin{pmatrix}
+		\frac{3 \Delta_{1} t_{X} - 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} \\
+		0 & \Delta_{2} & 0 \\
+		\frac{V \left(- \Delta_{1} + \Delta_{3}\right)}{\sqrt{4 V^{2} + 9 t_{X}^{2}}} & 0 & \frac{- 3 \Delta_{1} t_{X} + 3 \Delta_{3} t_{X} + \left(\Delta_{1} + \Delta_{3}\right) \sqrt{4 V^{2} + 9 t_{X}^{2}}}{2 \sqrt{4 V^{2} + 9 t_{X}^{2}}}
+	\end{pmatrix}
+\end{equation}
+So in particular there is no interband pairing for \(V \to 0\):
+\begin{equation}
+	G^{\dagger} \Delta G =
+	\begin{pmatrix}
+		\Delta_1 & 0 & 0 \\
+		0 & \Delta_{2} & 0 \\
+		0 & 0 & \Delta_3
+	\end{pmatrix}
+\end{equation}
+But for \(V > 0\), there is interband pairing (e.g. \(V = 0.1\)):
+\begin{equation}
+	G^{\dagger} \Delta G =
+	\begin{pmatrix}
+		0.5742 \Delta_{1} + 0.4258 \Delta_{3} & 0 & - 0.4945 \Delta_{1} + 0.4945 \Delta_{3} \\
+		0 & \Delta_{2} & 0 \\
+		- 0.4945 \Delta_{1} + 0.4945 \Delta_{3} & 0 & 0.4258 \Delta_{1} + 0.5742 \Delta_{3}
+	\end{pmatrix}
+\end{equation}
+
+\subsection{Grand potential}
+
+See \cite{peottaSuperfluidityTopologicallyNontrivial2015}, especially supplementary material, notes 1 and 3.
+
+Mean-Field Hamiltonian (with the last two terms due to exchange of anticommuting fermion operators and the term quadratic in the expectation value from the mean-field decoupling respectively):
+\begin{equation}
+	H_{MF} = \sum_{\vb{k}} \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}} + \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U}
+\end{equation}
+The second term is the trace of the non-interacting Hamiltonian.
+
+Thermodynamic grand potential (which at zero temperature is equivalent to the mean-field energy):
+\begin{align}
+	\Omega (T, \Delta) &= -\frac{1}{\beta} \ln{Z_{\Omega}} = -\frac{1}{\beta} \ln{\Tr(e^{-\beta H_{MF}})} \\
+	&= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{\beta} \ln{\Tr(e^{-\beta \Psi_{\vb{k}}^{\dagger} \mathcal{H} (\vb{k}) \Psi_{\vb{k}}})}
+\end{align}
+Zero temperature limit:
+\begin{align}
+	\Omega (\Delta) &= \sum_{\vb{k}} \Tr(H^{\downarrow}_{\vb{k}}) + \sum_{\vb{k} \alpha} \frac{\vert \Delta_{\alpha} \vert^2}{U} - \frac{1}{2} \sum_{\vb{k}} \Tr([\vert \mathcal{H}_{\vb{k}} \vert])
+\end{align}
+where a function of a matrix \(H\) (such as taking the absolute value of the BdG Hamiltonian \(\mathcal{H}_{\vb{k}}\)) is defined for the diagonal matrix of eigenvalues \(D\) and the unitary matrix \(U\) that diagonalizes \(H\):
+\begin{equation}
+	f(H) = U f(D) U^{\dagger}
+\end{equation}
+The route to finding the value of the order parameter for a fixed interaction \(U\) is minimizing the grand potential with respect to \(\Delta\).
+
+\end{document}

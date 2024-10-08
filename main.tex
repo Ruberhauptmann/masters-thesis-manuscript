@@ -9,19 +9,24 @@
     headinclude,
     titlepage=firstiscover,
     %toc=flat,
-    bibliography=totoc,
     listof=leveldown,
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
 
-\addbibresource{bibliography.bib}
+\hypersetup{
+	hidelinks=true,
+	pdftitle={Superconducting phase stiffness and coherence length from a finite momentum pairing constraint},
+	pdfauthor={Tjark Sievers}
+}
 
 \input{notation} % load the tex file with the notation shortcuts
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
+
+\addbibresource{\subfix{bibliography.bib}}
 
 \begin{document}
 % Start frontmatter: page numbering in small roman numerals, dont number chapters and sections
@@ -38,8 +43,7 @@
 \subfile{chapters/abstract.tex}
 
 
-% Print the table of contents (without link boxes)
-\hypersetup{hidelinks}
+% Print the table of contents
 \tableofcontents
 \clearpage
 
@@ -87,8 +91,8 @@
 \listoftables
 
 % Include the acknowledgement
-\chapter*{Acknowledgement}
-\addcontentsline{toc}{chapter}{Acknowledgement}
+\chapter*{Acknowledgment}
+\addcontentsline{toc}{chapter}{Acknowledgment}
 %\subfile{chapters/acknowledgement.tex}
 
 % Include the Selbstständigkeitserklärung
