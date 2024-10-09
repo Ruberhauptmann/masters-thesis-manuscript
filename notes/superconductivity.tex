@@ -45,6 +45,7 @@ Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, su
 \end{equation}
 Landau theory does not need microscopic expression for order parameter, it provides corse-grained description of the properties of matter.
 The order parameter description is good at length scales above \(\xi_0\), the coherence length (e.g.\ size of Cooper pairs for SC).
+On length scales above \(\xi_0\), the order parameter behaves as a smoothly varying function.
 
 \subsection{Ginzburg-Landau theory}
 
@@ -114,13 +115,17 @@ GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), 
 	f_{GL} [\psi, \Delta \psi, h] = \frac{s}{2} (\Delta \psi)^2 + \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4
 \end{equation}
 GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
-%Dimensional analysis shows: \(\frac{s}{r} = L^2\) has dimension of length squared.
+Dimensional analysis shows: \(\frac{s}{r} = L^2\) has dimension of length squared.
 Length scale introduced by the gradient term: correlation length
 \begin{equation}
-	d
+	\xi (T) = \sqrt{\frac{s}{\vert r(T) \vert}} = \xi_0 \left\vert 1 - \frac{T}{T_C} \right\vert^{-\frac{1}{2}}
 \end{equation}
-
-\todo{length scale/correlation length}
+sets characteristic length scale of order-parameter fluctuations, where
+\begin{equation}
+	\xi_0 = \xi (T = 0) = \sqrt{\frac{s}{\alpha T_C}}
+\end{equation}
+is a measure of the microscopic coherence length.
+Near transition \(\xi (T)\) diverges, but far from transition it becomes comparable with the coherence length.
 
 \paragraph{Complex order and superflow}
 
