@@ -157,10 +157,13 @@ Emergent phenomenon, collective properties of mater not a-priori self-evident fr
 
 GL free energy density for superfluid (with one added term in comparison to Landau energy):
 \begin{equation}
-	f_{GL} [\psi, \Delta \psi] = \frac{\hbar^2}{2m} \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
+	f_{GL} [\psi, \Delta \psi] = s \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
 \end{equation}
-Interpreted as energy density of a condensate of bosons in which the field operator behaves as a complex order parameter.
-\todo{energy density of bosonic field? -> for comparison!}
+Compare with the energy density of a bosonic field (with a quarctic interaction):
+\begin{align}
+	H = \int \odif[order=D]{x} \frac{\hbar^2}{2m} \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
+\end{align}
+Interpret GL free energy as energy density of a condensate of bosons in which the field operator behaves as a complex order parameter.
 Gives interpretation of gradient term as kinetic energy:
 \begin{equation}
 	s \vert \Delta \psi \vert^2 = \frac{\hbar^2}{2m} \braket{\Delta \hat{\psi}^{\dagger} \Delta \hat{\psi}} \implies s = \frac{\hbar^2}{2m}
@@ -169,10 +172,9 @@ As in Ising order: correlation length/GL-coherence length governs characteristic
 \begin{equation}
 	\xi = \sqrt{\frac{s}{\vert r \vert}} = \sqrt{\frac{\hbar^2}{2m \vert r \vert}} = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
 \end{equation}
-\todo{Compare with Ising order, especially dependence on \(T\)}
 where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
-Beyond this length: only phase fluctuations survive.
-\todo{Compare with Ising order. Is that derived or postulated?}
+Beyond this length scale: only phase fluctuations survive.
+\todo{I dont know why that is. Can I support that somehow better?}
 Freeze out fluctuations in amplitude (no \(x\)-dependence in amplitude) \(\psi(x) = \sqrt{n_s} e^{\iu \phi(x)}\), then \(\Delta \psi = \iu \Delta \phi \psi\) and \(\vert \Delta \psi \vert^2 = n_s (\Delta \phi)^2\), dependency of kinetic energy on the phase twist is (bringing it into the form \(\frac{m}{2} v^2\)):
 \begin{equation}
 	\frac{\hbar^2 n_s}{2m} (\Delta \phi)^2 = \frac{m n_s}{2} (\frac{\hbar}{m} \Delta \phi)^2
@@ -201,7 +203,9 @@ So:
 \end{equation}
 The second term resembles GL functional for an Ising order parameter, describes energy cost of variations in the magnitude of the order parameter.
 
-\todo{Here: particle-current operator, especially for coherent state, connection with phase twist}
+\paragraph{Phase rigidity and superflow}
+
+\todo{Phase rigidity and superflow}
 
 
 \section{Superconducting length scales from the constraint of finite-momentum pairing}
@@ -227,8 +231,7 @@ Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
 
 Theoretical description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 Description is based on the fact, that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
-These bound electrons show bosonic behaviour and 
-\todo{Why supercurrent in BCS theory?}
+As explained in \cref{sec:Ginzburg-Landau theory of superconductivity}, these paired electrons (finite order parameter) carry a superflow.
 
 \todo{BCS hamiltonian, pairing}
 This model Hamiltonian
