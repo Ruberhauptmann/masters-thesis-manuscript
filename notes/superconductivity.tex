@@ -5,6 +5,9 @@
 
 \chapter{Superconductivity}
 
+In 1894, Albert Michelson remarked that \enquote{it seems probable that most of the grand underlying principles have been firmly established} \cite[p. 159]{chicagoAnnualRegister1896}.
+
+
 At the end of the 19th and the beginning of the 20th century, cooling technology made great progress.
 Liquifying gases, were able to reach temperatures as low as \(\qty{4}{\kelvin}\) (the boiling point of Helium).
 Using that, SC was discovered in mercury in 1911 by Heike Onnes \cite{onnesFurtherExperimentsLiquid1991}.
@@ -15,9 +18,10 @@ This started almost half a century of intensive theoretical research, which culm
 Cuprate superconductors are made up of layers of cooper oxide and charge reservoirs in between.
 The specific charge reservoir layers determine the properties of the SC and varying them lead to a rich zoo of materials with high \(T_C\)  \cite{rybickiPerspectivePhaseDiagram2016}.
 
-Most current technical applications of superconductors rely on the fact that superconducting wires can carry much higher currents that ordinary wires and thus produce much larger magnetic fields.
-The largest commercial application to date is in magnetic resonance imaging, a medical technique using strong magnetic fields and field gradients \cite{rinckMagneticResonanceMedicine}.
-Technical applications in research are much wider, ranging from strong superconducting magnets in the LHC \cite{tollestrupDevelopmentSuperconductingMagnets2008} and other particle accelerators over detectors of single photons in astrophysics \cite{irwinTransitionEdgeSensors2005} to extremely sensitive measurement devices for magnetic fields \cite{faleyHighTcSQUIDBiomagnetometers2017}.
+Largest commercial application to date is in magnetic resonance imaging, a medical technique using strong magnetic fields and field gradients \cite{rinckMagneticResonanceMedicine}.
+Enabled due to the fact, that SCs can carry much stronger currents and thus generate much higher magnetic field strength.
+Technical applications in research are much wider, ranging from strong superconducting magnets in the LHC \cite{tollestrupDevelopmentSuperconductingMagnets2008} and other particle accelerators over detectors of single photons in astrophysics \cite{irwinTransitionEdgeSensors2005} to extremely sensitive measurement devices for magnetic fields \cite{faleyHighTcSQUIDBiomagnetometers2017} and voltages \cite{klushinPresentFutureHightemperature2020} based on the Josesphon effect \cite{josephsonPossibleNewEffects1962}.
+
 
 Since the first discovery of SC in cuprates, there has been a lot of work to develop superconductors with higher transition temperatures.
 One interesting development in is in twisted multilayer systems, first realized as twisted bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}.
@@ -151,7 +155,7 @@ Twist/gradient of phase determines superfluid velocity:
 \end{equation}
 We will derive this later in the chapter.
 Counterintuitive from quantum mechanics: GL suggested that \(\Phi(x)\) is a macroscopic manifestation of a macroscopic number of particles condensed into precisely the same quantum state.
-Emergent phenomenon, collective properties of mater not a-priori self-evident from microscopic physics.
+Emergent phenomenon, collective properties of mater not a-priori evident from microscopic physics.
 
 GL free energy density for superfluid (with one added term in comparison to Landau energy):
 \begin{equation}
@@ -172,7 +176,8 @@ As in Ising order: correlation length/GL-coherence length governs characteristic
 \end{equation}
 where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
 Beyond this length scale: only phase fluctuations survive.
-\todo{I dont know why that is. Can I support that somehow better?}
+\todo{I dont know why that is. Can I support that somehow better? -> See Niklas thesis}
+
 Freeze out fluctuations in amplitude (no \(x\)-dependence in amplitude) \(\psi(x) = \sqrt{n_s} e^{\iu \phi(x)}\), then \(\Delta \psi = \iu \Delta \phi \psi\) and \(\vert \Delta \psi \vert^2 = n_s (\Delta \phi)^2\), dependency of kinetic energy on the phase twist is (bringing it into the form \(\frac{m}{2} v^2\)):
 \begin{equation}
 	\frac{\hbar^2 n_s}{2m} (\Delta \phi)^2 = \frac{m n_s}{2} (\frac{\hbar}{m} \Delta \phi)^2
@@ -216,35 +221,68 @@ In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise.
 
 Theory/procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
-Constrain for FF-type pairing:
+FF-type pairing with Cooper pairs carrying finite momentum:
 \begin{equation}
 	\psi_{\vb{q}} (\vb{r}) = \vert \psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
 \end{equation}
+Then the free energy density is
+\begin{equation}
+	f_{GL} [\psi_{\vb{q}}] = \alpha \vert \psi_{\vb{q}} \vert^2 + \frac{b}{2} \vert \psi_{\vb{q}} \vert^4 + \frac{\hbar^2 q^2}{2 m^*} \vert \psi_{\vb{q}} \vert^2
+\end{equation}
+Stationary point of the system:
+\begin{equation}
+	\fdv{f_{GL}}{\psi_{\vb{q}}^*} = 2 \psi_{\vb{q}} \left[\alpha (1 - \xi^2 q^2) + b \vert \psi_{\vb{q}} \vert^2\right] = 0
+\end{equation}
+which results in the \(\vb{q}\)-dependence of the OP
+\begin{equation}
+	\vert \psi_{\vb{q}} \vert^2 = \vert \psi_{0} \vert^2 (1 - \xi(T)^2 q^2)
+\end{equation}
+For some value, SC order breaks down, \(\psi_{\vb{q}_c} = 0\), because the kinetic energy from phase modulation exceeds the gain in energy from pairing.
+In GL theory: \(q_c = \xi(T)^{-1}\).
+The temperature dependence of the OP and extracted \(\xi(T)\) gives access to the coherence length via
+\begin{equation}
+	\xi(T) = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
+\end{equation}
+Specifically: take
+\begin{equation}
+	\xi(T) = \frac{1}{\sqrt{2} \vert \vb{Q} \vert}
+\end{equation}
+with \(\vb{Q}\) such that
+\begin{equation}
+	\vert \frac{\psi_{\vb{Q}}(T)}{\psi_0 (T)} \vert = \frac{1}{\sqrt{2}}
+\end{equation}
+The Cooper pair \cite{yuanSupercurrentDiodeEffect2022, shimanoHiggsModeSuperconductors2020}
 
-\todo{Finish up the discussion of Niklas paper}
+\todo{Depairing current from FMP}
 
-\section{Mean-field theory of superconductivity}\label{sec:bcs-theory}
+\todo{Full formula for supercurrent, with sum over orbitals}
 
-\todo{Clear up nomenclature: BCS theory? BdG theory? Mean field theory?}
+\todo{DS from FMP}
 
-\subsection{BCS theory}
+\todo{Write more about the connection between all the things here}
+
+\section{Bardeen-Coooper-Schrieffer Theory}\label{sec:bcs-theory}
+
+\subsection{BCS Hamiltonian}
 
 Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
 
 First phenomenological description of SC: Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
-This descriptions is based on a one-particle wave function \(\phi (x)\) \todo{Finish up London theory}
+He was motivated by the discovery of the Meissner effect in 1933 \cite{meissnerNeuerEffektBei1933}, where magnetic flux inside of the superconductor is always pushed out in contrast to a perfectly conducting material, which would hold a `memory' of the magnetic field at the time of the phase transition. 
+This suggests that transition to the SC state is reversible and a SC is not just the limiting case of a conductor with infinite conductivity, in which according to the Maxwell equations, the magnetic flux would not change.
+Londons first descriptions is based on a one-particle wave function \(\phi (x)\).
+He proposed that persistent supercurrent is a property of the ground state associated with its rigidity against the application of a field.
 
+In 1950 \cite{landauTheorySuperconductivity1965}: GL interpreted this wave function as a complex order parameter as explained in \cref{sec:Ginzburg-Landau theory of superconductivity}.
 
 Microscopic description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
-Description is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956} \todo{Better explanation microscopic OP}
+Description is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
 
-BCS theory gave a microscopic explanation for the wavefunction used in the phenomenological London theory.
-Furthermore, it is the order parameter in the developing GL-theory of phase transitions \cite{landauTheorySuperconductivity1965}.
-As explained in \cref{sec:Ginzburg-Landau theory of superconductivity}, finite order parameter carry a superflow.
+\todo{Microscopic OP in BCS}
 
-The BCS-Hamiltonian is: \todo{BCS Hamiltonian}
-\begin{equation}
-	H_{BCS} = 
+The BCS-Hamiltonian is:
+\begin{equation}\label{eq:BCS Hamiltonian}
+	H_{\text{BCS}} = \sum_{\vb{k}\sigma} \epsilon_{\vb{k}\sigma} c_{\vb{k}\sigma}^{\dagger} c_{\vb{k}\sigma} + \sum_{\vb{k}, \vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}} c_{\vb{k}\uparrow}^{\dagger} c_{-\vb{k}\downarrow}^{\dagger} c_{-\vb{k}^{\prime}\downarrow} c_{\vb{k}^{\prime}\uparrow}
 \end{equation}
 The final element in this description was the origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\) between electrons, which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
 This so-called BCS-theory of superconductivity is very successful in explaining experimental results in many compounds.
@@ -252,11 +290,24 @@ This so-called BCS-theory of superconductivity is very successful in explaining 
 
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
 
-\todo{How can BCS theory be taken as a mean-field theory?}
+BCS theory always comes in conjunction with a mean-field description, decoupling the 
+
+\todo{Introduce mean field here}
+
+The reason for this: the interaction in the BCS Hamiltonian \cref{eq:BCS Hamiltonian} takes place at exactly zero momentum and as such is an infinite range interaction
+
+A 
+
+\todo{What is the connection between mean field theory and BCS theory?}
 
 
-\subsection{Mean field-theory on the attractive Hubbard model}
+\subsection{Attractive Hubbard Model}
 
+Simple choice for pairing interaction:
+\begin{equation}
+	V_{\vb{k}, \vb{k}^{\prime}} = U
+\end{equation}
+This is then just the (attractive) Hubbard model.
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
 
@@ -273,18 +324,27 @@ Besides
 \cite{qinHubbardModelComputational2022}
 
 This simple Hubbard model can be extended in a multitude of ways to model a variety of physical system.
-In this work: extension to multiple orbitals (on the honeycomb lattice) and an attractive interaction, i.e. a negative \(U\).
+In this work: extension to multiple orbitals and an attractive interaction, i.e. a negative \(U\).
 Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations that can be described as bosons \cite{micnasSuperconductivityNarrowbandSystems1990}.
 \todo{There are some more specific papers to the specific mechanisms (and also some more mechanism), could cite these here and say some more things}
 The form of the interaction term is then:
 \begin{equation}
-	H_{\mathrm{int}} = -U \sum_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
+	H_{\mathrm{int}} = -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
+	\label{eq:Hubbard interaction multiband}
 \end{equation}
-where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(U > 0\) now corresponds to an attractive interaction.
+where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(U > 0\) now corresponds to an attractive interaction (this is purely convention).
 \todo{Define: what exactly are orbitals in this context?}
-This is purely convention.
 
-\paragraph{Multi-band BCS theory on the Hubbard model}
+\paragraph{Multi-band BCS Theory}
+
+Look at interaction term \cref{eq:Hubbard interaction multiband}.
+Mean-field approximation: operators do not deviate much from their average value:
+
+\begin{align}
+	H_{\mathrm{int}} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
+\end{align}
+
+
 
 Fourier transformation:
 \begin{equation}
@@ -337,12 +397,165 @@ with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\D
 
 \todo{General multi-band mean field theory theory}
 
+
+
 \paragraph{Self-consistent solution}
 
 \todo{How to solve mean field theory self-consistently}
 
 \paragraph{Finite momentum}
 
+To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing \cite{kinnunenFuldeFerrellLarkin2018}:
+\begin{equation}
+	\Delta
+\end{equation}
+
 \todo{How to include finite momentum}
+
+\section{Dynamical Mean-Field Theory}
+
+\subsection{Green's Function Formalism}
+
+Following~\cite{bruusManyBodyQuantumTheory2004}
+
+Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
+
+Have different kinds of Green's functions, for example the retarded Green's function:
+\begin{equation}
+	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (t^{\prime})\}}
+\end{equation}
+They give the amplitude of a particle inserted at point \(\vb{r}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{r}\) at time \(t\).
+For time-independent Hamiltonians and systems in equilibrium, the GFs only depend on time differences:
+\begin{equation}
+	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = G^R (\vb{r} \sigma, \vb{r}^{\prime} \sigma^{\prime}, t - t^{\prime})
+\end{equation}
+So we can take \(t^{\prime} = 0\) and consider \(t\) as the only free variable:
+\begin{equation}
+	G^R (\vb{r}\sigma, \vb{r}^{\prime} \sigma^{\prime}, t) = -\iu \Theta(t) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (0)\}}
+\end{equation}
+In a translation invariant system: can use \(\vb{k}\) as a natural basis set:
+\begin{equation}
+	G^R (\vb{k}, \sigma, \sigma^{\prime} t) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma^{\prime}}^{\dagger} (0)\}}
+\end{equation}
+Define Fourier-transform:
+\begin{equation}
+	G^R (\vb{k}, \sigma, \sigma^{\prime}, \omega) = \int_{-\infty}^{\infty} \odif{t} G^R (\vb{k}, \sigma, \sigma^{\prime} t)
+\end{equation}
+Can define the spectral function from this:
+\begin{equation}
+	A(\vb{k} \sigma, \omega) = -2 \Im G^R (\vb{k} \sigma, \omega)
+\end{equation}
+Looking at the diagonal elements of \(G^R\) here.
+The spectral function can be thought of as the energy resolution of a particle with energy \(\omega\).
+This mean, for non-interacting systems, the spectral function is a delta-function around the single-particle energies:
+\begin{equation}
+	A_0 (\vb{k} \sigma, \omega) = 2\pi \delta (\omega - \epsilon_{\vb{k} \sigma})
+\end{equation}
+For interacting systems this is not true, but \(A\) can still be peaked.
+
+\todo{Show GFs can be related to observables}
+
+Mathematical technique to calculate retarded GFs involves defining GFs on imaginary times \gls{imaginary time}:
+\begin{equation}
+	t \to -\iu \tau
+\end{equation}
+where \(\tau\) is real and has the dimension time.
+This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
+
+Define imaginary time/Matsubara GF \gls{matsubara correlation function}:
+\begin{equation}
+	\mathcal{C}_{A B} (\tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
+\end{equation}
+with time-ordering operator in imaginary time:
+\begin{equation}
+	T_{\tau} (A(\tau) B(\tau^{\prime})) = \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau)
+\end{equation}
+so that operators with later `times' go to the left.
+
+Can prove from properties of Matsubara GF, that they are only defined for
+\begin{equation}
+	-\beta < \tau < \beta
+\end{equation}
+Due to this, the Fourier transform of the Matsubara GF is defined on discrete values:
+\begin{equation}
+	\mathcal{C}_{A B} (\iu \omega_n) = \int_{0}^{\beta} \odif{\tau}
+\end{equation}
+with fermionic/bosonic Matsubara frequencies
+\begin{equation}
+	\omega_n =
+	\begin{cases}
+		\frac{2n \pi}{\beta} \, \text{for bosons} \\
+		\frac{(2n + 1)\pi}{\beta} \, \text{for fermions}
+	\end{cases}
+\end{equation}
+
+\todo{How to resolve ambiguity at borders of integral}
+
+It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
+So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
+\begin{equation}
+	\mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
+\end{equation}
+So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
+Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value) ~\cite[8.3.4]{bruusManyBodyQuantumTheory2004}.
+
+\todo{single-particle Matsubara GF}
+
+\todo{equations of motion for Matsubara GF}
+
+\subsection{Perturbation theory, Dyson equation}
+
+\todo{Short introduction to diagrams}
+
+\todo{Self energy}
+
+\todo{Dyson equation}
+
+Dyson equation:
+\begin{equation}
+	\mathcal{G}_{\sigma} (\vb{k}, \iu \omega_n) = \frac{\mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n)}{1 - \mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n) \Sigma_{\sigma} (\vb{k}, \iu \omega_n)} = \frac{1}{\iu \omega_n - \xi_{\vb{k} - \Sigma_{\sigma} (\vb{k}, \iu \omega_n)}}
+\end{equation}
+
+
+\subsection{Nambu-Gorkov GF}
+
+Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
+
+\todo{More general introduction into NG GFs, how they look like, what they describe etc.}
+
+Order parameter can be chosen as the anomalous GF:
+\begin{equation}
+	\Psi = F^{\mathrm{loc}} (\tau = 0^-)
+\end{equation}
+or the superconducting gap
+\begin{equation}
+	\Delta = Z \Sigma^{\mathrm{AN}}
+\end{equation}
+that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) and quasiparticle weight \(Z\)
+\todo{Sources for these?}
+
+\todo{How to get quasiparticle weight?}
+
+\subsection{DMFT}
+
+Following \cite{georgesDynamicalMeanfieldTheory1996}.
+
+Most general non-interacting electronic Hamiltonian in second quantization:
+\begin{equation}
+	H_0 = \sum_{i, j, \sigma}
+\end{equation}
+with lattice coordinates \(i, j\) and spin \(\sigma\).
+
+One particle Green's function (many-body object, coming from the Hubbard model):
+\begin{equation}
+	G(\vb{k}, \iu \omega_n) = \frac{1}{\iu \omega_n + \mu - \epsilon_{\vb{k}} - \Sigma(\vb{k}, \iu \omega_n)}
+\end{equation}
+with the self energy \(\Sigma(\iu \omega_n)\) coming from the solution of the effect on-site problem:
+
+The Dyson equation
+\begin{equation}
+	G(\vb{k}, \iu \omega_n) = \left( G_0 (\vb{k}, \iu \omega_n) - \Sigma(\vb{k}, \iu \omega_n)\right)^{-1}
+\end{equation}
+relates the non-interacting Greens function \(G_0 (\vb{k}, \iu \omega_n)\) and the fully-interacting Greens function \(G (\vb{k}, \iu \omega_n)\) (inversion of a matrix!).
 
 \end{document}
