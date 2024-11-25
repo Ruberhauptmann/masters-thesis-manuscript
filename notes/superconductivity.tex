@@ -5,40 +5,30 @@
 
 \chapter{Superconductivity}
 
-In 1894, Albert Michelson remarked that \enquote{it seems probable that most of the grand underlying principles have been firmly established} \cite[p. 159]{chicagoAnnualRegister1896}.
+In this chapter: review theoretical concepts needed for describing SC. 
 
+Macroscopially, SC state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry, that is associated with an order parameter. 
+Theory of this: GL theory \cref{sec:Ginzburg-Landau theory of superconductivity}.
 
-At the end of the 19th and the beginning of the 20th century, cooling technology made great progress.
-Liquifying gases, were able to reach temperatures as low as \(\qty{4}{\kelvin}\) (the boiling point of Helium).
-Using that, SC was discovered in mercury in 1911 by Heike Onnes \cite{onnesFurtherExperimentsLiquid1991}.
-Superconductivity describes the phenomenon of the electrical resistance of a material suddenly dropping to zero below a critical temperature \(T_C\).
-Discovery of Meissner effect, perfect expulsion of external magnetic fields in 1933 \cite{meissnerNeuerEffektBei1933}.
-This started almost half a century of intensive theoretical research, which culminated in John Bardeen, Leon Cooper and J. Robert Schrieffer developing the microscopic theory now know as BCS theory \cite{bardeenTheorySuperconductivity1957}.
-1986 and 1987: discovery of superconductivity with very high \(T_C\) found in cuprates \cite{bednorzPossibleHighTc1986,uchidaHighTcSuperconductivity1987}.
-Cuprate superconductors are made up of layers of cooper oxide and charge reservoirs in between.
-The specific charge reservoir layers determine the properties of the SC and varying them lead to a rich zoo of materials with high \(T_C\)  \cite{rybickiPerspectivePhaseDiagram2016}.
+One tool to describe superconductivity from a microscopic perspective: BCS theory \cref{sec:bcs-theory}.
 
-Largest commercial application to date is in magnetic resonance imaging, a medical technique using strong magnetic fields and field gradients \cite{rinckMagneticResonanceMedicine}.
-Enabled due to the fact, that SCs can carry much stronger currents and thus generate much higher magnetic field strength.
-Technical applications in research are much wider, ranging from strong superconducting magnets in the LHC \cite{tollestrupDevelopmentSuperconductingMagnets2008} and other particle accelerators over detectors of single photons in astrophysics \cite{irwinTransitionEdgeSensors2005} to extremely sensitive measurement devices for magnetic fields \cite{faleyHighTcSQUIDBiomagnetometers2017} and voltages \cite{klushinPresentFutureHightemperature2020} based on the Josesphon effect \cite{josephsonPossibleNewEffects1962}.
+Taking fluctuations beyond mean field into account: DMFT \cref{sec:Dynamical Mean-Field Theory}.
 
-
-Since the first discovery of SC in cuprates, there has been a lot of work to develop superconductors with higher transition temperatures.
-One interesting development in is in twisted multilayer systems, first realized as twisted bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}.
-In comparison to the complex crystal structure of e.g. the Cuprates, twisted multilayer systems have a very simple structure and can be tuned very easily: the angle of twist between the layers can be easily accessed experimentally.
-The defining feature of these systems are flat electronic bands due to folding of the Brilluoin zone.
-Superconductivity in these systems is enhanced due to the fact that in the flat bands, interactions between the electrons are very strongly enhanced.
-Thus these systems are a very interesting playground to study strongly correlation effects in general and superconductivity in particular.
-
-This chapter: introduction to the mean-field BCS theory in \cref{sec:bcs-theory}, GL-theory in \cref{sec:Ginzburg-Landau theory of superconductivity} and
-
+There are many textbooks covering these topics which can be referenced for a more detailed treatment, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996, bruusManyBodyQuantumTheory2004, larkinTheoryFluctuationsSuperconductors2005}.
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
-Following~\cite[ch. 11]{colemanIntroductionManyBodyPhysics2015}.
+For this review, follow chapter 11 in ref.~\cite{colemanIntroductionManyBodyPhysics2015}.
+
+\todo{More extensive introduction}
+
+\todo{Introduce spontaneous symmetry breaking}
 
 \paragraph{Order parameter}
 
+\cite{landauTheorySuperconductivity1965}
+
+\todo{Work over paragraph}
 Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) are associated with the development of an order parameter when the temperature drops below the transition temperature \(T_C\).
 \begin{equation}
 	\vert \psi \vert =
@@ -51,7 +41,7 @@ Landau theory does not need microscopic expression for order parameter, it provi
 The order parameter description is good at length scales above \(\xi_0\), the coherence length (e.g.\ size of Cooper pairs for SC).
 On length scales above \(\xi_0\), the order parameter behaves as a smoothly varying function.
 
-\paragraph{Landau theory}
+\paragraph{Landau theory} \todo{Work over paragraph}
 
 Basic idea of Landau theory: write free energy as function \(F[\psi]\) of the order parameter.
 Region of small \(\psi\), expand free energy of many-body system as simple polynomial:
@@ -70,6 +60,10 @@ Minimum of free energy occurs for:
 		\pm \sqrt{\frac{a (T_C - T)}{u} }
 	\end{cases}
 \end{equation}
+
+\todo{Make graphic for Landau free energy}
+
+\todo{Make graphic for Landau OP and BCS OP}
 
 Two minima for free energy function for \(T < T_C\).
 With this, we can extract \(T_C\) from the knowledge of the dependence of \(\vert \psi \vert^2\) on \(T\) via a linear fit.
@@ -98,6 +92,8 @@ Figure~\ref{fig:Landau free energy mexican hat potential} shows the Landau free 
 	\label{fig:Landau free energy mexican hat potential}
 \end{figure}
 
+\todo{Make my own graphic for mexican hat potential}
+
 Rotational symmetry, because free energy is independent of the global phase of the OP:
 \begin{equation}
 	f [\psi] = f [e^{\iu a } \psi]
@@ -108,7 +104,7 @@ There is a topological argument for the fact that the phase is rigid.
 This leads to Ginzburg-Landau theory.
 Will see later: well-defined phase is associated with persistent currents or superflow.
 
-\paragraph{Ginzburg-Landau theory}
+\paragraph{Ginzburg-Landau theory} \todo{Work over paragraph}
 
 Landau theory: energy cost of a uniform order parameter, more general theory needs to account for inhomogenous order parameters, in which the amplitude varies or direction of order parameter is twisted -> GL theory.
 First: one-component, `Ising' order parameter.
@@ -129,7 +125,7 @@ sets characteristic length scale of order-parameter fluctuations, where
 is a measure of the microscopic coherence length.
 Near transition \(\xi (T)\) diverges, but far from transition it becomes comparable with the coherence length.
 
-\paragraph{Complex order and superflow}
+\paragraph{Complex order and superflow} \todo{Work over paragraph}
 
 Now: GL theory of complex or two-component order parameters, so superfluids and superconductors.
 Heart of discussion: emergence of a `macroscopic wavefunction', where the microscopic field operators \(\hat{\psi}(x)\) acquire an expectation value:
@@ -213,9 +209,11 @@ The second term resembles GL functional for an Ising order parameter, describes 
 \todo{Phase rigidity and superflow}
 
 
-\section{Superconducting length scales from the constraint of finite-momentum pairing}
+\section{Superconducting length scales}
 
 From~\cite{wittBypassingLatticeBCSBEC2024}.
+
+\todo{Better introduction}
 
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise.
@@ -412,7 +410,7 @@ To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing 
 
 \todo{How to include finite momentum}
 
-\section{Dynamical Mean-Field Theory}
+\section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
 
 \subsection{Green's Function Formalism}
 
