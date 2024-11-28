@@ -22,22 +22,31 @@ For this review, follow chapter 11 in ref.~\cite{colemanIntroductionManyBodyPhys
 
 \todo{More extensive introduction}
 
-\todo{Introduce spontaneous symmetry breaking}
-
-\paragraph{Order parameter}
-
-\cite{landauTheorySuperconductivity1965}
+\paragraph{Order parameter} 
 
 \todo{Work over paragraph}
-Landau theory: phase transitions (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) are associated with the development of an order parameter when the temperature drops below the transition temperature \(T_C\).
+
+Similarly to a magnetically ordered state, the SC state is characterized by 
+
+\todo{Introduce spontaneous symmetry breaking}
+
+
+\cite{landauTheoryPhaseTransitions1965, landauTheorySuperconductivity1965}
+
+Such a symmetry breaking (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) is associated with the development of an order parameter \(\Psi\) when the temperature drops below the transition temperature \(T_C\).
 \begin{equation}
-	\vert \psi \vert =
+	\vert \Psi \vert =
 	\begin{cases}
 		0\;,\; T > T_C \\
-		\vert \psi_0 \vert > 0 \;,\; T < T_C
+		\vert \Psi_0 \vert > 0 \;,\; T < T_C
 	\end{cases}
 \end{equation}
-Landau theory does not need microscopic expression for order parameter, it provides corse-grained description of the properties of matter.
+
+\todo{Intuitive understanding why that is?}
+
+Ginzburg-Landau theory is concerned with the the properties of the 
+
+It does not need microscopic expression for order parameter, it provides corse-grained description of the properties of matter.
 The order parameter description is good at length scales above \(\xi_0\), the coherence length (e.g.\ size of Cooper pairs for SC).
 On length scales above \(\xi_0\), the order parameter behaves as a smoothly varying function.
 
@@ -209,7 +218,7 @@ The second term resembles GL functional for an Ising order parameter, describes 
 \todo{Phase rigidity and superflow}
 
 
-\section{Superconducting length scales}
+\subsection{Superconducting length scales}
 
 From~\cite{wittBypassingLatticeBCSBEC2024}.
 
@@ -261,10 +270,6 @@ The Cooper pair \cite{yuanSupercurrentDiodeEffect2022, shimanoHiggsModeSupercond
 
 \section{Bardeen-Coooper-Schrieffer Theory}\label{sec:bcs-theory}
 
-\subsection{BCS Hamiltonian}
-
-Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
-
 First phenomenological description of SC: Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
 He was motivated by the discovery of the Meissner effect in 1933 \cite{meissnerNeuerEffektBei1933}, where magnetic flux inside of the superconductor is always pushed out in contrast to a perfectly conducting material, which would hold a `memory' of the magnetic field at the time of the phase transition. 
 This suggests that transition to the SC state is reversible and a SC is not just the limiting case of a conductor with infinite conductivity, in which according to the Maxwell equations, the magnetic flux would not change.
@@ -273,12 +278,15 @@ He proposed that persistent supercurrent is a property of the ground state assoc
 
 In 1950 \cite{landauTheorySuperconductivity1965}: GL interpreted this wave function as a complex order parameter as explained in \cref{sec:Ginzburg-Landau theory of superconductivity}.
 
+Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
+
+\subsection{BCS Hamiltonian}
+
 Microscopic description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 Description is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
 
 \todo{Microscopic OP in BCS}
-
-The BCS-Hamiltonian is:
+The BCS-Hamiltonian:
 \begin{equation}\label{eq:BCS Hamiltonian}
 	H_{\text{BCS}} = \sum_{\vb{k}\sigma} \epsilon_{\vb{k}\sigma} c_{\vb{k}\sigma}^{\dagger} c_{\vb{k}\sigma} + \sum_{\vb{k}, \vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}} c_{\vb{k}\uparrow}^{\dagger} c_{-\vb{k}\downarrow}^{\dagger} c_{-\vb{k}^{\prime}\downarrow} c_{\vb{k}^{\prime}\uparrow}
 \end{equation}
@@ -290,7 +298,7 @@ This so-called BCS-theory of superconductivity is very successful in explaining 
 
 BCS theory always comes in conjunction with a mean-field description, decoupling the 
 
-\todo{Introduce mean field here}
+\todo{Introduce mean field for BCS here}
 
 The reason for this: the interaction in the BCS Hamiltonian \cref{eq:BCS Hamiltonian} takes place at exactly zero momentum and as such is an infinite range interaction
 
@@ -301,11 +309,6 @@ A
 
 \subsection{Attractive Hubbard Model}
 
-Simple choice for pairing interaction:
-\begin{equation}
-	V_{\vb{k}, \vb{k}^{\prime}} = U
-\end{equation}
-This is then just the (attractive) Hubbard model.
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
 
@@ -325,7 +328,7 @@ This simple Hubbard model can be extended in a multitude of ways to model a vari
 In this work: extension to multiple orbitals and an attractive interaction, i.e. a negative \(U\).
 Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations that can be described as bosons \cite{micnasSuperconductivityNarrowbandSystems1990}.
 \todo{There are some more specific papers to the specific mechanisms (and also some more mechanism), could cite these here and say some more things}
-The form of the interaction term is then:
+The form of the interaction term is then: \todo{Order of operators? -> also in all other equations!}
 \begin{equation}
 	H_{\mathrm{int}} = -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
 	\label{eq:Hubbard interaction multiband}
@@ -333,15 +336,33 @@ The form of the interaction term is then:
 where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(U > 0\) now corresponds to an attractive interaction (this is purely convention).
 \todo{Define: what exactly are orbitals in this context?}
 
-\paragraph{Multi-band BCS Theory}
+\paragraph{Multiband BCS Mean Field Theory}
+
+\todo{General multi-band mean field theory theory}
+
+There are a multitude of ways to derive a mean field description of a given interacting Hamiltonian.
+Very rigorous in path integral formulations as saddle points, given for example in ref. \cite{colemanIntroductionManyBodyPhysics2015}.
+A more intuitive way based on ref. \cite{bruusManyBodyQuantumTheory2004} discussed here looks at the operators and which one are small. 
 
 Look at interaction term \cref{eq:Hubbard interaction multiband}.
-Mean-field approximation: operators do not deviate much from their average value:
+Mean-field approximation (here specifically for superconductivity i.e. pairing): operators do not deviate much from their average value, i.e. the deviation operators \todo{correct definition}
+\begin{align}
+	d_{i, \alpha, \uparrow}^{\dagger} d_{i, \alpha, \downarrow} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}} \\
+	d_{i, \alpha, \uparrow}^{\dagger} d_{i, \alpha, \downarrow} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}}
+\end{align}
+are small (dont contribute much to expectation values and correlation functions), so in
+
+\begin{equation}
+	H_{\mathrm{int}} = -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
+\end{equation}
+
+\begin{equation}
+	c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
+\end{equation}
 
 \begin{align}
 	H_{\mathrm{int}} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
 \end{align}
-
 
 
 Fourier transformation:
@@ -393,11 +414,8 @@ with
 \end{equation}
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
 
-\todo{General multi-band mean field theory theory}
 
-
-
-\paragraph{Self-consistent solution}
+\paragraph{Self-consistent Parameters}
 
 \todo{How to solve mean field theory self-consistently}
 
