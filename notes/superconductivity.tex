@@ -338,27 +338,49 @@ where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(
 
 \paragraph{Multiband BCS Mean Field Theory}
 
-\todo{General multi-band mean field theory theory}
-
 There are a multitude of ways to derive a mean field description of a given interacting Hamiltonian.
 Very rigorous in path integral formulations as saddle points, given for example in ref. \cite{colemanIntroductionManyBodyPhysics2015}.
 A more intuitive way based on ref. \cite{bruusManyBodyQuantumTheory2004} discussed here looks at the operators and which one are small. 
 
 Look at interaction term \cref{eq:Hubbard interaction multiband}.
-Mean-field approximation (here specifically for superconductivity i.e. pairing): operators do not deviate much from their average value, i.e. the deviation operators \todo{correct definition}
+Mean-field approximation (here specifically for superconductivity i.e. pairing): operators do not deviate much from their average value, i.e. the deviation operators \todo{there are other combinations, talk about that}
 \begin{align}
-	d_{i, \alpha, \uparrow}^{\dagger} d_{i, \alpha, \downarrow} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}} \\
-	d_{i, \alpha, \uparrow}^{\dagger} d_{i, \alpha, \downarrow} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}}
+	d_{i, \alpha} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\
+	e_{i, \alpha} = c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 \end{align}
-are small (dont contribute much to expectation values and correlation functions), so in
-
+are small (dont contribute much to expectation values and correlation functions), so that in the interaction part of the Hamiltonian
+\begin{align}
+	H_{\mathrm{int}} &= -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \\
+	&= -\sum_{i, \alpha} U_{\alpha} 
+	\left( d_{i, \alpha}^{\dagger} + \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \right)
+	\left( e_{i, \alpha} + \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} \right) \\
+	&= -\sum_{i, \alpha} U_{\alpha} (
+		d_{i, \alpha} e_{i, \alpha}
+		+ d_{i, \alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
+		+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\
+		&+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} )
+\end{align}
+the first term is quadratic in the deviation and can be neglected.
+Thus arrive at the approximation
+\begin{align}
+	H_{\mathrm{int}} &\approx -\sum_{i, \alpha} U_{\alpha} \left(
+	d_{i, \alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
+	+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}}
+	+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
+	\right) \\
+	&= -\sum_{i, \alpha} U_{\alpha} (
+		c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
+		+ c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\	
+	&- \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} ) \\
+	&= 
+\end{align}
+with the expectation values
 \begin{equation}
-	H_{\mathrm{int}} = -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
+	\Delta
 \end{equation}
 
-\begin{equation}
-	c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
-\end{equation}
+\todo{General multi-band mean field theory theory}
+
 
 \begin{align}
 	H_{\mathrm{int}} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
