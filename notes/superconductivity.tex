@@ -5,7 +5,7 @@
 
 \chapter{Superconductivity}
 
-In this chapter: review theoretical concepts needed for describing SC. 
+In this chapter: review theoretical concepts needed for describing SC.
 
 Macroscopially, SC state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry, that is associated with an order parameter. 
 Theory of this: GL theory \cref{sec:Ginzburg-Landau theory of superconductivity}.
@@ -284,48 +284,48 @@ Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
 
 Microscopic description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 Description is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
-
-\todo{Microscopic OP in BCS}
-The BCS-Hamiltonian:
+The final element in this description was the origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\) between electrons, which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
+BCS-Hamiltonian:
 \begin{equation}\label{eq:BCS Hamiltonian}
 	H_{\text{BCS}} = \sum_{\vb{k}\sigma} \epsilon_{\vb{k}\sigma} c_{\vb{k}\sigma}^{\dagger} c_{\vb{k}\sigma} + \sum_{\vb{k}, \vb{k}^{\prime}} V_{\vb{k}, \vb{k}^{\prime}} c_{\vb{k}\uparrow}^{\dagger} c_{-\vb{k}\downarrow}^{\dagger} c_{-\vb{k}^{\prime}\downarrow} c_{\vb{k}^{\prime}\uparrow}
 \end{equation}
-The final element in this description was the origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\) between electrons, which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
-This so-called BCS-theory of superconductivity is very successful in explaining experimental results in many compounds.
+This Hamiltonian can be solved exactly using a mean field approach, because it involves an interaction at zero momentum and thus infinite range.
+Order parameter in mean field BCS theory is the pairing amplitude
+\begin{equation}
+	\Delta = - \frac{U}{N_{\vb{k}}} \sum_{\vb{k}} \braket{c_{-\vb{k} \downarrow} c_{\vb{k} \uparrow}} = - U \braket{c_{-\vb{r}=0 \downarrow} c_{\vb{r=0} \uparrow}} \simeq U \Psi \;.
+\end{equation}
+A finite \(\Delta\) corresponds to the pairing introduced above: there is a finite expectation value for a coherent creation/annihilation of a pair of electrons with opposite momentum and spin.
+BCS theory brings multiple aspects together: concept of paired electrons with the pairing amplitude being the order parameter in SC, an explanation for the attractive interaction overcoming Coulomb repulsion and a model Hamiltonian that very elegantly captures the essential physics.
+
+It is very successful in two ways: on the one hand very 
+
 \todo{What is explained by phononic pairing?}
 
+ in establishing electronic pairing as the microscopic mechanism behind SC, which holds still today even for high \(T_C\)/unconventional superconductors and secondly 
+
+\todo{Sources for that}
+
+This so-called BCS-theory of superconductivity is very successful in explaining experimental results in many compounds.
+
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
-
-BCS theory always comes in conjunction with a mean-field description, decoupling the 
-
-\todo{Introduce mean field for BCS here}
-
-The reason for this: the interaction in the BCS Hamiltonian \cref{eq:BCS Hamiltonian} takes place at exactly zero momentum and as such is an infinite range interaction
-
-A 
-
-\todo{What is the connection between mean field theory and BCS theory?}
-
 
 \subsection{Attractive Hubbard Model}
 
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
-
 \begin{equation}
 	H_{\mathrm{int}} = U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
 \end{equation}
 where \(U > 0\).
 
-
-\todo{Some relevance of the repulsive Hubbard model}
-
 Besides 
 
 \cite{qinHubbardModelComputational2022}
 
+\todo{Some relevance of the repulsive Hubbard model}
+
 This simple Hubbard model can be extended in a multitude of ways to model a variety of physical system.
-In this work: extension to multiple orbitals and an attractive interaction, i.e. a negative \(U\).
+In this work: extension to multiple orbitals (i.e. atoms in the unit cell for lattice systems) and an attractive interaction, i.e. a negative \(U\).
 Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations that can be described as bosons \cite{micnasSuperconductivityNarrowbandSystems1990}.
 \todo{There are some more specific papers to the specific mechanisms (and also some more mechanism), could cite these here and say some more things}
 The form of the interaction term is then: \todo{Order of operators? -> also in all other equations!}
@@ -334,7 +334,6 @@ The form of the interaction term is then: \todo{Order of operators? -> also in a
 	\label{eq:Hubbard interaction multiband}
 \end{equation}
 where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(U > 0\) now corresponds to an attractive interaction (this is purely convention).
-\todo{Define: what exactly are orbitals in this context?}
 
 \paragraph{Multiband BCS Mean Field Theory}
 
@@ -381,6 +380,8 @@ with the expectation values
 
 \todo{General multi-band mean field theory theory}
 
+\todo{Mean field with finite momentum}
+
 
 \begin{align}
 	H_{\mathrm{int}} \approx \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
@@ -411,6 +412,9 @@ This gives the BCS mean field Hamiltonian:
 	+ \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
 \end{align}
 with Nambu spinor
+
+\todo{Nambu spinor}
+
 \begin{equation}
 	\Psi_{\vb{k}} =
 	\begin{pmatrix}
@@ -437,7 +441,12 @@ with
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = diag(\Delta_1, \Delta_2, \Delta_3)\).
 
 
-\paragraph{Self-consistent Parameters}
+\paragraph{Self-consistency}
+
+Formula for OP using the Bogoliubov operators
+\begin{equation}
+	\Delta_{\alpha} = -U
+\end{equation}
 
 \todo{How to solve mean field theory self-consistently}
 
@@ -455,6 +464,8 @@ To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing 
 \subsection{Green's Function Formalism}
 
 Following~\cite{bruusManyBodyQuantumTheory2004}
+
+\todo{Work over the paragraph}
 
 Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
 
