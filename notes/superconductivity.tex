@@ -3,46 +3,57 @@
 
 \begin{document}
 
-\chapter{Superconductivity}
+\chapter{Superconductivity}\label{ch:superconductivity}
 
-In this chapter: review theoretical concepts needed for describing SC.
+Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
+In this chapter we review theoretical concepts needed for understanding superconductivity and introduce the tools used to study superconductivity in the later chapters.
+There are many textbooks covering these topics which can be referenced for a more detailed treatment, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996, bruusManyBodyQuantumTheory2004, larkinTheoryFluctuationsSuperconductors2005, bennemannSuperconductivity2008}.
 
-Macroscopially, SC state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry, that is associated with an order parameter. 
-Theory of this: GL theory \cref{sec:Ginzburg-Landau theory of superconductivity}.
+Macroscopially, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
+Theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}.
+\todo{Talk about finite q specifically!}
 
-One tool to describe superconductivity from a microscopic perspective: BCS theory \cref{sec:bcs-theory}.
+Ginzburg Landau theory is not a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
+One such theory to describe superconductivity from a microscopic perspective is \acrfull{bcs} theory in \cref{sec:bcs-theory}.
 
-Taking fluctuations beyond mean field into account: DMFT \cref{sec:Dynamical Mean-Field Theory}.
-
-There are many textbooks covering these topics which can be referenced for a more detailed treatment, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996, bruusManyBodyQuantumTheory2004, larkinTheoryFluctuationsSuperconductors2005}.
+A method to treat local interactions non-perturbatively is \acrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \acrshort{dmft} self-consistency cycle.
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
-For this review, follow chapter 11 in ref.~\cite{colemanIntroductionManyBodyPhysics2015}.
+This review partially follows the introduction given in refs.~\cite{colemanIntroductionManyBodyPhysics2015, beekmanIntroductionSpontaneousSymmetry2019}.
 
-\todo{More extensive introduction}
+\paragraph{\acrlong{ssb}}
 
-\paragraph{Order parameter} 
+Symmetries are a powerful concept in physics.
+Noethers theorem \cite{noetherInvarianteVariationsprobleme1918} connects the symmetries of physical theories to associated conservation laws.
+An interesting facet of symmetries in physical theories is the fact, that a ground state of a system must not necessarily obey the same symmetries of its Hamiltonian, i.e. for a symmetry operation that is described by a unitary operator \(U\), the Hamiltonian commutes with \(U\) (which results in expectation values of the Hamiltonian being invariant under the symmetry operation) but the states \(\ket{\phi}\) and \(U \ket{\phi}\) are different.
+This phenomenon is called \acrfull{ssb} and the state \(\ket{\phi}\) is said to be symmetry-broken.
+
+One consequence of this fact is that for a given symmetry-broken state \(\ket{\phi}\), there exists multiple states that can be reached by repeatedly applying \(U\) to \(\ket{\phi}\) and all have the same energy.
+To differentiate the symmetry-broken states an operator can be defined that has all these equivalent states as eigenvectors with different eigenvalues and zero expectation value for symmetric states.
+This is the microscopic notion of an order parameter.
+
+\paragraph{Order parameter}
+
+The original notion of an order parameter was motivated from macroscopic observables that can then be related to the microscopic order parameter operator introduced above.
+Macroscopically we characterize the symmetry breaking by an order parameter \(\Psi\) which generally can be a complex-valued vector that becomes non-zero below the transition temperature \(T_C\):
+\begin{equation}
+	\vert \Psi \vert =
+	\begin{cases}
+		0 & T > T_C \\
+		\vert \Psi_0 \vert > 0 & T < T_C
+	\end{cases} \;.
+\end{equation}
+In the example of a ferromagnet, a finite measurable magnetization of a material is associated with a finite expectation value for the \(z\)-component of the spin operator, \(m_z = \braket{\ope{S_z}}\).
+This \cite{landauTheoryPhaseTransitions1965}
 
 \todo{Work over paragraph}
 
 Similarly to a magnetically ordered state, the SC state is characterized by 
 
-\todo{Introduce spontaneous symmetry breaking}
+\cite{landauTheorySuperconductivity1965}
 
-
-\cite{landauTheoryPhaseTransitions1965, landauTheorySuperconductivity1965}
-
-Such a symmetry breaking (e.g.\ iron becomes magnetic, water freezes, superfluidity/superconductivity) is associated with the development of an order parameter \(\Psi\) when the temperature drops below the transition temperature \(T_C\).
-\begin{equation}
-	\vert \Psi \vert =
-	\begin{cases}
-		0\;,\; T > T_C \\
-		\vert \Psi_0 \vert > 0 \;,\; T < T_C
-	\end{cases}
-\end{equation}
-
-\todo{Intuitive understanding why that is?}
+\todo{Order parameters from observables -> in contrast to microscopic OP}
 
 Ginzburg-Landau theory is concerned with the the properties of the 
 
@@ -123,15 +134,15 @@ GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), 
 \end{equation}
 GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
 Dimensional analysis shows: \(\frac{s}{r} = L^2\) has dimension of length squared.
-Length scale introduced by the gradient term: correlation length
+Length scale introduced by the gradient term: correlation length \gls{correlation length}
 \begin{equation}
 	\xi (T) = \sqrt{\frac{s}{\vert r(T) \vert}} = \xi_0 \left\vert 1 - \frac{T}{T_C} \right\vert^{-\frac{1}{2}}
 \end{equation}
-sets characteristic length scale of order-parameter fluctuations, where
+sets characteristic length scale of order-parameter fluctuations, where the zero temperature value
 \begin{equation}
 	\xi_0 = \xi (T = 0) = \sqrt{\frac{s}{\alpha T_C}}
 \end{equation}
-is a measure of the microscopic coherence length.
+is the microscopic coherence length \gls{coherence length}.
 Near transition \(\xi (T)\) diverges, but far from transition it becomes comparable with the coherence length.
 
 \paragraph{Complex order and superflow} \todo{Work over paragraph}
@@ -294,22 +305,18 @@ Order parameter in mean field BCS theory is the pairing amplitude
 \begin{equation}
 	\Delta = - \frac{U}{N_{\vb{k}}} \sum_{\vb{k}} \braket{c_{-\vb{k} \downarrow} c_{\vb{k} \uparrow}} = - U \braket{c_{-\vb{r}=0 \downarrow} c_{\vb{r=0} \uparrow}} \simeq U \Psi \;.
 \end{equation}
+More about mean field theory in \cref{ssec:attractive hubbard model}
+
 A finite \(\Delta\) corresponds to the pairing introduced above: there is a finite expectation value for a coherent creation/annihilation of a pair of electrons with opposite momentum and spin.
+A finite \(\Delta\) also introduces a band gap into the spectrum.
 BCS theory brings multiple aspects together: concept of paired electrons with the pairing amplitude being the order parameter in SC, an explanation for the attractive interaction overcoming Coulomb repulsion and a model Hamiltonian that very elegantly captures the essential physics.
 
-\todo{Band gap!}
-
-It is very successful in two ways: on the one hand \cite{giaeverStudySuperconductorsElectron1961}
-
-\todo{What is explained by phononic pairing?}
-
- in establishing electronic pairing as the microscopic mechanism behind SC, which holds still today even for high \(T_C\)/unconventional superconductors
-
-\todo{Sources for that}
+It is very successful in two ways: on the one hand it could quantitatively predict effects in the SCs known at the time, for example the Hebel-Slichter peak that was measured in 1957 \cite{hebelNuclearRelaxationSuperconducting1957, hebelNuclearSpinRelaxation1959} and the band gap measured by Giaever in 1960 \cite{giaeverStudySuperconductorsElectron1961}.  
+On the other hand, it established electronic pairing as the microscopic mechanism behind SC, which holds still today even for high \(T_C\)/unconventional superconductors, so SCs that cannot be described by BCS theory \cite{zhouHightemperatureSuperconductivity2021}.
 
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
 
-\subsection{Attractive Hubbard Model}
+\subsection{Attractive Hubbard Model}\label{ssec:attractive hubbard model}
 
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
@@ -459,9 +466,11 @@ To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing 
 
 \todo{How to include finite momentum}
 
-\section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
+\section{Dynamical Mean-Field Theory (DMFT)}\label{sec:Dynamical Mean-Field Theory}
 
 \subsection{Green's Function Formalism}
+
+
 
 Following~\cite{bruusManyBodyQuantumTheory2004}
 
@@ -545,14 +554,15 @@ So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic contin
 \begin{equation}
 	\mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
 \end{equation}
+\todo{What is the eta there -> need to define it in retarded GF}
 So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
 Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value) ~\cite[8.3.4]{bruusManyBodyQuantumTheory2004}.
 
 \todo{single-particle Matsubara GF}
 
-\todo{equations of motion for Matsubara GF}
-
 \subsection{Perturbation theory, Dyson equation}
+
+
 
 \todo{Short introduction to diagrams}
 

@@ -79,7 +79,7 @@ Points of high symmetry in the Brillouin zone are:
 	\mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
 \end{align}
 
-\section{EG-X Model}\label{sec:eg-x-model}
+\section{Dressed Graphene Model}\label{sec:dressed graphene model}
 
 Graphene lattice and a site X\@.
 \begin{figure}[htb]
@@ -141,5 +141,33 @@ Also write the interaction part with \(\alpha\) (with changed signs compared to 
 \begin{equation}
 	H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
 \end{equation}
+
+\begin{align}
+	H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
+	\begin{pmatrix}
+		0 & f_{Gr} & V \\
+		f_{Gr}^* & 0 & 0 \\
+		V & 0 & f_{X}
+	\end{pmatrix} \begin{pmatrix} c_{k, \sigma}^{A} \\ c_{k, \sigma}^{B} \\ d_{k, \sigma} \end{pmatrix}
+	\label{eq:EG-X Hamiltonian non-interacting matrix}
+\end{align}
+The band structure for the non-interacting EG-X model is easily obtained by diagonalising the matrix in \cref{eq:EG-X Hamiltonian non-interacting matrix}.
+This was done in \cref{fig:EG-X model non-interacting bands}.
+
+Values used for calculation:
+\begin{itemize}
+	\item \(a_0 = 1\)
+	\item \(t_{\mathrm{Gr}} = 1\)
+	\item \(t_{\mathrm{X}} = 0.01\)
+\end{itemize}
+\(V\) is the control parameter.
+A range from \(V=0.1\) to \(V=2\) can be mapped onto materials in experiment.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\textwidth]{images/EG_X bands_tGr_1_tX_0.01}
+	\caption{Bands of the non-interacting EG-X model. All the bands are spin-degenerate.}
+	\label{fig:EG-X model non-interacting bands}
+\end{figure}
 
 \end{document}
