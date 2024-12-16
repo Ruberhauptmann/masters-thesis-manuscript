@@ -85,6 +85,26 @@ Minimum of free energy occurs for:
 
 \todo{Make graphic for Landau OP and BCS OP}
 
+\todo{Make my own graphic for mexican hat potential}
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+			\centering
+			\input{images/landau_free_energy.pgf}
+			\caption{Landau free energy}
+			\label{sfig:Landau free energy}
+	\end{subfigure}%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/landau_free_energy}
+		\caption{Ginzburg Landau free energy}
+		\label{sfig:Ginzburg Landau free energy}
+	\end{subfigure}
+	\caption{Landau free energy and} 
+	\label{fig:Landau free energy and Ginzburg-Landau free energy}
+\end{figure}
+
 Two minima for free energy function for \(T < T_C\).
 With this, we can extract \(T_C\) from the knowledge of the dependence of \(\vert \psi \vert^2\) on \(T\) via a linear fit.
 This is only valid for an area near \(T_C\) (where Landau theory holds), but can be used to get \(T_C\) from microscopic theories.
@@ -102,17 +122,7 @@ As before:
 \begin{equation}
 	r = a(T - T_C)
 \end{equation}
-
-Figure~\ref{fig:Landau free energy mexican hat potential} shows the Landau free energy as function of \(\psi\).
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.3\textwidth]{images/landau free energy mexican hat}
-	\caption{Mexican hat potential}
-	\label{fig:Landau free energy mexican hat potential}
-\end{figure}
-
-\todo{Make my own graphic for mexican hat potential}
+shows the Landau free energy as function of \(\psi\).
 
 Rotational symmetry, because free energy is independent of the global phase of the OP:
 \begin{equation}
@@ -315,6 +325,8 @@ It is very successful in two ways: on the one hand it could quantitatively predi
 On the other hand, it established electronic pairing as the microscopic mechanism behind SC, which holds still today even for high \(T_C\)/unconventional superconductors, so SCs that cannot be described by BCS theory \cite{zhouHightemperatureSuperconductivity2021}.
 
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
+
+\todo{Make graphic for Landau OP and BCS OP -> Formula for BCS OP!}
 
 \subsection{Attractive Hubbard Model}\label{ssec:attractive hubbard model}
 
@@ -561,8 +573,6 @@ Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Mats
 \todo{single-particle Matsubara GF}
 
 \subsection{Perturbation theory, Dyson equation}
-
-
 
 \todo{Short introduction to diagrams}
 

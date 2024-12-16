@@ -69,6 +69,8 @@
 \usepackage{pgfplots} % package to draw axes and labeled plots
 \pgfplotsset{compat=1.18} % recommended by pgfplots: set compatibility to the newest version
 
+\usepackage{pgf}
+
 \usepackage{graphicx} % gives \includegraphics command
 \usepackage{epsfig} % use eps files in figures
 \graphicspath{images/} % setup path for inclusion of images
@@ -206,7 +208,7 @@
 % Language and font settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{fontspec} % enables selection of fonts in XeLaTeX
+\usepackage{fontspec} % enables selection of fonts in LuaLaTeX
 \setmainfont{texgyrepagella}[
 Extension = .otf ,
 UprightFont = *-regular ,
