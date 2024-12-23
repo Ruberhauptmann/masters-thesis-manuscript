@@ -69,7 +69,8 @@
 \usepackage{pgfplots} % package to draw axes and labeled plots
 \pgfplotsset{compat=1.18} % recommended by pgfplots: set compatibility to the newest version
 
-\usepackage{pgf}
+\usepackage{pgf} % needed for input of matplotlib pgf plots
+\def\mathdefault#1{#1} % fix for bug in matplotlib pgf output
 
 \usepackage{graphicx} % gives \includegraphics command
 \usepackage{epsfig} % use eps files in figures

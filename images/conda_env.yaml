@@ -1,0 +1,10 @@
+name: thesis-plots
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3
+  - jupyter
+  - numpy
+  - pip:
+      - SciencePlots

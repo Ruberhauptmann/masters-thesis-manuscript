@@ -11,32 +11,32 @@ There are many textbooks covering these topics which can be referenced for a mor
 
 Macroscopially, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
 Theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}.
-\todo{Talk about finite q specifically!}
+Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi\) describing 
+
+\Cref{sec:Ginzburg-Landau theory of superconductivity} also introduces the theoretical framework based on introducing a finite momentum for the Cooper pairs \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
 
 Ginzburg Landau theory is not a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
-One such theory to describe superconductivity from a microscopic perspective is \acrfull{bcs} theory in \cref{sec:bcs-theory}.
+One such theory to describe superconductivity from a microscopic perspective is \glsxtrfull{bcs} theory in \cref{sec:bcs-theory}.
 
-A method to treat local interactions non-perturbatively is \acrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \acrshort{dmft} self-consistency cycle.
+A method to treat local interactions non-perturbatively is \glsxtrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \glsxtrshort{dmft} self-consistency cycle.
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
 This review partially follows the introduction given in refs.~\cite{colemanIntroductionManyBodyPhysics2015, beekmanIntroductionSpontaneousSymmetry2019}.
 
-\paragraph{\acrlong{ssb}}
+\subsection{\glsxtrlong{ssb} and Order Parameter}
 
 Symmetries are a powerful concept in physics.
 Noethers theorem \cite{noetherInvarianteVariationsprobleme1918} connects the symmetries of physical theories to associated conservation laws.
 An interesting facet of symmetries in physical theories is the fact, that a ground state of a system must not necessarily obey the same symmetries of its Hamiltonian, i.e. for a symmetry operation that is described by a unitary operator \(U\), the Hamiltonian commutes with \(U\) (which results in expectation values of the Hamiltonian being invariant under the symmetry operation) but the states \(\ket{\phi}\) and \(U \ket{\phi}\) are different.
-This phenomenon is called \acrfull{ssb} and the state \(\ket{\phi}\) is said to be symmetry-broken.
+This phenomenon is called \glsxtrfull{ssb} and the state \(\ket{\phi}\) is said to be symmetry-broken.
 
 One consequence of this fact is that for a given symmetry-broken state \(\ket{\phi}\), there exists multiple states that can be reached by repeatedly applying \(U\) to \(\ket{\phi}\) and all have the same energy.
 To differentiate the symmetry-broken states an operator can be defined that has all these equivalent states as eigenvectors with different eigenvalues and zero expectation value for symmetric states.
 This is the microscopic notion of an order parameter.
 
-\paragraph{Order parameter}
-
 The original notion of an order parameter was motivated from macroscopic observables that can then be related to the microscopic order parameter operator introduced above.
-Macroscopically we characterize the symmetry breaking by an order parameter \(\Psi\) which generally can be a complex-valued vector that becomes non-zero below the transition temperature \(T_C\):
+Macroscopically we characterize the symmetry breaking by an order parameter \(\Psi\) which generally can be a complex-valued vector that becomes non-zero below the transition temperature \(T_C\)
 \begin{equation}
 	\vert \Psi \vert =
 	\begin{cases}
@@ -44,97 +44,84 @@ Macroscopically we characterize the symmetry breaking by an order parameter \(\P
 		\vert \Psi_0 \vert > 0 & T < T_C
 	\end{cases} \;.
 \end{equation}
-In the example of a ferromagnet, a finite measurable magnetization of a material is associated with a finite expectation value for the \(z\)-component of the spin operator, \(m_z = \braket{\ope{S_z}}\).
-This \cite{landauTheoryPhaseTransitions1937}
 
-\todo{Work over paragraph}
+In the example of a ferromagnet, a finite magnetization of a material is associated with a finite expectation value for the \(z\)-component of the spin operator, \(m_z = \braket{\ope{S_z}}\).
+The order parameter describes the `degree of order` \cite{landauTheoryPhaseTransitions1937}.
+Similarly to a magnetically ordered state, the SC state is characterized by an order parameter.
+The theory of phase transitions in superconductors was developed by Ginzburg and Landau \cite{ginzburgTheorySuperconductivity1950}.
+Landau theory and conversely Ginzburg-Landau theory is not concerned with the the microscopic properties of the order parameter, but describes the changes in thermodynamic properties of matter with the development of an order parameter.
 
-Similarly to a magnetically ordered state, the SC state is characterized by 
+\subsection{Landau and Ginzburg-Landau Theory}
 
-\cite{ginzburgTheorySuperconductivity1950}
+\todo{Explain free energy here}
 
-\todo{Order parameters from observables -> in contrast to microscopic OP}
-
-Ginzburg-Landau theory is concerned with the the properties of the 
-
-It does not need microscopic expression for order parameter, it provides corse-grained description of the properties of matter.
-The order parameter description is good at length scales above \(\xi_0\), the coherence length (e.g.\ size of Cooper pairs for SC).
-On length scales above \(\xi_0\), the order parameter behaves as a smoothly varying function.
-
-\paragraph{Landau theory} \todo{Work over paragraph}
-
-Basic idea of Landau theory: write free energy as function \(F[\psi]\) of the order parameter.
-Region of small \(\psi\), expand free energy of many-body system as simple polynomial:
+The fundamental idea underlying Landau theory is to write the free energy \(F[\Psi]\) as function of the order parameter \(\Psi\) and expand it as a polynomial:
 \begin{equation}
-	f_{L} = \frac{1}{V} F[\psi] = \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4
+	F[\Psi] = \frac{r}{2} \Psi^2 + \frac{u}{4} \Psi^4 \;.
 \end{equation}
-Provided \(r\) and \(u\) are greater that \(0\): minimum of \(f_L [\psi])\) lies at \(\psi = 0\).
-Landau theory assumes: at phase transition temperature \(r\) changes sign, so:
+Provided the parameters \(r\) and \(u\) are greater than \(0\), there is a minimum of \(F[\Psi]\) that lies at \(\Psi = 0\).
+Landau theory assumes that at the phase transition temperature \(T_C\) the parameter \(r\) changes sign, so it can be written in first order as
 \begin{equation}
-	r = a(T - T_C)
-\end{equation}
-Minimum of free energy occurs for:
-\begin{equation}
-	\psi = \begin{cases}
-		0 \\
-		\pm \sqrt{\frac{a (T_C - T)}{u} }
-	\end{cases}
+	r = a(T - T_C) \;.
 \end{equation}
 
-\todo{Make graphic for Landau free energy}
-
-\todo{Make graphic for Landau OP and BCS OP}
-
-\todo{Make my own graphic for mexican hat potential}
-
+\todo{Work over graphic for Landau free energy}
+\todo{Work over graphic for mexican hat potential}
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
-			\centering
-			\input{images/landau_free_energy.pgf}
-			\caption{Landau free energy}
-			\label{sfig:Landau free energy}
+		\centering
+		\input{images/landau_free_energy.pgf}
+		\caption{\label{sfig:Landau free energy}}
 	\end{subfigure}%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{images/landau_free_energy}
-		\caption{Ginzburg Landau free energy}
-		\label{sfig:Ginzburg Landau free energy}
+		\input{images/ginzburg_landau_free_energy.pgf}
+		\caption{\label{sfig:Ginzburg Landau free energy}}
 	\end{subfigure}
-	\caption{Landau free energy and} 
+	\caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
 
-Two minima for free energy function for \(T < T_C\).
-With this, we can extract \(T_C\) from the knowledge of the dependence of \(\vert \psi \vert^2\) on \(T\) via a linear fit.
-This is only valid for an area near \(T_C\) (where Landau theory holds), but can be used to get \(T_C\) from microscopic theories.
+\Cref{sfig:Landau free energy} shows the free energy as a function of a single-component, real order parameter \(\Psi\) and it illustrates the essence of Landau theory: there are two cases for the minima of the free energy \(F\)
+\begin{equation}
+	\Psi = \begin{cases}
+		0 & T \geq T_C \\
+		\pm \sqrt{\frac{a (T_C - T)}{u}} & T < T_C
+	\end{cases} \;,
+\end{equation}
+so there is a for \(T < T_C\) there are two minima corresponding to ground states with broken symmetry.
+When the order parameter can be calculated from some microscopic theory, the critical temperature \(T_C\) can be extracted from the behavior of the order parameter near \(T_C\) via a linear fit of
+\begin{equation}
+	\vert \Psi \vert^2 \propto T_C - T \;.
+\end{equation}
 
-Going from a one to a \(n\)-component order parameters, OP acquires directions and magnitude.
-Particularly important example: complex or two component order parameter in superfluids and superconductors:
+Generalizing this from a one to an \(n\)-component order parameters is straightforward.
+One example is the complex or two component order parameter that will become important for 
 \begin{equation}
-	\psi = \psi_1 + \iu \psi_2 = \vert \psi \vert e^{\iu \phi}
+	\Psi = \Psi_1 + \iu \Psi_2 = \vert \Psi \vert e^{\iu \phi} \,.
 \end{equation}
-The Landau free energy takes the form:
+The Landau free energy then takes the form
 \begin{equation}
-	f[\psi] = r(\psi^* \psi) + \frac{u}{2} (\psi^* \psi)^2
+	F [\psi] = r \psi^* \psi + \frac{u}{2} (\psi^* \psi)^2 = r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
 \end{equation}
-As before:
+with again
 \begin{equation}
-	r = a(T - T_C)
+	r = a(T_C - T) \;.
 \end{equation}
-shows the Landau free energy as function of \(\psi\).
+Instead of the two minima, the free energy here is rotational symmetry, because it is independent of the phase of the order parameter: 
+\begin{equation}
+	F [\Psi] = f [e^{\iu a} \Psi] \;.
+\end{equation}
+This gives the so called `Mexican hat' potential shown in \cref{sfig:Ginzburg Landau free energy}.
 
-Rotational symmetry, because free energy is independent of the global phase of the OP:
-\begin{equation}
-	f [\psi] = f [e^{\iu a } \psi]
-\end{equation}
-In this `Mexican hat' potential: order parameter can be rotated continuously from one broken-symmetry state to another.
+\todo{Work over paragraph}
+
+In this  order parameter can be rotated continuously from one broken-symmetry state to another.
 If we want the phase to be rigid, we need to introduce an
 There is a topological argument for the fact that the phase is rigid.
 This leads to Ginzburg-Landau theory.
 Will see later: well-defined phase is associated with persistent currents or superflow.
-
-\paragraph{Ginzburg-Landau theory} \todo{Work over paragraph}
 
 Landau theory: energy cost of a uniform order parameter, more general theory needs to account for inhomogenous order parameters, in which the amplitude varies or direction of order parameter is twisted -> GL theory.
 First: one-component, `Ising' order parameter.
@@ -155,7 +142,7 @@ sets characteristic length scale of order-parameter fluctuations, where the zero
 is the microscopic coherence length \gls{coherence length}.
 Near transition \(\xi (T)\) diverges, but far from transition it becomes comparable with the coherence length.
 
-\paragraph{Complex order and superflow} \todo{Work over paragraph}
+\todo{Work over paragraph}
 
 Now: GL theory of complex or two-component order parameters, so superfluids and superconductors.
 Heart of discussion: emergence of a `macroscopic wavefunction', where the microscopic field operators \(\hat{\psi}(x)\) acquire an expectation value:
@@ -222,9 +209,6 @@ These are eigenstates of the field operator
 and don't have a definite particle number.
 Importantly, this small uncertainty in particle number enables a high degree of precision in phase (which is the property of a condensate).
 
-
-\paragraph{Phase rigidity and superflow}
-
 In GL theory, energy is sensitive to a twist of the phase.
 Substitute \(\psi = \vert \psi \vert e^{\iu \phi}\) into GL free energy, gradient term is:
 \begin{equation}
@@ -238,8 +222,7 @@ The second term resembles GL functional for an Ising order parameter, describes 
 
 \todo{Phase rigidity and superflow}
 
-
-\subsection{Superconducting length scales}
+\subsection{Superconducting Length Scales}
 
 From~\cite{wittBypassingLatticeBCSBEC2024}.
 
@@ -480,15 +463,19 @@ To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing 
 
 \section{Dynamical Mean-Field Theory (DMFT)}\label{sec:Dynamical Mean-Field Theory}
 
+\todo{Introduction DMFT, citing what has been achieved with it so far, what is the basic idea etc.}
+
 \subsection{Green's Function Formalism}
 
+\todo{Give an introduction }
 
+Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
 
 Following~\cite{bruusManyBodyQuantumTheory2004}
 
 \todo{Work over the paragraph}
 
-Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
+\todo{Slim down to relevant information}
 
 Have different kinds of Green's functions, for example the retarded Green's function:
 \begin{equation}
@@ -525,7 +512,8 @@ For interacting systems this is not true, but \(A\) can still be peaked.
 
 \todo{Show GFs can be related to observables}
 
-Mathematical technique to calculate retarded GFs involves defining GFs on imaginary times \gls{imaginary time}:
+\todo{Introduction Matsubara GF: finite temperatures}
+
 \begin{equation}
 	t \to -\iu \tau
 \end{equation}
@@ -572,7 +560,7 @@ Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Mats
 
 \todo{single-particle Matsubara GF}
 
-\subsection{Perturbation theory, Dyson equation}
+\subsection{Self Energy}
 
 \todo{Short introduction to diagrams}
 
