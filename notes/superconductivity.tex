@@ -53,8 +53,12 @@ Landau theory and conversely Ginzburg-Landau theory is not concerned with the th
 
 \subsection{Landau and Ginzburg-Landau Theory}
 
-\todo{Explain free energy here}
-
+The free energy is a thermodynamic quantity:
+\begin{equation}
+	F = E - T S
+\end{equation}
+with the energy of the system \(E\), temperature \(T\) and entropy \(S\).
+A system in thermodynamic equilibrium has minimal free energy.
 The fundamental idea underlying Landau theory is to write the free energy \(F[\Psi]\) as function of the order parameter \(\Psi\) and expand it as a polynomial:
 \begin{equation}
 	F[\Psi] = \frac{r}{2} \Psi^2 + \frac{u}{4} \Psi^4 \;.
@@ -65,7 +69,6 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 	r = a(T - T_C) \;.
 \end{equation}
 
-\todo{Work over graphic for Landau free energy}
 \todo{Work over graphic for mexican hat potential}
 \begin{figure}[t]
 	\centering
@@ -103,7 +106,7 @@ One example is the complex or two component order parameter that will become imp
 \end{equation}
 The Landau free energy then takes the form
 \begin{equation}
-	F [\psi] = r \psi^* \psi + \frac{u}{2} (\psi^* \psi)^2 = r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
+	F [\Psi] = r \Psi^* \Psi + \frac{u}{2} (\Psi^* \Psi)^2 = r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
 \end{equation}
 with again
 \begin{equation}
@@ -114,43 +117,54 @@ Instead of the two minima, the free energy here is rotational symmetry, because 
 	F [\Psi] = f [e^{\iu a} \Psi] \;.
 \end{equation}
 This gives the so called `Mexican hat' potential shown in \cref{sfig:Ginzburg Landau free energy}.
+In this potential, the order parameter can be rotated continuously from one broken-symmetry state to another.
 
+In 1950, Ginzburg and Landau published their theory of superconductivity based on Landaus theory of phase transitions \cite{ginzburgTheorySuperconductivity1950}.
+Where Landau theory as described above has an uniform order parameters, Ginzburg-Landau theory accounts for it being inhomogeneous, so an order parameter with spatially varying amplitude or direction.
+This in turn leads to the order parameter developing a fixed phase, which is the underlying mechanism of the superflow in superconductors.
+
+Ginzburg-Landau theory can be developed for a general \(n\)-component order parameter, but in superfluids and superconductors the order parameter is complex, i.e. two-component.
+The Ginzburg-Landau free energy for a complex order parameter is
+\begin{equation}
+	F_{\mathrm{GL}} [\Psi, \adif{\Psi}] = s \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \;,
+\end{equation}
+where the gradient term \(\adif{\Psi}\) is added in comparison to Landau energy.
+Comparing with the energy density of a bosonic field with a quarctic interaction
+\begin{align}
+	H = \int \odif[order=D]{x} \frac{\hbar^2}{2m} \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \;,
+\end{align}
+the Ginzburg-Landau free energy can be interpreted as the energy density of a condensate of bosons in which the field operator behaves as a complex order parameter.
+This gives interpretation of gradient term as kinetic energy:
+\begin{equation}
+	s \vert \Delta \psi \vert^2 = \frac{\hbar^2}{2m} \braket{\Delta \hat{\psi}^{\dagger} \Delta \hat{\psi}} \implies s = \frac{\hbar^2}{2m} \;.
+\end{equation}
 \todo{Work over paragraph}
-
-In this  order parameter can be rotated continuously from one broken-symmetry state to another.
-If we want the phase to be rigid, we need to introduce an
-There is a topological argument for the fact that the phase is rigid.
-This leads to Ginzburg-Landau theory.
-Will see later: well-defined phase is associated with persistent currents or superflow.
-
-Landau theory: energy cost of a uniform order parameter, more general theory needs to account for inhomogenous order parameters, in which the amplitude varies or direction of order parameter is twisted -> GL theory.
-First: one-component, `Ising' order parameter.
-GL introduces additional energy \(\delta f \propto \vert \Delta \psi \vert^2\), \(f_{GL} [\psi, \Delta \psi] = \frac{s}{2} \vert \Delta \psi \vert^2 + f_L [\psi(s)]\), or in full:
-\begin{equation}
-	f_{GL} [\psi, \Delta \psi, h] = \frac{s}{2} (\Delta \psi)^2 + \frac{r}{2} \psi^2 + \frac{u}{4} \psi^4
-\end{equation}
-GL theory is only valid near critical point, where OP is small enough to permit leading-order expansion.
-Dimensional analysis shows: \(\frac{s}{r} = L^2\) has dimension of length squared.
-Length scale introduced by the gradient term: correlation length \gls{correlation length}
-\begin{equation}
-	\xi (T) = \sqrt{\frac{s}{\vert r(T) \vert}} = \xi_0 \left\vert 1 - \frac{T}{T_C} \right\vert^{-\frac{1}{2}}
-\end{equation}
-sets characteristic length scale of order-parameter fluctuations, where the zero temperature value
-\begin{equation}
-	\xi_0 = \xi (T = 0) = \sqrt{\frac{s}{\alpha T_C}}
-\end{equation}
-is the microscopic coherence length \gls{coherence length}.
-Near transition \(\xi (T)\) diverges, but far from transition it becomes comparable with the coherence length.
-
-\todo{Work over paragraph}
-
-Now: GL theory of complex or two-component order parameters, so superfluids and superconductors.
 Heart of discussion: emergence of a `macroscopic wavefunction', where the microscopic field operators \(\hat{\psi}(x)\) acquire an expectation value:
 \begin{equation}
 	\braket{\hat{\psi} (x)} = \psi (x) = \vert \psi (x) \vert e^{\iu \theta(x)}
 \end{equation}
 Reminder: Field operators are the real space representations of creation/annihilation operators.
 They can be thought of the super position of all ways of creating a particle at position \(x\) via the basis coefficients.
+
+As in Ising order: correlation length/GL-coherence length governs characteristic range of amplitude fluctuations of the order parameter:
+\begin{equation}
+	\xi = \sqrt{\frac{s}{\vert r \vert}} = \sqrt{\frac{\hbar^2}{2m \vert r \vert}} = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
+\end{equation}
+where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
+Beyond this length scale: only phase fluctuations survive.
+\todo{I dont know why that is. Can I support that somehow better? -> See Niklas thesis}
+
+In GL theory, energy is sensitive to a twist of the phase.
+Substitute \(\psi = \vert \psi \vert e^{\iu \phi}\) into GL free energy, gradient term is:
+\begin{equation}
+	\Delta \psi = (\Delta \vert \psi \vert + \iu \Delta \phi \vert \psi \vert) e^{\iu \phi}
+\end{equation}
+So:
+\begin{equation}
+	f_{GL}  = \frac{\hbar}{2m} \vert \psi \vert^2 (\Delta \phi)^2 + \left[ \frac{\hbar}{2m} (\Delta \vert \psi \vert)^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4 \right]
+\end{equation}
+The second term resembles GL functional for an Ising order parameter, describes energy cost of variations in the magnitude of the order parameter.
+
 
 Magnitude determines density of particles in the superfluid:
 \begin{equation}
@@ -170,27 +184,6 @@ We will derive this later in the chapter.
 Counterintuitive from quantum mechanics: GL suggested that \(\Phi(x)\) is a macroscopic manifestation of a macroscopic number of particles condensed into precisely the same quantum state.
 Emergent phenomenon, collective properties of mater not a-priori evident from microscopic physics.
 
-GL free energy density for superfluid (with one added term in comparison to Landau energy):
-\begin{equation}
-	f_{GL} [\psi, \Delta \psi] = s \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
-\end{equation}
-Compare with the energy density of a bosonic field (with a quarctic interaction):
-\begin{align}
-	H = \int \odif[order=D]{x} \frac{\hbar^2}{2m} \vert \Delta \psi \vert^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4
-\end{align}
-Interpret GL free energy as energy density of a condensate of bosons in which the field operator behaves as a complex order parameter.
-Gives interpretation of gradient term as kinetic energy:
-\begin{equation}
-	s \vert \Delta \psi \vert^2 = \frac{\hbar^2}{2m} \braket{\Delta \hat{\psi}^{\dagger} \Delta \hat{\psi}} \implies s = \frac{\hbar^2}{2m}
-\end{equation}
-As in Ising order: correlation length/GL-coherence length governs characteristic range of amplitude fluctuations of the order parameter:
-\begin{equation}
-	\xi = \sqrt{\frac{s}{\vert r \vert}} = \sqrt{\frac{\hbar^2}{2m \vert r \vert}} = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
-\end{equation}
-where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
-Beyond this length scale: only phase fluctuations survive.
-\todo{I dont know why that is. Can I support that somehow better? -> See Niklas thesis}
-
 Freeze out fluctuations in amplitude (no \(x\)-dependence in amplitude) \(\psi(x) = \sqrt{n_s} e^{\iu \phi(x)}\), then \(\Delta \psi = \iu \Delta \phi \psi\) and \(\vert \Delta \psi \vert^2 = n_s (\Delta \phi)^2\), dependency of kinetic energy on the phase twist is (bringing it into the form \(\frac{m}{2} v^2\)):
 \begin{equation}
 	\frac{\hbar^2 n_s}{2m} (\Delta \phi)^2 = \frac{m n_s}{2} (\frac{\hbar}{m} \Delta \phi)^2
@@ -209,22 +202,13 @@ These are eigenstates of the field operator
 and don't have a definite particle number.
 Importantly, this small uncertainty in particle number enables a high degree of precision in phase (which is the property of a condensate).
 
-In GL theory, energy is sensitive to a twist of the phase.
-Substitute \(\psi = \vert \psi \vert e^{\iu \phi}\) into GL free energy, gradient term is:
-\begin{equation}
-	\Delta \psi = (\Delta \vert \psi \vert + \iu \Delta \phi \vert \psi \vert) e^{\iu \phi}
-\end{equation}
-So:
-\begin{equation}
-	f_{GL}  = \frac{\hbar}{2m} \vert \psi \vert^2 (\Delta \phi)^2 + \left[ \frac{\hbar}{2m} (\Delta \vert \psi \vert)^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4 \right]
-\end{equation}
-The second term resembles GL functional for an Ising order parameter, describes energy cost of variations in the magnitude of the order parameter.
-
 \todo{Phase rigidity and superflow}
 
 \subsection{Superconducting Length Scales}
 
-From~\cite{wittBypassingLatticeBCSBEC2024}.
+
+
+From~\cite{wittBypassingLatticeBCS2024}.
 
 \todo{Better introduction}
 
@@ -254,14 +238,7 @@ The temperature dependence of the OP and extracted \(\xi(T)\) gives access to th
 \begin{equation}
 	\xi(T) = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
 \end{equation}
-Specifically: take
-\begin{equation}
-	\xi(T) = \frac{1}{\sqrt{2} \vert \vb{Q} \vert}
-\end{equation}
-with \(\vb{Q}\) such that
-\begin{equation}
-	\vert \frac{\psi_{\vb{Q}}(T)}{\psi_0 (T)} \vert = \frac{1}{\sqrt{2}}
-\end{equation}
+
 The Cooper pair \cite{yuanSupercurrentDiodeEffect2022, shimanoHiggsModeSuperconductors2020}
 
 \todo{Depairing current from FMP}
@@ -274,6 +251,10 @@ The Cooper pair \cite{yuanSupercurrentDiodeEffect2022, shimanoHiggsModeSupercond
 
 \section{Bardeen-Coooper-Schrieffer Theory}\label{sec:bcs-theory}
 
+\todo{Better introduction}
+
+\todo{Work over paragraph}
+
 First phenomenological description of SC: Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937}.
 He was motivated by the discovery of the Meissner effect in 1933 \cite{meissnerNeuerEffektBei1933}, where magnetic flux inside of the superconductor is always pushed out in contrast to a perfectly conducting material, which would hold a `memory' of the magnetic field at the time of the phase transition. 
 This suggests that transition to the SC state is reversible and a SC is not just the limiting case of a conductor with infinite conductivity, in which according to the Maxwell equations, the magnetic flux would not change.
@@ -285,6 +266,8 @@ In 1950 \cite{ginzburgTheorySuperconductivity1950}: GL interpreted this wave fun
 Following \cite[ch. 14]{colemanIntroductionManyBodyPhysics2015}.
 
 \subsection{BCS Hamiltonian}
+
+\todo{Work over paragraph}
 
 Microscopic description of SC: 1957 by John Bardeen, his postdoc Leon Cooper and the graduate in the group, J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 Description is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
