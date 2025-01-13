@@ -11,13 +11,13 @@ There are many textbooks covering these topics which can be referenced for a mor
 
 Macroscopially, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
 Theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}.
-Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi\) describing 
+Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi_0\) describing the length scale of amplitude variations of the order parameter and the London penetration depth \(\lambda_L\), which is connected to energy cost of phase variations of the order parameter.
+The interplay of these length scales determine 
+\todo{What is influenced by length scales? See Niklas 2024 npj}
+To this end, \cref{sec:Ginzburg-Landau theory of superconductivity}  introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
 
-\Cref{sec:Ginzburg-Landau theory of superconductivity} also introduces the theoretical framework based on introducing a finite momentum for the Cooper pairs \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
-
-Ginzburg Landau theory is not a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
+Ginzburg Landau theory is a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
 One such theory to describe superconductivity from a microscopic perspective is \glsxtrfull{bcs} theory in \cref{sec:bcs-theory}.
-
 A method to treat local interactions non-perturbatively is \glsxtrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \glsxtrshort{dmft} self-consistency cycle.
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
@@ -53,7 +53,7 @@ Similarly to a magnetically ordered state, the SC state is characterized by an o
 The theory of phase transitions in superconductors was developed by Ginzburg and Landau \cite{ginzburgTheorySuperconductivity1950}.
 Landau theory and conversely Ginzburg-Landau theory is not concerned with the the microscopic properties of the order parameter, but describes the changes in thermodynamic properties of matter with the development of an order parameter.
 
-\subsection{Landau and Ginzburg-Landau Theory}
+\subsection{Landau and Ginzburg-Landau Theory}\label{sub:Landau and Ginzburg-Landau Theory}
 
 The free energy is a thermodynamic quantity:
 \begin{equation}
@@ -151,28 +151,23 @@ The dominating fluctuation is determined by the ratio of the factors \(s\) and \
 where \(\xi_0 = \xi(T=0) = \sqrt{\frac{s}{a T_C}}\) is the coherence length.
 Beyond this length scale: only phase fluctuations survive.
 
-\todo{Phase rigidity and superflow}
+Superconductors: charged superfluids, coupling to electromagnetic fields.
 
-Twist/gradient of phase determines superfluid velocity:
-\begin{equation}
-	\vb{v}_s (x) = \frac{\hbar}{m} \Delta \phi (x)
-\end{equation}
-We will derive this later in the chapter.
+\todo{Explanation superfluid weight}
 
-Freeze out fluctuations in amplitude (no \(x\)-dependence in amplitude) \(\psi(x) = \sqrt{n_s} e^{\iu \phi(x)}\), then \(\Delta \psi = \iu \Delta \phi \psi\) and \(\vert \Delta \psi \vert^2 = n_s (\Delta \phi)^2\), dependency of kinetic energy on the phase twist is (bringing it into the form \(\frac{m}{2} v^2\)):
-\begin{equation}
-	\frac{\hbar^2 n_s}{2m} (\Delta \phi)^2 = \frac{m n_s}{2} (\frac{\hbar}{m} \Delta \phi)^2
-\end{equation}
-So twist of phase results in increase in kinetic energy, associated with a superfluid velocity:
-\begin{equation}
-	\vb{v}_s = \frac{\hbar}{m} \Delta \phi
-\end{equation}
+\todo{Go into detail: what are the different methods used in Aalto and by me}
 
-\todo{Phase rigidity and superflow}
+\todo{Be proper about what is a free energy density and what is a free energy}
 
 \subsection{Superconducting Length Scales}
 
-From~\cite{wittBypassingLatticeBCS2024}.
+\Cref{sub:Landau and Ginzburg-Landau Theory} introduced the 
+
+Having access to these scales from microscopic models and ab initio approaches is very important in the search 
+
+One of the challenges in achieving high-temperature superconductivity is the fact, that the energy scales given by 
+
+\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for calculating \cite{wittBypassingLatticeBCS2024}.
 
 \todo{Better introduction}
 
@@ -360,17 +355,28 @@ with the so-called Bogoliubov-de-Gennes matrix
 	\end{pmatrix}
 \end{equation}
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = \diag(\Delta_1, \Delta_2, \ldots, \Delta_{n_{\mathrm{orb}}})\).
-
-\todo{General multi-band mean field theory theory}
+Problem is  now reduced to diagonalization of the BdG matrix.
+Write
+\begin{equation}
+	H_{\mathrm{BdG}} = U_{\vb{k}} \epsilon_{\vb{k}} U_{\vb{k}}^{\dagger}
+\end{equation}
+and 
+\begin{equation}
+	H_{\mathrm{MF}} = \sum_{\vb{k}} \gamma_{\vb{k}} \epsilon_{\vb{k}} \gamma_{\vb{k}}^{\dagger}
+\end{equation}
+with quasi-particle operators
+\begin{equation}
+	\gamma_{\vb{k}} = U_{\vb{k}}^{\dagger} c_{\vb{k}}
+\end{equation}
 
 \todo{Write indeces everywhere without comma}
 
-Formula for OP using the Bogoliubov operators
+Using the gap equation
+\todo{gap equation}
 \begin{equation}
 	\Delta_{\alpha} = -U
 \end{equation}
-
-\todo{How to solve mean field theory self-consistently}
+the order parameter can be determined self-consistently, i.e. starting from an initial value, the BdG matrix needs to be set up, diagonalized and then used to determine \(\Delta_{\alpha}\) again, until a converged value is found.
 
 \todo{SC current in BCS}
 
@@ -390,23 +396,11 @@ Following~\cite{bruusManyBodyQuantumTheory2004}
 
 \todo{Slim down to relevant information}
 
-Have different kinds of Green's functions, for example the retarded Green's function:
-\begin{equation}
-	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (t^{\prime})\}}
-\end{equation}
-They give the amplitude of a particle inserted at point \(\vb{r}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{r}\) at time \(t\).
-For time-independent Hamiltonians and systems in equilibrium, the GFs only depend on time differences:
-\begin{equation}
-	G^R (\vb{r}\sigma t, \vb{r}^{\prime} \sigma^{\prime} t^{\prime}) = G^R (\vb{r} \sigma, \vb{r}^{\prime} \sigma^{\prime}, t - t^{\prime})
-\end{equation}
-So we can take \(t^{\prime} = 0\) and consider \(t\) as the only free variable:
-\begin{equation}
-	G^R (\vb{r}\sigma, \vb{r}^{\prime} \sigma^{\prime}, t) = -\iu \Theta(t) \braket{ \{c_{\vb{r} \sigma} (t), c_{\vb{r} \sigma}^{\dagger} (0)\}}
-\end{equation}
-In a translation invariant system: can use \(\vb{k}\) as a natural basis set:
+Have different kinds of Green's functions, for example the retarded Green's function (here with the \(k\) for lattice systems):
 \begin{equation}
 	G^R (\vb{k}, \sigma, \sigma^{\prime} t) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma^{\prime}}^{\dagger} (0)\}}
 \end{equation}
+They give the amplitude of a particle inserted at momentum \(\vb{k}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{k}\) at time \(t\).
 Define Fourier-transform:
 \begin{equation}
 	G^R (\vb{k}, \sigma, \sigma^{\prime}, \omega) = \int_{-\infty}^{\infty} \odif{t} G^R (\vb{k}, \sigma, \sigma^{\prime} t)
@@ -425,15 +419,14 @@ For interacting systems this is not true, but \(A\) can still be peaked.
 
 \todo{Show GFs can be related to observables}
 
-\todo{Introduction Matsubara GF: finite temperatures}
-
+A mathematical trick to calculate GFs in praxis is to introduce the imaginary time variable \(\tau\)
 \begin{equation}
 	t \to -\iu \tau
 \end{equation}
 where \(\tau\) is real and has the dimension time.
 This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
-
-Define imaginary time/Matsubara GF \gls{matsubara correlation function}:
+Define Matsubara GF \gls{matsubara correlation function}:
+\todo{Introduce Greens functions instead of correlation functions}
 \begin{equation}
 	\mathcal{C}_{A B} (\tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
 \end{equation}
@@ -460,8 +453,6 @@ with fermionic/bosonic Matsubara frequencies
 	\end{cases}
 \end{equation}
 
-\todo{How to resolve ambiguity at borders of integral}
-
 It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
 So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
 \begin{equation}
@@ -469,7 +460,7 @@ So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic contin
 \end{equation}
 \todo{What is the eta there -> need to define it in retarded GF}
 So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
-Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value) ~\cite[8.3.4]{bruusManyBodyQuantumTheory2004}.
+Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value).
 
 \todo{single-particle Matsubara GF}
 
