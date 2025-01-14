@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\chapter{Superconductivity}\label{ch:superconductivity}
+\chapter{Superconductivity} \label{ch:superconductivity}
 
 Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
 In this chapter we review theoretical concepts needed for understanding superconductivity and introduce the tools used to study superconductivity in the later chapters.
@@ -84,7 +84,7 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 		\input{images/ginzburg_landau_free_energy.pgf}
 		\caption{\label{sfig:Ginzburg Landau free energy}}
 	\end{subfigure}
-	\caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
+	%caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
 
@@ -116,12 +116,12 @@ with again
 \end{equation}
 Instead of the two minima, the free energy here is rotational symmetry, because it is independent of the phase of the order parameter: 
 \begin{equation}
-	F [\Psi] = f [e^{\iu a} \Psi] \;.
+	F [\Psi] = F [e^{\iu \phi} \Psi] \;.
 \end{equation}
 This gives the so called `Mexican hat' potential shown in \cref{sfig:Ginzburg Landau free energy}.
-In this potential, the order parameter can be rotated continuously from one broken-symmetry state to another.
+In this potential, the order parameter can be rotated continuously from one symmetry-broken state to another.
 
-In 1950, Ginzburg and Landau published their theory of superconductivity based on Landaus theory of phase transitions \cite{ginzburgTheorySuperconductivity1950}.
+In 1950, Ginzburg and Landau published their theory of superconductivity, based on Landaus theory of phase transitions \cite{ginzburgTheorySuperconductivity1950}.
 Where Landau theory as described above has an uniform order parameters, Ginzburg-Landau theory accounts for it being inhomogeneous, so an order parameter with spatially varying amplitude or direction.
 This in turn leads to the order parameter developing a fixed phase, which is the underlying mechanism of the superflow in superconductors.
 
@@ -129,47 +129,64 @@ Ginzburg-Landau theory can be developed for a general \(n\)-component order para
 The Ginzburg-Landau free energy for a complex order parameter is
 \begin{equation}
 	F_{\mathrm{GL}} [\Psi, \adif{\Psi}] = s \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \;,
+	\label{eq:free energy ginzburg-landau theory}
 \end{equation}
-where the gradient term \(\adif{\Psi}\) is added in comparison to Landau energy.
-\todo{Work over paragraph}
-
-In GL theory, energy is sensitive to a twist of the phase.
-Substitute \(\psi = \vert \psi \vert e^{\iu \phi}\) into GL free energy, gradient term is:
+\todo{Introduce gradient term as kinetic energy (with mass)}
+where the gradient term \(\adif{\Psi}\) is added in comparison to the Landau free energy.
+The free energy in \cref{eq:free energy ginzburg-landau theory} is sensitive to a twist of the phase of the order parameter.
+Substituting the expression \(\Psi = \vert \Psi \vert e^{\iu \phi}\), the gradient term reads
 \begin{equation}
-	\Delta \psi = (\Delta \vert \psi \vert + \iu \Delta \phi \vert \psi \vert) e^{\iu \phi}
+	\Delta \Psi = (\adif{\vert \Psi \vert} + \iu \adif{\phi} \vert \Psi \vert) e^{\iu \phi} \;.
 \end{equation}
-So:
+With that, \cref{eq:free energy ginzburg-landau theory} becomes
 \begin{equation}
-	f_{GL}  = s \vert \psi \vert^2 (\Delta \phi)^2 + \left[ s (\Delta \vert \psi \vert)^2 + r \vert \psi \vert^2 + \frac{u}{2} \vert \psi \vert^4 \right]
+	F_{GL}  = s \vert \Psi \vert^2 (\adif{\phi})^2 + \left[ s (\adif{\vert \Psi \vert})^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \right] \;.
 \end{equation}
-The second term describes energy cost of variations in the magnitude of the order parameter.
-The first term describes energy cost of variations in the phase of the order parameter.
+Now the contributions of phase and amplitude variations are split up: the first term describes energy cost of variations in the phase of the order parameter and the second term describes energy cost of variations in the magnitude of the order parameter.
 The dominating fluctuation is determined by the ratio of the factors \(s\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the correlation length
 \begin{equation}
 	\xi = \sqrt{\frac{s}{\vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
 \end{equation}
 where \(\xi_0 = \xi(T=0) = \sqrt{\frac{s}{a T_C}}\) is the coherence length.
-Beyond this length scale: only phase fluctuations survive.
+\todo{significance of coherence length: only phase fluctuations}
 
+\todo{Work over paragraph}
 Superconductors: charged superfluids, coupling to electromagnetic fields.
+Free energy with minimal coupling to an electromagnetic field:
+\begin{equation}
+	F_{\mathrm{GL}} [\Psi, \vb{A}] = s \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
+\end{equation}
+
+\todo{Explanation London penetration depth}
+
+\todo{Explanation supercurrent}
 
 \todo{Explanation superfluid weight}
 
-\todo{Go into detail: what are the different methods used in Aalto and by me}
+\begin{equation}
+	\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \adif{\phi} (\vb{r}) \vert^2}
+	\label{eq:breakdown of OP with phase fluctuations}
+\end{equation}
+
+\todo{Explanation: phase fluctuations destroy SC order -> introducing q gives access to SC properties}
 
 \todo{Be proper about what is a free energy density and what is a free energy}
 
 \subsection{Superconducting Length Scales}
 
-\Cref{sub:Landau and Ginzburg-Landau Theory} introduced the 
+One of the challenges in achieving high-temperature superconductivity is the fact, that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
+\todo{Competing energy scales via interaction strength: higher U gives more tightly bound pairs}
 
-Having access to these scales from microscopic models and ab initio approaches is very important in the search 
+\cite{hazraBoundsSuperconductingTransition2019}
 
-One of the challenges in achieving high-temperature superconductivity is the fact, that the energy scales given by 
+These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}, so having access to these scales from microscopic models and ab initio approaches is very important in the search for high \(T_C\)-superconductors.
 
-\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for calculating \cite{wittBypassingLatticeBCS2024}.
+\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing exactly that \cite{wittBypassingLatticeBCS2024}.
+As already discussed in the context of \cref{eq:breakdown of OP with phase fluctuations}, strong phase fluctuations destroy superconducting order.
 
 \todo{Better introduction}
+
+\todo{work over paragraph}
 
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
@@ -191,32 +208,42 @@ which results in the \(\vb{q}\)-dependence of the OP
 \begin{equation}
 	\vert \psi_{\vb{q}} \vert^2 = \vert \psi_{0} \vert^2 (1 - \xi(T)^2 q^2)
 \end{equation}
+\todo{Make graphic for Landau OP and BCS OP with q}
 For some value, SC order breaks down, \(\psi_{\vb{q}_c} = 0\), because the kinetic energy from phase modulation exceeds the gain in energy from pairing.
 In GL theory: \(q_c = \xi(T)^{-1}\).
 The temperature dependence of the OP and extracted \(\xi(T)\) gives access to the coherence length via
 \begin{equation}
 	\xi(T) = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
 \end{equation}
-
 The Cooper pair
 
 \todo{Depairing current from FMP}
 
-\todo{Full formula for supercurrent, with sum over orbitals}
+The momentum of the Cooper pairs entails a charge supercurrent \(\vb{j}_{\vb{q}}\).
+The maximum of 
+\todo{Graphic for supercurrent}
 
-\todo{DS from FMP}
+The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
+The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth:
+\begin{equation}
+	\lambda_L
+\end{equation}
+\todo{Where does this formula come from?}
 
-\todo{Write more about the connection between all the things here}
+\todo{\(D_S\)}
 
-\todo{Make graphic for Landau OP and BCS OP with q}
+\todo{What else can be done with the FMP method?}
+
+\todo{Connection of the FMP method to linear response techniques}
 
 \section{Bardeen-Coooper-Schrieffer Theory}\label{sec:bcs-theory}
 
 It took nearly 50 years after the first discovery of superconductivity in mercury by Heike Kamerlingh Onnes in 1911 \cite{onnesFurtherExperimentsLiquid1991} for the first microscopic description of this phenomenon to be published in 1957 by John Bardeen, Leon Cooper and J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
-This \glsxtrfull{bcs} theory is one of the great successes in physics history.
 
 The \glsxtrshort{bcs} description of superconductivity is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
 The origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\), which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
+
+This \glsxtrfull{bcs} theory is one of the great successes in physics history.
 
 There exist many textbooks tackling BCS theory from different angles, such as chapter 14 in refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996}.
 This section gives an introduction to the relevant physics of \glsxtrshort{bcs} theory as originally proposed, then derives the 
