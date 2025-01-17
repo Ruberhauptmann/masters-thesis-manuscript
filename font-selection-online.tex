@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Language and font settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fontspec} % enables selection of fonts in LuaLaTeX
+\setmainfont{texgyreheros}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+\setsansfont{texgyreheros}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}
+\setmonofont{texgyrecursor}[
+Extension = .otf ,
+UprightFont = *-regular ,
+ItalicFont = *-italic ,
+BoldFont = *-bold ,
+BoldItalicFont = *-bolditalic,
+]
+
+\setkomafont{disposition}{\scshape} % Set small caps for chapter, section and subsection titles
+\setkomafont{pagehead}{\upshape\scshape}

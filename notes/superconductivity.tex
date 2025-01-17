@@ -2,6 +2,7 @@
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
+\raggedbottom
 
 \chapter{Superconductivity} \label{ch:superconductivity}
 
@@ -76,15 +77,15 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
+		\caption{\hfill\null}\label{sfig:Landau free energy}
 		\input{images/landau_free_energy.pgf}
-		\caption{\label{sfig:Landau free energy}}
 	\end{subfigure}%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
+		\caption{\hfill\null}\label{sfig:Ginzburg Landau free energy}
 		\input{images/ginzburg_landau_free_energy.pgf}
-		\caption{\label{sfig:Ginzburg Landau free energy}}
 	\end{subfigure}
-	%caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
+	\caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
 
@@ -128,11 +129,11 @@ This in turn leads to the order parameter developing a fixed phase, which is the
 Ginzburg-Landau theory can be developed for a general \(n\)-component order parameter, but in superfluids and superconductors the order parameter is complex, i.e. two-component.
 The Ginzburg-Landau free energy for a complex order parameter is
 \begin{equation}
-	F_{\mathrm{GL}} [\Psi, \adif{\Psi}] = s \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \;,
+	F_{\mathrm{GL}} [\Psi, \adif{\Psi}] = \frac{\hbar^2}{2m^*} \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \;,
 	\label{eq:free energy ginzburg-landau theory}
 \end{equation}
-\todo{Introduce gradient term as kinetic energy (with mass)}
 where the gradient term \(\adif{\Psi}\) is added in comparison to the Landau free energy.
+The prefactor \(\frac{\hbar^2}{2m^*}\) is chosen to illustrate the interpretation of the Ginzburg-Landau free energy as the energy of a condensate of bosons, where the gradient term \(\vert \adif{\Psi} \vert^2\) is the kinetic energy.
 The free energy in \cref{eq:free energy ginzburg-landau theory} is sensitive to a twist of the phase of the order parameter.
 Substituting the expression \(\Psi = \vert \Psi \vert e^{\iu \phi}\), the gradient term reads
 \begin{equation}
@@ -140,35 +141,52 @@ Substituting the expression \(\Psi = \vert \Psi \vert e^{\iu \phi}\), the gradie
 \end{equation}
 With that, \cref{eq:free energy ginzburg-landau theory} becomes
 \begin{equation}
-	F_{GL}  = s \vert \Psi \vert^2 (\adif{\phi})^2 + \left[ s (\adif{\vert \Psi \vert})^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \right] \;.
+	F_{GL}  = \frac{\hbar^2}{2m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \left[ \frac{\hbar^2}{2m^*} (\adif{\vert \Psi \vert})^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \right] \;.
+	\label{eq:free energy ginzburg-landau theory with phase}
 \end{equation}
 Now the contributions of phase and amplitude variations are split up: the first term describes energy cost of variations in the phase of the order parameter and the second term describes energy cost of variations in the magnitude of the order parameter.
-The dominating fluctuation is determined by the ratio of the factors \(s\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the correlation length
+The dominating fluctuation is determined by the ratio of the factors \(\frac{\hbar^2}{2m^*}\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the correlation length
 \begin{equation}
-	\xi = \sqrt{\frac{s}{\vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
+	\xi = \sqrt{\frac{\hbar^2}{2m^* \vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
+	\label{eq:correlation length GL theory}
 \end{equation}
-where \(\xi_0 = \xi(T=0) = \sqrt{\frac{s}{a T_C}}\) is the coherence length.
-\todo{significance of coherence length: only phase fluctuations}
-
+where \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\) is the coherence length.
+On length scales above \(\xi\), the physics is entirely controlled by the phase degrees of freedom, i.e.
+\begin{equation}
+	F_{\mathrm{GL}} = \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.}
+\end{equation}
 \todo{Work over paragraph}
 Superconductors: charged superfluids, coupling to electromagnetic fields.
 Free energy with minimal coupling to an electromagnetic field:
+\todo{GL energy with minimal coupling}
 \begin{equation}
 	F_{\mathrm{GL}} [\Psi, \vb{A}] = s \vert \adif{\Psi} \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
+	\label{eq:GL energy with minimal coupling to EM field}
 \end{equation}
 
 \todo{Explanation London penetration depth}
 
-\todo{Explanation supercurrent}
+Can get the current density from the stationary point condition of the free energy for the vector potential \(\vb{A}\) \cite{colemanIntroductionManyBodyPhysics2015}:
+\begin{equation}
+	\fdv{f_{\mathrm{GL}}}{\vb{A}} = 0 = -\vb{j} + \frac{1}{\mu_0} \nabla \times \vb{B}
+\end{equation}
+with the supercurrent density
+\begin{equation}
+	\vb{j} = -\iu \frac{e\hbar}{m^*} \left(\Psi^* \adif{\Psi} - \Psi \adif{\Psi^*} - \frac{4 e^2}{m^*} \vert \Psi \vert^2 \vb{A} \right) \;.
+\end{equation}
 
-\todo{Explanation superfluid weight}
+\todo{Explanation supercurrent: introduce complex OP with phase, rewrite equation}
 
+Take case of frozen amplitude fluctuations, i.e. \(\adif{\vert \Psi (\vb{r}) \vert} = 0\).
+Stationary point condition for \cref{eq:free energy ginzburg-landau theory with phase} gives:
 \begin{equation}
 	\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \adif{\phi} (\vb{r}) \vert^2}
 	\label{eq:breakdown of OP with phase fluctuations}
 \end{equation}
+This shows that the superconducting order gets suppressed and eventually destroyed by short-ranged (below \(\xi\)) phase fluctuations.
+By introducing a particular form of phase fluctuations \(\phi = \vb{q} \cdot \vb{r}\) into a microscopic model, it is possible to probe this breakdown of superconductivity and thus gain insight into the nature of superconductivity, in particular this gives access to \(\xi\).
 
-\todo{Explanation: phase fluctuations destroy SC order -> introducing q gives access to SC properties}
+\todo{Explanation superfluid weight}
 
 \todo{Be proper about what is a free energy density and what is a free energy}
 
@@ -191,37 +209,56 @@ As already discussed in the context of \cref{eq:breakdown of OP with phase fluct
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
 
+\todo{Write better: connection of the section above and this theory}
+
 Theory/procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
 FF-type pairing with Cooper pairs carrying finite momentum:
 \begin{equation}
-	\psi_{\vb{q}} (\vb{r}) = \vert \psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
+	\Psi_{\vb{q}} (\vb{r}) = \vert \Psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
 \end{equation}
-Then the free energy density is
+Then the free energy density \cref{eq:free energy ginzburg-landau theory} is
 \begin{equation}
-	f_{GL} [\psi_{\vb{q}}] = \alpha \vert \psi_{\vb{q}} \vert^2 + \frac{b}{2} \vert \psi_{\vb{q}} \vert^4 + \frac{\hbar^2 q^2}{2 m^*} \vert \psi_{\vb{q}} \vert^2
+	f_{GL} [\Psi_{\vb{q}}] = r \vert \Psi_{\vb{q}} \vert^2 + \frac{u}{2} \vert \Psi_{\vb{q}} \vert^4 + \frac{\hbar^2 q^2}{2 m^*} \vert \Psi_{\vb{q}} \vert^2
 \end{equation}
 Stationary point of the system:
 \begin{equation}
-	\fdv{f_{GL}}{\psi_{\vb{q}}^*} = 2 \psi_{\vb{q}} \left[\alpha (1 - \xi^2 q^2) + b \vert \psi_{\vb{q}} \vert^2\right] = 0
+	\fdv{f_{GL}}{\Psi_{\vb{q}}^*} = 2 \Psi_{\vb{q}} \left[r (1 - \xi^2 q^2) + u \vert \Psi_{\vb{q}} \vert^2\right] = 0
 \end{equation}
 which results in the \(\vb{q}\)-dependence of the OP
 \begin{equation}
-	\vert \psi_{\vb{q}} \vert^2 = \vert \psi_{0} \vert^2 (1 - \xi(T)^2 q^2)
+	\vert \psi_{\vb{q}} \vert^2 = \vert \psi_{0} \vert^2 \left(1 - \xi(T)^2 q^2\right)
 \end{equation}
-\todo{Make graphic for Landau OP and BCS OP with q}
 For some value, SC order breaks down, \(\psi_{\vb{q}_c} = 0\), because the kinetic energy from phase modulation exceeds the gain in energy from pairing.
 In GL theory: \(q_c = \xi(T)^{-1}\).
-The temperature dependence of the OP and extracted \(\xi(T)\) gives access to the coherence length via
+The temperature dependence of the OP and extracted \(\xi(T)\) gives access to the coherence length via \cref{eq:correlation length GL theory}
 \begin{equation}
-	\xi(T) = \xi_0 (1 - \frac{T}{T_C})^{-\frac{1}{2}}
+	\xi(T) = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
 \end{equation}
 The Cooper pair
 
 \todo{Depairing current from FMP}
 
 The momentum of the Cooper pairs entails a charge supercurrent \(\vb{j}_{\vb{q}}\).
-The maximum of 
-\todo{Graphic for supercurrent}
+For small \(q\)
+
+\todo{Work over graphic for Landau OP}
+\todo{Work over graphic for Landau current}
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\caption{\hfill\null}\label{sfig:Ginzburg Landau OP vs q}
+		\centering
+		\input{images/ginzburg_landau_OP_vs_q.pgf}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:Ginzburg Landau current vs q}
+		\input{images/ginzburg_landau_current_vs_q.pgf}
+	\end{subfigure}
+	\caption{\subref{sfig:Ginzburg Landau OP vs q} and \subref{sfig:Ginzburg Landau current vs q}} 
+	\label{fig:Ginzburg Landau OP and current vs q}
+\end{figure}
 
 The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
 The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth:
@@ -240,12 +277,12 @@ The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \c
 
 It took nearly 50 years after the first discovery of superconductivity in mercury by Heike Kamerlingh Onnes in 1911 \cite{onnesFurtherExperimentsLiquid1991} for the first microscopic description of this phenomenon to be published in 1957 by John Bardeen, Leon Cooper and J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
 
-The \glsxtrshort{bcs} description of superconductivity is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
+The \glsxtrfull{bcs} description of superconductivity is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
 The origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\), which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
 
-This \glsxtrfull{bcs} theory is one of the great successes in physics history.
+This \glsxtrshort{bcs} theory is one of the great successes in physics history.
 
-There exist many textbooks tackling BCS theory from different angles, such as chapter 14 in refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996}.
+There exist many textbooks tackling BCS theory from different angles, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996}.
 This section gives an introduction to the relevant physics of \glsxtrshort{bcs} theory as originally proposed, then derives the 
 
 \todo{Better introduction}

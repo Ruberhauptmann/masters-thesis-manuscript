@@ -3,3 +3,4 @@ pgf.texsystem: lualatex
 pgf.rcfonts: False
 font.family: serif
 text.usetex: True
+font.size: 11

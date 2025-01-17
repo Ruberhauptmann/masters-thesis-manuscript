@@ -11,6 +11,10 @@
 
 \input{preamble} % load the tex file with the preamble
 
+\input{font-selection}
+\usepackage{xstring}
+\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
+
 \input{notation} % load the tex file with the notation shortcuts
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
