@@ -13,13 +13,17 @@ There are many textbooks covering these topics which can be referenced for a mor
 Macroscopially, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
 Theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}, following refs. \cite{beekmanIntroductionSpontaneousSymmetry2019, colemanIntroductionManyBodyPhysics2015}.
 Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi_0\) describing the length scale of amplitude variations of the order parameter and the London penetration depth \(\lambda_L\), which is connected to energy cost of phase variations of the order parameter.
-The interplay of these length scales determine 
-\todo{What is influenced by length scales? See Niklas 2024 npj}
-To this end, \cref{sec:Ginzburg-Landau theory of superconductivity}  introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
+They also 
+
+The interplay of these length (energy) scales determine 
+\todo{What is influenced by length/energy scales? See Niklas 2024 npj}
+To this end, \cref{sec:Ginzburg-Landau theory of superconductivity} introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
 
 Ginzburg Landau theory is a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
 One such theory to describe superconductivity from a microscopic perspective is \glsxtrfull{bcs} theory in \cref{sec:bcs-theory}.
 A method to treat local interactions non-perturbatively is \glsxtrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \glsxtrshort{dmft} self-consistency cycle.
+
+Lastly, \todo{Introduce quantum metric}
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
@@ -181,10 +185,11 @@ with the supercurrent density
 \begin{equation}
 	\vb{j} = -\iu \frac{e\hbar}{m^*} \left(\Psi^* \adif{\Psi} - \Psi \adif{\Psi^*} - \frac{4 e^2}{m^*} \vert \Psi \vert^2 \vb{A} \right) \;.
 \end{equation}
-
+Introducing the OP with phase \(\Psi = \vert \Psi \vert e^{\iu \phi}\):
+\begin{equation}
+	\vb{j} = 
+\end{equation}
 \todo{Explanation supercurrent: introduce complex OP with phase, rewrite equation}
-
-
 
 \todo{Explanation superfluid weight}
 
@@ -192,7 +197,10 @@ with the supercurrent density
 
 One of the challenges in achieving high-temperature superconductivity is the fact, that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
 Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperconductivityCrosses2024}.
+This describes the fact that in many recently discovered
+\todo{Description BCS-BEC crossover}
 
+The picture of this crossover is the following: for small attractive interaction, pairs of electrons are
 
 \todo{Competing energy scales via interaction strength: higher U gives more tightly bound pairs}
 
@@ -202,7 +210,7 @@ Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperco
 
 These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}, so having access to these scales from microscopic models and ab initio approaches is very important in the search for high \(T_C\)-superconductors.
 
-\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing exactly that \cite{wittBypassingLatticeBCS2024}.
+\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing this \cite{wittBypassingLatticeBCS2024}.
 As already discussed in the context of \cref{eq:breakdown of OP with phase fluctuations}, strong phase fluctuations destroy superconducting order.
 
 \todo{Better introduction}
@@ -214,7 +222,7 @@ In presence of e.g.\ external fields or magnetism: SC states with FMP might aris
 
 \todo{Write better: connection of the section above and this theory}
 
-Theory/procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
+Procedure: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
 FF-type pairing with Cooper pairs carrying finite momentum:
 \begin{equation}
 	\Psi_{\vb{q}} (\vb{r}) = \vert \Psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
