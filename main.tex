@@ -16,7 +16,7 @@
 
 \hypersetup{
 	hidelinks=true,
-	pdftitle={Superconducting phase stiffness and coherence length from a finite momentum pairing constraint},
+	pdftitle={Superconducting Phase Stiffness and Coherence Length From a Finite Momentum Pairing Constraint},
 	pdfauthor={Tjark Sievers}
 }
 
@@ -53,9 +53,8 @@
 %\input{conventions}
 %\newpage
 
-% Beginning of the content: page numbers in arabic numbering, number chapters and sections (in roman numerals)
+% Beginning of the content
 \mainmatter
-\renewcommand{\thechapter}{\Roman{chapter}}
 
 % Load motivation
 \subfile{chapters/motivation.tex}
@@ -71,24 +70,29 @@
 
 % Print the bibliography
 \cleardoublepage
+
+\nocite{*}
+
 \phantomsection
-\printbibliography
+\printbibliography[title={Bibliography},category=cited]
 
 \printbibliography[title={Not cited},notcategory=cited]
 
 % Beginning of the backmatter
 \backmatter
 
-% Print list of symbols
-%\setglossarysection{chapter}
-%\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
-%\printglossary[type=\acronymtype, title=List of Abbreviations]
-%\printglossary[type=\glossarytype, title=Glossary]
-
-% Include lists of the figures and tables (optional)
-\chapter*{Listings}
+% Include listings
+\chapter{Listings}
+\addcontentsline{toc}{section}{\listfigurename}
 \listoffigures
+\addcontentsline{toc}{section}{\listtablename}
 \listoftables
+
+\setglossarysection{section}
+\printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
+
+\setglossarysection{section}
+\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
 
 % Include the acknowledgement
 \chapter*{Acknowledgment}
@@ -96,5 +100,5 @@
 %\subfile{chapters/acknowledgement.tex}
 
 % Include the Selbstständigkeitserklärung
-%\includepdf{eidesstattlicheerklaerung_unterschrieben.pdf}
+\includepdf{eidesstattlicheerklaerung.pdf}
 \end{document}

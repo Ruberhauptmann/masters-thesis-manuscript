@@ -23,6 +23,28 @@
 %\ihead[]{\headmark\hspace*{11pt}\pagemark} % chapter/section title and page number on the inner side
 \cfoot[\pagemark]{} % pagenumber in the center footer for the 'plain' pagestyle (per default, this gets used for pages on the beginning of chapters)
 
+\RedeclareSectionCommand[
+beforeskip=0pt,
+afterindent=false,
+afterskip=2.5\baselineskip,
+font=\normalfont\Huge
+]{chapter}
+
+\renewcommand*\chapterformat{%
+	\fontsize{50pt}{50pt}\selectfont\thechapter%
+}%
+
+\renewcommand*\chapterlinesformat[3]{%
+	\parbox[b]{\textwidth}{\raggedchapter \textcolor{UHHgray}{#3}}%
+	\makebox[0pt][l]{%
+		\hspace{1ex}%
+		\smash{\textcolor{UHHgray}{\rule[-15pt]{2pt}{10cm}}}%
+		\hspace{1ex}
+		\textcolor{UHHred}{#2}
+	}%
+}
+\renewcommand*\raggedchapter{\raggedleft}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Some automatic enhancements for the documents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,6 +99,8 @@
 \graphicspath{images/} % setup path for inclusion of images
 
 \usepackage[export]{adjustbox} % give options to \includegraphics to align images (for the two logos in the titlepage)
+
+\usepackage{pdfpages} % to include pdf documents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
