@@ -1,0 +1,2057 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{colemanIntroductionManyBodyPhysics2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=839b78b5dc56eff1101d23520a8b5000}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={Piers},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{839b78b5dc56eff1101d23520a8b5000}
+      \strng{fullhash}{839b78b5dc56eff1101d23520a8b5000}
+      \strng{bibnamehash}{839b78b5dc56eff1101d23520a8b5000}
+      \strng{authorbibnamehash}{839b78b5dc56eff1101d23520a8b5000}
+      \strng{authornamehash}{839b78b5dc56eff1101d23520a8b5000}
+      \strng{authorfullhash}{839b78b5dc56eff1101d23520a8b5000}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A modern, graduate-level introduction to many-body physics in condensed matter, this textbook explains the tools and concepts needed for a research-level understanding of the correlated behavior of quantum fluids. Starting with an operator-based introduction to the quantum field theory of many-body physics, this textbook presents the Feynman diagram approach, Green's functions and finite-temperature many-body physics before developing the path integral approach to interacting systems. Special chapters are devoted to the concepts of Fermi liquid theory, broken symmetry, conduction in disordered systems, superconductivity and the physics of local-moment metals. A strong emphasis on concepts and numerous exercises make this an invaluable course book for graduate students in condensed matter physics. It will also interest students in nuclear, atomic and particle physics.}
+      \field{isbn}{978-0-521-86488-6}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Introduction to {{Many-Body Physics}}}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9781139020916
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/9YSGPFV2/Introduction to Many-Body Physics - Piers Coleman.pdf
+      \endverb
+    \endentry
+    \entry{tinkhamIntroductionSuperconductivity1996}{book}{}
+      \name{author}{1}{}{%
+        {{hash=35bae14532c526b4a5ac004c663f3ce9}{%
+           family={Tinkham},
+           familyi={T\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{35bae14532c526b4a5ac004c663f3ce9}
+      \strng{fullhash}{35bae14532c526b4a5ac004c663f3ce9}
+      \strng{bibnamehash}{35bae14532c526b4a5ac004c663f3ce9}
+      \strng{authorbibnamehash}{35bae14532c526b4a5ac004c663f3ce9}
+      \strng{authornamehash}{35bae14532c526b4a5ac004c663f3ce9}
+      \strng{authorfullhash}{35bae14532c526b4a5ac004c663f3ce9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed}
+      \field{isbn}{978-0-07-064878-4}
+      \field{langid}{english}
+      \field{pagetotal}{454}
+      \field{series}{International Series in Pure and Applied Physics}
+      \field{title}{Introduction to Superconductivity}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/JDF4TXVI/Tinkham - 1996 - Introduction to superconductivity.pdf
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{bruusManyBodyQuantumTheory2004}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a196033419a5e27b66571f37e386da7d}{%
+           family={Bruus},
+           familyi={B\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=533d63e82c5527c01b821ca32839ab68}{%
+           family={Flensberg},
+           familyi={F\bibinitperiod},
+           given={Karsten},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford, New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \strng{fullhash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \strng{bibnamehash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \strng{authorbibnamehash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \strng{authornamehash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \strng{authorfullhash}{45846ed8d7a1bd8857f5e660ec025cf2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This book is an introduction to the techniques of many-body quantum theory with a large number of applications to condensed matter physics. The basic idea of the book is to provide a self-contained formulation of the theoretical framework without losing mathematical rigor, while at the same time providing physical motivation and examples. The examples are taken from applications in electron systems and transport theory. On the formal side, the book covers an introduction to second quantization, many-body Green's function, finite temperature Feynman diagrams and bosonization. The applications include traditional transport theory in bulk as well as mesoscopic systems, where both the Landau-Büttiker formalism and recent developments in correlated transport phenomena in mesoscopic systems and nano-structures are covered. Other topics include interacting electron gases, plasmons, electron-phonon interactions, superconductivity and a final chapter on one-dimensional systems where a detailed treatment of Luttinger liquid theory and bosonization techniques is given. Having grown out of a set of lecture notes, and containing many pedagogical exercises, this book is designed as a textbook for an advanced undergraduate or graduate course, and is also well suited for self-study. , This book is an introduction to the techniques of many-body quantum theory with a large number of applications to condensed matter physics. The basic idea of the book is to provide a self-contained formulation of the theoretical framework without losing mathematical rigor, while at the same time providing physical motivation and examples. The examples are taken from applications in electron systems and transport theory. On the formal side, the book covers an introduction to second quantization, many-body Green's function, finite temperature Feynman diagrams and bosonization. The applications include traditional transport theory in bulk as well as mesoscopic systems, where both the Landau-Büttiker formalism and recent developments in correlated transport phenomena in mesoscopic systems and nano-structures are covered. Other topics include interacting electron gases, plasmons, electron-phonon interactions, superconductivity and a final chapter on one-dimensional systems where a detailed treatment of Luttinger liquid theory and bosonization techniques is given. Having grown out of a set of lecture notes, and containing many pedagogical exercises, this book is designed as a textbook for an advanced undergraduate or graduate course, and is also well suited for self-study.}
+      \field{day}{11}
+      \field{isbn}{978-0-19-856633-5}
+      \field{month}{11}
+      \field{pagetotal}{466}
+      \field{series}{Oxford {{Graduate Texts}}}
+      \field{shorttitle}{Many-{{Body Quantum Theory}} in {{Condensed Matter Physics}}}
+      \field{title}{Many-{{Body Quantum Theory}} in {{Condensed Matter Physics}}: {{An Introduction}}}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/3ZW9UAGA/Many-body quantum theory in condensed matt - Henrik Bruus.pdf
+      \endverb
+    \endentry
+    \entry{larkinTheoryFluctuationsSuperconductors2005}{book}{}
+      \name{author}{2}{}{%
+        {{hash=683713051e5e4deb34f31ec6e9329e18}{%
+           family={Larkin},
+           familyi={L\bibinitperiod},
+           given={Anatolii\bibnamedelima Ivanovich},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=27b46230a251a558fc1923fccef2b504}{%
+           family={Varlamov},
+           familyi={V\bibinitperiod},
+           given={Andreĭ\bibnamedelima Andreevich},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press Oxford University Press}%
+      }
+      \strng{namehash}{907628552ede994d79ae016430c4ac5f}
+      \strng{fullhash}{907628552ede994d79ae016430c4ac5f}
+      \strng{bibnamehash}{907628552ede994d79ae016430c4ac5f}
+      \strng{authorbibnamehash}{907628552ede994d79ae016430c4ac5f}
+      \strng{authornamehash}{907628552ede994d79ae016430c4ac5f}
+      \strng{authorfullhash}{907628552ede994d79ae016430c4ac5f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-852815-9}
+      \field{langid}{english}
+      \field{number}{127}
+      \field{series}{Oxford Science Publications}
+      \field{title}{Theory of Fluctuations in Superconductors}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/6T48V6RI/Larkin and Varlamov - 2005 - Theory of fluctuations in superconductors.pdf
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{bennemannSuperconductivity2008}{book}{}
+      \name{editor}{2}{}{%
+        {{hash=d2a7fbdf933322f0d9fa68813a3c6e5c}{%
+           family={Bennemann},
+           familyi={B\bibinitperiod},
+           given={K.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=caab585302f26e55aa3d20af6e62f305}{%
+           family={Ketterson},
+           familyi={K\bibinitperiod},
+           given={John\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{916e26750804122f600a0d70b5af1953}
+      \strng{fullhash}{916e26750804122f600a0d70b5af1953}
+      \strng{bibnamehash}{916e26750804122f600a0d70b5af1953}
+      \strng{editorbibnamehash}{916e26750804122f600a0d70b5af1953}
+      \strng{editornamehash}{916e26750804122f600a0d70b5af1953}
+      \strng{editorfullhash}{916e26750804122f600a0d70b5af1953}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-73252-5}
+      \field{langid}{english}
+      \field{title}{Superconductivity}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-540-73253-2
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/3EJ6RN49/Bennemann and Ketterson - 2008 - Superconductivity.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-540-73253-2
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-540-73253-2
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{beekmanIntroductionSpontaneousSymmetry2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=083f6e0b918447db728136805b727032}{%
+           family={Beekman},
+           familyi={B\bibinitperiod},
+           given={Aron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bcc779b365312265a0b08c19f47e32b0}{%
+           family={Rademaker},
+           familyi={R\bibinitperiod},
+           given={Louk},
+           giveni={L\bibinitperiod}}}%
+        {{useprefix=true,hash=9e5fdbb7c4c4064c1c93a28bdf44d0d1}{%
+           family={Wezel},
+           familyi={W\bibinitperiod},
+           given={Jasper},
+           giveni={J\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{372123ef16b737a1a7422882c29afa00}
+      \strng{fullhash}{372123ef16b737a1a7422882c29afa00}
+      \strng{bibnamehash}{372123ef16b737a1a7422882c29afa00}
+      \strng{authorbibnamehash}{372123ef16b737a1a7422882c29afa00}
+      \strng{authornamehash}{372123ef16b737a1a7422882c29afa00}
+      \strng{authorfullhash}{372123ef16b737a1a7422882c29afa00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SciPost Journals Publication Detail SciPost Phys. Lect. Notes 11 (2019) An introduction to spontaneous symmetry breaking}
+      \field{day}{4}
+      \field{issn}{2590-1990}
+      \field{journaltitle}{SciPost Physics Lecture Notes}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{title}{An Introduction to Spontaneous Symmetry Breaking}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{011}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21468/SciPostPhysLectNotes.11
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/5CND2X2Y/Beekman et al. - 2019 - An introduction to spontaneous symmetry breaking.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://scipost.org/10.21468/SciPostPhysLectNotes.11
+      \endverb
+      \verb{url}
+      \verb https://scipost.org/10.21468/SciPostPhysLectNotes.11
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{wittBypassingLatticeBCS2024}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0131987e0e4f4ce264d88580af2fb36c}{%
+           family={Nomura},
+           familyi={N\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=65bb03a5da61f72b4bac1b815a7ac7de}{%
+           family={Brener},
+           familyi={B\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=65f88bc7e50377682ecc93d607dca9f3}{%
+           family={Arita},
+           familyi={A\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3c88645d57ffec17a297e9b94eeee5e5}{%
+           family={Lichtenstein},
+           familyi={L\bibinitperiod},
+           given={Alexander\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Superconductivity emerges from the spatial coherence of a macroscopic condensate of Cooper pairs. Increasingly strong binding and localization of electrons into these pairs compromises the condensate’s phase stiffness, thereby limiting critical temperatures – a phenomenon known as the BCS–BEC crossover in lattice systems. In this study, we demonstrate enhanced superconductivity in a multiorbital model of alkali-doped fullerides (A3C60) that goes beyond the limits of the lattice BCS–BEC crossover. We identify that the interplay of strong correlations and multiorbital effects results in a localized superconducting state characterized by a short coherence length but robust stiffness and a domeless rise in critical temperature with increasing pairing interaction. To derive these insights, we introduce a new theoretical framework allowing us to calculate the fundamental length scales of superconductors, namely the coherence length (ξ0) and the London penetration depth (λL), even in presence of strong electron correlations.}
+      \field{day}{10}
+      \field{issn}{2397-4648}
+      \field{journaltitle}{npj Quantum Materials}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{npj Quantum Mater.}
+      \field{title}{Bypassing the Lattice {{BCS}}–{{BEC}} Crossover in Strongly Correlated Superconductors through Multiorbital Physics}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1038/s41535-024-00706-7
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/EYEN73KB/Witt et al. - 2024 - Bypassing the lattice BCS–BEC crossover in strongly correlated superconductors through multiorbital.pdf;/home/tjark/Zotero/storage/RYAEF35I/41535_2024_706_MOESM1_ESM.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{noetherInvarianteVariationsprobleme1918}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dc49c9411a2dd7c254f0a041b3852527}{%
+           family={Noether},
+           familyi={N\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc49c9411a2dd7c254f0a041b3852527}
+      \strng{fullhash}{dc49c9411a2dd7c254f0a041b3852527}
+      \strng{bibnamehash}{dc49c9411a2dd7c254f0a041b3852527}
+      \strng{authorbibnamehash}{dc49c9411a2dd7c254f0a041b3852527}
+      \strng{authornamehash}{dc49c9411a2dd7c254f0a041b3852527}
+      \strng{authorfullhash}{dc49c9411a2dd7c254f0a041b3852527}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse}
+      \field{langid}{deu}
+      \field{title}{Invariante Variationsprobleme}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{1918}
+      \field{year}{1918}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{235\bibrangedash 257}
+      \range{pages}{23}
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/8CB92RF8/Noether - 1918 - Invariante Variationsprobleme.pdf;/home/tjark/Zotero/storage/YRXA8VF4/59024.html
+      \endverb
+      \verb{urlraw}
+      \verb https://eudml.org/doc/59024
+      \endverb
+      \verb{url}
+      \verb https://eudml.org/doc/59024
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{landauTheoryPhaseTransitions1937}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ab77fc1405f1025268c1fed8c4fe3104}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={L.\bibnamedelimi D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{useprefix=true,hash=0259947abe58e87fd65c34d0905020bd}{%
+           family={Haar},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           prefix={ter},
+           prefixi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{fullhash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{bibnamehash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{authorbibnamehash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{authornamehash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{authorfullhash}{ab77fc1405f1025268c1fed8c4fe3104}
+      \strng{editorbibnamehash}{0259947abe58e87fd65c34d0905020bd}
+      \strng{editornamehash}{0259947abe58e87fd65c34d0905020bd}
+      \strng{editorfullhash}{0259947abe58e87fd65c34d0905020bd}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki}
+      \field{shortjournal}{Zh. Eksp. Teor. Fiz.}
+      \field{title}{On the Theory of Phase Transitions}
+      \field{volume}{7}
+      \field{year}{1937}
+      \field{dateera}{ce}
+      \field{pages}{19\bibrangedash 32}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/B978-0-08-010586-4.50034-1
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/K3K8ABSS/Landau - 1937 - On the theory of phase transitions.pdf
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{ginzburgTheorySuperconductivity1950}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9c309a90fdb6756d478cb37eead5fbb2}{%
+           family={Ginzburg},
+           familyi={G\bibinitperiod},
+           given={V.\bibnamedelimi L.},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ab77fc1405f1025268c1fed8c4fe3104}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={L.\bibnamedelimi D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{useprefix=true,hash=0259947abe58e87fd65c34d0905020bd}{%
+           family={Haar},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           prefix={ter},
+           prefixi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{fullhash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{bibnamehash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{authorbibnamehash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{authornamehash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{authorfullhash}{fb7e54299ba6bb0625afd4c01d6241fe}
+      \strng{editorbibnamehash}{0259947abe58e87fd65c34d0905020bd}
+      \strng{editornamehash}{0259947abe58e87fd65c34d0905020bd}
+      \strng{editorfullhash}{0259947abe58e87fd65c34d0905020bd}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki}
+      \field{shortjournal}{Zh. Eksp. Teor. Fiz.}
+      \field{title}{On the {{Theory}} of Superconductivity}
+      \field{volume}{20}
+      \field{year}{1950}
+      \field{dateera}{ce}
+      \field{pages}{1064\bibrangedash 1082}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/b978-0-08-010586-4.50078-x
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/BKT9SGMT/Ginzburg and Landau - 1950 - On the Theory of superconductivity.pdf
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{chenWhenSuperconductivityCrosses2024}{article}{}
+      \name{author}{5}{}{%
+        {{hash=56d87240b6061fa8d80c3335f0b07734}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Qijin},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=007af8ed4f8c23926b9d3af3087338c6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhiqiang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b871435c6b80cdeea5a918a1570b2462}{%
+           family={Boyack},
+           familyi={B\bibinitperiod},
+           given={Rufus},
+           giveni={R\bibinitperiod}}}%
+        {{hash=697ec4e688b5ae5835b5b8776dec3f9b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Shuolong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fd64dacd84eeea7dd56425473077aa4}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{9ffc0c0f25974a8f82b65890e8b265dd}
+      \strng{fullhash}{3c39fab1d366fd5a4793f2eb3e1a33ee}
+      \strng{bibnamehash}{9ffc0c0f25974a8f82b65890e8b265dd}
+      \strng{authorbibnamehash}{9ffc0c0f25974a8f82b65890e8b265dd}
+      \strng{authornamehash}{9ffc0c0f25974a8f82b65890e8b265dd}
+      \strng{authorfullhash}{3c39fab1d366fd5a4793f2eb3e1a33ee}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{New developments in superconductivity, particularly through unexpected and often surprising forms of superconducting materials, continue to excite the community and stimulate theory. It is now becoming clear that there are two distinct platforms for superconductivity: natural and synthetic materials. The study of these artificial materials has greatly expanded in the past decade or so, with the discoveries of new forms of superfluidity in artificial heterostructures and the exploitation of proximitization. Natural superconductors continue to surprise through Fe-based pnictides and chalcogenides, and nickelates as well as others. This review presents a two-pronged investigation into such superconductors, with an emphasis on those that have come to be understood to belong somewhere between the Bardeen-Cooper-Schrieffer (BCS) and Bose-Einstein condensation (BEC) regimes. The nature of this “crossover” superconductivity, which is to be distinguished from crossover superfluidity in atomic Fermi gases, is a focus here. Multiple ways of promoting a system out of the BCS and into the BCS-BEC crossover regime are addressed in the context of concrete experimental realizations. These involve natural materials, such as organic conductors, as well as artificial, mostly two-dimensional materials, such as magic-angle twisted bilayer and trilayer graphene, or gate-controlled devices, as well as one-layer and interfacial superconducting films. Such developments should be viewed as a celebration of BCS theory, as it is now clear that, even though this theory was initially implemented with the special case of weak correlations in mind, it can be extended in a natural way to treat the case of these more exotic strongly correlated superconductors.}
+      \field{day}{23}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{5}
+      \field{number}{2}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{shorttitle}{When Superconductivity Crosses Over}
+      \field{title}{When Superconductivity Crosses over: {{From BCS}} to {{BEC}}}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{96}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{025002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.96.025002
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/82GNYRWZ/Chen et al. - 2024 - When superconductivity crosses over From BCS to BEC.pdf;/home/tjark/Zotero/storage/UH27AJNZ/RevModPhys.96.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.96.025002
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.96.025002
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{hazraBoundsSuperconductingTransition2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d33d27d642b1dd95df7dae211aaa0625}{%
+           family={Hazra},
+           familyi={H\bibinitperiod},
+           given={Tamaghna},
+           giveni={T\bibinitperiod}}}%
+        {{hash=18c5954b872d8ee8a21ece6003f0aceb}{%
+           family={Verma},
+           familyi={V\bibinitperiod},
+           given={Nishchhal},
+           giveni={N\bibinitperiod}}}%
+        {{hash=46f6817fff8fe6d49a5c3e5ef962460a}{%
+           family={Randeria},
+           familyi={R\bibinitperiod},
+           given={Mohit},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{56176ca169012d70254a1cd08582544f}
+      \strng{fullhash}{56176ca169012d70254a1cd08582544f}
+      \strng{bibnamehash}{56176ca169012d70254a1cd08582544f}
+      \strng{authorbibnamehash}{56176ca169012d70254a1cd08582544f}
+      \strng{authornamehash}{56176ca169012d70254a1cd08582544f}
+      \strng{authorfullhash}{56176ca169012d70254a1cd08582544f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Understanding the material parameters that control the superconducting transition temperature 𝑇𝑐 is a problem of fundamental importance. In many novel superconductors phase fluctuations determine 𝑇𝑐, rather than the collapse of the pairing amplitude. We derive rigorous upper bounds on the superfluid phase stiffness for multiband systems, valid in any dimension. This in turn leads to an upper bound on 𝑇𝑐 in two dimensions, which holds irrespective of pairing mechanism, interaction strength, or order-parameter symmetry. Our bound is particularly useful for the strongly correlated regime of low-density and narrow-band systems, where mean-field theory fails. For a simple parabolic band in 2D with Fermi energy 𝐸𝐹, we find that 𝑘𝐵⁢𝑇𝑐 ≤𝐸𝐹/8, an exact result that has direct implications for the 2D BCS-BEC crossover in ultracold Fermi gases. Applying our multiband bound to magic-angle twisted bilayer graphene, we find that band structure results constrain the maximum 𝑇𝑐 to be close to the experimentally observed value. Finally, we discuss the question of deriving rigorous upper bounds on 𝑇𝑐 in 3D.}
+      \field{day}{17}
+      \field{journaltitle}{Physical Review X}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Phys. Rev. X}
+      \field{shorttitle}{Bounds on the {{Superconducting Transition Temperature}}}
+      \field{title}{Bounds on the {{Superconducting Transition Temperature}}: {{Applications}} to {{Twisted Bilayer Graphene}} and {{Cold Atoms}}}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{031049}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevX.9.031049
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/JMDQ4P76/Hazra et al. - 2019 - Bounds on the Superconducting Transition Temperature Applications to Twisted Bilayer Graphene and C.pdf;/home/tjark/Zotero/storage/J49NTYEK/PhysRevX.9.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevX.9.031049
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevX.9.031049
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{chenFiniteMomentumCooper2018}{article}{}
+      \name{author}{8}{}{%
+        {{hash=796c9f1d74399421de35d40fd11d73f0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Angela\bibnamedelima Q.},
+           giveni={A\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=14cd91f0827bc51eeedf5310bfb24d7f}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Moon\bibnamedelima Jip},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fa26334394c163e9d65e0256d0d25c43}{%
+           family={Gill},
+           familyi={G\bibinitperiod},
+           given={Stephen\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=2d7e390af68d53175ec01f8087a1efcf}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Yiran},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=df983d88da0b3b9c9e24a4607cdaefc6}{%
+           family={Reig-i-Plessis},
+           familyi={R\bibinithyphendelim i\bibinithyphendelim P\bibinitperiod},
+           given={Dalmau},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cbb6b836109c0337abc4394e4bfdea51}{%
+           family={MacDougall},
+           familyi={M\bibinitperiod},
+           given={Gregory\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7b261094a16b1ba7243216772640f34b}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ab5a864825b768a1db3caf40fc647b9c}{%
+           family={Mason},
+           familyi={M\bibinitperiod},
+           given={Nadya},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{d53807ab4fa98052818fb72e3a94733a}
+      \strng{fullhash}{8950b433dcb9332762ff4f1f42a34cb8}
+      \strng{bibnamehash}{d53807ab4fa98052818fb72e3a94733a}
+      \strng{authorbibnamehash}{d53807ab4fa98052818fb72e3a94733a}
+      \strng{authornamehash}{d53807ab4fa98052818fb72e3a94733a}
+      \strng{authorfullhash}{8950b433dcb9332762ff4f1f42a34cb8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Unconventional superconductivity arising from the interplay between strong spin–orbit coupling and magnetism is an intensive area of research. One form of unconventional superconductivity arises when Cooper pairs subjected to a magnetic exchange coupling acquire a finite momentum. Here, we report on a signature of finite momentum Cooper pairing in the three-dimensional topological insulator Bi2Se3. We apply in-plane and out-of-plane magnetic fields to proximity-coupled Bi2Se3 and find that the in-plane field creates a spatially oscillating superconducting order parameter in the junction as evidenced by the emergence of an anomalous Fraunhofer pattern. We describe how the anomalous Fraunhofer patterns evolve for different device parameters, and we use this to understand the microscopic origin of the oscillating order parameter. The agreement between the experimental data and simulations shows that the finite momentum pairing originates from the coexistence of the Zeeman effect and Aharonov–Bohm flux.}
+      \field{day}{28}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{1}
+      \field{shortjournal}{Nat Commun}
+      \field{title}{Finite Momentum {{Cooper}} Pairing in Three-Dimensional Topological Insulator {{Josephson}} Junctions}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3478}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-018-05993-w
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/XEPEAPLJ/Chen et al. - 2018 - Finite momentum Cooper pairing in three-dimensional topological insulator Josephson junctions.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41467-018-05993-w
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41467-018-05993-w
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{wanOrbitalFuldeFerrell2023}{article}{}
+      \name{author}{11}{}{%
+        {{hash=b0d6b4f87874f7a235ae26602692b413}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Puhua},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7e9db0e61d418b9ee737bc56725b3c1f}{%
+           family={Zheliuk},
+           familyi={Z\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod}}}%
+        {{hash=8c5f4573806aaf1db65ba6dbbece96d7}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Noah\bibnamedelimb F.\bibnamedelimi Q.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=e75193addce7cc67d772f952e14ee1b3}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Xiaoli},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a77e72790c7d025bf3a8550ae69cd99d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Le},
+           giveni={L\bibinitperiod}}}%
+        {{hash=90618d3cc062ca5acf3f3180a9705b67}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Minpeng},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c023f65f1a59c7d98e897be679cf5915}{%
+           family={Zeitler},
+           familyi={Z\bibinitperiod},
+           given={Uli},
+           giveni={U\bibinitperiod}}}%
+        {{hash=614f05737189622594a8bde8a7614c3d}{%
+           family={Wiedmann},
+           familyi={W\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d85067aef6f4721aca00a0c2d8f27dc0}{%
+           family={Hussey},
+           familyi={H\bibinitperiod},
+           given={Nigel\bibnamedelima E.},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2811a9e93bf7f7afe1832af37ba9ff56}{%
+           family={Palstra},
+           familyi={P\bibinitperiod},
+           given={Thomas\bibnamedelimb T.\bibnamedelimi M.},
+           giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=083f0050cac51a279afa6ae086b62f9f}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Jianting},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{b105ba8e880f8c1e287f21358be818a3}
+      \strng{fullhash}{8eec1104c28d28faf16b2b8db3caafb6}
+      \strng{bibnamehash}{b105ba8e880f8c1e287f21358be818a3}
+      \strng{authorbibnamehash}{b105ba8e880f8c1e287f21358be818a3}
+      \strng{authornamehash}{b105ba8e880f8c1e287f21358be818a3}
+      \strng{authorfullhash}{8eec1104c28d28faf16b2b8db3caafb6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In superconductors possessing both time and inversion symmetries, the Zeeman effect of an external magnetic field can break the time-reversal symmetry, forming a conventional Fulde–Ferrell–Larkin–Ovchinnikov (FFLO) state characterized by Cooper pairings with finite momentum1,2. In superconductors lacking (local)~inversion symmetry, the Zeeman effect may still act as the underlying mechanism of FFLO states by interacting with spin–orbit coupling (SOC). Specifically, the interplay between the Zeeman effect and Rashba SOC can lead to the formation of more accessible Rashba FFLO states that cover broader regions in the phase diagram3–5. However, when the Zeeman effect is suppressed because of spin locking in the presence of Ising-type SOC, the conventional FFLO scenarios are no longer effective. Instead, an unconventional FFLO state is formed by coupling the orbital effect of magnetic fields with SOC, providing an alternative mechanism in superconductors with broken inversion symmetries6–8. Here we report the discovery of such an orbital FFLO state in the multilayer Ising superconductor 2H-NbSe2. Transport measurements show that the translational and rotational symmetries are broken in the orbital FFLO state, providing the hallmark signatures of finite-momentum Cooper pairings. We establish the entire orbital FFLO phase diagram, consisting of a normal metal, a uniform Ising superconducting phase and a six-fold orbital FFLO state. This study highlights an alternative route to achieving finite-momentum superconductivity and provides a universal mechanism to preparing orbital FFLO states in similar materials with broken inversion symmetries.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{7968}
+      \field{title}{Orbital {{Fulde}}–{{Ferrell}}–{{Larkin}}–{{Ovchinnikov}} State in an {{Ising}} Superconductor}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{619}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{46\bibrangedash 51}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/s41586-023-05967-z
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/2AJFPWQU/Wan et al. - 2023 - Orbital Fulde–Ferrell–Larkin–Ovchinnikov state in an Ising superconductor.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41586-023-05967-z
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41586-023-05967-z
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{yuanSupercurrentDiodeEffect2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8c5f4573806aaf1db65ba6dbbece96d7}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Noah\bibnamedelimb F.\bibnamedelimi Q.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=159de599cf141a3147da71ab6973e85c}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{da3293d65a0cde73cd3f3441689a49b0}
+      \strng{fullhash}{da3293d65a0cde73cd3f3441689a49b0}
+      \strng{bibnamehash}{da3293d65a0cde73cd3f3441689a49b0}
+      \strng{authorbibnamehash}{da3293d65a0cde73cd3f3441689a49b0}
+      \strng{authornamehash}{da3293d65a0cde73cd3f3441689a49b0}
+      \strng{authorfullhash}{da3293d65a0cde73cd3f3441689a49b0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When both inversion and time-reversal symmetries are broken, the critical current of a superconductor can be nonreciprocal. In this work, we show that, in certain classes of two-dimensional superconductors with antisymmetric spin–orbit coupling, Cooper pairs acquire a finite momentum upon the application of an in-plane magnetic field, and, as a result, critical currents in the direction parallel and antiparallel to the Cooper pair momentum become unequal. This supercurrent diode effect is also manifested in the polarity dependence of in-plane critical fields induced by a supercurrent. These nonreciprocal effects may be found in polar SrTiO3 film, few-layer MoTe2 in the Td phase, and twisted bilayer graphene in which the valley degree of freedom plays a role analogous to spin.}
+      \field{day}{12}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{4}
+      \field{number}{15}
+      \field{title}{Supercurrent Diode Effect and Finite-Momentum Superconductors}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{119}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e2119548119}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1073/pnas.2119548119
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/JWHCGKVA/Yuan and Fu - 2022 - Supercurrent diode effect and finite-momentum superconductors.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/doi/10.1073/pnas.2119548119
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/doi/10.1073/pnas.2119548119
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{bardeenCriticalFieldsCurrents1962}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cd14636c48ecd3a935e70c12d471a86b}{%
+           family={Bardeen},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{cd14636c48ecd3a935e70c12d471a86b}
+      \strng{fullhash}{cd14636c48ecd3a935e70c12d471a86b}
+      \strng{bibnamehash}{cd14636c48ecd3a935e70c12d471a86b}
+      \strng{authorbibnamehash}{cd14636c48ecd3a935e70c12d471a86b}
+      \strng{authornamehash}{cd14636c48ecd3a935e70c12d471a86b}
+      \strng{authorfullhash}{cd14636c48ecd3a935e70c12d471a86b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{title}{Critical {{Fields}} and {{Currents}} in {{Superconductors}}}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{34}
+      \field{year}{1962}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{667\bibrangedash 681}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.34.667
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/36YJ3SQH/Bardeen - 1962 - Critical Fields and Currents in Superconductors.pdf;/home/tjark/Zotero/storage/23SBAFCA/RevModPhys.34.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.34.667
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.34.667
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{xuAchievingTheoreticalDepairing2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6ccd6b6d635d297a3626c29742a8674c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=9337c35112565cd53da87b55a21398cf}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Peigen},
+           giveni={P\bibinitperiod}}}%
+        {{hash=84f7914431152c2e0ebb635b55ec5df0}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{327433fa4be97142817167bcbe52e755}
+      \strng{fullhash}{327433fa4be97142817167bcbe52e755}
+      \strng{bibnamehash}{327433fa4be97142817167bcbe52e755}
+      \strng{authorbibnamehash}{327433fa4be97142817167bcbe52e755}
+      \strng{authornamehash}{327433fa4be97142817167bcbe52e755}
+      \strng{authorfullhash}{327433fa4be97142817167bcbe52e755}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show the theoretical depairing current limit can be achieved in a robust fashion in highly ordered superconductor nanomesh films having spatial periodicities smaller than both the superconducting coherence length and the magnetic penetration depth. For a niobium nanomesh film with 34 nm spatial periodicity, the experimental critical current density is enhanced by more than 17 times over the continuous film and is in good agreement with the depairing limit over the entire measured temperature range. The nanomesh superconductors are also less susceptible to thermal fluctuations when compared to nanowire superconductors. Tc values similar to the bulk film are achieved, and the nanomeshes are capable of retaining superconductivity to higher fields relative to the bulk. In addition, periodic oscillations in Tc are observed as a function of field, reflecting the highly ordered nanomesh structure.}
+      \field{day}{13}
+      \field{issn}{1530-6984}
+      \field{journaltitle}{Nano Letters}
+      \field{month}{10}
+      \field{number}{10}
+      \field{shortjournal}{Nano Lett.}
+      \field{title}{Achieving the {{Theoretical Depairing Current Limit}} in {{Superconducting Nanomesh Films}}}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{10}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4206\bibrangedash 4210}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1021/nl102584j
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/T7DMMV2R/Xu et al. - 2010 - Achieving the Theoretical Depairing Current Limit in Superconducting Nanomesh Films.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/nl102584j
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/nl102584j
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{onnesFurtherExperimentsLiquid1991}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=7808c79be349f044f5f00d86780389b6}{%
+           family={Onnes},
+           familyi={O\bibinitperiod},
+           given={H.\bibnamedelimi Kamerlingh},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=a6a67fee3eb543df769f38f89812070e}{%
+           family={Gavroglu},
+           familyi={G\bibinitperiod},
+           given={Kostas},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2e8dd361285a734d97a8804ea53768c6}{%
+           family={Goudaroulis},
+           familyi={G\bibinitperiod},
+           given={Yorgos},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{7808c79be349f044f5f00d86780389b6}
+      \strng{fullhash}{7808c79be349f044f5f00d86780389b6}
+      \strng{bibnamehash}{7808c79be349f044f5f00d86780389b6}
+      \strng{authorbibnamehash}{7808c79be349f044f5f00d86780389b6}
+      \strng{authornamehash}{7808c79be349f044f5f00d86780389b6}
+      \strng{authorfullhash}{7808c79be349f044f5f00d86780389b6}
+      \strng{editorbibnamehash}{00c3bc1c3b902ec466f63706b84ff609}
+      \strng{editornamehash}{00c3bc1c3b902ec466f63706b84ff609}
+      \strng{editorfullhash}{00c3bc1c3b902ec466f63706b84ff609}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In Comm. N° 122b (May 1911) I mentioned that just before this resistance disappeared practically altogether its rate of diminution with falling temperature became much greater than that given by the formula of Comm. N°. 119. In the present paper a closer investigation is made of this phenomenon.}
+      \field{booktitle}{Through Measurement to Knowledge: {{The}} Selected Papers of Heike Kamerlingh Onnes 1853–1926}
+      \field{isbn}{978-94-009-2079-8}
+      \field{title}{Further Experiments with Liquid Helium. {{G}}. {{On}} the Electrical Resistance of Pure Metals, Etc. {{VI}}. {{On}} the Sudden Change in the Rate at Which the Resistance of Mercury Disappears.}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{pages}{267\bibrangedash 272}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1007/978-94-009-2079-8_17
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/ZVEULRU7/Onnes_1991_Further experiments with liquid helium.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-94-009-2079-8_17
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-94-009-2079-8_17
+      \endverb
+    \endentry
+    \entry{bardeenTheorySuperconductivity1957}{article}{}
+      \name{author}{3}{}{%
+        {{hash=616cd76a955b1fcb011fefbf1af91880}{%
+           family={Bardeen},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=818261d37b65922f250ddf289897eb6c}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
+           family={Schrieffer},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{c30a83010c772bf453b99545802834fb}
+      \strng{fullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{bibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorbibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authornamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorfullhash}{c30a83010c772bf453b99545802834fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A theory of superconductivity is presented, based on the fact that the interaction between electrons resulting from virtual exchange of phonons is attractive when the energy difference between the electrons states involved is less than the phonon energy, ℏ⁢𝜔. It is favorable to form a superconducting phase when this attractive interaction dominates the repulsive screened Coulomb interaction. The normal phase is described by the Bloch individual-particle model. The ground state of a superconductor, formed from a linear combination of normal state configurations in which electrons are virtually excited in pairs of opposite spin and momentum, is lower in energy than the normal state by amount proportional to an average (ℏ⁢𝜔)2, consistent with the isotope effect. A mutually orthogonal set of excited states in one-to-one correspondence with those of the normal phase is obtained by specifying occupation of certain Bloch states and by using the rest to form a linear combination of virtual pair configurations. The theory yields a second-order phase transition and a Meissner effect in the form suggested by Pippard. Calculated values of specific heats and penetration depths and their temperature variation are in good agreement with experiment. There is an energy gap for individual-particle excitations which decreases from about 3.5⁢𝑘⁢𝑇𝑐 at 𝑇=0°K to zero at 𝑇𝑐. Tables of matrix elements of single-particle operators between the excited-state superconducting wave functions, useful for perturbation expansions and calculations of transition probabilities, are given.}
+      \field{day}{1}
+      \field{journaltitle}{Physical Review}
+      \field{month}{12}
+      \field{number}{5}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Theory of {{Superconductivity}}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{108}
+      \field{year}{1957}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1175\bibrangedash 1204}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1103/PhysRev.108.1175
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/WIWM8TPW/Bardeen et al. - 1957 - Theory of Superconductivity.pdf;/home/tjark/Zotero/storage/DE3LXQVY/PhysRev.108.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{cooperBoundElectronPairs1956}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2adf3021085e9f8b64cd83f04af3b72c}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Leon\bibnamedelima N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \strng{fullhash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \strng{bibnamehash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \strng{authorbibnamehash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \strng{authornamehash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \strng{authorfullhash}{2adf3021085e9f8b64cd83f04af3b72c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{DOI:https://doi.org/10.1103/PhysRev.104.1189}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review}
+      \field{month}{11}
+      \field{number}{4}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Bound {{Electron Pairs}} in a {{Degenerate Fermi Gas}}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{104}
+      \field{year}{1956}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1189\bibrangedash 1190}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1103/PhysRev.104.1189
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/KXL5HG8I/Cooper - 1956 - Bound Electron Pairs in a Degenerate Fermi Gas.pdf;/home/tjark/Zotero/storage/WHU6CYY7/PhysRev.104.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.104.1189
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.104.1189
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{hebelNuclearRelaxationSuperconducting1957}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2bb977a3d901820dcc91157d877a8a46}{%
+           family={Hebel},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=0865e78201ed128291d417eac413b952}{%
+           family={Slichter},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{fullhash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{bibnamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authorbibnamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authornamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authorfullhash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{journaltitle}{Physical Review}
+      \field{month}{8}
+      \field{number}{3}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Nuclear {{Relaxation}} in {{Superconducting Aluminum}}}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{107}
+      \field{year}{1957}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{901\bibrangedash 902}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1103/PhysRev.107.901
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/5BNF3IGD/Hebel and Slichter - 1957 - Nuclear Relaxation in Superconducting Aluminum.pdf;/home/tjark/Zotero/storage/JKXC3FIT/PhysRev.107.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.107.901
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.107.901
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{hebelNuclearSpinRelaxation1959}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2bb977a3d901820dcc91157d877a8a46}{%
+           family={Hebel},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=0865e78201ed128291d417eac413b952}{%
+           family={Slichter},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{fullhash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{bibnamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authorbibnamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authornamehash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \strng{authorfullhash}{76f3cc9f0ef4e1bdfe3528c611ca4ab2}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nuclear spin-lattice relaxation times have been measured in normal and superconducting Al from 0.94°K to 4.2°K, and as a function of static field in the normal state. In the normal state the relaxation rate is proportional to temperature as predicted by Redfield and others. The field dependence is somewhat greater than predicted. Relaxation in the superconductor was studied by a field cycling method which allowed the measurements to be made in the normal state but relaxation to occur in the superconductor. The results disagree with a simple two-fluid model, but are explained by the theory of Bardeen, Cooper, and Schrieffer. The contrast between the temperature dependence of nuclear relaxation and ultrasonic absorption confirms the central feature of the Bardeen-Cooper-Schrieffer theory that electrons of opposite spin and momentum are correlated.}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review}
+      \field{month}{3}
+      \field{number}{6}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Nuclear {{Spin Relaxation}} in {{Normal}} and {{Superconducting Aluminum}}}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{113}
+      \field{year}{1959}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1504\bibrangedash 1519}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1103/PhysRev.113.1504
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/JIBU7KIP/Hebel and Slichter - 1959 - Nuclear Spin Relaxation in Normal and Superconducting Aluminum.pdf;/home/tjark/Zotero/storage/5VT5U666/PhysRev.113.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.113.1504
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.113.1504
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{giaeverStudySuperconductorsElectron1961}{article}{}
+      \name{author}{2}{}{%
+        {{hash=38d55ac52e8a0be36c5581b5082c17ee}{%
+           family={Giaever},
+           familyi={G\bibinitperiod},
+           given={Ivar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5624649245171885bfe6f42c09299bd3}{%
+           family={Megerle},
+           familyi={M\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \strng{fullhash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \strng{bibnamehash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \strng{authorbibnamehash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \strng{authornamehash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \strng{authorfullhash}{e6cdd0cc037f790a2294b3da3bce36d8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{If a small potential difference is applied between two metals separated by a thin insulating film, a current will flow due to the quantum mechanical tunnel effect. For both metals in the normal state the current-voltage characteristic is linear, for one of the metals in the superconducting state the current voltage characteristic becomes nonlinear, and for both metals in the superconductive state even a negative-resistance region is obtained. From these changes in the current voltage characteristics, the change in the electron density of states when a metal goes from its normal to its superconductive state can be inferred. By using this technique we have found the energy gap in metal films 1000-3000 A thick at 1°K to be 2⁢𝜀Pb =(2.68 ±0.0⁢6) ×10−3 ev, 2⁢𝜀Sn =(1.11 ±0.0⁢3) ×10−3 ev, 2⁢𝜀In =(1.05 ±0.0⁢3) ×10−3 ev, and 2⁢𝜀Al =(0.32 ±0.0⁢3) ×10−3 ev.}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review}
+      \field{month}{5}
+      \field{number}{4}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Study of {{Superconductors}} by {{Electron Tunneling}}}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{122}
+      \field{year}{1961}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1101\bibrangedash 1111}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1103/PhysRev.122.1101
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/CQDLWU7W/Giaever and Megerle - 1961 - Study of Superconductors by Electron Tunneling.pdf;/home/tjark/Zotero/storage/G3CZNENL/PhysRev.122.1101.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.122.1101
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.122.1101
+      \endverb
+    \endentry
+    \entry{londonNewConceptionSupraconductivity1937}{article}{}
+      \name{author}{1}{}{%
+        {{hash=36be484d5dae207db137476478a65a7d}{%
+           family={London},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{36be484d5dae207db137476478a65a7d}
+      \strng{fullhash}{36be484d5dae207db137476478a65a7d}
+      \strng{bibnamehash}{36be484d5dae207db137476478a65a7d}
+      \strng{authorbibnamehash}{36be484d5dae207db137476478a65a7d}
+      \strng{authornamehash}{36be484d5dae207db137476478a65a7d}
+      \strng{authorfullhash}{36be484d5dae207db137476478a65a7d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{IN the past few years, physicists have been much engaged by the phenomenon of supraconductivity. It is well known that various metals, when cooled below a certain very low temperature, characteristic of the metal in question, show the strange property of conducting electricity apparently without offering any resistance to the current. This curious phenomenon seems to contradict all our customary conceptions in physics. Particularly striking was the experiment of Kamerlingh Onnes and Tuyn, in which a current was induced in a supraconducting ring of lead and was found to persist there without any measurable decrease for many hours—so long as the low temperature could be maintained. This experiment seems to present a unique case of motion without any friction, whilst we have been accustomed to see in every mechanism an occasion for dissipation of kinetic energy into heat.}
+      \field{day}{1}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{3549}
+      \field{title}{A {{New Conception}} of {{Supraconductivity}}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{140}
+      \field{year}{1937}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{793\bibrangedash 796}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/140793a0
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/G2MCAA7A/London - 1937 - A New Conception of Supraconductivity.pdf;/home/tjark/Zotero/storage/BDPUSAL9/140793a0.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/140793a0
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/140793a0
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{zhouHightemperatureSuperconductivity2021}{article}{}
+      \name{author}{8}{}{%
+        {{hash=a56f169009e5e1126141fc655c476636}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xingjiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=435e49d0e8f3c1d28e00d161412f45a4}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Wei-Sheng},
+           giveni={W\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=96ab653248af9fd5ceb2d00a72772791}{%
+           family={Imada},
+           familyi={I\bibinitperiod},
+           given={Masatoshi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a87f915956aef80c3abefb8c54488c8c}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Nandini},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a5456b784e4baa5b40ce4c17d1bf25f2}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e8712772ec8fef75b801e9792a6575c4}{%
+           family={Kee},
+           familyi={K\bibinitperiod},
+           given={Hae-Young},
+           giveni={H\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=67ae2e1fa89ec302eef1eee91b3d012f}{%
+           family={Eremets},
+           familyi={E\bibinitperiod},
+           given={Mikhail},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{559d5ecf65e1cd4416cc99565170096d}
+      \strng{fullhash}{037d4828d77962c1fcc38888b10f9f65}
+      \strng{bibnamehash}{559d5ecf65e1cd4416cc99565170096d}
+      \strng{authorbibnamehash}{559d5ecf65e1cd4416cc99565170096d}
+      \strng{authornamehash}{559d5ecf65e1cd4416cc99565170096d}
+      \strng{authorfullhash}{037d4828d77962c1fcc38888b10f9f65}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Despite decades of intense theoretical, experimental and computational effort, a microscopic theory of high-temperature superconductivity is not yet established. Eight researchers share their contributions to the search for a better understanding of unconventional superconductivity and their hopes for the future of the field.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{High-Temperature Superconductivity}
+      \field{urlday}{16}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{462\bibrangedash 465}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/s42254-021-00324-3
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/QQ2AHZVI/Zhou et al_2021_High-temperature superconductivity.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s42254-021-00324-3
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s42254-021-00324-3
+      \endverb
+      \keyw{Pass 2 (closed)}
+    \endentry
+    \entry{hubbardElectronCorrelationsNarrow1963}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e8fad1a90868b785d776eb1ac2a631eb}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=adb2efc957538963f1b4262bf63d5b7c}{%
+           family={Flowers},
+           familyi={F\bibinitperiod},
+           given={Brian\bibnamedelima Hilton},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Royal Society}%
+      }
+      \strng{namehash}{98c47c8ba01a3a304013013d1f803082}
+      \strng{fullhash}{98c47c8ba01a3a304013013d1f803082}
+      \strng{bibnamehash}{98c47c8ba01a3a304013013d1f803082}
+      \strng{authorbibnamehash}{98c47c8ba01a3a304013013d1f803082}
+      \strng{authornamehash}{98c47c8ba01a3a304013013d1f803082}
+      \strng{authorfullhash}{98c47c8ba01a3a304013013d1f803082}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is pointed out that one of the main effects of correlation phenomena in d- and f-bands is to give rise to behaviour characteristic of the atomic or Heitler-London model. To investigate this situation a simple, approximate model for the interaction of electrons in narrow energy bands is introduced. The results of applying the Hartree-Fock approximation to this model are examined. Using a Green function technique an approximate solution of the correlation problem for this model is obtained. This solution has the property of reducing to the exact atomic solution in the appropriate limit and to the ordinary uncorrelated band picture in the opposite limit. The condition for ferromagnetism of this solution is discussed. To clarify the physical meaning of the solution a two-electron example is examined.}
+      \field{day}{26}
+      \field{journaltitle}{Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}
+      \field{month}{11}
+      \field{number}{1365}
+      \field{title}{Electron Correlations in Narrow Energy Bands}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{volume}{276}
+      \field{year}{1963}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{238\bibrangedash 257}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1098/rspa.1963.0204
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/DW6UMJE4/Hubbard and Flowers - 1997 - Electron correlations in narrow energy bands.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rspa.1963.0204
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rspa.1963.0204
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{kanamoriElectronCorrelationFerromagnetism1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bad7445bf41d6c6b140ea10c4c93f291}{%
+           family={Kanamori},
+           familyi={K\bibinitperiod},
+           given={Junjiro},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \strng{fullhash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \strng{bibnamehash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \strng{authorbibnamehash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \strng{authornamehash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \strng{authorfullhash}{bad7445bf41d6c6b140ea10c4c93f291}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The electron correlation in a narrow energy band is discussed taking into account the multiple scattering between two electrons. The discussion is an adaptation of Brueckner's theory of nuclear matter. It is assumed that electrons interact with each other only when they are at the same atom. The effect of the electron correlation depends in an intricate way on the energy spectrum of a given band. An approximate expression of the effective magnitude of the interaction is derived. The condition for the occurrence of ferromagnetism is investigated for various types of bands. The ferromagnetism of Ni and the paramagnetism of Pd can be understood reasonably through the present approach. The degeneracy of the d bands is taken into account in the discussion of these metals.}
+      \field{day}{1}
+      \field{issn}{0033-068X}
+      \field{journaltitle}{Progress of Theoretical Physics}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Progress of Theoretical Physics}
+      \field{title}{Electron {{Correlation}} and {{Ferromagnetism}} of {{Transition Metals}}}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{volume}{30}
+      \field{year}{1963}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{275\bibrangedash 289}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1143/PTP.30.275
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/754M2R9D/Kanamori - 1963 - Electron Correlation and Ferromagnetism of Transition Metals.pdf;/home/tjark/Zotero/storage/P469A79R/1865799.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1143/PTP.30.275
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1143/PTP.30.275
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{gutzwillerEffectCorrelationFerromagnetism1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d168760a297e14bb731aac8f869c9c34}{%
+           family={Gutzwiller},
+           familyi={G\bibinitperiod},
+           given={Martin\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{d168760a297e14bb731aac8f869c9c34}
+      \strng{fullhash}{d168760a297e14bb731aac8f869c9c34}
+      \strng{bibnamehash}{d168760a297e14bb731aac8f869c9c34}
+      \strng{authorbibnamehash}{d168760a297e14bb731aac8f869c9c34}
+      \strng{authornamehash}{d168760a297e14bb731aac8f869c9c34}
+      \strng{authorfullhash}{d168760a297e14bb731aac8f869c9c34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{DOI:https://doi.org/10.1103/PhysRevLett.10.159}
+      \field{day}{1}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{3}
+      \field{number}{5}
+      \field{shortjournal}{Phys. Rev. Lett.}
+      \field{title}{Effect of {{Correlation}} on the {{Ferromagnetism}} of {{Transition Metals}}}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{volume}{10}
+      \field{year}{1963}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{159\bibrangedash 162}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.10.159
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/7C53JTA7/Gutzwiller - 1963 - Effect of Correlation on the Ferromagnetism of Transition Metals.pdf;/home/tjark/Zotero/storage/KGK6DSEZ/PhysRevLett.10.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.10.159
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.10.159
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{qinHubbardModelComputational2022}{article}{}
+      \name{author}{5}{}{%
+        {{hash=9cafb7032fa0c8e2764faa81a0368d9e}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Mingpu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=15ddade9f03752213816d93140f0c6ef}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=29301e35cd49d0e36333e999f74c6196}{%
+           family={Andergassen},
+           familyi={A\bibinitperiod},
+           given={Sabine},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed63fdd4111d1315987467d940a45488}{%
+           family={Corboz},
+           familyi={C\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9d80aac1a31971f3a0bc1bdb19056279}{%
+           family={Gull},
+           familyi={G\bibinitperiod},
+           given={Emanuel},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Annual Reviews}%
+      }
+      \strng{namehash}{fd78363b9dc869daba2a1fba73c26684}
+      \strng{fullhash}{945672c226f622acb1f2de4e8aaac125}
+      \strng{bibnamehash}{fd78363b9dc869daba2a1fba73c26684}
+      \strng{authorbibnamehash}{fd78363b9dc869daba2a1fba73c26684}
+      \strng{authornamehash}{fd78363b9dc869daba2a1fba73c26684}
+      \strng{authorfullhash}{945672c226f622acb1f2de4e8aaac125}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The Hubbard model is the simplest model of interacting fermions on a lattice and is of similar importance to correlated electron physics as the Ising model is to statistical mechanics or the fruit fly to biomedical science. Despite its simplicity, the model exhibits an incredible wealth of phases, phase transitions, and exotic correlation phenomena. Although analytical methods have provided a qualitative description of the model in certain limits, numerical tools have shown impressive progress in achieving quantitative accurate results over the past several years. This article gives an introduction to the model, motivates common questions, and illustrates the progress that has been achieved over recent years in revealing various aspects of the correlation physics of the model.}
+      \field{day}{10}
+      \field{issn}{1947-5454, 1947-5462}
+      \field{issue}{Volume 13, 2022}
+      \field{journaltitle}{Annual Review of Condensed Matter Physics}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{shorttitle}{The {{Hubbard Model}}}
+      \field{title}{The {{Hubbard Model}}: {{A Computational Perspective}}}
+      \field{urlday}{17}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{275\bibrangedash 302}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1146/annurev-conmatphys-090921-033948
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/C74JVJ8J/Qin et al_2022_The Hubbard Model.pdf;/home/tjark/Zotero/storage/XAXQMVIQ/annurev-conmatphys-090921-033948.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-090921-033948
+      \endverb
+      \verb{url}
+      \verb https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-090921-033948
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{micnasSuperconductivityNarrowbandSystems1990}{article}{}
+      \name{author}{3}{}{%
+        {{hash=87a4b578e022c52433a734f9560dd48a}{%
+           family={Micnas},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=78c111af7a9d3240a60b8f2e30a5a83d}{%
+           family={Ranninger},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3846791357c867aeea54f6e4c9e36667}{%
+           family={Robaszkiewicz},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{5d71bacc564280b93060fe6b0f58c830}
+      \strng{fullhash}{5d71bacc564280b93060fe6b0f58c830}
+      \strng{bibnamehash}{5d71bacc564280b93060fe6b0f58c830}
+      \strng{authorbibnamehash}{5d71bacc564280b93060fe6b0f58c830}
+      \strng{authornamehash}{5d71bacc564280b93060fe6b0f58c830}
+      \strng{authorfullhash}{5d71bacc564280b93060fe6b0f58c830}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In narrow-band systems electrons can interact with each other via a short-range nonretarded attractive potential. The origin of such an effective local attraction can be polaronic or it can be due to a coupling between electrons and excitons or plasmons. It can also result from purely chemical (electronic) mechanisms, especially in compounds with elements favoring disproportionation of valent states. These mechanisms are discussed and an exhaustive list of materials in which such local electron pairing occurs is given. The authors review the thermodynamic and electromagnetic properties of such systems in several limiting scenarios: (i) Systems with on-site pairing which can be described by the extended negative-𝑈 Hubbard model. The strong-attraction limit of this model, at which it reduces to a system of tightly bound electron pairs (bipolarons) on a lattice, is extensively discussed. These electron pairs behaving as hard-core charged bosons can exhibit a superconducting state analogous to that of superfluid 4He II. The change-over from weak-attraction BCS-like superconductivity to the superfluidity of charged hard-core bosons is examined. (ii) Systems with intersite pairing described by an extended Hubbard model with 𝑈{$>$}0 and nearest-neighbor attraction and/or nearest-neighbor spin exchange as well as correlated hopping. (iii) A mixture of local pairs and itinerant electrons interacting via a charge-exchange mechanism giving rise to a mutually induced superconductivity in both subsystems. The authors discuss to what extent the picture of local pairing, and in particular superfluidity of hard-core charged bosons on a lattice, can be an explanation for the superconducting and normal-state properties of the high-𝑇𝑐 oxides: doped BaBiO3 and the cuprates.}
+      \field{day}{1}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{title}{Superconductivity in Narrow-Band Systems with Local Nonretarded Attractive Interactions}
+      \field{urlday}{17}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{62}
+      \field{year}{1990}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{113\bibrangedash 171}
+      \range{pages}{59}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.62.113
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/KNGP4LUF/Micnas et al_1990_Superconductivity in narrow-band systems with local nonretarded attractive.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.62.113
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.62.113
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{huhtinenSuperconductivityNormalState2023}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=08f1b1d0b471704a0276dd1a707ab3e9}{%
+           family={Huhtinen},
+           familyi={H\bibinitperiod},
+           given={Kukka-Emilia},
+           giveni={K\bibinithyphendelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Aalto University}%
+      }
+      \strng{namehash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \strng{fullhash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \strng{bibnamehash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \strng{authorbibnamehash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \strng{authornamehash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \strng{authorfullhash}{08f1b1d0b471704a0276dd1a707ab3e9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bloch bands with a constant dispersion, called flat bands, have attracted great recent interest. Due to the lack of kinetic energy, even small interactions are dominant, and the formation of exotic correlated phases can be favored. Flat bands are particularly promising for superconductivity, where Bardeen-Cooper Schrieffer theory predicts that the superconducting critical temperature can be greatly enhanced compared to a dispersive band. In this dissertation, we explore the properties of flat band models in the attractive Hubbard model, with particular focus on the superconducting phase and the normal state at temperatures above the superconducting transition. The first part presents the theoretical background on superconductivity in multiband Hubbard models, including a linear response computation of the mean-field superfluid weight. In the second part, we explore the role of quantum geometry in flat band superconductivity. In the third part, we discuss the normal state in flat band models, which differs from a usual Fermi liquid. This thesis consists of four publications. In publication II, we showed that the superfluid weight in isolated flat bands is related to the minimal quantum metric, which is the integrated quantum metric with the smallest possible trace. Furthermore, by studying models with dispersive bands touching the flat bands, we showed that such band touchings can be beneficial for superconductivity. In publication III, the many-body problem was solved beyond the mean-field level in isolated flat bands models fulfilling the uniform pairing condition. This study showed that the quadratic excitation of the Cooper pair bound states is determined by the minimal quantum metric. In publication IV, we considered the relationship between quantum geometry and the real part of the optical conductivity in non-interacting flat bands. While the conductivity at non-zero inelastic scattering rate is related to the components of the quantum metric, the DC conductivity vanishes at low enough temperatures due to the localization of the particles. We also showed that a connection to the quantum metric could appear when applying the Kubo-Streda formula at exactly zero temperature in systems with (partially) flat bands, but this effect was absent when evaluating the conductivity using the Kubo-Greenwood formula. In publication I, we studied the normal state properties in the Lieb lattice flat band using dynamical mean field theory. The normal state was found to exhibit a crossover between two different types of non-Fermi liquids. At intermediate interaction strengths, a pseudogap phase with preformed pairs was found. As the interaction was lowered, the state developed insulating characteristics, which could be attributed to the localization of particles.}
+      \field{issn}{1799-4942 (electronic)}
+      \field{langid}{english}
+      \field{title}{Superconductivity and Normal State Properties in Flat Bands}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/F4TKEKWQ/Huhtinen - 2023 - Superconductivity and normal state properties in flat bands.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://aaltodoc.aalto.fi/handle/123456789/119970
+      \endverb
+      \verb{url}
+      \verb https://aaltodoc.aalto.fi/handle/123456789/119970
+      \endverb
+      \keyw{Aalto,Pass 1}
+    \endentry
+    \entry{kinnunenFuldeFerrellLarkin2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f07cc684948791513430f322e1d180c1}{%
+           family={Kinnunen},
+           familyi={K\bibinitperiod},
+           given={Jami\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c85161aa9b4cb1e4c0e6de4d8392772e}{%
+           family={Baarsma},
+           familyi={B\bibinitperiod},
+           given={Jildou\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6ef554517ecf0121cb002b160ad7a7e9}{%
+           family={Martikainen},
+           familyi={M\bibinitperiod},
+           given={Jani-Petri},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{b45c2c69ed1fe4e2ee2b4857a0a0722d}
+      \strng{fullhash}{95bd8232d6796f0db33fbe76bfcb8c1d}
+      \strng{bibnamehash}{b45c2c69ed1fe4e2ee2b4857a0a0722d}
+      \strng{authorbibnamehash}{b45c2c69ed1fe4e2ee2b4857a0a0722d}
+      \strng{authornamehash}{b45c2c69ed1fe4e2ee2b4857a0a0722d}
+      \strng{authorfullhash}{95bd8232d6796f0db33fbe76bfcb8c1d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We review the concepts and the present state of theoretical studies of spin-imbalanced superfluidity, in particular the elusive Fulde–Ferrell–Larkin–Ovchinnikov (FFLO) state, in the context of ultracold quantum gases. The comprehensive presentation of the theoretical basis for the FFLO state that we provide is useful also for research on the interplay between magnetism and superconductivity in other physical systems. We focus on settings that have been predicted to be favourable for the FFLO state, such as optical lattices in various dimensions and spin–orbit coupled systems. These are also the most likely systems for near-future experimental observation of the FFLO state. Theoretical bounds, such as Bloch’s and Luttinger’s theorems, and experimentally important limitations, such as finite-size effects and trapping potentials, are considered. In addition, we provide a comprehensive review of the various ideas presented for the observation of the FFLO state. We conclude our review with an analysis of the open questions related to the FFLO state, such as its stability, superfluid density, collective modes and extending the FFLO superfluid concept to new types of lattice systems.}
+      \field{issn}{0034-4885}
+      \field{journaltitle}{Reports on Progress in Physics}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{4}
+      \field{shortjournal}{Rep. Prog. Phys.}
+      \field{shorttitle}{The {{Fulde}}–{{Ferrell}}–{{Larkin}}–{{Ovchinnikov}} State for Ultracold Fermions in Lattice and Harmonic Potentials}
+      \field{title}{The {{Fulde}}–{{Ferrell}}–{{Larkin}}–{{Ovchinnikov}} State for Ultracold Fermions in Lattice and Harmonic Potentials: A Review}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{81}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{046401}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1361-6633/aaa4ad
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/9SFXTK8N/Kinnunen et al_2018_The Fulde–Ferrell–Larkin–Ovchinnikov state for ultracold fermions in lattice.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1361-6633/aaa4ad
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1361-6633/aaa4ad
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{georgesDynamicalMeanfieldTheory1996}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a3fd2f2b22938dc53c1d195381d71109}{%
+           family={Georges},
+           familyi={G\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=627180cd0517be2323caf5b86bcebeee}{%
+           family={Kotliar},
+           familyi={K\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d1a9093d8a8328c6f6bfb02fba161d48}{%
+           family={Krauth},
+           familyi={K\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a77351af4be331234d6ee203069ec1ed}{%
+           family={Rozenberg},
+           familyi={R\bibinitperiod},
+           given={Marcelo\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{4b5ac052648e507d5c9155f4814c8166}
+      \strng{fullhash}{f7d19b3ecf02d702b02c86fbccf0d656}
+      \strng{bibnamehash}{4b5ac052648e507d5c9155f4814c8166}
+      \strng{authorbibnamehash}{4b5ac052648e507d5c9155f4814c8166}
+      \strng{authornamehash}{4b5ac052648e507d5c9155f4814c8166}
+      \strng{authorfullhash}{f7d19b3ecf02d702b02c86fbccf0d656}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We review the dynamical mean-field theory of strongly correlated electron systems which is based on a mapping of lattice models onto quantum impurity models subject to a self-consistency condition. This mapping is exact for models of correlated electrons in the limit of large lattice coordination (or infinite spatial dimensions). It extends the standard mean-field construction from classical statistical mechanics to quantum problems. We discuss the physical ideas underlying this theory and its mathematical derivation. Various analytic and numerical techniques that have been developed recently in order to analyze and solve the dynamical mean-field equations are reviewed and compared to each other. The method can be used for the determination of phase diagrams (by comparing the stability of various types of long-range order), and the calculation of thermodynamic properties, one-particle Green's functions, and response functions. We review in detail the recent progress in understanding the Hubbard model and the Mott metal-insulator transition within this approach, including some comparison to experiments on three-dimensional transition-metal oxides. We present an overview of the rapidly developing field of applications of this method to other systems. The present limitations of the approach, and possible extensions of the formalism are finally discussed. Computer programs for the numerical implementation of this method are also provided with this article.}
+      \field{day}{1}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{title}{Dynamical Mean-Field Theory of Strongly Correlated Fermion Systems and the Limit of Infinite Dimensions}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{68}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{13\bibrangedash 125}
+      \range{pages}{113}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.68.13
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/4AQ3FK84/Georges et al_1996_Dynamical mean-field theory of strongly correlated fermion systems and the.pdf;/home/tjark/Zotero/storage/744L3SSH/RevModPhys.68.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.68.13
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.68.13
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{provostRiemannianStructureManifolds1980}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5351c126413483d91097f2b5a555fcd7}{%
+           family={Provost},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=dd77d7665c02e3ed8f3262af4ae4b5f3}{%
+           family={Vallee},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{fullhash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{bibnamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authorbibnamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authornamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authorfullhash}{3442408cbf3eff933edec626e0109f1f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A metric tensor is defined from the underlying Hilbert space structure for any submanifold of quantum states. The case where the manifold is generated by the action of a Lie group on a fixed state vector (generalized coherent states manifold hereafter noted G.C.S.M.) is studied in details; the geometrical properties of some wellknown G.C.S.M. are reviewed and an explicit expression for the scalar Riemannian curvature is given in the general case. The physical meaning of such Riemannian structures (which have been recently introduced to describe collective manifolds in nuclear physics) is discussed. It is shown on examples that the distance between nearby states is related to quantum fluctuations; in the particular case of the harmonic oscillator group the condition of zero curvature appears to be identical to that of non dispersion of wave packets.}
+      \field{day}{1}
+      \field{issn}{1432-0916}
+      \field{journaltitle}{Communications in Mathematical Physics}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Commun.Math. Phys.}
+      \field{title}{Riemannian Structure on Manifolds of Quantum States}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{volume}{76}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{289\bibrangedash 301}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/BF02193559
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/4C69VZ8Z/Provost_Vallee_1980_Riemannian structure on manifolds of quantum states.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02193559
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02193559
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{peottaSuperfluidityTopologicallyNontrivial2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{fullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{bibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorbibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authornamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorfullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Topological invariants built from the periodic Bloch functions characterize new phases of matter, such as topological insulators and topological superconductors. The most important topological invariant is the Chern number that explains the quantized conductance of the quantum Hall effect. Here we provide a general result for the superfluid weight Ds of a multiband superconductor that is applicable to topologically nontrivial bands with nonzero Chern number C. We find that the integral over the Brillouin-zone of the quantum metric, an invariant calculated from the Bloch functions, gives the superfluid weight in a flat band, with the bound Ds⩾|C|. Thus, even a flat band can carry finite superfluid current, provided the Chern number is nonzero. As an example, we provide Ds for the time-reversal invariant attractive Harper–Hubbard model that can be experimentally tested in ultracold gases. In general, our results establish that a topologically nontrivial flat band is a promising concept for increasing the critical temperature of the superconducting transition.}
+      \field{day}{20}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{1}
+      \field{shortjournal}{Nat Commun}
+      \field{title}{Superfluidity in Topologically Nontrivial Flat Bands}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8944}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/ncomms9944
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/7IFZ84QL/Peotta and Törmä - 2015 - Superfluidity in topologically nontrivial flat ban.pdf;/home/tjark/Zotero/storage/JPYEZYLE/Peotta_Törmä_2015_Superfluidity in topologically nontrivial flat bands.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \keyw{Aalto,Pass 1 (closed)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

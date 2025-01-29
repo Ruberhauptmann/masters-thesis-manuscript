@@ -6,40 +6,38 @@
 
 \chapter{Superconductivity}\label{ch:superconductivity}
 
-Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
-In this chapter we review theoretical concepts needed for understanding superconductivity and introduce the tools used to study superconductivity in the later chapters.
+%Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
+In this chapter I review theoretical concepts needed for understanding superconductivity and introduce the tools used to study superconductivity in the later chapters.
 There are many textbooks covering these topics which can be referenced for a more detailed treatment, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996, bruusManyBodyQuantumTheory2004, larkinTheoryFluctuationsSuperconductors2005, bennemannSuperconductivity2008}.
 
-Macroscopially, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
-Theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}, following refs. \cite{beekmanIntroductionSpontaneousSymmetry2019, colemanIntroductionManyBodyPhysics2015}.
+Macroscopically, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
+The theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}, following refs. \cite{beekmanIntroductionSpontaneousSymmetry2019, colemanIntroductionManyBodyPhysics2015}.
 Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi_0\) describing the length scale of amplitude variations of the order parameter and the London penetration depth \(\lambda_L\), which is connected to energy cost of phase variations of the order parameter.
-They also 
+They also connect to the energy gap \(\Delta\) and the condensate stiffness \(D_{\mathrm{S}}\), which are often competing energy scales in superconductors.
+The interplay of these length (energy) scales determine the macroscopic properties of a superconductors, so there is a great interest in accessing them in computational ways.
+To this end, \cref{sec:Ginzburg-Landau theory of superconductivity} also introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
 
-The interplay of these length (energy) scales determine 
-\todo{What is influenced by length/energy scales? See Niklas 2024 npj}
-To this end, \cref{sec:Ginzburg-Landau theory of superconductivity} introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
-
-Ginzburg Landau theory is a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the symmetry breakdown, it can be connected to quantities expressed by Ginzburg-Landau theory, such as the superconducting current.
-One such theory to describe superconductivity from a microscopic perspective is \glsxtrfull{bcs} theory in \cref{sec:bcs-theory}.
+Ginzburg Landau theory is a macroscopic theory, but it can be connected to microscopic theories: if a theory finds an expression for the order parameter describing the breakdown of symmetry, it can be connected to quantities expressed by Ginzburg-Landau theory.
+One such theory to describe superconductivity from a microscopic perspective is \glsxtrfull{bcs} theory in \cref{sec:bcs-theory}, which is 
 A method to treat local interactions non-perturbatively is \glsxtrfull{dmft}. \Cref{sec:Dynamical Mean-Field Theory} briefly introduces the Greens function method to treat many-body problems and outlines the \glsxtrshort{dmft} self-consistency cycle.
 
-Lastly, \todo{Introduce quantum metric}
+Furthermore, \cref{sec:quantum-metric} introduces an emerging perspective in the study of novel superconductors: it turns out that the superfluid weight is connected to a quantity of the electronic band structure called the quantum metric \cite{peottaSuperfluidityTopologicallyNontrivial2015, yuQuantumGeometryQuantum2024}, which is connected to 
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
-\subsection{Spontaneous Symmetry Breaking and Order Parameter}
+\subsection*{Spontaneous Symmetry Breaking and Order Parameter}
 
 Symmetries are a powerful concept in physics.
 Noethers theorem \cite{noetherInvarianteVariationsprobleme1918} connects the symmetries of physical theories to associated conservation laws.
 An interesting facet of symmetries in physical theories is the fact, that a ground state of a system must not necessarily obey the same symmetries of its Hamiltonian, i.e. for a symmetry operation that is described by a unitary operator \(U\), the Hamiltonian commutes with \(U\) (which results in expectation values of the Hamiltonian being invariant under the symmetry operation) but the states \(\ket{\phi}\) and \(U \ket{\phi}\) are different.
-This phenomenon is called \glsxtrfull{ssb} and the state \(\ket{\phi}\) is said to be symmetry-broken.
+This phenomenon is called spontaneous symmetry breaking and the state \(\ket{\phi}\) is said to be symmetry-broken.
 
 One consequence of this fact is that for a given symmetry-broken state \(\ket{\phi}\), there exists multiple states that can be reached by repeatedly applying \(U\) to \(\ket{\phi}\) and all have the same energy.
 To differentiate the symmetry-broken states an operator can be defined that has all these equivalent states as eigenvectors with different eigenvalues and zero expectation value for symmetric states.
 This is the microscopic notion of an order parameter.
 
 The original notion of an order parameter was motivated from macroscopic observables that can then be related to the microscopic order parameter operator introduced above.
-Macroscopically we characterize the symmetry breaking by an order parameter \(\Psi\) which generally can be a complex-valued vector that becomes non-zero below the transition temperature \(T_C\)
+Macroscopically I characterize the symmetry breaking by an order parameter \(\Psi\) which generally can be a complex-valued vector that becomes non-zero below the transition temperature \(T_C\)
 \begin{equation}
 	\vert \Psi \vert =
 	\begin{cases}
@@ -54,7 +52,7 @@ Similarly to a magnetically ordered state, the SC state is characterized by an o
 The theory of phase transitions in superconductors was developed by Ginzburg and Landau \cite{ginzburgTheorySuperconductivity1950}.
 Landau theory and conversely Ginzburg-Landau theory is not concerned with the the microscopic properties of the order parameter, but describes the changes in thermodynamic properties of matter with the development of an order parameter.
 
-\subsection{Landau and Ginzburg-Landau Theory}\label{sub:Landau and Ginzburg-Landau Theory}
+\subsection*{Landau and Ginzburg-Landau Theory}\label{sub:Landau and Ginzburg-Landau Theory}
 
 The free energy is a thermodynamic quantity:
 \begin{equation}
@@ -149,16 +147,26 @@ With that, \cref{eq:free energy ginzburg-landau theory} becomes
 	\label{eq:free energy ginzburg-landau theory with phase}
 \end{equation}
 Now the contributions of phase and amplitude variations are split up: the first term describes energy cost of variations in the phase of the order parameter and the second term describes energy cost of variations in the magnitude of the order parameter.
+\todo{Introduce superfluid density properly}
+\todo{Energy cost of phase bending via GL energy}
+Twisting the phase of the condensate is associated with an energy cost.
+This energy cost is characterized by the stiffness \(D_{\mathrm{S}}\)
+
+\todo{Explanation phase stiffness}
+
+\todo{Explanation superfluid weight as linear response}
+
 The dominating fluctuation is determined by the ratio of the factors \(\frac{\hbar^2}{2m^*}\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the \gls{correlation length}
 \begin{equation}
 	\xi = \sqrt{\frac{\hbar^2}{2m^* \vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
 	\label{eq:correlation length GL theory}
 \end{equation}
-where we define the \gls{coherence length} \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
+where I define the \gls{coherence length} \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
 On length scales above \(\xi\), the physics is entirely controlled by the phase degrees of freedom, i.e.
 \begin{equation}
 	f_{\mathrm{GL}} = \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.}
 \end{equation}
+
 Take case of frozen amplitude fluctuations, i.e. \(\adif{\vert \Psi (\vb{r}) \vert} = 0\).
 Stationary point condition for \cref{eq:free energy ginzburg-landau theory with phase} gives:
 \begin{equation}
@@ -183,39 +191,36 @@ Can get the current density from the stationary point condition of the free ener
 \end{equation}
 with the supercurrent density
 \begin{equation}
-	\vb{j} = -\iu \frac{e\hbar}{m^*} \left(\Psi^* \adif{\Psi} - \Psi \adif{\Psi^*} - \frac{4 e^2}{m^*} \vert \Psi \vert^2 \vb{A} \right) \;.
+	\vb{j} = -\iu \frac{e\hbar}{m^*} \left(\Psi^* \adif{\Psi} - \Psi \adif{\Psi^*}\right) - \frac{4 e^2}{m^*} \vert \Psi \vert^2 \vb{A} \;.
 \end{equation}
 Introducing the OP with phase \(\Psi = \vert \Psi \vert e^{\iu \phi}\):
 \begin{equation}
-	\vb{j} = 
+	\vb{j} = 2 e \vert \Psi \vert^2 \frac{\hbar}{m^*} \left(\nabla \phi - \frac{2 \pi}{\Phi_0} \vb{A} \right)
 \end{equation}
-\todo{Explanation supercurrent: introduce complex OP with phase, rewrite equation}
+with the magnetic flux quantum \(\Phi_0 = \frac{\pi \hbar}{e}\).
+Shows that not only an applied field \(\vb{A}\) can induce a supercurrent, but also the twist of the phase of the condensate.
+Rewriting using \(\vert \Psi \vert^2 = \nicefrac{n_S}{2}\)  and introducing the superfluid velocity \(\vb{v}_S\):
+\begin{equation}
+	\vb{j} = e n_S \vb{v}_S
+\end{equation}
+\todo{Make clear: supercurrent just because of twisting of phase in ground state}
 
-\todo{Explanation superfluid weight}
+\subsection*{Superconducting Length Scales}
 
-\subsection{Superconducting Length Scales}
+\todo{Write introduction better}
 
-One of the challenges in achieving high-temperature superconductivity is the fact, that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
+One of the challenges in achieving high-temperature superconductivity is the fact that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
 Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperconductivityCrosses2024}.
-This describes the fact that in many recently discovered
-\todo{Description BCS-BEC crossover}
+The picture of this crossover is the following: for a small attractive interaction, pairs of electrons are very loosely bound, which are pretty mobile, enabling superconductivity, while for a stronger interaction the pairs
 
-The picture of this crossover is the following: for small attractive interaction, pairs of electrons are
+The crossover region
 
 \todo{Competing energy scales via interaction strength: higher U gives more tightly bound pairs}
-
-\todo{Critical surface of a superconductor}
-
-\cite{hazraBoundsSuperconductingTransition2019}
 
 These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}, so having access to these scales from microscopic models and ab initio approaches is very important in the search for high \(T_C\)-superconductors.
 
 \citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing this \cite{wittBypassingLatticeBCS2024}.
 As already discussed in the context of \cref{eq:breakdown of OP with phase fluctuations}, strong phase fluctuations destroy superconducting order.
-
-\todo{Better introduction}
-
-\todo{work over paragraph}
 
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
@@ -270,11 +275,11 @@ For small \(q\)
 \end{figure}
 
 The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
-The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth:
+The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth \cite{tinkhamIntroductionSuperconductivity1996}
 \begin{equation}
-	\lambda_L
+	\lambda_L (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right^4 \right)^{-\frac{1}{2}} 
 \end{equation}
-\todo{Where does this formula come from?}
+\todo{Where does this formula come from? Second London equation}
 
 \todo{\(D_S\)}
 
@@ -294,7 +299,7 @@ This section gives an introduction to the relevant physics of \glsxtrshort{bcs} 
 
 \todo{Better introduction}
 
-\subsection{BCS Hamiltonian}
+\subsection*{BCS Hamiltonian}
 
 \todo{Work over paragraph}
 
@@ -319,14 +324,18 @@ This picture still holds today even for high \(T_C\)/unconventional superconduct
 
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
 
-\subsection{Multiband BCS Mean Field Theory}\label{ssec:Multiband BCS Mean Field Theory}
+\subsection*{Multiband BCS Mean Field Theory}\label{ssec:Multiband BCS Mean Field Theory}
 
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
+\todo{Kinetic term as well}
 \begin{equation}
 	H_{\mathrm{int}} = U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
+	\label{eq:Hubbard interaction repulsive}
 \end{equation}
 where \(U > 0\).
+It describes a repulsive interaction between electrons of different spin at the same lattice site.
+
 
 Besides 
 
@@ -334,8 +343,8 @@ Besides
 
 \todo{Some relevance of the repulsive Hubbard model}
 
-This simple Hubbard model can be extended in a multitude of ways to model a variety of physical system.
-In this work: extension to multiple orbitals (i.e. atoms in the unit cell for lattice systems) and an attractive interaction, i.e. a negative \(U\).
+The Hubbard model  in the form of \cref{eq:Hubbard interaction repulsive} can be extended in a multitude of ways to model a variety of physical system.
+Here: extension to multiple orbitals (i.e. atoms in the unit cell for lattice systems) and an attractive interaction, i.e. a negative \(U\).
 Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations that can be described as bosons \cite{micnasSuperconductivityNarrowbandSystems1990}.
 \todo{There are some more specific papers to the specific mechanisms (and also some more mechanism), could cite these here and say some more things}
 The form of the interaction term is then: \todo{Order of operators? -> also in all other equations!}
@@ -456,7 +465,7 @@ the order parameter can be determined self-consistently, i.e. starting from an i
 
 \todo{Introduction DMFT, citing what has been achieved with it so far, what is the basic idea etc.}
 
-\subsection{Green's Function Formalism}
+\subsection*{Green's Function Formalism}
 
 \todo{Give an introduction }
 
@@ -526,7 +535,7 @@ with fermionic/bosonic Matsubara frequencies
 \end{equation}
 
 It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
-So we can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
+So I can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
 \begin{equation}
 	\mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
 \end{equation}
@@ -536,7 +545,7 @@ Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Mats
 
 \todo{single-particle Matsubara GF}
 
-\subsection{Self Energy}
+\subsection*{Self Energy}
 
 \todo{Short introduction to diagrams}
 
@@ -550,7 +559,7 @@ Dyson equation:
 \end{equation}
 
 
-\subsection{Nambu-Gorkov GF}
+\subsection*{Nambu-Gorkov GF}
 
 Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
 
@@ -569,7 +578,7 @@ that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) a
 
 \todo{How to get quasiparticle weight?}
 
-\subsection{DMFT}
+\subsection*{DMFT}
 
 Following \cite{georgesDynamicalMeanfieldTheory1996}.
 
@@ -591,7 +600,7 @@ The Dyson equation
 \end{equation}
 relates the non-interacting Greens function \(G_0 (\vb{k}, \iu \omega_n)\) and the fully-interacting Greens function \(G (\vb{k}, \iu \omega_n)\) (inversion of a matrix!).
 
-\section{Quantum Metric}
+\section{Quantum Metric}\label{sec:quantum-metric}
 
 First formulated in \cite{provostRiemannianStructureManifolds1980}
 
@@ -611,7 +620,7 @@ Infinitesimal variation of the parameter \(\odif{\lambda}\) \todo{Dont get it he
 \end{equation}
 Last part is splitting up into real and imaginary part
 
-\subsection{Quantum Metric and superfluid weight}
+\subsection*{Quantum Metric and superfluid weight}
 
 \todo{Write up notes about quantum metric and superfluid weight}
 

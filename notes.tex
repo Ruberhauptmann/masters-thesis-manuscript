@@ -11,6 +11,8 @@
 
 \input{preamble} % load the tex file with the preamble
 
+%\renewcommand{\section}[1]{\section*{#1}}
+
 \input{font-selection}
 \usepackage{xstring}
 \IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
@@ -30,12 +32,14 @@
 
 \graphicspath{notes/images/} % setup path for inclusion of images
 
+
 \begin{document}
 \raggedbottom
 \frontmatter
 \clearpage
 
 % Print the table of contents (without link boxes)
+\setcounter{tocdepth}{1}
 \hypersetup{hidelinks}
 \tableofcontents
 \clearpage
