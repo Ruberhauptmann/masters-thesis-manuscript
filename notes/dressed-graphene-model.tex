@@ -2,147 +2,136 @@
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
-\raggedbottom	
-	
+\raggedbottom
+
 \chapter{Dressed Graphene Model}
+
+This thesis concerned with a specific model.
+Idea: Graphene with an added orbital on one of the lattice site with a low hopping, as to provide a flat band.
+I will call this model dressed Graphene from here on.
+This chapter reviews the lattice structure in \cref{sec:lattice-structure-of-graphene}.
 
 \todo{Write introduction to the model and what is done in this chapter}
 
+\todo{Connection with Niklas/Siheeon paper on dressed Graphene}
+
 \section{Lattice Structure}\label{sec:lattice-structure-of-graphene}
 
-Structure of honeycomb lattice following~\cite{yangStructureGrapheneIts2018}.
+There exist a few different ways to define the lattice structure of Graphene which are all equivalent, but intermediate steps in calculating tight-binding models look different depending on the definition.
+This review on  follows ref.~\cite{yangStructureGrapheneIts2018}.
 
-Monolayer graphene forms a honeycomb lattice, which is a hexagonal Bravais lattice with a two atom basis.
-
-\begin{figure}[htb]
+Monolayer graphene forms a honeycomb lattice, which is a hexagonal Bravais lattice with a two atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
+The primitive lattice vectors of the hexagonal lattice are:
+\begin{align}
+	\vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \; \vb{a}_2 = \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
+\end{align}
+\todo{Labels on vectors}
+with lattice constant \(a = \sqrt{3} a_0 \approx \SI{2.46}{\angstrom}\), using the nearest-neighbour distance \(a_0\).
+The vectors to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) from atom \(A\) are
+\begin{align}
+	\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
+\end{align}
+and the vectors to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) from atom \(B\) are
+\begin{align}
+	\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 2} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 3} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix} \;.
+\end{align}
+The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice are:
+\begin{alignat}{3}
+	&\vb{\delta}_{AA, 1} = \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \;
+	&&\vb{\delta}_{AA, 2} = a \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \;
+	& &\vb{\delta}_{AA, 3} = a \begin{pmatrix} \frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix}, \\
+	&\vb{\delta}_{AA, 4} = a \begin{pmatrix} -\frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix}, \;
+	&&\vb{\delta}_{AA, 5} = a \begin{pmatrix} -1 \\ 0 \end{pmatrix}, \;
+	& &\vb{\delta}_{AA, 6} = a \begin{pmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix}
+\end{alignat}
+\begin{figure}[tb]
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/graphene lattice}
-	\caption{Graphene lattice structure}
-	\label{fig:graphene lattice structure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:graphene lattice structure}
+		\input{images/graphene lattice.pgf}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:graphene Brillouin zone}
+		\input{images/graphene brillouin_zone.pgf}
+	\end{subfigure}
+	\caption{(\subref{sfig:graphene lattice structure}) Graphene lattice structure and (\subref{sfig:graphene Brillouin zone}) Brilluoin zone} 
+	\label{fig:Graphene lattice structure and Brilluoin zone}
 \end{figure}
-
-Primitive lattice vectors of the hexagonal lattice:
-\begin{align}
-	\vb{a}_1 &= \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \\
-	\vb{a}_2 &= \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
-\end{align}
-with lattice constant \(a \approx \SI{2.46}{\angstrom}\) (distance between unit cells).
-Have
-\begin{equation}
-	a = \sqrt{3} a_0
-\end{equation}
-with the nearest-neighbour distance \(a_0\).
-
-Vectors to the nearest-neighbor \(B_i\) (\(i = 1, 2, 3,\)) atoms from atom \(A\):
-\begin{align}
-	\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix}, \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}, \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
-\end{align}
-
-Vectors to the nearest-neighbor \(A_i\) (\(i = 1, 2, 3,\)) atoms from atom \(B\):
-\begin{align}
-	\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix}, \vb{\delta}_{BA, 2} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix}, \vb{\delta}_{BA, 3} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix}
-\end{align}
-
-The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice can be found by rotating \(\vb{a}_1\) six times by \(\nicefrac{1}{6} * 2\pi = \nicefrac{\pi}{3}\):
-\begin{align}
-	\vb{\delta}_{AA, 1} &= \vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} = a \begin{pmatrix} \frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix} = a \begin{pmatrix} \sin{(\frac{\pi}{6})} \\ \cos{(\frac{\pi}{6})} \end{pmatrix} \\
-	\vb{\delta}_{AA, 2} &= a \begin{pmatrix} \sin{(\frac{3\pi}{6})} \\ \cos{(\frac{3\pi}{6})} \end{pmatrix} = a \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
-	\vb{\delta}_{AA, 3} &= a \begin{pmatrix} \sin{(\frac{5\pi}{6})} \\ \cos{(\frac{5\pi}{6})} \end{pmatrix} = a \begin{pmatrix} \frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix} \\
-	\vb{\delta}_{AA, 4} &= a \begin{pmatrix} \sin{(\frac{7\pi}{6})} \\ \cos{(\frac{7\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -\frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix} \\
-	\vb{\delta}_{AA, 5} &= a \begin{pmatrix} \sin{(\frac{9\pi}{6})} \\ \cos{(\frac{9\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -1 \\ 0 \end{pmatrix} \\
-	\vb{\delta}_{AA, 6} &= a \begin{pmatrix} \sin{(\frac{11\pi}{6})} \\ \cos{(\frac{11\pi}{6})} \end{pmatrix} = a \begin{pmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix}
-\end{align}
-
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/graphene brillouin_zone}
-	\caption{Graphene Brillouin Zone}
-	\label{fig:graphene Brillouin zone}
-\end{figure}
-
-\todo{First BZ vs this Gamma centered one}
-
-The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
+The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill \todo{labels on vectors}
 \begin{align}
 	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
-	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0
-	\;,
+	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0\;,
 \end{align}
 so we have:
 \begin{align}
-	\vb{b}_1 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \\
-	\vb{b}_2 &= \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
+	\vb{b}_1 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
+	\vb{b}_2 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix}
 \end{align}
-Points of high symmetry in the Brillouin zone are:
+The first Brilluoin zone of the hexagonal lattice is shown in \cref{sfig:graphene Brillouin zone}, with the points of high symmetry
 \begin{align}
-	\Gamma &= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
-	\mathrm{M} &= \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix} \\
-	\mathrm{K} &= \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+	\Gamma = \begin{pmatrix} 0 \\ 0 \end{pmatrix},\;
+	\mathrm{M} = \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
+	\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\;.
 \end{align}
+
 
 \section{Dressed Graphene Model}\label{sec:dressed graphene model}
 
-Graphene lattice and a site X\@.
-\begin{figure}[htb]
+The model I am concerned with in this thesis consists of a Hubbard Hamiltonian (as introduced in \cref{sec:bcs-theory}) on a Graphene lattice, with one additional atom at one of the two sites in a unit cell, which I will call X\@.
+This is shown in \cref{fig:eg-x model}.\todo{Work over image for dressed graphene lattice}
+\begin{figure}[tb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/eg-x lattice}
-	\caption{EG-X model}
+	\input{images/dressed graphene lattice.pgf}
+	\caption{Dressed Graphene model}
 	\label{fig:eg-x model}
 \end{figure}
-
-Without interaction:
+The kinetic term is
 \begin{align}
 	H_0 &= -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma} d_{i, \sigma}^{\dagger} d_{j, \sigma}
 	-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma}
-	c_{i, \sigma}^{(A), \dagger} c_{j, \sigma}^{(B)}
+	c_{i, \sigma}^{(\mathrm{A}), \dagger} c_{j, \sigma}^{(\mathrm{B})}
 	+ V \sum_{i, \sigma \sigma^{\prime}}
-	d_{i, \sigma}^{\dagger} c_{i, \sigma^{\prime}}^{(A)} + \mathrm{h.c.}
+	d_{i, \sigma}^{\dagger} c_{i, \sigma^{\prime}}^{(\mathrm{A})} + \mathrm{h.c.}
 	\label{eq:EG-X model Hamiltonian non-interacting}
 \end{align}
-with:
+with
 \begin{itemize}
-	\item \(d\) operators on the X atom
-	\item \(c^{(\epsilon)}\) operators on the graphene site (\(\epsilon = A, B\))
-	\item \(t_X\) NN hopping for X
-	\item \(t_{Gr}\) NN hopping of Gr
-	\item \(V\) hybridization between \(\mathrm{X}\) and Graphene \(\mathrm{B}\) sites
+	\item \(d\) - operators on the X atom
+	\item \(c^{(\epsilon)}\) - operators on the graphene sites (\(\epsilon = \mathrm{A}, \mathrm{B}\))
+	\item \(t_{\mathrm{X}}\) - nearest neighbour hopping for X
+	\item \(t_{\mathrm{Gr}}\) - nearest neighbour hopping between Graphene sites
+	\item \(V\) - hopping between \(\mathrm{X}\) and Graphene \(\mathrm{A}\) sites.
 \end{itemize}
-We can also introduce an onsite Hubbard interaction:
+The (attractive) Hubbard interaction has the following form:
 \begin{equation}
-	H_{\mathrm{int}} = U_{\mathrm{X}} \sum_{i} d_{i, \uparrow}^{\dagger} d_{i, \downarrow}^{\dagger} d_{i, \downarrow} d_{i, \uparrow}
-	+ U_{\mathrm{Gr}} \sum_{i, \epsilon=A, B} c_{i, \uparrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{\epsilon} c_{i, \uparrow}^{\epsilon}
+	H_{\mathrm{int}} = -U_{\mathrm{X}} \sum_{i} d_{i, \uparrow}^{\dagger} d_{i, \downarrow}^{\dagger} d_{i, \downarrow} d_{i, \uparrow}
+	- U_{\mathrm{Gr}} \sum_{i, \epsilon=A, B} c_{i, \uparrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{\epsilon} c_{i, \uparrow}^{\epsilon}
 \end{equation}
-
-\todo{Write the Hamiltonian with orbital indeces}
-
-Define sublattice index
+The notation using different letters for the sites connects intuitively to the physical picture, but it is more economical and in line with the notation for mean field-theory established in \cref{sec:bcs-theory} to write the Hamiltonian using a sublattice index
 \begin{equation}
 	\alpha = 1, 2, 3
 \end{equation}
-with \(1 \hateq \mathrm{Gr}_1, 2 \hateq \mathrm{Gr}_2, 3 \hateq \mathrm{X}\).
+with \(1 \hateq \mathrm{Gr}_{\mathrm{A}}\), \(2 \hateq \mathrm{Gr}_{\mathrm{B}}\), \(3 \hateq \mathrm{X}\).
 Then we can write the non-interacting term as
 \begin{equation}
-	H_0 = - \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
+	H_0 = \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
 \end{equation}
-with the matrix
+with the matrix in the sublattice indices
 \begin{equation}
 	\mat{t} = \begin{pmatrix}
-		0 & t_{\mathrm{Gr}} & 0 \\
-		t_{\mathrm{Gr}} & 0 & -V \delta_{ij} \\
-		0 & -V \delta_{ij} & t_{\mathrm{X}} \\
-	\end{pmatrix}
+		0 & -t_{\mathrm{Gr}} & V \delta_{ij} \\
+		-t_{\mathrm{Gr}} & 0 & 0 \\
+		V \delta_{ij} & 0 & -t_{\mathrm{X}} \\
+	\end{pmatrix}\;
 \end{equation}
-
-Add chemical potential:
+Also write the interaction part as
 \begin{equation}
-	-\mu \sum_{i \alpha \sigma} n_{i \alpha \sigma}
+	H_{\mathrm{int}} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}\;.
 \end{equation}
-
-Also write the interaction part with \(\alpha\) (with changed signs compared to Niklas, to keep in line with papers about the attractive Hubbard model):
-\begin{equation}
-	H_{int} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}
-\end{equation}
-
+\todo{Clean up the section from here}
+Using the Fourier transformation \cref{ch:dressed graphene reciprocal space}
 \begin{align}
 	H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
 	\begin{pmatrix}
@@ -150,25 +139,15 @@ Also write the interaction part with \(\alpha\) (with changed signs compared to 
 		f_{Gr}^* & 0 & 0 \\
 		V & 0 & f_{X}
 	\end{pmatrix} \begin{pmatrix} c_{k, \sigma}^{A} \\ c_{k, \sigma}^{B} \\ d_{k, \sigma} \end{pmatrix}
-	\label{eq:EG-X Hamiltonian non-interacting matrix}
+	\label{eq:dressed graphene Hamiltonian non-interacting matrix}
 \end{align}
-The band structure for the non-interacting EG-X model is easily obtained by diagonalising the matrix in \cref{eq:EG-X Hamiltonian non-interacting matrix}.
-This was done in \cref{fig:EG-X model non-interacting bands}.
-
-Values used for calculation:
-\begin{itemize}
-	\item \(a_0 = 1\)
-	\item \(t_{\mathrm{Gr}} = 1\)
-	\item \(t_{\mathrm{X}} = 0.01\)
-\end{itemize}
-\(V\) is the control parameter.
-A range from \(V=0.1\) to \(V=2\) can be mapped onto materials in experiment.
-
+The band structure for the non-interacting dressed graphene model is easily obtained by diagonalising the matrix in \cref{eq:dressed graphene Hamiltonian non-interacting matrix}.
+This was done in \cref{fig:dressed graphene model non-interacting bands}.
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=\textwidth]{images/EG_X bands_tGr_1_tX_0.01}
-	\caption{Bands of the non-interacting EG-X model. All the bands are spin-degenerate.}
-	\label{fig:EG-X model non-interacting bands}
+	 \import{images}{dressed graphene bands.pgf}
+	\caption{Bands of the non-interacting dressed Graphene model, with parameters \(t_{\mathrm{X}} = 0 \cdot t_{\mathrm{Gr}}\)}
+	\label{fig:dressed graphene model non-interacting bands}
 \end{figure}
 
 \end{document}

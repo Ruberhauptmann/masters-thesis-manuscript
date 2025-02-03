@@ -7,11 +7,12 @@
     titlepage=firstiscover,
     bibliography=totoc,
     listof=leveldown,
+    twoside=false
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
 
-%\renewcommand{\section}[1]{\section*{#1}}
+\usepackage{import}
 
 \input{font-selection}
 \usepackage{xstring}
@@ -30,7 +31,7 @@
 	pdfauthor={Tjark Sievers}
 }
 
-\graphicspath{notes/images/} % setup path for inclusion of images
+\graphicspath{images/} % setup path for inclusion of images
 
 
 \begin{document}
@@ -88,10 +89,6 @@
 
 \setglossarysection{section}
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
-
-% Print list of symbols
-\setglossarysection{section}
-\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
 
 
 \end{document}

@@ -9,3 +9,5 @@ dependencies:
   - scipy
   - pip:
       - SciencePlots
+      - lattpy
+      - quant-met

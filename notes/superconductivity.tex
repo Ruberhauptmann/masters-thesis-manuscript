@@ -156,12 +156,12 @@ This energy cost is characterized by the stiffness \(D_{\mathrm{S}}\)
 
 \todo{Explanation superfluid weight as linear response}
 
-The dominating fluctuation is determined by the ratio of the factors \(\frac{\hbar^2}{2m^*}\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the \gls{correlation length}
+The dominating fluctuation is determined by the ratio of the factors \(\frac{\hbar^2}{2m^*}\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the correlation length.
 \begin{equation}
 	\xi = \sqrt{\frac{\hbar^2}{2m^* \vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
 	\label{eq:correlation length GL theory}
 \end{equation}
-where I define the \gls{coherence length} \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
+where I define the zero temperature value as the coherence length \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
 On length scales above \(\xi\), the physics is entirely controlled by the phase degrees of freedom, i.e.
 \begin{equation}
 	f_{\mathrm{GL}} = \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.}
@@ -277,7 +277,7 @@ For small \(q\)
 The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
 The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth \cite{tinkhamIntroductionSuperconductivity1996}
 \begin{equation}
-	\lambda_L (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right^4 \right)^{-\frac{1}{2}} 
+	\lambda_L (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right)^4 \right)^{-\frac{1}{2}} 
 \end{equation}
 \todo{Where does this formula come from? Second London equation}
 
@@ -312,7 +312,6 @@ Order parameter in mean field BCS theory is the pairing amplitude
 \begin{equation}
 	\Delta = - \frac{U}{N_{\vb{k}}} \sum_{\vb{k}} \braket{c_{-\vb{k} \downarrow} c_{\vb{k} \uparrow}} = - U \braket{c_{-\vb{r}=0 \downarrow} c_{\vb{r=0} \uparrow}} \simeq U \Psi \;.
 \end{equation}
-More about mean field theory in \cref{ssec:Multiband BCS Mean Field Theory}
 
 A finite \(\Delta\) corresponds to the pairing introduced above: there is a finite expectation value for a coherent creation/annihilation of a pair of electrons with opposite momentum and spin.
 A finite \(\Delta\) also introduces a band gap into the spectrum.
@@ -324,7 +323,7 @@ This picture still holds today even for high \(T_C\)/unconventional superconduct
 
 \todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
 
-\subsection*{Multiband BCS Mean Field Theory}\label{ssec:Multiband BCS Mean Field Theory}
+\subsection*{Multiband BCS Theory}
 
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
@@ -356,7 +355,7 @@ where \(\alpha\) counts orbitals and the minus sign in front is taken so that \(
 
 There are a multitude of ways to derive a mean field description of a given interacting Hamiltonian.
 Very rigorous in path integral formulations as saddle points, given for example in ref. \cite{colemanIntroductionManyBodyPhysics2015}.
-The review follows \cite{huhtinenSuperconductivityNormalState2023}.
+The review follows ref. \cite{huhtinenSuperconductivityNormalState2023}.
 A more intuitive way based on ref. \cite{bruusManyBodyQuantumTheory2004} discussed here looks at the operators and which one are small. 
 
 Look at interaction term \cref{eq:Hubbard interaction multiband}.
@@ -390,29 +389,35 @@ Thus arrive at the approximation
 		c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 		+ c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\	
 	&- \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} ) \\
-	&= \sum_{i, \alpha} (\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}})
+	&= \sum_{i, \alpha} \left(\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}}\right)
 \end{align}
 with the expectation value
 \begin{align}
 	\Delta_{i, \alpha} = -U_{\alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 \end{align}
-which is called the superconducting gap.
+which is called the superconducting gap and is the order parameter introduced in Ginzburg-Landau theory in \cref{sec:Ginzburg-Landau theory of superconductivity}.
+To include finite momentum in BCS theory, take the ansatz of a Fulde-Ferrel (FF) type pairing \cite{kinnunenFuldeFerrellLarkin2018}: \todo{How to include finite momentum, rewrite equations} 
+\begin{equation}
+	\Delta_{i, \alpha} = \Delta_{\alpha} e^{\iu \vb{q} \vb{r}_{i \alpha}}
+\end{equation}
 Using the Fourier transform
 \begin{equation}
 	c_{i \alpha \sigma} = \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \alpha \sigma}
 \end{equation}
-can write \todo{Look at that Hamiltonian again, is that correct and can I write it better?}
+can write mean-field interaction term as
+\begin{align}
+	\sum_{i, \alpha} \left(\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}}\right)
+\end{align}
+\todo{there are phase factors introduced by the orbital positions}
+
+can write
 \begin{align}
 	H_{\mathrm{MF}} = \sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta} c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}
-	-\mu \sum_{\vb{k} \alpha \sigma} n_{\vb{k} \alpha \sigma}
 	+ \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
 	\label{eq:Mean Field Hamiltonian fourier transform}
 \end{align}
-To include finite momentum, take the ansatz of a Fulde-Ferrel (FF) type pairing \cite{kinnunenFuldeFerrellLarkin2018}: \todo{How to include finite momentum, rewrite equations} 
-\begin{equation}
-	\Delta
-\end{equation}
-The Hamiltonian in \cref{eq:Mean Field Hamiltonian fourier transform} can be writen as \todo{Get the remaining terms here}
+
+The Hamiltonian in \cref{eq:Mean Field Hamiltonian fourier transform} can be written as \todo{Get the remaining terms here}
 \begin{align}
 	H_{\mathrm{MF}} &= \sum_{\vb{k}} \vb{C}_{\vb{k}}^{\dagger} H_{\mathrm{BdG}} (\vb{k}) \vb{C}_{\vb{k}} \\
 	C_{\vb{k}} &= 
@@ -427,7 +432,7 @@ The Hamiltonian in \cref{eq:Mean Field Hamiltonian fourier transform} can be wri
 			c_{-\vb{k} n_{\mathrm{orb}} \downarrow}^{\dagger}
 		\end{pmatrix}^{T}
 \end{align}
-with the so-called Bogoliubov-de-Gennes matrix
+with the so-called \acrfull{bdg} matrix
 \begin{equation}
 	H_{\mathrm{BdG}} (\vb{k}) =
 	\begin{pmatrix}
@@ -436,7 +441,7 @@ with the so-called Bogoliubov-de-Gennes matrix
 	\end{pmatrix}
 \end{equation}
 with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = \diag(\Delta_1, \Delta_2, \ldots, \Delta_{n_{\mathrm{orb}}})\).
-Problem is  now reduced to diagonalization of the BdG matrix.
+Problem is  now reduced to diagonalization of the \acrshort{bdg} matrix.
 Write
 \begin{equation}
 	H_{\mathrm{BdG}} = U_{\vb{k}} \epsilon_{\vb{k}} U_{\vb{k}}^{\dagger}
@@ -461,7 +466,7 @@ the order parameter can be determined self-consistently, i.e. starting from an i
 
 \todo{SC current in BCS}
 
-\section{Dynamical Mean-Field Theory (DMFT)}\label{sec:Dynamical Mean-Field Theory}
+\section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
 
 \todo{Introduction DMFT, citing what has been achieved with it so far, what is the basic idea etc.}
 
@@ -469,47 +474,22 @@ the order parameter can be determined self-consistently, i.e. starting from an i
 
 \todo{Give an introduction }
 
-Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
-
-Following~\cite{bruusManyBodyQuantumTheory2004}
-
 \todo{Work over the paragraph}
 
-\todo{Slim down to relevant information}
-
-Have different kinds of Green's functions, for example the retarded Green's function (here with the \(k\) for lattice systems):
-\begin{equation}
-	G^R (\vb{k}, \sigma, \sigma^{\prime} t) = -\iu \Theta(t- t^{\prime}) \braket{ \{c_{\vb{k} \sigma} (t), c_{\vb{k} \sigma^{\prime}}^{\dagger} (0)\}}
-\end{equation}
-They give the amplitude of a particle inserted at momentum \(\vb{k}^{\prime}\) at time \(t^{\prime}\) to propagate to position \(\vb{k}\) at time \(t\).
-Define Fourier-transform:
-\begin{equation}
-	G^R (\vb{k}, \sigma, \sigma^{\prime}, \omega) = \int_{-\infty}^{\infty} \odif{t} G^R (\vb{k}, \sigma, \sigma^{\prime} t)
-\end{equation}
-Can define the spectral function from this:
-\begin{equation}
-	A(\vb{k} \sigma, \omega) = -2 \Im G^R (\vb{k} \sigma, \omega)
-\end{equation}
-Looking at the diagonal elements of \(G^R\) here.
-The spectral function can be thought of as the energy resolution of a particle with energy \(\omega\).
-This mean, for non-interacting systems, the spectral function is a delta-function around the single-particle energies:
-\begin{equation}
-	A_0 (\vb{k} \sigma, \omega) = 2\pi \delta (\omega - \epsilon_{\vb{k} \sigma})
-\end{equation}
-For interacting systems this is not true, but \(A\) can still be peaked.
-
-\todo{Show GFs can be related to observables}
-
-A mathematical trick to calculate GFs in praxis is to introduce the imaginary time variable \(\tau\)
+Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
+Depending on the context, different kinds of Green's functions are employed.
+Following~\cite{bruusManyBodyQuantumTheory2004}.
+The Matsubara formalism naturally includes finite 
+This is done via a so-called Wick rotation of the time variable \(t\) into imaginary time
 \begin{equation}
 	t \to -\iu \tau
 \end{equation}
 where \(\tau\) is real and has the dimension time.
 This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
-Define Matsubara GF \gls{matsubara correlation function}:
-\todo{Introduce Greens functions instead of correlation functions}
+
+For our context (translationally invariant and systems), Matsubara GF are defined as
 \begin{equation}
-	\mathcal{C}_{A B} (\tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
+	G (\vb{k}, \tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
 \end{equation}
 with time-ordering operator in imaginary time:
 \begin{equation}
@@ -543,13 +523,7 @@ So I can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continu
 So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
 Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value).
 
-\todo{single-particle Matsubara GF}
-
-\subsection*{Self Energy}
-
-\todo{Short introduction to diagrams}
-
-\todo{Self energy}
+\subsection*{Dyson Equation}
 
 \todo{Dyson equation}
 
@@ -558,25 +532,7 @@ Dyson equation:
 	\mathcal{G}_{\sigma} (\vb{k}, \iu \omega_n) = \frac{\mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n)}{1 - \mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n) \Sigma_{\sigma} (\vb{k}, \iu \omega_n)} = \frac{1}{\iu \omega_n - \xi_{\vb{k} - \Sigma_{\sigma} (\vb{k}, \iu \omega_n)}}
 \end{equation}
 
-
-\subsection*{Nambu-Gorkov GF}
-
-Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
-
-\todo{More general introduction into NG GFs, how they look like, what they describe etc.}
-
-Order parameter can be chosen as the anomalous GF:
-\begin{equation}
-	\Psi = F^{\mathrm{loc}} (\tau = 0^-)
-\end{equation}
-or the superconducting gap
-\begin{equation}
-	\Delta = Z \Sigma^{\mathrm{AN}}
-\end{equation}
-that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) and quasiparticle weight \(Z\)
-\todo{Sources for these?}
-
-\todo{How to get quasiparticle weight?}
+\todo{Self energy}
 
 \subsection*{DMFT}
 
@@ -600,6 +556,25 @@ The Dyson equation
 \end{equation}
 relates the non-interacting Greens function \(G_0 (\vb{k}, \iu \omega_n)\) and the fully-interacting Greens function \(G (\vb{k}, \iu \omega_n)\) (inversion of a matrix!).
 
+\subsection*{Nambu-Gorkov Green's Functions}
+
+Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
+
+\todo{More general introduction into NG GFs, how they look like, what they describe etc.}
+
+Order parameter can be chosen as the anomalous GF:
+\begin{equation}
+	\Psi = F^{\mathrm{loc}} (\tau = 0^-)
+\end{equation}
+or the superconducting gap
+\begin{equation}
+	\Delta = Z \Sigma^{\mathrm{AN}}
+\end{equation}
+that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) and quasiparticle weight \(Z\)
+\todo{Sources for these?}
+
+\todo{How to get quasiparticle weight?}
+
 \section{Quantum Metric}\label{sec:quantum-metric}
 
 First formulated in \cite{provostRiemannianStructureManifolds1980}
@@ -620,7 +595,7 @@ Infinitesimal variation of the parameter \(\odif{\lambda}\) \todo{Dont get it he
 \end{equation}
 Last part is splitting up into real and imaginary part
 
-\subsection*{Quantum Metric and superfluid weight}
+\subsection*{Quantum Metric and Superfluid Weight}
 
 \todo{Write up notes about quantum metric and superfluid weight}
 

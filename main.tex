@@ -10,6 +10,7 @@
     titlepage=firstiscover,
     %toc=flat,
     listof=leveldown,
+    twoside=false
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
@@ -35,6 +36,8 @@
 
 % Load the titlepage
 \subfile{titlepage.tex}
+
+%\KOMAoptions{twoside=false}
 
 % List the todos (comment this out in the final version!)
 %\listoftodos
@@ -90,9 +93,6 @@
 
 \setglossarysection{section}
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
-
-\setglossarysection{section}
-\printnoidxglossary[type=symbols,style=symbolstyle,title={List of Symbols}]
 
 % Include the acknowledgement
 \chapter*{Acknowledgment}
