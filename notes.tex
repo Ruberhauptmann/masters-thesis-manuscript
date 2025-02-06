@@ -15,8 +15,8 @@
 \usepackage{import}
 
 \input{font-selection}
-\usepackage{xstring}
-\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
+%\usepackage{xstring}
+%\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
 
 \input{notation} % load the tex file with the notation shortcuts
 
@@ -65,7 +65,7 @@
 
 % Appendix
 \appendix
-\subfile{notes/dressed-graphene-reciprocal-space.tex}
+%\subfile{notes/dressed-graphene-reciprocal-space.tex}
 
 \subfile{notes/computational-implementation}
 
@@ -84,8 +84,8 @@
 \chapter{Listings}
 \addcontentsline{toc}{section}{\listfigurename}
 \listoffigures
-\addcontentsline{toc}{section}{\listtablename}
-\listoftables
+%\addcontentsline{toc}{section}{\listtablename}
+%\listoftables
 
 \setglossarysection{section}
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]

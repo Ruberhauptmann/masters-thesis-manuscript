@@ -468,18 +468,36 @@ the order parameter can be determined self-consistently, i.e. starting from an i
 
 \section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
 
-\todo{Introduction DMFT, citing what has been achieved with it so far, what is the basic idea etc.}
+The foundational idea of \acrfull{dmft} is to map the full interacting problem to the problem of a single lattice site (or a small cluster of lattice sites) embedded in a mean field
+
+as seen in \cref{fig:DMFT AIM mapping}.
+
+This 
+
+\todo{What is the basic idea of DMFT?}
+
+DMFT has
+
+\todo{What has been achieved with DMFT}
+	
+This section describes the method of Green's function, which is the language DMFT is formulated in, the mapping of the lattice problem onto the impurity problem and the resulting self-consistency loop of DMFT.
+Additionally, I will also briefly describe how to describe the superconducting state in terms of Green's function and the consequences for a DMFT implementation.
+I will not fully derive the equations of DMFT here, for a more (pedagogical) introduction see refs. \cite{pavariniDynamicalMeanfieldTheory2022, georgesDynamicalMeanfieldTheory1996, colemanIntroductionManyBodyPhysics2015, bruusManyBodyQuantumTheory2004}.
+
+\begin{figure}[t]
+	\centering
+	\import{images/}{AIM mapping.pdf_tex}
+	\caption{AIM mapping}
+	\label{fig:DMFT AIM mapping}
+\end{figure}
 
 \subsection*{Green's Function Formalism}
-
-\todo{Give an introduction }
 
 \todo{Work over the paragraph}
 
 Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
 Depending on the context, different kinds of Green's functions are employed.
-Following~\cite{bruusManyBodyQuantumTheory2004}.
-The Matsubara formalism naturally includes finite 
+For exampple, Matsubara Green's functions naturally includes finite temperatures.
 This is done via a so-called Wick rotation of the time variable \(t\) into imaginary time
 \begin{equation}
 	t \to -\iu \tau
@@ -489,9 +507,9 @@ This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming f
 
 For our context (translationally invariant and systems), Matsubara GF are defined as
 \begin{equation}
-	G (\vb{k}, \tau, 0) = - \Braket{T_{\tau} (A(\tau) B(0))}
+	G (\vb{k}, \tau) = - \Braket{T_{\tau} (A(\tau) B(0))}
 \end{equation}
-with time-ordering operator in imaginary time:
+with time-ordering operator in imaginary time \todo{also time-ordering without Delta}:
 \begin{equation}
 	T_{\tau} (A(\tau) B(\tau^{\prime})) = \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau)
 \end{equation}
@@ -501,9 +519,9 @@ Can prove from properties of Matsubara GF, that they are only defined for
 \begin{equation}
 	-\beta < \tau < \beta
 \end{equation}
-Due to this, the Fourier transform of the Matsubara GF is defined on discrete values:
+Due to this, the Fourier transform of the Matsubara GF is defined on discrete values \todo{Definition of Matsubara frequencies}:
 \begin{equation}
-	\mathcal{C}_{A B} (\iu \omega_n) = \int_{0}^{\beta} \odif{\tau}
+	G_{A B} (\vb{k}, \iu \omega_n) = \int_{0}^{\beta} \odif{\tau}
 \end{equation}
 with fermionic/bosonic Matsubara frequencies
 \begin{equation}
@@ -514,14 +532,18 @@ with fermionic/bosonic Matsubara frequencies
 	\end{cases}
 \end{equation}
 
-It turns out that Matsubara GFs and retarded GFs can be generated from a common function \(\mathcal{C}_{AB} (z)\) that is defined on the entire complex plane except for the real axis.
-So I can get the retarded GF \(\mathcal{C}_{AB}^R (\omega)\) by analytic continuation:
+\todo{Connection to experimental observables}
+Can get the retarded GF \(G_{AB}^R (\omega)\) by analytic continuation:
 \begin{equation}
-	\mathcal{C}_{AB}^R (\omega) = \mathcal{C}_{AB} (\iu \omega_n \to \omega + \iu \eta)
+	G_{AB}^R (\omega) = G_{AB} (\iu \omega_n \to \omega + \iu \eta)
 \end{equation}
-\todo{What is the eta there -> need to define it in retarded GF}
-So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
-Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value).
+\todo{What is the eta there?}
+
+\todo{Spectral representation of Matsubara and retarded GF}
+
+\todo{How to get real frequency information from Matsubara GF?}
+%So in particular the extrapolation of the Matsubara GF to zero is proportional to the density of states at the chemical potential.
+%Gapped: density is zero (Matsubara GF goes to 0), metal: density is finite (Matsubara GF goes to finite value).
 
 \subsection*{Dyson Equation}
 
@@ -534,31 +556,9 @@ Dyson equation:
 
 \todo{Self energy}
 
-\subsection*{DMFT}
-
-Following \cite{georgesDynamicalMeanfieldTheory1996}.
-
-Most general non-interacting electronic Hamiltonian in second quantization:
-\begin{equation}
-	H_0 = \sum_{i, j, \sigma}
-\end{equation}
-with lattice coordinates \(i, j\) and spin \(\sigma\).
-
-One particle Green's function (many-body object, coming from the Hubbard model):
-\begin{equation}
-	G(\vb{k}, \iu \omega_n) = \frac{1}{\iu \omega_n + \mu - \epsilon_{\vb{k}} - \Sigma(\vb{k}, \iu \omega_n)}
-\end{equation}
-with the self energy \(\Sigma(\iu \omega_n)\) coming from the solution of the effect on-site problem:
-
-The Dyson equation
-\begin{equation}
-	G(\vb{k}, \iu \omega_n) = \left( G_0 (\vb{k}, \iu \omega_n) - \Sigma(\vb{k}, \iu \omega_n)\right)^{-1}
-\end{equation}
-relates the non-interacting Greens function \(G_0 (\vb{k}, \iu \omega_n)\) and the fully-interacting Greens function \(G (\vb{k}, \iu \omega_n)\) (inversion of a matrix!).
+\subsection*{Anderson Impurity Model}
 
 \subsection*{Nambu-Gorkov Green's Functions}
-
-Introduction following~\cite[ch. 14.7]{colemanIntroductionManyBodyPhysics2015}
 
 \todo{More general introduction into NG GFs, how they look like, what they describe etc.}
 
