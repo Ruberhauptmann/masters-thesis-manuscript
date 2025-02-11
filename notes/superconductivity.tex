@@ -51,6 +51,7 @@ The order parameter describes the `degree of order` \cite{landauTheoryPhaseTrans
 Similarly to a magnetically ordered state, the SC state is characterized by an order parameter.
 The theory of phase transitions in superconductors was developed by Ginzburg and Landau \cite{ginzburgTheorySuperconductivity1950}.
 Landau theory and conversely Ginzburg-Landau theory is not concerned with the the microscopic properties of the order parameter, but describes the changes in thermodynamic properties of matter with the development of an order parameter.
+\todo{Still explain a little bit what the physical interpretation of the OP is}
 
 \subsection*{Landau and Ginzburg-Landau Theory}\label{sub:Landau and Ginzburg-Landau Theory}
 
@@ -203,7 +204,9 @@ Rewriting using \(\vert \Psi \vert^2 = \nicefrac{n_S}{2}\)  and introducing the 
 \begin{equation}
 	\vb{j} = e n_S \vb{v}_S
 \end{equation}
-\todo{Make clear: supercurrent just because of twisting of phase in ground state}
+where even for \(\vb{A} = 0\), there is finite current because of the phase twist of the condensate ground state (which is quite remarkable).
+
+\todo{Section about BCS-BEC crossover? Can especially talk about what is optimised!}
 
 \subsection*{Superconducting Length Scales}
 
@@ -211,23 +214,23 @@ Rewriting using \(\vert \Psi \vert^2 = \nicefrac{n_S}{2}\)  and introducing the 
 
 One of the challenges in achieving high-temperature superconductivity is the fact that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
 Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperconductivityCrosses2024}.
-The picture of this crossover is the following: for a small attractive interaction, pairs of electrons are very loosely bound, which are pretty mobile, enabling superconductivity, while for a stronger interaction the pairs
-
-The crossover region
-
-\todo{Competing energy scales via interaction strength: higher U gives more tightly bound pairs}
-
-These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}, so having access to these scales from microscopic models and ab initio approaches is very important in the search for high \(T_C\)-superconductors.
-
+The picture of this crossover is the following: for a small attractive interaction, pairs of electrons are very loosely bound and mobile, while for a stronger interaction the pairs are bound together stronger and are not mobile, because hopping of a pair would involve a virtual hopping, thus breaking up the pair.
+This is highly suppressed.
+The crossover region between these two regimes is the BCS-BEC crossover.
+The energy scales characterizing the crossover are the superconducting gap/order parameter describing how strong the order is and the superfluid weight describing how mobile the Cooper pairs are.
+These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}.
+To understand the physics of the BCS-BEC crossover and eventually use it to optimize current and future superconductors it is thus imperative to have access to the superconducting length scales in ab initio approaches 
 \citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing this \cite{wittBypassingLatticeBCS2024}.
 As already discussed in the context of \cref{eq:breakdown of OP with phase fluctuations}, strong phase fluctuations destroy superconducting order.
-
+A particular choice of phase fluctuations would be
+\begin{equation}
+	\phi (\vb{r}) = \vb{q} \cdot \vb{r}
+\end{equation}
+which corresponds to Cooper pairs with a finite momentum \(\vb{q}\).
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
 
-\todo{Write better: connection of the section above and this theory}
-
-Procedure: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
+Procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
 FF-type pairing with Cooper pairs carrying finite momentum:
 \begin{equation}
 	\Psi_{\vb{q}} (\vb{r}) = \vert \Psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
