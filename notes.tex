@@ -15,8 +15,8 @@
 \usepackage{import}
 
 \input{font-selection}
-\usepackage{xstring}
-\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
+%\usepackage{xstring}
+%\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
 
 \input{notation} % load the tex file with the notation shortcuts
 
@@ -55,13 +55,9 @@
 
 \subfile{notes/superconductivity}
 
-%\subfile{notes/d-wave-superconductivity}
-
 \subfile{notes/dressed-graphene-model}
 
 \subfile{notes/results}
-
-%\subfile{notes/trash}
 
 % Appendix
 \appendix
@@ -84,8 +80,8 @@
 \chapter{Listings}
 \addcontentsline{toc}{section}{\listfigurename}
 \listoffigures
-\addcontentsline{toc}{section}{\listtablename}
-\listoftables
+%\addcontentsline{toc}{section}{\listtablename}
+%\listoftables
 
 \setglossarysection{section}
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
