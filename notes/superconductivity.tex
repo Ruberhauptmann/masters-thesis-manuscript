@@ -87,7 +87,9 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 		\caption{\hfill\null}\label{sfig:Ginzburg Landau free energy}
 		\input{images/ginzburg_landau_free_energy.pgf}
 	\end{subfigure}
-	\caption{(\subref{sfig:Landau free energy}) Landau free energy and (\subref{sfig:Ginzburg Landau free energy}) Mexican hat potential} 
+	\caption{
+		\textbf{Landau free energy and Mexican hat potential} (\textbf{\subref{sfig:Landau free energy}}) Landau free energy \(f_{\mathrm{L}}\) for a real-valued order parameter \(\Psi\) at different temperatures \(T\). (\subref{sfig:Ginzburg Landau free energy}) Landau free energy for a complex order parameter \(\Psi\).
+	} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
 
@@ -105,7 +107,7 @@ When the order parameter can be calculated from some microscopic theory, the cri
 \end{equation}
 
 Generalizing this from a one to an \(n\)-component order parameters is straightforward.
-One example is the complex or two component order parameter that will become important for 
+One example is the complex or two component order parameter that will become important for superconductivity
 \begin{equation}
 	\Psi = \Psi_1 + \iu \Psi_2 = \vert \Psi \vert e^{\iu \phi} \,.
 \end{equation}
@@ -468,9 +470,7 @@ the order parameter can be determined self-consistently, i.e. starting from an i
 
 \section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
 
-The foundational idea of \acrfull{dmft} is to map the full interacting problem to the problem of a single lattice site (or a small cluster of lattice sites) embedded in a mean field
-
-as seen in \cref{fig:DMFT AIM mapping}.
+The foundational idea of \acrfull{dmft} is to map the full interacting problem to the problem of a single lattice site (or a small cluster of lattice sites) embedded in a mean field encompassing all non-local correlation effects, as seen in \cref{fig:DMFT AIM mapping}.
 
 This 
 
@@ -487,7 +487,7 @@ I will not fully derive the equations of DMFT here, for a more (pedagogical) int
 \begin{figure}[t]
 	\centering
 	\import{images/}{AIM mapping.pdf_tex}
-	\caption{AIM mapping}
+	\caption{\textbf{Mapping of the full lattice problem .} This also }
 	\label{fig:DMFT AIM mapping}
 \end{figure}
 
@@ -560,20 +560,17 @@ Dyson equation:
 
 \subsection*{Nambu-Gorkov Green's Functions}
 
+To describe superconductivity, 
+
+
 \todo{More general introduction into NG GFs, how they look like, what they describe etc.}
 
 Order parameter can be chosen as the anomalous GF:
 \begin{equation}
 	\Psi = F^{\mathrm{loc}} (\tau = 0^-)
 \end{equation}
-or the superconducting gap
-\begin{equation}
-	\Delta = Z \Sigma^{\mathrm{AN}}
-\end{equation}
-that can be calculated from the anomalous self-energy \(\Sigma^{\mathrm{AN}}\) and quasiparticle weight \(Z\)
-\todo{Sources for these?}
 
-\todo{How to get quasiparticle weight?}
+\todo{DMFT with NG GFs}
 
 \section{Quantum Metric}\label{sec:quantum-metric}
 

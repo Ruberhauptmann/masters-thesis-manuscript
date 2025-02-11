@@ -25,17 +25,36 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.2696166"
-     inkscape:cx="185.48907"
-     inkscape:cy="115.38917"
+     inkscape:zoom="1.8508624"
+     inkscape:cx="233.40471"
+     inkscape:cy="117.24264"
      inkscape:window-width="1512"
-     inkscape:window-height="859"
+     inkscape:window-height="862"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker10184"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path10182" />
+    </marker>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient6881">
@@ -59,6 +78,25 @@
        r="13.569629"
        gradientTransform="matrix(0.73970055,0.03500053,-0.06190962,0.97227375,21.924753,-3.0089467)"
        gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="marker10184-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path10182-7" />
+    </marker>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -185,5 +223,15 @@
          style="font-size:3.88056px;stroke-width:0.264583"
          x="75.924324"
          y="44.546387">single site impurity model</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184)"
+       d="M 101.87551,47.927885 C 89.20443,59.620582 32.895202,58.20913 30.513324,44.670244"
+       id="path552-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184-4)"
+       d="M 31.929547,9.101644 C 44.600634,-2.591053 100.90986,-1.179601 103.29174,12.359285"
+       id="path552-7-1"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

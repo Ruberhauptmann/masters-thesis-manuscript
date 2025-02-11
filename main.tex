@@ -22,6 +22,12 @@
 
 \input{notation} % load the tex file with the notation shortcuts
 
+\usepackage{import}
+
+\input{font-selection}
+\usepackage{xstring}
+\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
+
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
