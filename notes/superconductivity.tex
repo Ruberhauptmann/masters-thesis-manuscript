@@ -6,7 +6,7 @@
 
 \chapter{Superconductivity}\label{ch:superconductivity}
 
-%Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
+Superconductivity is an example of an emergent phenomenon: the Schrödinger equation describing all interactions between electrons gives no indication that there exists parameters for which the electrons condense into phase coherent pairs.
 In this chapter I review theoretical concepts needed for understanding superconductivity and introduce the tools used to study superconductivity in the later chapters.
 There are many textbooks covering these topics which can be referenced for a more detailed treatment, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996, bruusManyBodyQuantumTheory2004, larkinTheoryFluctuationsSuperconductors2005, bennemannSuperconductivity2008}.
 
@@ -51,7 +51,8 @@ The order parameter describes the `degree of order` \cite{landauTheoryPhaseTrans
 Similarly to a magnetically ordered state, the SC state is characterized by an order parameter.
 The theory of phase transitions in superconductors was developed by Ginzburg and Landau \cite{ginzburgTheorySuperconductivity1950}.
 Landau theory and conversely Ginzburg-Landau theory is not concerned with the the microscopic properties of the order parameter, but describes the changes in thermodynamic properties of matter with the development of an order parameter.
-\todo{Still explain a little bit what the physical interpretation of the OP is}
+In superconductivity, the order parameter is described by coherent pairs of electrons with opposite momentum and spin.
+This will be explained in more detail later, but might be helpful to think of Cooper pairs already when discussing Ginzburg-Landau theory.  
 
 \subsection*{Landau and Ginzburg-Landau Theory}\label{sub:Landau and Ginzburg-Landau Theory}
 
@@ -150,14 +151,6 @@ With that, \cref{eq:free energy ginzburg-landau theory} becomes
 	\label{eq:free energy ginzburg-landau theory with phase}
 \end{equation}
 Now the contributions of phase and amplitude variations are split up: the first term describes energy cost of variations in the phase of the order parameter and the second term describes energy cost of variations in the magnitude of the order parameter.
-\todo{Introduce superfluid density properly}
-\todo{Energy cost of phase bending via GL energy}
-Twisting the phase of the condensate is associated with an energy cost.
-This energy cost is characterized by the stiffness \(D_{\mathrm{S}}\)
-
-\todo{Explanation phase stiffness}
-
-\todo{Explanation superfluid weight as linear response}
 
 The dominating fluctuation is determined by the ratio of the factors \(\frac{\hbar^2}{2m^*}\) and \(r\), which has the dimension \(\mathrm{Length}^2\), from which define the correlation length.
 \begin{equation}
@@ -166,9 +159,18 @@ The dominating fluctuation is determined by the ratio of the factors \(\frac{\hb
 \end{equation}
 where I define the zero temperature value as the coherence length \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
 On length scales above \(\xi\), the physics is entirely controlled by the phase degrees of freedom, i.e.
-\begin{equation}
-	f_{\mathrm{GL}} = \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.}
-\end{equation}
+\todo{Work over paragraph}
+\begin{align}
+	f_{\mathrm{GL}} &= \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.} \\
+	&= \frac{\hbar^2}{4 m^*} n_{\mathrm{S}} (\adif{\phi})^2 + \mathrm{const.} \\
+	&= D_{\mathrm{S}} (\adif{\phi})^2 + \mathrm{const.}
+\end{align}
+where \(\frac{n_{\mathrm{S}}}{2} = \vert \Psi \vert^2\) is the density of single electrons that form the Cooper pairs (also called the superfluid/superconducting density).
+It is derived by looking at the superconducting state as a coherent state, the density \(n_S\) describes the average number of particles.
+A coherent state trades a small uncertainty in particle number for a very high certainty in phase.
+See for information chapter 14 in ref. \cite{colemanIntroductionManyBodyPhysics2015}.
+So see that twisting the phase of the condensate is associated with an energy cost.
+This energy cost is characterized by the superfluid phase stiffness \(D_{\mathrm{S}}\).
 
 Take case of frozen amplitude fluctuations, i.e. \(\adif{\vert \Psi (\vb{r}) \vert} = 0\).
 Stationary point condition for \cref{eq:free energy ginzburg-landau theory with phase} gives:
@@ -176,7 +178,7 @@ Stationary point condition for \cref{eq:free energy ginzburg-landau theory with 
 	\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \adif{\phi} (\vb{r}) \vert^2}
 	\label{eq:breakdown of OP with phase fluctuations}
 \end{equation}
-\todo{Work over paragraph}
+
 This shows that the superconducting order gets suppressed and eventually destroyed by short-ranged (below \(\xi\)) phase fluctuations.
 By introducing a particular form of phase fluctuations \(\phi = \vb{q} \cdot \vb{r}\) into a microscopic model, it is possible to probe this breakdown of superconductivity and thus gain insight into the nature of superconductivity, in particular this gives access to \(\xi\).
 
@@ -202,6 +204,17 @@ Introducing the OP with phase \(\Psi = \vert \Psi \vert e^{\iu \phi}\):
 \end{equation}
 with the magnetic flux quantum \(\Phi_0 = \frac{\pi \hbar}{e}\).
 Shows that not only an applied field \(\vb{A}\) can induce a supercurrent, but also the twist of the phase of the condensate.
+The equation can be gauge-transformed to
+\begin{equation}
+	\vb{j} = -\frac{4e^2 n_S}{m^*} \vb{A} = \tilde{D_S} \vb{A}
+\end{equation}
+which shows that the superfluid phase stiffness
+\begin{equation}
+	D_{\mathrm{S}} = \frac{\hbar^2}{(2e)^2} \tilde{D_S}
+\end{equation}
+also encodes the linear response of a system to a small applied vector field \(\vb{A}\).
+\todo{Connection of SF weight and London penetration depth}
+
 Rewriting using \(\vert \Psi \vert^2 = \nicefrac{n_S}{2}\)  and introducing the superfluid velocity \(\vb{v}_S\):
 \begin{equation}
 	\vb{j} = e n_S \vb{v}_S
@@ -285,22 +298,17 @@ The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \c
 	\lambda_L (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right)^4 \right)^{-\frac{1}{2}} 
 \end{equation}
 \todo{Where does this formula come from? Second London equation}
-
-\todo{\(D_S\)}
-
-\todo{What else can be done with the FMP method?}
-
-\todo{Connection of the FMP method to linear response techniques}
+The superfluid phase stiffness can then be calculated via
+\begin{equation}
+	D_S \propto \lambda_L^{-2}
+\end{equation}
+The finite-momentum method in the limit of \(\vb{q} \to 0\) is related to linear response techniques to calculate the superfluid weight \cite{peottaSuperfluidityTopologicallyNontrivial2015, liangBandGeometryBerry2017}.
 
 \section{Bardeen-Coooper-Schrieffer Theory}\label{sec:bcs-theory}
 
-It took nearly 50 years after the first discovery of superconductivity in mercury by Heike Kamerlingh Onnes in 1911 \cite{onnesFurtherExperimentsLiquid1991} for the first microscopic description of this phenomenon to be published in 1957 by John Bardeen, Leon Cooper and J. Robert Schrieffer \cite{bardeenTheorySuperconductivity1957}.
-
-The \glsxtrfull{bcs} description of superconductivity is based on the fact that the Fermi sea is unstable towards development of bound pairs under arbitrarily small attraction \cite{cooperBoundElectronPairs1956}.
-The origin of the attractive interaction \(V_{{\vb{k}, \vb{k}^{\prime}}}\), which Bardeen, Cooper and Schrieffer identified as a retarded electron-phonon interaction \cite{bardeenTheorySuperconductivity1957}.
-
+The \glsxtrfull{bcs} description of superconductivity describes superconductivity as the condensation of electrons into pairs that form a macroscopic quantum state.
 There exist many textbooks tackling BCS theory from different angles, such as refs. \cite{colemanIntroductionManyBodyPhysics2015, tinkhamIntroductionSuperconductivity1996}.
-This section gives an introduction to the relevant physics of \glsxtrshort{bcs} theory as originally proposed, then derives the 
+This section gives an introduction to the relevant physics of \glsxtrshort{bcs} theory as originally proposed, then derives (BCS) mean-field theory for the multiband Hubbard model.
 
 \todo{Better introduction}
 
@@ -321,24 +329,25 @@ Order parameter in mean field BCS theory is the pairing amplitude
 A finite \(\Delta\) corresponds to the pairing introduced above: there is a finite expectation value for a coherent creation/annihilation of a pair of electrons with opposite momentum and spin.
 A finite \(\Delta\) also introduces a band gap into the spectrum.
 BCS theory brings multiple aspects together: concept of paired electrons with the pairing amplitude being the order parameter in SC, an explanation for the attractive interaction overcoming Coulomb repulsion and a model Hamiltonian that very elegantly captures the essential physics.
+In particular, the model Hamiltonian can be expanded with other types of pairing interactions to give a picture of superconductivity in the cuprates, compare ch. 15 in \cite{colemanIntroductionManyBodyPhysics2015}.
 
-It is very successful in two ways: on the one hand it could quantitatively predict effects in the SCs known at the time, for example the Hebel-Slichter peak that was measured in 1957 \cite{hebelNuclearRelaxationSuperconducting1957, hebelNuclearSpinRelaxation1959} and the band gap measured by Giaever in 1960 \cite{giaeverStudySuperconductorsElectron1961}.  
+BCS theory is very successful in two ways: on the one hand it could quantitatively predict effects in the SCs known at the time, for example the Hebel-Slichter peak that was measured in 1957 \cite{hebelNuclearRelaxationSuperconducting1957, hebelNuclearSpinRelaxation1959} and the band gap measured by Giaever in 1960 \cite{giaeverStudySuperconductorsElectron1961}.  
 On the other hand, it established electronic pairing, i.e. the picture of a quantum-mechanical wave function with a defined phase as already described by Fritz London in 1937 \cite{londonNewConceptionSupraconductivity1937} as the microscopic mechanism behind SC.
 This picture still holds today even for high \(T_C\)/unconventional superconductors, so SCs that cannot be described by BCS theory \cite{zhouHightemperatureSuperconductivity2021}.
-
-\todo{Other pairing interactions can be taken, gives explanations for a lot of different SCs}
 
 \subsection*{Multiband BCS Theory}
 
 The Hubbard model is the simplest model for interacting electron systems.
 It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
+The Hamiltonian of the  singleband Hubbard model is
 \todo{Kinetic term as well}
 \begin{equation}
-	H_{\mathrm{int}} = U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
+	H = H_0 + H_{\mathrm{int}} 
+	= -t \sum_{\langle i j \rangle} + U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
 	\label{eq:Hubbard interaction repulsive}
 \end{equation}
 where \(U > 0\).
-It describes a repulsive interaction between electrons of different spin at the same lattice site.
+The interaction describes a repulsive interaction between electrons of different spin at the same lattice site.
 
 
 Besides 
@@ -405,39 +414,28 @@ To include finite momentum in BCS theory, take the ansatz of a Fulde-Ferrel (FF)
 \begin{equation}
 	\Delta_{i, \alpha} = \Delta_{\alpha} e^{\iu \vb{q} \vb{r}_{i \alpha}}
 \end{equation}
-Using the Fourier transform
+Using the Fourier transform (with position vectors \(\vb{r}_{i \alpha} = \vb{R}_i + \delta_{\alpha}\), position of the unit cell \(\vb{R}_i\) and position of the orbital inside the unit cell \(\vb{\delta}_{\alpha}\))
 \begin{equation}
 	c_{i \alpha \sigma} = \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \alpha \sigma}
 \end{equation}
 can write mean-field interaction term as
+\todo{Get the remaining terms here}
 \begin{align}
-	\sum_{i, \alpha} \left(\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}}\right)
-\end{align}
-\todo{there are phase factors introduced by the orbital positions}
-
-can write
-\begin{align}
-	H_{\mathrm{MF}} = \sum_{\vb{k} \alpha \beta \sigma} [H_{0, \sigma} (\vb{k})]_{\alpha \beta} c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}
-	+ \sum_{\alpha, \vb{k}} (\Delta_{\alpha} c_{\vb{k} \alpha \uparrow}^{\dagger} c_{-\vb{k} \alpha \downarrow}^{\dagger} + \Delta_{\alpha}^* c_{-\vb{k} \alpha \downarrow} c_{\vb{k} \alpha \uparrow})
-	\label{eq:Mean Field Hamiltonian fourier transform}
-\end{align}
-
-The Hamiltonian in \cref{eq:Mean Field Hamiltonian fourier transform} can be written as \todo{Get the remaining terms here}
-\begin{align}
-	H_{\mathrm{MF}} &= \sum_{\vb{k}} \vb{C}_{\vb{k}}^{\dagger} H_{\mathrm{BdG}} (\vb{k}) \vb{C}_{\vb{k}} \\
-	C_{\vb{k}} &= 
+	H_{\mathrm{MF}} (\vb{q}) &= \sum_{\vb{k}} \vb{C}_{\vb{q}, \vb{k}}^{\dagger} H_{\mathrm{BdG}} (\vb{q}, \vb{k}) \vb{C}_{\vb{q}, \vb{k}} + K_{\vb{q}} \\
+	C_{\vb{q}, \vb{k}} &= 
 		\begin{pmatrix}
 			c_{\vb{k} 1 \uparrow} & 
 			c_{\vb{k} 2 \uparrow} &
 			\ldots &
 			c_{\vb{k} n_{\mathrm{orb}} \uparrow} &
-			c_{-\vb{k} 1 \downarrow}^{\dagger} &
-			c_{-\vb{k} 2 \downarrow}^{\dagger} &
+			c_{\vb{q} -\vb{k} 1 \downarrow}^{\dagger} &
+			c_{\vb{q} -\vb{k} 2 \downarrow}^{\dagger} &
 			\ldots &
-			c_{-\vb{k} n_{\mathrm{orb}} \downarrow}^{\dagger}
-		\end{pmatrix}^{T}
+			c_{\vb{q} -\vb{k} n_{\mathrm{orb}} \downarrow}^{\dagger}
+		\end{pmatrix}^{T} \\
+		K_{\vb{q}} &= 
 \end{align}
-with the so-called \acrfull{bdg} matrix
+with the so-called \acrfull{bdg} matrix \todo{BdG matrix correctly}
 \begin{equation}
 	H_{\mathrm{BdG}} (\vb{k}) =
 	\begin{pmatrix}
@@ -445,19 +443,22 @@ with the so-called \acrfull{bdg} matrix
 		\Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
 	\end{pmatrix}
 \end{equation}
-with \(H_{0, \sigma}\) being the F.T. of the kinetic term and \(\Delta = \diag(\Delta_1, \Delta_2, \ldots, \Delta_{n_{\mathrm{orb}}})\).
+with \(H_{0, \sigma}\) being the F.T. of the kinetic term \todo{F.T. of kinetic term} and \(\Delta = \diag(\Delta_1 (\vb{q}), \Delta_2 (\vb{q}), \ldots, \Delta_{n_{\mathrm{orb}}} (\vb{q}))\).
+For time-reversal symmetric systems, there exists a solution s.t. all \(\Delta_{\alpha}\) are real \cite{peottaSuperfluidityTopologicallyNontrivial2015}.
+The introduction of the \(\vb{q}\) breaks time-reversal symmetry, s.t. in a multiband system, the order parameters in the orbital can develop different phases.
+
 Problem is  now reduced to diagonalization of the \acrshort{bdg} matrix.
 Write
 \begin{equation}
-	H_{\mathrm{BdG}} = U_{\vb{k}} \epsilon_{\vb{k}} U_{\vb{k}}^{\dagger}
+	H_{\mathrm{BdG}} = U_{\vb{q}, \vb{k}} \epsilon_{\vb{q}, \vb{k}} U_{\vb{q}, \vb{k}}^{\dagger}
 \end{equation}
 and 
 \begin{equation}
-	H_{\mathrm{MF}} = \sum_{\vb{k}} \gamma_{\vb{k}} \epsilon_{\vb{k}} \gamma_{\vb{k}}^{\dagger}
+	H_{\mathrm{MF}} = \sum_{\vb{q}, \vb{k}} \gamma_{\vb{q}, \vb{k}} \epsilon_{\vb{q}, \vb{k}} \gamma_{\vb{q}, \vb{k}}^{\dagger}
 \end{equation}
 with quasi-particle operators
 \begin{equation}
-	\gamma_{\vb{k}} = U_{\vb{k}}^{\dagger} c_{\vb{k}}
+	\gamma_{\vb{q}, \vb{k}} = U_{\vb{q}, \vb{k}}^{\dagger} C_{\vb{q}, \vb{k}}
 \end{equation}
 
 \todo{Write indeces everywhere without comma}
@@ -495,8 +496,6 @@ I will not fully derive the equations of DMFT here, for a more (pedagogical) int
 \end{figure}
 
 \subsection*{Green's Function Formalism}
-
-\todo{Work over the paragraph}
 
 Green's functions: method to encode influence of many-body effects on propagation of particles in a system.
 Depending on the context, different kinds of Green's functions are employed.
@@ -575,11 +574,13 @@ Order parameter can be chosen as the anomalous GF:
 
 \todo{DMFT with NG GFs}
 
+
 \section{Quantum Metric}\label{sec:quantum-metric}
 
-First formulated in \cite{provostRiemannianStructureManifolds1980}
+Topic in quantum materials: quantum geometry and its influence on a many (quantum) material properties \cite{yuQuantumGeometryQuantum2024}.
+First (?) example: the Integer quantum Hall effect \cite{klitzingNewMethodHighAccuracy1980} that was explained by \citeauthor{thoulessQuantizedHallConductance1982} to be a consequence of the unique topology of the ground state of the electron \cite{thoulessQuantizedHallConductance1982}.
 
-Following Cheng - a pedagogical Introduction \todo{See what is specific to this paper, see that I can derive that myself}
+Concept of quantum geometry first formulated in 1980 by Provost and Vallee \cite{provostRiemannianStructureManifolds1980}.
 
 Parameter dependent Hamiltonian \(\{H(\lambda)\}\), smooth dependence on parameter \(\lambda = (\lambda_1, \lambda_2, \ldots) \in \mathcal{M}\) (base manifold)
 
@@ -595,10 +596,14 @@ Infinitesimal variation of the parameter \(\odif{\lambda}\) \todo{Dont get it he
 \end{equation}
 Last part is splitting up into real and imaginary part
 
+Recently, the Quantum Geometric Tensor (and in turn the quantum metric) was measured \cite{kangMeasurementsQuantumGeometric2025}.
+
 \subsection*{Quantum Metric and Superfluid Weight}
 
-\todo{Write up notes about quantum metric and superfluid weight}
+In the context of superconductivity: 
 
-\cite{peottaSuperfluidityTopologicallyNontrivial2015}
+\cite{peottaSuperfluidityTopologicallyNontrivial2015, liangBandGeometryBerry2017, tormaSuperconductivitySuperfluidityQuantum2022}
+
+\todo{Write up notes about quantum metric and superfluid weight}
 
 \end{document}
