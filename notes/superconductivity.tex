@@ -12,7 +12,7 @@ There are many textbooks covering these topics which can be referenced for a mor
 
 Macroscopically, the superconducting state can be described by a spontaneous breaking of a \(U(1)\) phase rotation symmetry that is associated with an order parameter.
 The theory of spontaneous symmetry breaking and associated phase transitions is Ginzburg-Landau theory discussed in \cref{sec:Ginzburg-Landau theory of superconductivity}, following refs. \cite{beekmanIntroductionSpontaneousSymmetry2019, colemanIntroductionManyBodyPhysics2015}.
-Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi_0\) describing the length scale of amplitude variations of the order parameter and the London penetration depth \(\lambda_L\), which is connected to energy cost of phase variations of the order parameter.
+Ginzburg-Landau theory introduces two length scales: the coherence length \(\xi_0\) describing the length scale of amplitude variations of the order parameter and the London penetration depth \(\lambda_{\mathrm{L}}\), which is connected to energy cost of phase variations of the order parameter.
 They also connect to the energy gap \(\Delta\) and the condensate stiffness \(D_{\mathrm{S}}\), which are often competing energy scales in superconductors.
 The interplay of these length (energy) scales determine the macroscopic properties of a superconductors, so there is a great interest in accessing them in computational ways.
 To this end, \cref{sec:Ginzburg-Landau theory of superconductivity} also introduces a theoretical framework based on Cooper pairs with finite momentum \cite{wittBypassingLatticeBCS2024} that will be used in later chapters to calculate these length scales from microscopic theories.
@@ -64,16 +64,22 @@ with the energy of the system \(E\), temperature \(T\) and entropy \(S\).
 A system in thermodynamic equilibrium has minimal free energy.
 The fundamental idea underlying Landau theory is to write the free energy \(F[\Psi]\) as function of the order parameter \(\Psi\) and expand it as a polynomial:
 \begin{equation}
-	F_L[\Psi] = \int \odif[order={d}]{x} f_L [\Psi] \;,
+	F_{\mathrm{L}}[\Psi] = \int \odif[order={d}]{x} f_{\mathrm{L}} [\Psi] \;,
 \end{equation}
 where
 \begin{equation}
-	f_L [\Psi] = \frac{r}{2} \Psi^2 + \frac{u}{4} \Psi^4
+	f_{\mathrm{L}} [\Psi] = \frac{r}{2} \Psi^2 + \frac{u}{4} \Psi^4
 \end{equation}
 is called the free energy density.
-\todo{Do minima first, then redefine r}
-Provided the parameters \(r\) and \(u\) are greater than \(0\), there is a minimum of \(f_L [\Psi]\) that lies at \(\Psi = 0\).
-Landau theory assumes that at the phase transition temperature \(T_C\) the parameter \(r\) changes sign, so it can be written in first order as
+The stationary point of \(f_{\mathrm{L}}\) can be found from the condition
+\begin{equation}
+	\fdv{f_{\mathrm{L}}}{\Psi} =  r \Psi + u \Psi^3 \overset{!}{=} 0
+\end{equation}
+which gives
+\begin{equation}
+	\Psi = 0 \; \lor \; \Psi = \pm \sqrt{\frac{r}{u}}
+\end{equation}
+For a stable systems \(r > 0\) is required, so for the order parameter to assume a finite value at a critical temperature, the parameter \(r\) needs to change sign at this temperature, in first order
 \begin{equation}
 	r = a(T - T_C) \;.
 \end{equation}
@@ -91,20 +97,13 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 		\input{images/ginzburg_landau_free_energy.pgf}
 	\end{subfigure}
 	\caption{
-		\textbf{Landau free energy and Mexican hat potential} (\subref{sfig:Landau free energy}) Landau free energy \(f_{\mathrm{L}}\) for a real-valued order parameter \(\Psi\) at different temperatures \(T\). (\subref{sfig:Ginzburg Landau free energy}) Landau free energy for a complex order parameter \(\Psi\).
+		\textbf{Landau free energy and Mexican hat potential} \textbf{(\subref{sfig:Landau free energy})} Landau free energy \(f_{\mathrm{L}}\) for a real-valued order parameter \(\Psi\) at different temperatures \(T\). \textbf{(\subref{sfig:Ginzburg Landau free energy})} Landau free energy for a complex order parameter \(\Psi\).
 	} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
 
-\Cref{sfig:Landau free energy} shows the free energy as a function of a single-component, real order parameter \(\Psi\) and it illustrates the essence of Landau theory: there are two cases for the minima of the free energy \(f\)
-\begin{equation}
-	\Psi = \begin{cases}
-		0 & T \geq T_C \\
-		\pm \sqrt{\frac{a (T_C - T)}{u}} & T < T_C
-	\end{cases} \;,
-\end{equation}
-so there is a for \(T < T_C\) there are two minima corresponding to ground states with broken symmetry.
-When the order parameter can be calculated from some microscopic theory, the critical temperature \(T_C\) can be extracted from the behavior of the order parameter near \(T_C\) via a linear fit of
+\Cref{sfig:Landau free energy} shows the free energy as a function of a single-component, real order parameter \(\Psi\).
+When the order parameter can be calculated from a microscopic theory, the critical temperature \(T_C\) can be extracted from the behavior of the order parameter near \(T_C\) via a linear fit of
 \begin{equation}
 	\vert \Psi \vert^2 \propto T_C - T \;.
 \end{equation}
@@ -116,7 +115,7 @@ One example is the complex or two component order parameter that will become imp
 \end{equation}
 The Landau free energy then takes the form
 \begin{equation}
-	f_L [\Psi] = r \Psi^* \Psi + \frac{u}{2} (\Psi^* \Psi)^2 = r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
+	f_{\mathrm{L}} [\Psi] = r \Psi^* \Psi + \frac{u}{2} (\Psi^* \Psi)^2 = r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
 \end{equation}
 with again
 \begin{equation}
@@ -124,7 +123,7 @@ with again
 \end{equation}
 Instead of the two minima, the free energy here is rotational symmetry, because it is independent of the phase of the order parameter: 
 \begin{equation}
-	f_L [\Psi] = f_L [e^{\iu \phi} \Psi] \;.
+	f_{\mathrm{L}} [\Psi] = f_{\mathrm{L}} [e^{\iu \phi} \Psi] \;.
 \end{equation}
 This gives the so called `Mexican hat' potential shown in \cref{sfig:Ginzburg Landau free energy}.
 In this potential, the order parameter can be rotated continuously from one symmetry-broken state to another.
@@ -186,7 +185,7 @@ The Ginzburg-Landau free energy with minimal coupling to an electromagnetic fiel
 \end{equation}
 with an additional term to include the electromagnetic energy of the magnetic field \(\vb{B} = \nabla \times \vb{A}\).
 It really describes two intertwined Ginzburg-Landau theories for \(\Psi\) and \(\vb{A}\).
-This mean there are two length scales, the coherence length \(\xi\) governing amplitude fluctuations of \(\Psi\) and the London penetration depth \(\lambda_L\) which determines the distance magnetic fields penetrate into the superconductor.
+This mean there are two length scales, the coherence length \(\xi\) governing amplitude fluctuations of \(\Psi\) and the London penetration depth \(\lambda_{\mathrm{L}}\) which determines the distance magnetic fields penetrate into the superconductor.
 
 The current density can be calculated from the stationary point condition of the free energy w.r.t. the vector potential \(\vb{A}\)
 \begin{equation}
@@ -218,7 +217,7 @@ also encodes the linear response of a system to a small applied vector field \(\
 
 \subsection*{Superconducting Length Scales}
 
-As already discussed in the last section, access to the breakdown of the order parameter with phase fluctuations can give information on the coherence length \(\xi\) and the London penetration depth \(\lambda_L\).
+As already discussed in the last section, access to the breakdown of the order parameter with phase fluctuations can give information on the coherence length \(\xi\) and the London penetration depth \(\lambda_{\mathrm{L}}\).
 This is a method developed by \citeauthor{wittBypassingLatticeBCS2024} for characterizing superconductivity in alkali-doped fullerides, a material with strong electronic correlations.
 The authors find that multiorbital effects enable a superconducting state with a short coherence length but robust stiffness and a domeless rise in critical temperatures with increasing pairing interaction \cite{wittBypassingLatticeBCS2024}.
 Access to the superconducting length scales is especially important in the context of BCS-BEC crossover physics and characterizing new high \(T_C\) superconductors.
@@ -237,7 +236,7 @@ which corresponds to Cooper pairs with a finite momentum \(\vb{q}\).
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
 
-Procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_L\) through analysis of the momentum and temperature-dependent OP\@.
+Procedure in the paper: enforce FMP states via constraints on pair-center-of-mass momentum \(\vb{q}\), access characteristic lenght scales \(\xi_0, \lambda_{\mathrm{L}}\) through analysis of the momentum and temperature-dependent OP\@.
 FF-type pairing with Cooper pairs carrying finite momentum:
 \begin{equation}
 	\Psi_{\vb{q}} (\vb{r}) = \vert \Psi_{\vb{q}} \vert e^{\iu \vb{q} \vb{r}}
@@ -285,12 +284,12 @@ The current \(\vb{j}_{\vb{q}}\) is a non-monotonous function of \(\vb{q}\) with 
 The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
 The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth \cite{tinkhamIntroductionSuperconductivity1996}
 \begin{equation}
-	\lambda_L (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right)^4 \right)^{-\frac{1}{2}} 
+	\lambda_{\mathrm{L}} (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi(T) j_{\mathrm{dp}} (T)}} = \lambda_{L,0} \left( 1 - \left( \frac{T}{T_{\mathrm{C}}}\right)^4 \right)^{-\frac{1}{2}} 
 \end{equation}
 \todo{Where does this formula come from? Second London equation}
 The superfluid phase stiffness can then be calculated via
 \begin{equation}
-	D_S \propto \lambda_L^{-2}
+	D_S \propto \lambda_{\mathrm{L}}^{-2}
 \end{equation}
 The finite-momentum method in the limit of \(\vb{q} \to 0\) is related to linear response techniques to calculate the superfluid weight \cite{peottaSuperfluidityTopologicallyNontrivial2015, liangBandGeometryBerry2017}.
 
