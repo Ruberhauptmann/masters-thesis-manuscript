@@ -51,7 +51,7 @@
       \verb 10.1017/CBO9781139020916
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/9YSGPFV2/Introduction to Many-Body Physics - Piers Coleman.pdf
+      \verb /Users/tjark/Zotero/storage/9YSGPFV2/Introduction to Many-Body Physics - Piers Coleman.pdf
       \endverb
     \endentry
     \entry{tinkhamIntroductionSuperconductivity1996}{book}{}
@@ -87,7 +87,7 @@
       \field{year}{1996}
       \field{dateera}{ce}
       \verb{file}
-      \verb /home/tjark/Zotero/storage/JDF4TXVI/Tinkham - 1996 - Introduction to superconductivity.pdf
+      \verb /Users/tjark/Zotero/storage/JDF4TXVI/Tinkham - 1996 - Introduction to superconductivity.pdf
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry
@@ -131,7 +131,7 @@
       \field{year}{2004}
       \field{dateera}{ce}
       \verb{file}
-      \verb /home/tjark/Zotero/storage/3ZW9UAGA/Many-body quantum theory in condensed matt - Henrik Bruus.pdf
+      \verb /Users/tjark/Zotero/storage/3ZW9UAGA/Many-body quantum theory in condensed matt - Henrik Bruus.pdf
       \endverb
     \endentry
     \entry{larkinTheoryFluctuationsSuperconductors2005}{book}{}
@@ -171,7 +171,7 @@
       \field{year}{2005}
       \field{dateera}{ce}
       \verb{file}
-      \verb /home/tjark/Zotero/storage/6T48V6RI/Larkin and Varlamov - 2005 - Theory of fluctuations in superconductors.pdf
+      \verb /Users/tjark/Zotero/storage/6T48V6RI/Larkin and Varlamov - 2005 - Theory of fluctuations in superconductors.pdf
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry
@@ -217,7 +217,7 @@
       \verb 10.1007/978-3-540-73253-2
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/3EJ6RN49/Bennemann and Ketterson - 2008 - Superconductivity.pdf
+      \verb /Users/tjark/Zotero/storage/3EJ6RN49/Bennemann and Ketterson - 2008 - Superconductivity.pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/978-3-540-73253-2
@@ -276,7 +276,7 @@
       \verb 10.21468/SciPostPhysLectNotes.11
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/5CND2X2Y/Beekman et al. - 2019 - An introduction to spontaneous symmetry breaking.pdf
+      \verb /Users/tjark/Zotero/storage/5CND2X2Y/Beekman et al. - 2019 - An introduction to spontaneous symmetry breaking.pdf
       \endverb
       \verb{urlraw}
       \verb https://scipost.org/10.21468/SciPostPhysLectNotes.11
@@ -354,13 +354,144 @@
       \verb 10.1038/s41535-024-00706-7
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/EYEN73KB/Witt et al. - 2024 - Bypassing the lattice BCS–BEC crossover in strongly correlated superconductors through multiorbital.pdf;/home/tjark/Zotero/storage/RYAEF35I/41535_2024_706_MOESM1_ESM.pdf
+      \verb /Users/tjark/Zotero/storage/EYEN73KB/Witt et al. - 2024 - Bypassing the lattice BCS–BEC crossover in strongly correlated superconductors through multiorbital.pdf;/Users/tjark/Zotero/storage/RYAEF35I/41535_2024_706_MOESM1_ESM.pdf
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/s41535-024-00706-7
       \endverb
       \verb{url}
       \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{peottaSuperfluidityTopologicallyNontrivial2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{fullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{bibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorbibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authornamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorfullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Topological invariants built from the periodic Bloch functions characterize new phases of matter, such as topological insulators and topological superconductors. The most important topological invariant is the Chern number that explains the quantized conductance of the quantum Hall effect. Here we provide a general result for the superfluid weight Ds of a multiband superconductor that is applicable to topologically nontrivial bands with nonzero Chern number C. We find that the integral over the Brillouin-zone of the quantum metric, an invariant calculated from the Bloch functions, gives the superfluid weight in a flat band, with the bound Ds⩾|C|. Thus, even a flat band can carry finite superfluid current, provided the Chern number is nonzero. As an example, we provide Ds for the time-reversal invariant attractive Harper–Hubbard model that can be experimentally tested in ultracold gases. In general, our results establish that a topologically nontrivial flat band is a promising concept for increasing the critical temperature of the superconducting transition.}
+      \field{day}{20}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{1}
+      \field{shortjournal}{Nat Commun}
+      \field{title}{Superfluidity in Topologically Nontrivial Flat Bands}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8944}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/ncomms9944
+      \endverb
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/7IFZ84QL/Peotta and Törmä - 2015 - Superfluidity in topologically nontrivial flat ban.pdf;/Users/tjark/Zotero/storage/JPYEZYLE/Peotta_Törmä_2015_Superfluidity in topologically nontrivial flat bands.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \keyw{Aalto,Pass 1 (closed)}
+    \endentry
+    \entry{yuQuantumGeometryQuantum2024}{online}{}
+      \name{author}{6}{}{%
+        {{hash=adbb64a27da0903a5048df5e750244e0}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jiabin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8016f8821f21d07f0089bb3ab683a3be}{%
+           family={Bernevig},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi Andrei},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=80c7b07e1e17389c9a50e54d3cd6e95c}{%
+           family={Queiroz},
+           familyi={Q\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4c1ca0252363e44485f683b4cbb66149}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3a7f89bba2186c02f3a1657325232c65}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Bohm-Jung},
+           giveni={B\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff99a479c3aede1fee8e3c488a1765ed}
+      \strng{fullhash}{f75387c61436ea009fd5e4733a4594ca}
+      \strng{bibnamehash}{ff99a479c3aede1fee8e3c488a1765ed}
+      \strng{authorbibnamehash}{ff99a479c3aede1fee8e3c488a1765ed}
+      \strng{authornamehash}{ff99a479c3aede1fee8e3c488a1765ed}
+      \strng{authorfullhash}{f75387c61436ea009fd5e4733a4594ca}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quantum geometry, characterized by the quantum geometric tensor, is pivotal in diverse physical phenomena in quantum materials. In condensed matter systems, quantum geometry refers to the geoemtric properties of Bloch states in the Brillouin zone. This pedagogical review provides an accessible introduction to the concept of quantum geometry, emphasizing its extensive implications across multiple domains. Specifically, we discuss the role of quantum geometry in optical responses, Landau levels, and fractional Chern insulators, as well as its influence on superfluid weight, spin stiffness, exciton condensates, electron-phonon coupling, etc. By integrating these topics, we underscore the pervasive significance of quantum geometry in understanding emergent behaviors in quantum materials. Finally, we present an outlook on open questions and potential future directions, highlighting the need for continued exploration in this rapidly developing field.}
+      \field{day}{30}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{month}{12}
+      \field{pubstate}{prepublished}
+      \field{title}{Quantum {{Geometry}} in {{Quantum Materials}}}
+      \field{urlday}{6}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2501.00098
+      \endverb
+      \verb{eprint}
+      \verb 2501.00098
+      \endverb
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/GD75XG7V/Yu et al. - 2024 - Quantum Geometry in Quantum Materials.pdf;/Users/tjark/Zotero/storage/LC29CTGH/2501.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2501.00098
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2501.00098
       \endverb
       \keyw{Backlog}
     \endentry
@@ -378,8 +509,8 @@
       \strng{authorbibnamehash}{dc49c9411a2dd7c254f0a041b3852527}
       \strng{authornamehash}{dc49c9411a2dd7c254f0a041b3852527}
       \strng{authorfullhash}{dc49c9411a2dd7c254f0a041b3852527}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse}
@@ -395,7 +526,7 @@
       \field{pages}{235\bibrangedash 257}
       \range{pages}{23}
       \verb{file}
-      \verb /home/tjark/Zotero/storage/8CB92RF8/Noether - 1918 - Invariante Variationsprobleme.pdf;/home/tjark/Zotero/storage/YRXA8VF4/59024.html
+      \verb /Users/tjark/Zotero/storage/8CB92RF8/Noether - 1918 - Invariante Variationsprobleme.pdf;/Users/tjark/Zotero/storage/YRXA8VF4/59024.html
       \endverb
       \verb{urlraw}
       \verb https://eudml.org/doc/59024
@@ -431,8 +562,8 @@
       \strng{editorbibnamehash}{0259947abe58e87fd65c34d0905020bd}
       \strng{editornamehash}{0259947abe58e87fd65c34d0905020bd}
       \strng{editorfullhash}{0259947abe58e87fd65c34d0905020bd}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki}
@@ -447,7 +578,7 @@
       \verb 10.1016/B978-0-08-010586-4.50034-1
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/K3K8ABSS/Landau - 1937 - On the theory of phase transitions.pdf
+      \verb /Users/tjark/Zotero/storage/K3K8ABSS/Landau - 1937 - On the theory of phase transitions.pdf
       \endverb
       \keyw{Pass 1}
     \endentry
@@ -482,8 +613,8 @@
       \strng{editorbibnamehash}{0259947abe58e87fd65c34d0905020bd}
       \strng{editornamehash}{0259947abe58e87fd65c34d0905020bd}
       \strng{editorfullhash}{0259947abe58e87fd65c34d0905020bd}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki}
@@ -498,7 +629,7 @@
       \verb 10.1016/b978-0-08-010586-4.50078-x
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/BKT9SGMT/Ginzburg and Landau - 1950 - On the Theory of superconductivity.pdf
+      \verb /Users/tjark/Zotero/storage/BKT9SGMT/Ginzburg and Landau - 1950 - On the Theory of superconductivity.pdf
       \endverb
       \keyw{Pass 1}
     \endentry
@@ -540,8 +671,8 @@
       \strng{authornamehash}{9ffc0c0f25974a8f82b65890e8b265dd}
       \strng{authorfullhash}{3c39fab1d366fd5a4793f2eb3e1a33ee}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{New developments in superconductivity, particularly through unexpected and often surprising forms of superconducting materials, continue to excite the community and stimulate theory. It is now becoming clear that there are two distinct platforms for superconductivity: natural and synthetic materials. The study of these artificial materials has greatly expanded in the past decade or so, with the discoveries of new forms of superfluidity in artificial heterostructures and the exploitation of proximitization. Natural superconductors continue to surprise through Fe-based pnictides and chalcogenides, and nickelates as well as others. This review presents a two-pronged investigation into such superconductors, with an emphasis on those that have come to be understood to belong somewhere between the Bardeen-Cooper-Schrieffer (BCS) and Bose-Einstein condensation (BEC) regimes. The nature of this “crossover” superconductivity, which is to be distinguished from crossover superfluidity in atomic Fermi gases, is a focus here. Multiple ways of promoting a system out of the BCS and into the BCS-BEC crossover regime are addressed in the context of concrete experimental realizations. These involve natural materials, such as organic conductors, as well as artificial, mostly two-dimensional materials, such as magic-angle twisted bilayer and trilayer graphene, or gate-controlled devices, as well as one-layer and interfacial superconducting films. Such developments should be viewed as a celebration of BCS theory, as it is now clear that, even though this theory was initially implemented with the special case of weak correlations in mind, it can be extended in a natural way to treat the case of these more exotic strongly correlated superconductors.}
@@ -565,7 +696,7 @@
       \verb 10.1103/RevModPhys.96.025002
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/82GNYRWZ/Chen et al. - 2024 - When superconductivity crosses over From BCS to BEC.pdf;/home/tjark/Zotero/storage/UH27AJNZ/RevModPhys.96.html
+      \verb /Users/tjark/Zotero/storage/82GNYRWZ/Chen et al. - 2024 - When superconductivity crosses over From BCS to BEC.pdf;/Users/tjark/Zotero/storage/UH27AJNZ/RevModPhys.96.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.96.025002
@@ -573,69 +704,7 @@
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.96.025002
       \endverb
-      \keyw{Inbox}
-    \endentry
-    \entry{hazraBoundsSuperconductingTransition2019}{article}{}
-      \name{author}{3}{}{%
-        {{hash=d33d27d642b1dd95df7dae211aaa0625}{%
-           family={Hazra},
-           familyi={H\bibinitperiod},
-           given={Tamaghna},
-           giveni={T\bibinitperiod}}}%
-        {{hash=18c5954b872d8ee8a21ece6003f0aceb}{%
-           family={Verma},
-           familyi={V\bibinitperiod},
-           given={Nishchhal},
-           giveni={N\bibinitperiod}}}%
-        {{hash=46f6817fff8fe6d49a5c3e5ef962460a}{%
-           family={Randeria},
-           familyi={R\bibinitperiod},
-           given={Mohit},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{56176ca169012d70254a1cd08582544f}
-      \strng{fullhash}{56176ca169012d70254a1cd08582544f}
-      \strng{bibnamehash}{56176ca169012d70254a1cd08582544f}
-      \strng{authorbibnamehash}{56176ca169012d70254a1cd08582544f}
-      \strng{authornamehash}{56176ca169012d70254a1cd08582544f}
-      \strng{authorfullhash}{56176ca169012d70254a1cd08582544f}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Understanding the material parameters that control the superconducting transition temperature 𝑇𝑐 is a problem of fundamental importance. In many novel superconductors phase fluctuations determine 𝑇𝑐, rather than the collapse of the pairing amplitude. We derive rigorous upper bounds on the superfluid phase stiffness for multiband systems, valid in any dimension. This in turn leads to an upper bound on 𝑇𝑐 in two dimensions, which holds irrespective of pairing mechanism, interaction strength, or order-parameter symmetry. Our bound is particularly useful for the strongly correlated regime of low-density and narrow-band systems, where mean-field theory fails. For a simple parabolic band in 2D with Fermi energy 𝐸𝐹, we find that 𝑘𝐵⁢𝑇𝑐 ≤𝐸𝐹/8, an exact result that has direct implications for the 2D BCS-BEC crossover in ultracold Fermi gases. Applying our multiband bound to magic-angle twisted bilayer graphene, we find that band structure results constrain the maximum 𝑇𝑐 to be close to the experimentally observed value. Finally, we discuss the question of deriving rigorous upper bounds on 𝑇𝑐 in 3D.}
-      \field{day}{17}
-      \field{journaltitle}{Physical Review X}
-      \field{month}{9}
-      \field{number}{3}
-      \field{shortjournal}{Phys. Rev. X}
-      \field{shorttitle}{Bounds on the {{Superconducting Transition Temperature}}}
-      \field{title}{Bounds on the {{Superconducting Transition Temperature}}: {{Applications}} to {{Twisted Bilayer Graphene}} and {{Cold Atoms}}}
-      \field{urlday}{14}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{volume}{9}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{031049}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevX.9.031049
-      \endverb
-      \verb{file}
-      \verb /home/tjark/Zotero/storage/JMDQ4P76/Hazra et al. - 2019 - Bounds on the Superconducting Transition Temperature Applications to Twisted Bilayer Graphene and C.pdf;/home/tjark/Zotero/storage/J49NTYEK/PhysRevX.9.html
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRevX.9.031049
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRevX.9.031049
-      \endverb
-      \keyw{Pass 1 (closed)}
+      \keyw{Backlog}
     \endentry
     \entry{chenFiniteMomentumCooper2018}{article}{}
       \name{author}{8}{}{%
@@ -716,7 +785,7 @@
       \verb 10.1038/s41467-018-05993-w
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/XEPEAPLJ/Chen et al. - 2018 - Finite momentum Cooper pairing in three-dimensional topological insulator Josephson junctions.pdf
+      \verb /Users/tjark/Zotero/storage/XEPEAPLJ/Chen et al. - 2018 - Finite momentum Cooper pairing in three-dimensional topological insulator Josephson junctions.pdf
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/s41467-018-05993-w
@@ -724,7 +793,7 @@
       \verb{url}
       \verb https://www.nature.com/articles/s41467-018-05993-w
       \endverb
-      \keyw{Inbox}
+      \keyw{Pass 1 (closed)}
     \endentry
     \entry{wanOrbitalFuldeFerrell2023}{article}{}
       \name{author}{11}{}{%
@@ -817,7 +886,7 @@
       \verb 10.1038/s41586-023-05967-z
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/2AJFPWQU/Wan et al. - 2023 - Orbital Fulde–Ferrell–Larkin–Ovchinnikov state in an Ising superconductor.pdf
+      \verb /Users/tjark/Zotero/storage/2AJFPWQU/Wan et al. - 2023 - Orbital Fulde–Ferrell–Larkin–Ovchinnikov state in an Ising superconductor.pdf
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/s41586-023-05967-z
@@ -872,7 +941,7 @@
       \verb 10.1073/pnas.2119548119
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/JWHCGKVA/Yuan and Fu - 2022 - Supercurrent diode effect and finite-momentum superconductors.pdf
+      \verb /Users/tjark/Zotero/storage/JWHCGKVA/Yuan and Fu - 2022 - Supercurrent diode effect and finite-momentum superconductors.pdf
       \endverb
       \verb{urlraw}
       \verb https://www.pnas.org/doi/10.1073/pnas.2119548119
@@ -922,7 +991,7 @@
       \verb 10.1103/RevModPhys.34.667
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/36YJ3SQH/Bardeen - 1962 - Critical Fields and Currents in Superconductors.pdf;/home/tjark/Zotero/storage/23SBAFCA/RevModPhys.34.html
+      \verb /Users/tjark/Zotero/storage/36YJ3SQH/Bardeen - 1962 - Critical Fields and Currents in Superconductors.pdf;/Users/tjark/Zotero/storage/23SBAFCA/RevModPhys.34.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.34.667
@@ -930,7 +999,7 @@
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.34.667
       \endverb
-      \keyw{Inbox}
+      \keyw{Backlog}
     \endentry
     \entry{xuAchievingTheoreticalDepairing2010}{article}{}
       \name{author}{3}{}{%
@@ -984,7 +1053,7 @@
       \verb 10.1021/nl102584j
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/T7DMMV2R/Xu et al. - 2010 - Achieving the Theoretical Depairing Current Limit in Superconducting Nanomesh Films.pdf
+      \verb /Users/tjark/Zotero/storage/T7DMMV2R/Xu et al. - 2010 - Achieving the Theoretical Depairing Current Limit in Superconducting Nanomesh Films.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1021/nl102584j
@@ -994,177 +1063,81 @@
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry
-    \entry{onnesFurtherExperimentsLiquid1991}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=7808c79be349f044f5f00d86780389b6}{%
-           family={Onnes},
-           familyi={O\bibinitperiod},
-           given={H.\bibnamedelimi Kamerlingh},
-           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=a6a67fee3eb543df769f38f89812070e}{%
-           family={Gavroglu},
-           familyi={G\bibinitperiod},
-           given={Kostas},
-           giveni={K\bibinitperiod}}}%
-        {{hash=2e8dd361285a734d97a8804ea53768c6}{%
-           family={Goudaroulis},
-           familyi={G\bibinitperiod},
-           given={Yorgos},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Dordrecht}%
-      }
-      \list{publisher}{1}{%
-        {Springer Netherlands}%
-      }
-      \strng{namehash}{7808c79be349f044f5f00d86780389b6}
-      \strng{fullhash}{7808c79be349f044f5f00d86780389b6}
-      \strng{bibnamehash}{7808c79be349f044f5f00d86780389b6}
-      \strng{authorbibnamehash}{7808c79be349f044f5f00d86780389b6}
-      \strng{authornamehash}{7808c79be349f044f5f00d86780389b6}
-      \strng{authorfullhash}{7808c79be349f044f5f00d86780389b6}
-      \strng{editorbibnamehash}{00c3bc1c3b902ec466f63706b84ff609}
-      \strng{editornamehash}{00c3bc1c3b902ec466f63706b84ff609}
-      \strng{editorfullhash}{00c3bc1c3b902ec466f63706b84ff609}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In Comm. N° 122b (May 1911) I mentioned that just before this resistance disappeared practically altogether its rate of diminution with falling temperature became much greater than that given by the formula of Comm. N°. 119. In the present paper a closer investigation is made of this phenomenon.}
-      \field{booktitle}{Through Measurement to Knowledge: {{The}} Selected Papers of Heike Kamerlingh Onnes 1853–1926}
-      \field{isbn}{978-94-009-2079-8}
-      \field{title}{Further Experiments with Liquid Helium. {{G}}. {{On}} the Electrical Resistance of Pure Metals, Etc. {{VI}}. {{On}} the Sudden Change in the Rate at Which the Resistance of Mercury Disappears.}
-      \field{year}{1991}
-      \field{dateera}{ce}
-      \field{pages}{267\bibrangedash 272}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1007/978-94-009-2079-8_17
-      \endverb
-      \verb{file}
-      \verb /home/tjark/Zotero/storage/ZVEULRU7/Onnes_1991_Further experiments with liquid helium.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/978-94-009-2079-8_17
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/978-94-009-2079-8_17
-      \endverb
-    \endentry
-    \entry{bardeenTheorySuperconductivity1957}{article}{}
-      \name{author}{3}{}{%
-        {{hash=616cd76a955b1fcb011fefbf1af91880}{%
-           family={Bardeen},
-           familyi={B\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=818261d37b65922f250ddf289897eb6c}{%
-           family={Cooper},
-           familyi={C\bibinitperiod},
-           given={L.\bibnamedelimi N.},
-           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
-           family={Schrieffer},
+    \entry{liangBandGeometryBerry2017}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b0da78f85d2efcbce861e4d52e343481}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4360c3180623f5c01fee41d5a873ecd7}{%
+           family={Vanhala},
+           familyi={V\bibinitperiod},
+           given={Tuomas\bibnamedelima I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=432d73f4326cbbb1b7ee84c6bbeddf99}{%
+           family={Siro},
            familyi={S\bibinitperiod},
-           given={J.\bibnamedelimi R.},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+           given={Topi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5628abb2fc5213ef1a7a66c85f0b4e4f}{%
+           family={Harju},
+           familyi={H\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {American Physical Society}%
       }
-      \strng{namehash}{c30a83010c772bf453b99545802834fb}
-      \strng{fullhash}{c30a83010c772bf453b99545802834fb}
-      \strng{bibnamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authorbibnamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authornamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authorfullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{namehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{fullhash}{cca2177327c1d70034c66bbb647ed862}
+      \strng{bibnamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authorbibnamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authornamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authorfullhash}{cca2177327c1d70034c66bbb647ed862}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A theory of superconductivity is presented, based on the fact that the interaction between electrons resulting from virtual exchange of phonons is attractive when the energy difference between the electrons states involved is less than the phonon energy, ℏ⁢𝜔. It is favorable to form a superconducting phase when this attractive interaction dominates the repulsive screened Coulomb interaction. The normal phase is described by the Bloch individual-particle model. The ground state of a superconductor, formed from a linear combination of normal state configurations in which electrons are virtually excited in pairs of opposite spin and momentum, is lower in energy than the normal state by amount proportional to an average (ℏ⁢𝜔)2, consistent with the isotope effect. A mutually orthogonal set of excited states in one-to-one correspondence with those of the normal phase is obtained by specifying occupation of certain Bloch states and by using the rest to form a linear combination of virtual pair configurations. The theory yields a second-order phase transition and a Meissner effect in the form suggested by Pippard. Calculated values of specific heats and penetration depths and their temperature variation are in good agreement with experiment. There is an energy gap for individual-particle excitations which decreases from about 3.5⁢𝑘⁢𝑇𝑐 at 𝑇=0°K to zero at 𝑇𝑐. Tables of matrix elements of single-particle operators between the excited-state superconducting wave functions, useful for perturbation expansions and calculations of transition probabilities, are given.}
-      \field{day}{1}
-      \field{journaltitle}{Physical Review}
-      \field{month}{12}
-      \field{number}{5}
-      \field{shortjournal}{Phys. Rev.}
-      \field{title}{Theory of {{Superconductivity}}}
-      \field{urlday}{9}
-      \field{urlmonth}{7}
+      \field{abstract}{We present a theory of the superfluid weight in multiband attractive Hubbard models within the Bardeen-Cooper-Schrieffer (BCS) mean-field framework. We show how to separate the geometric contribution to the superfluid weight from the conventional one, and that the geometric contribution is associated with the interband matrix elements of the current operator. Our theory can be applied to systems with or without time-reversal symmetry. In both cases the geometric superfluid weight can be related to the quantum metric of the corresponding noninteracting systems. This leads to a lower bound on the superfluid weight given by the absolute value of the Berry curvature. We apply our theory to the attractive Kane-Mele-Hubbard and Haldane-Hubbard models, which can be realized in ultracold atom gases. Quantitative comparisons are made to state of the art dynamical mean-field theory and exact diagonalization results.}
+      \field{day}{27}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{1}
+      \field{number}{2}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Band Geometry, {{Berry}} Curvature, and Superfluid Weight}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
       \field{urlyear}{2024}
-      \field{volume}{108}
-      \field{year}{1957}
+      \field{volume}{95}
+      \field{year}{2017}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{1175\bibrangedash 1204}
-      \range{pages}{30}
+      \field{pages}{024515}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.1103/PhysRev.108.1175
+      \verb 10.1103/PhysRevB.95.024515
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/WIWM8TPW/Bardeen et al. - 1957 - Theory of Superconductivity.pdf;/home/tjark/Zotero/storage/DE3LXQVY/PhysRev.108.html
+      \verb /Users/tjark/Zotero/storage/W5PFHHG2/Liang et al. - 2017 - Band geometry, Berry curvature, and superfluid wei.pdf;/Users/tjark/Zotero/storage/CH2YFC4S/PhysRevB.95.html
       \endverb
       \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.95.024515
       \endverb
       \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.95.024515
       \endverb
-      \keyw{Pass 1 (closed)}
-    \endentry
-    \entry{cooperBoundElectronPairs1956}{article}{}
-      \name{author}{1}{}{%
-        {{hash=2adf3021085e9f8b64cd83f04af3b72c}{%
-           family={Cooper},
-           familyi={C\bibinitperiod},
-           given={Leon\bibnamedelima N.},
-           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \strng{fullhash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \strng{bibnamehash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \strng{authorbibnamehash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \strng{authornamehash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \strng{authorfullhash}{2adf3021085e9f8b64cd83f04af3b72c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{DOI:https://doi.org/10.1103/PhysRev.104.1189}
-      \field{day}{15}
-      \field{journaltitle}{Physical Review}
-      \field{month}{11}
-      \field{number}{4}
-      \field{shortjournal}{Phys. Rev.}
-      \field{title}{Bound {{Electron Pairs}} in a {{Degenerate Fermi Gas}}}
-      \field{urlday}{9}
-      \field{urlmonth}{7}
-      \field{urlyear}{2024}
-      \field{volume}{104}
-      \field{year}{1956}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1189\bibrangedash 1190}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.1103/PhysRev.104.1189
-      \endverb
-      \verb{file}
-      \verb /home/tjark/Zotero/storage/KXL5HG8I/Cooper - 1956 - Bound Electron Pairs in a Degenerate Fermi Gas.pdf;/home/tjark/Zotero/storage/WHU6CYY7/PhysRev.104.html
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.104.1189
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.104.1189
-      \endverb
-      \keyw{Pass 1 (closed)}
+      \keyw{Pass 1}
     \endentry
     \entry{hebelNuclearRelaxationSuperconducting1957}{article}{}
       \name{author}{2}{}{%
@@ -1212,7 +1185,7 @@
       \verb 10.1103/PhysRev.107.901
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/5BNF3IGD/Hebel and Slichter - 1957 - Nuclear Relaxation in Superconducting Aluminum.pdf;/home/tjark/Zotero/storage/JKXC3FIT/PhysRev.107.html
+      \verb /Users/tjark/Zotero/storage/5BNF3IGD/Hebel and Slichter - 1957 - Nuclear Relaxation in Superconducting Aluminum.pdf;/Users/tjark/Zotero/storage/JKXC3FIT/PhysRev.107.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/PhysRev.107.901
@@ -1269,7 +1242,7 @@
       \verb 10.1103/PhysRev.113.1504
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/JIBU7KIP/Hebel and Slichter - 1959 - Nuclear Spin Relaxation in Normal and Superconducting Aluminum.pdf;/home/tjark/Zotero/storage/5VT5U666/PhysRev.113.html
+      \verb /Users/tjark/Zotero/storage/JIBU7KIP/Hebel and Slichter - 1959 - Nuclear Spin Relaxation in Normal and Superconducting Aluminum.pdf;/Users/tjark/Zotero/storage/5VT5U666/PhysRev.113.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/PhysRev.113.1504
@@ -1325,7 +1298,7 @@
       \verb 10.1103/PhysRev.122.1101
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/CQDLWU7W/Giaever and Megerle - 1961 - Study of Superconductors by Electron Tunneling.pdf;/home/tjark/Zotero/storage/G3CZNENL/PhysRev.122.1101.pdf
+      \verb /Users/tjark/Zotero/storage/CQDLWU7W/Giaever and Megerle - 1961 - Study of Superconductors by Electron Tunneling.pdf;/Users/tjark/Zotero/storage/G3CZNENL/PhysRev.122.1101.pdf
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/PhysRev.122.1101
@@ -1376,7 +1349,7 @@
       \verb 10.1038/140793a0
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/G2MCAA7A/London - 1937 - A New Conception of Supraconductivity.pdf;/home/tjark/Zotero/storage/BDPUSAL9/140793a0.html
+      \verb /Users/tjark/Zotero/storage/G2MCAA7A/London - 1937 - A New Conception of Supraconductivity.pdf;/Users/tjark/Zotero/storage/BDPUSAL9/140793a0.html
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/140793a0
@@ -1463,7 +1436,7 @@
       \verb 10.1038/s42254-021-00324-3
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/QQ2AHZVI/Zhou et al_2021_High-temperature superconductivity.pdf
+      \verb /Users/tjark/Zotero/storage/QQ2AHZVI/Zhou et al_2021_High-temperature superconductivity.pdf
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/s42254-021-00324-3
@@ -1518,7 +1491,7 @@
       \verb 10.1098/rspa.1963.0204
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/DW6UMJE4/Hubbard and Flowers - 1997 - Electron correlations in narrow energy bands.pdf
+      \verb /Users/tjark/Zotero/storage/DW6UMJE4/Hubbard and Flowers - 1997 - Electron correlations in narrow energy bands.pdf
       \endverb
       \verb{urlraw}
       \verb https://royalsocietypublishing.org/doi/10.1098/rspa.1963.0204
@@ -1567,7 +1540,7 @@
       \verb 10.1143/PTP.30.275
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/754M2R9D/Kanamori - 1963 - Electron Correlation and Ferromagnetism of Transition Metals.pdf;/home/tjark/Zotero/storage/P469A79R/1865799.html
+      \verb /Users/tjark/Zotero/storage/754M2R9D/Kanamori - 1963 - Electron Correlation and Ferromagnetism of Transition Metals.pdf;/Users/tjark/Zotero/storage/P469A79R/1865799.html
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1143/PTP.30.275
@@ -1618,7 +1591,7 @@
       \verb 10.1103/PhysRevLett.10.159
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/7C53JTA7/Gutzwiller - 1963 - Effect of Correlation on the Ferromagnetism of Transition Metals.pdf;/home/tjark/Zotero/storage/KGK6DSEZ/PhysRevLett.10.html
+      \verb /Users/tjark/Zotero/storage/7C53JTA7/Gutzwiller - 1963 - Effect of Correlation on the Ferromagnetism of Transition Metals.pdf;/Users/tjark/Zotero/storage/KGK6DSEZ/PhysRevLett.10.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/PhysRevLett.10.159
@@ -1691,7 +1664,7 @@
       \verb 10.1146/annurev-conmatphys-090921-033948
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/C74JVJ8J/Qin et al_2022_The Hubbard Model.pdf;/home/tjark/Zotero/storage/XAXQMVIQ/annurev-conmatphys-090921-033948.html
+      \verb /Users/tjark/Zotero/storage/C74JVJ8J/Qin et al_2022_The Hubbard Model.pdf;/Users/tjark/Zotero/storage/XAXQMVIQ/annurev-conmatphys-090921-033948.html
       \endverb
       \verb{urlraw}
       \verb https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-090921-033948
@@ -1752,7 +1725,7 @@
       \verb 10.1103/RevModPhys.62.113
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/KNGP4LUF/Micnas et al_1990_Superconductivity in narrow-band systems with local nonretarded attractive.pdf
+      \verb /Users/tjark/Zotero/storage/KNGP4LUF/Micnas et al_1990_Superconductivity in narrow-band systems with local nonretarded attractive.pdf
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.62.113
@@ -1794,7 +1767,7 @@
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/tjark/Zotero/storage/F4TKEKWQ/Huhtinen - 2023 - Superconductivity and normal state properties in flat bands.pdf
+      \verb /Users/tjark/Zotero/storage/F4TKEKWQ/Huhtinen - 2023 - Superconductivity and normal state properties in flat bands.pdf
       \endverb
       \verb{urlraw}
       \verb https://aaltodoc.aalto.fi/handle/123456789/119970
@@ -1862,7 +1835,7 @@
       \verb 10.1088/1361-6633/aaa4ad
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/9SFXTK8N/Kinnunen et al_2018_The Fulde–Ferrell–Larkin–Ovchinnikov state for ultracold fermions in lattice.pdf
+      \verb /Users/tjark/Zotero/storage/9SFXTK8N/Kinnunen et al_2018_The Fulde–Ferrell–Larkin–Ovchinnikov state for ultracold fermions in lattice.pdf
       \endverb
       \verb{urlraw}
       \verb https://dx.doi.org/10.1088/1361-6633/aaa4ad
@@ -1871,6 +1844,65 @@
       \verb https://dx.doi.org/10.1088/1361-6633/aaa4ad
       \endverb
       \keyw{Pass 1}
+    \endentry
+    \entry{pavariniDynamicalMeanfieldTheory2022}{book}{}
+      \name{editor}{6}{}{%
+        {{hash=3ae9b6465f77e14dc11aaaf82ac61aa5}{%
+           family={Pavarini},
+           familyi={P\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b27f8daae6a75161ced290395781b519}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3c88645d57ffec17a297e9b94eeee5e5}{%
+           family={Lichtenstein},
+           familyi={L\bibinitperiod},
+           given={Alexander\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=7a6b5186a77aad7fd7509a7405af4e10}{%
+           family={Vollhardt},
+           familyi={V\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f018bd7b7fad38e09f1ab8b4eed1c4af}{%
+           family={{Institute for Advanced Simulation}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=4cd76998b09f03e6c840802ef82da654}{%
+           family={{Forschungszentrum Jülich}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Jülich}%
+      }
+      \list{publisher}{1}{%
+        {Forschungszentrum Jülich, Zentralbibliothek, Verlag}%
+      }
+      \strng{namehash}{d62bdcb174a5a867cd9386ba706e990a}
+      \strng{fullhash}{250979978e69980a6135cd09e973eeb1}
+      \strng{bibnamehash}{d62bdcb174a5a867cd9386ba706e990a}
+      \strng{editorbibnamehash}{d62bdcb174a5a867cd9386ba706e990a}
+      \strng{editornamehash}{d62bdcb174a5a867cd9386ba706e990a}
+      \strng{editorfullhash}{250979978e69980a6135cd09e973eeb1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{eventtitle}{Autumn {{School}} on {{Correlated Electrons}}}
+      \field{isbn}{978-3-95806-619-9}
+      \field{langid}{english}
+      \field{number}{Band/volume 12}
+      \field{pagetotal}{1}
+      \field{series}{Schriften Des {{Forschungszentrums Jülich Reihe Modeling}} and {{Simulation}}}
+      \field{title}{Dynamical Mean-Field Theory of Correlated Electrons}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/DKJCNFCT/Pavarini et al. - 2022 - Dynamical mean-field theory of correlated electrons.pdf
+      \endverb
+      \keyw{Pass 1 (closed)}
     \endentry
     \entry{georgesDynamicalMeanfieldTheory1996}{article}{}
       \name{author}{4}{}{%
@@ -1928,7 +1960,7 @@
       \verb 10.1103/RevModPhys.68.13
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/4AQ3FK84/Georges et al_1996_Dynamical mean-field theory of strongly correlated fermion systems and the.pdf;/home/tjark/Zotero/storage/744L3SSH/RevModPhys.68.html
+      \verb /Users/tjark/Zotero/storage/4AQ3FK84/Georges et al_1996_Dynamical mean-field theory of strongly correlated fermion systems and the.pdf;/Users/tjark/Zotero/storage/744L3SSH/RevModPhys.68.html
       \endverb
       \verb{urlraw}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.68.13
@@ -1937,6 +1969,137 @@
       \verb https://link.aps.org/doi/10.1103/RevModPhys.68.13
       \endverb
       \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{klitzingNewMethodHighAccuracy1980}{article}{}
+      \name{author}{3}{}{%
+        {{useprefix=false,hash=982433b52fe2a3a9ef6bc0e0042bc85a}{%
+           family={Klitzing},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           prefix={v.},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=f0cc80344097f24f7d5432206cd7ae0f}{%
+           family={Dorda},
+           familyi={D\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5cb5cac742cf7e9af7ad8808e35e3bf0}{%
+           family={Pepper},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{1ac02f23c357277ab6077d04420d6fdc}
+      \strng{fullhash}{1ac02f23c357277ab6077d04420d6fdc}
+      \strng{bibnamehash}{1ac02f23c357277ab6077d04420d6fdc}
+      \strng{authorbibnamehash}{1ac02f23c357277ab6077d04420d6fdc}
+      \strng{authornamehash}{1ac02f23c357277ab6077d04420d6fdc}
+      \strng{authorfullhash}{1ac02f23c357277ab6077d04420d6fdc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Measurements of the Hall voltage of a two-dimensional electron gas, realized with a silicon metal-oxide-semiconductor field-effect transistor, show that the Hall resistance at particular, experimentally well-defined surface carrier concentrations has fixed values which depend only on the fine-structure constant and speed of light, and is insensitive to the geometry of the device. Preliminary data are reported.}
+      \field{day}{11}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{8}
+      \field{number}{6}
+      \field{shortjournal}{Phys. Rev. Lett.}
+      \field{title}{New {{Method}} for {{High-Accuracy Determination}} of the {{Fine-Structure Constant Based}} on {{Quantized Hall Resistance}}}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{45}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{494\bibrangedash 497}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.45.494
+      \endverb
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/AE2F5NQF/Klitzing et al. - 1980 - New Method for High-Accuracy Determination of the Fine-Structure Constant Based on Quantized Hall Re.pdf;/Users/tjark/Zotero/storage/8E5JL7U2/PhysRevLett.45.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.45.494
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.45.494
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{thoulessQuantizedHallConductance1982}{article}{}
+      \name{author}{4}{}{%
+        {{hash=519fb52f442999f67395a2149283b508}{%
+           family={Thouless},
+           familyi={T\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3018d78c6d14f7426813b97ce1f11fd7}{%
+           family={Kohmoto},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8da4516d16ad7633b2a7b4989957e471}{%
+           family={Nightingale},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{useprefix=true,hash=851998664c8e4947ca5d6e78eb19e156}{%
+           family={Nijs},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           prefix={den},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{f7044af62fefe3eca10065f802e7b478}
+      \strng{fullhash}{42ca5b42b6f54c5a9464fa033209b7c0}
+      \strng{bibnamehash}{f7044af62fefe3eca10065f802e7b478}
+      \strng{authorbibnamehash}{f7044af62fefe3eca10065f802e7b478}
+      \strng{authornamehash}{f7044af62fefe3eca10065f802e7b478}
+      \strng{authorfullhash}{42ca5b42b6f54c5a9464fa033209b7c0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Hall conductance of a two-dimensional electron gas has been studied in a uniform magnetic field and a periodic substrate potential 𝑈. The Kubo formula is written in a form that makes apparent the quantization when the Fermi energy lies in a gap. Explicit expressions have been obtained for the Hall conductance for both large and small 𝑈ℏ⁢𝜔𝑐.}
+      \field{day}{9}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{8}
+      \field{number}{6}
+      \field{shortjournal}{Phys. Rev. Lett.}
+      \field{title}{Quantized {{Hall Conductance}} in a {{Two-Dimensional Periodic Potential}}}
+      \field{urlday}{14}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{49}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{405\bibrangedash 408}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.49.405
+      \endverb
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/Q6B9ECK8/Thouless et al. - 1982 - Quantized Hall Conductance in a Two-Dimensional Periodic Potential.pdf;/Users/tjark/Zotero/storage/N358MQNV/PhysRevLett.49.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.49.405
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.49.405
+      \endverb
+      \keyw{Inbox}
     \endentry
     \entry{provostRiemannianStructureManifolds1980}{article}{}
       \name{author}{2}{}{%
@@ -1983,7 +2146,7 @@
       \verb 10.1007/BF02193559
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/4C69VZ8Z/Provost_Vallee_1980_Riemannian structure on manifolds of quantum states.pdf
+      \verb /Users/tjark/Zotero/storage/4C69VZ8Z/Provost_Vallee_1980_Riemannian structure on manifolds of quantum states.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF02193559
@@ -1993,61 +2156,202 @@
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry
-    \entry{peottaSuperfluidityTopologicallyNontrivial2015}{article}{}
-      \name{author}{2}{}{%
-        {{hash=504f660300ef110cdee78d28448e9bba}{%
-           family={Peotta},
-           familyi={P\bibinitperiod},
-           given={Sebastiano},
+    \entry{kangMeasurementsQuantumGeometric2025}{article}{}
+      \name{author}{18}{}{%
+        {{hash=5de3a6962c6fbbeea05bcc37edf460a3}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Mingu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3225f2bf001171904783015b46de6172}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sunje},
            giveni={S\bibinitperiod}}}%
+        {{hash=86113a5d7c1a5862f638a44dfbf7d735}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Yuting},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7e01881a8776588f069ca85b8361649f}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={Paul\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4ca30b3279291fb45208a165848cbb06}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1c32696bbf20b1e435b2750c8f037559}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Junseo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d6815c91527afbf9528cfea894a8632f}{%
+           family={Puntel},
+           familyi={P\bibinitperiod},
+           given={Denny},
+           giveni={D\bibinitperiod}}}%
+        {{hash=77f2c51c5488067ae029d154a6854445}{%
+           family={Mazzola},
+           familyi={M\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=409225084688edae00b313fd7da87835}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Shiang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=17e9fd281329f0c758167459feb3ec78}{%
+           family={Jozwiak},
+           familyi={J\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9cf80f9202a66dcd99a572eb810a771a}{%
+           family={Bostwick},
+           familyi={B\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=77510e60d75d73cbf6345ffab1ab2a55}{%
+           family={Rotenberg},
+           familyi={R\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c65e077de142140e1ff73ff8670f5ae4}{%
+           family={Fuji},
+           familyi={F\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=79c59f499e7c502534c18cd9cd57b1ba}{%
+           family={Vobornik},
+           familyi={V\bibinitperiod},
+           given={Ivana},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1d5b35dd3fcaded84c36e27085380bbb}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jae-Hoon},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=fd3c5e7f72c3fdc36b19f45f42809571}{%
+           family={Checkelsky},
+           familyi={C\bibinitperiod},
+           given={Joseph\bibnamedelima G.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=3a7f89bba2186c02f3a1657325232c65}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Bohm-Jung},
+           giveni={B\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=34e061170e716355ab092ddf4a35a302}{%
+           family={Comin},
+           familyi={C\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{d13c74f9b2295f2b9bff8ad14a552dc8}
+      \strng{fullhash}{e57e88ad25ae1a0cbc8a534283617b1b}
+      \strng{bibnamehash}{d13c74f9b2295f2b9bff8ad14a552dc8}
+      \strng{authorbibnamehash}{d13c74f9b2295f2b9bff8ad14a552dc8}
+      \strng{authornamehash}{d13c74f9b2295f2b9bff8ad14a552dc8}
+      \strng{authorfullhash}{e57e88ad25ae1a0cbc8a534283617b1b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Understanding the geometric properties of quantum states and their implications in fundamental physical phenomena is a core aspect of contemporary physics. The quantum geometric tensor (QGT) is a central physical object in this regard, encoding complete information about the geometry of the quantum state. The imaginary part of the QGT is the well-known Berry curvature, which plays an integral role in the topological magnetoelectric and optoelectronic phenomena. The real part of the QGT is the quantum metric, whose importance has come to prominence recently, giving rise to a new set of quantum geometric phenomena such as anomalous Landau levels, flat band superfluidity, excitonic Lamb shifts and nonlinear Hall effect. Despite the central importance of the QGT, its experimental measurements have been restricted only to artificial two-level systems. Here, we develop a framework to measure the QGT in crystalline solids using polarization-, spin- and angle-resolved photoemission spectroscopy. Using this framework, we demonstrate the effective reconstruction of the QGT in the kagome metal CoSn, which hosts topological flat bands. Establishing this momentum- and energy-resolved spectroscopic probe of the QGT is poised to significantly advance our understanding of quantum geometric responses in a wide range of crystalline systems.}
+      \field{issn}{1745-2481}
+      \field{journaltitle}{Nature Physics}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Nat. Phys.}
+      \field{title}{Measurements of the Quantum Geometric Tensor in Solids}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{21}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{110\bibrangedash 117}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1038/s41567-024-02678-8
+      \endverb
+      \verb{file}
+      \verb /Users/tjark/Zotero/storage/E7JISAZS/Kang et al. - 2025 - Measurements of the quantum geometric tensor in solids.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41567-024-02678-8
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41567-024-02678-8
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{tormaSuperconductivitySuperfluidityQuantum2022}{article}{}
+      \name{author}{3}{}{%
         {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
            family={Törmä},
            familyi={T\bibinitperiod},
            given={Päivi},
            giveni={P\bibinitperiod}}}%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=40440d90311127925683bd37f186a3b2}{%
+           family={Bernevig},
+           familyi={B\bibinitperiod},
+           given={Bogdan\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \strng{fullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \strng{bibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \strng{authorbibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \strng{authornamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \strng{authorfullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \strng{namehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{fullhash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{bibnamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authorbibnamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authornamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authorfullhash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Topological invariants built from the periodic Bloch functions characterize new phases of matter, such as topological insulators and topological superconductors. The most important topological invariant is the Chern number that explains the quantized conductance of the quantum Hall effect. Here we provide a general result for the superfluid weight Ds of a multiband superconductor that is applicable to topologically nontrivial bands with nonzero Chern number C. We find that the integral over the Brillouin-zone of the quantum metric, an invariant calculated from the Bloch functions, gives the superfluid weight in a flat band, with the bound Ds⩾|C|. Thus, even a flat band can carry finite superfluid current, provided the Chern number is nonzero. As an example, we provide Ds for the time-reversal invariant attractive Harper–Hubbard model that can be experimentally tested in ultracold gases. In general, our results establish that a topologically nontrivial flat band is a promising concept for increasing the critical temperature of the superconducting transition.}
-      \field{day}{20}
-      \field{issn}{2041-1723}
-      \field{journaltitle}{Nature Communications}
+      \field{abstract}{Superconductivity has been observed in moiré systems such as twisted bilayer graphene, which host flat, dispersionless electronic bands. In parallel, theory work has discovered that superconductivity and superfluidity of flat-band systems can be made possible by the quantum geometry and topology of the band structure. These recent key developments are merging into a flourishing research topic: understanding the possible connection and ramifications of quantum geometry on the induced superconductivity and superfluidity in moiré multilayer and other flat-band systems. This article presents an introduction to how quantum geometry governs superconductivity and superfluidity in platforms including, and beyond, graphene. Ultracold gases are introduced as a complementary platform for quantum geometric effects and a comparison is made to moiré materials. An outlook sketches the prospects of twisted multilayer systems in providing the route to room-temperature superconductivity.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
       \field{langid}{english}
-      \field{month}{11}
-      \field{number}{1}
-      \field{shortjournal}{Nat Commun}
-      \field{title}{Superfluidity in Topologically Nontrivial Flat Bands}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{Superconductivity, Superfluidity and Quantum Geometry in Twisted Multilayer Systems}
       \field{urlday}{2}
       \field{urlmonth}{4}
       \field{urlyear}{2024}
-      \field{volume}{6}
-      \field{year}{2015}
+      \field{volume}{4}
+      \field{year}{2022}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{8944}
-      \range{pages}{1}
+      \field{pages}{528\bibrangedash 542}
+      \range{pages}{15}
       \verb{doi}
-      \verb 10.1038/ncomms9944
+      \verb 10.1038/s42254-022-00466-y
       \endverb
       \verb{file}
-      \verb /home/tjark/Zotero/storage/7IFZ84QL/Peotta and Törmä - 2015 - Superfluidity in topologically nontrivial flat ban.pdf;/home/tjark/Zotero/storage/JPYEZYLE/Peotta_Törmä_2015_Superfluidity in topologically nontrivial flat bands.pdf
+      \verb /Users/tjark/Zotero/storage/QJ7966AD/Törmä et al_2022_Superconductivity, superfluidity and quantum geometry in twisted multilayer.pdf
       \endverb
       \verb{urlraw}
-      \verb https://www.nature.com/articles/ncomms9944
+      \verb https://www.nature.com/articles/s42254-022-00466-y
       \endverb
       \verb{url}
-      \verb https://www.nature.com/articles/ncomms9944
+      \verb https://www.nature.com/articles/s42254-022-00466-y
       \endverb
       \keyw{Aalto,Pass 1 (closed)}
     \endentry

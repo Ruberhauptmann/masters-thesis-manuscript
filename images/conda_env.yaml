@@ -8,6 +8,5 @@ dependencies:
   - numpy
   - scipy
   - pip:
-      - SciencePlots
       - lattpy
       - quant-met

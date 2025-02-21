@@ -81,6 +81,8 @@ font=\normalfont\Huge
 } % options for typesetting things like 1-5cm
 \usepackage{derivative} % for typesetting derivatives and differentials
 
+\usepackage{mhchem} % Typeset chemical equation
+
 \numberwithin{equation}{chapter} % number equations as <chapter>.<equationnumber>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,6 +143,17 @@ font=\normalfont\Huge
 \definecolor{UHHblack}{HTML}{000000}
 \definecolor{UHHgray}{HTML}{3B515B}
 
+\definecolor{petroff1}{RGB}{63, 144, 218}
+\definecolor{petroff2}{RGB}{255, 169, 14}
+\definecolor{petroff3}{RGB}{189, 31, 1}
+\definecolor{petroff4}{RGB}{148, 164, 162}
+\definecolor{petroff5}{RGB}{131, 45, 182}
+\definecolor{petroff6}{RGB}{169, 107, 89}
+\definecolor{petroff7}{RGB}{231, 99, 0}
+\definecolor{petroff8}{RGB}{185, 172, 112}
+\definecolor{petroff9}{RGB}{113, 117, 129}
+\definecolor{petroff10}{RGB}{146, 218, 221}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Define environments for code listings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,8 +183,10 @@ font=\normalfont\Huge
     singlelinecheck=true,
 } % setup the caption for floats
 \usepackage{subcaption} % For placing figures side by side
+\usepackage{sidecap} % For placing caption besides figures
 
 \usepackage{booktabs} % package to typeset prettier tables
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Things for referencing

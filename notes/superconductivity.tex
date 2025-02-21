@@ -71,6 +71,7 @@ where
 	f_L [\Psi] = \frac{r}{2} \Psi^2 + \frac{u}{4} \Psi^4
 \end{equation}
 is called the free energy density.
+\todo{Do minima first, then redefine r}
 Provided the parameters \(r\) and \(u\) are greater than \(0\), there is a minimum of \(f_L [\Psi]\) that lies at \(\Psi = 0\).
 Landau theory assumes that at the phase transition temperature \(T_C\) the parameter \(r\) changes sign, so it can be written in first order as
 \begin{equation}
@@ -90,7 +91,7 @@ Landau theory assumes that at the phase transition temperature \(T_C\) the param
 		\input{images/ginzburg_landau_free_energy.pgf}
 	\end{subfigure}
 	\caption{
-		\textbf{Landau free energy and Mexican hat potential} (\textbf{\subref{sfig:Landau free energy}}) Landau free energy \(f_{\mathrm{L}}\) for a real-valued order parameter \(\Psi\) at different temperatures \(T\). (\subref{sfig:Ginzburg Landau free energy}) Landau free energy for a complex order parameter \(\Psi\).
+		\textbf{Landau free energy and Mexican hat potential} (\subref{sfig:Landau free energy}) Landau free energy \(f_{\mathrm{L}}\) for a real-valued order parameter \(\Psi\) at different temperatures \(T\). (\subref{sfig:Ginzburg Landau free energy}) Landau free energy for a complex order parameter \(\Psi\).
 	} 
 	\label{fig:Landau free energy and Ginzburg-Landau free energy}
 \end{figure}
@@ -159,89 +160,80 @@ The dominating fluctuation is determined by the ratio of the factors \(\frac{\hb
 \end{equation}
 where I define the zero temperature value as the coherence length \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_C}}\).
 On length scales above \(\xi\), the physics is entirely controlled by the phase degrees of freedom, i.e.
-\todo{Work over paragraph}
 \begin{align}
-	f_{\mathrm{GL}} &= \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 (\adif{\phi})^2 + \mathrm{const.} \\
-	&= \frac{\hbar^2}{4 m^*} n_{\mathrm{S}} (\adif{\phi})^2 + \mathrm{const.} \\
-	&= D_{\mathrm{S}} (\adif{\phi})^2 + \mathrm{const.}
+	f_{\mathrm{GL}} &= \frac{\hbar^2}{2 m^*} \vert \Psi \vert^2 \left(\adif{\phi}\right)^2 + \mathrm{const.} \\
+	&= \frac{\hbar^2}{4 m^*} n_{\mathrm{S}} \left(\adif{\phi}\right)^2 + \mathrm{const.} \\
+	&= D_{\mathrm{S}} \left(\adif{\phi}\right)^2 + \mathrm{const.} \label{eq:GL energy above correlation length}
 \end{align}
-where \(\frac{n_{\mathrm{S}}}{2} = \vert \Psi \vert^2\) is the density of single electrons that form the Cooper pairs (also called the superfluid/superconducting density).
-It is derived by looking at the superconducting state as a coherent state, the density \(n_S\) describes the average number of particles.
-A coherent state trades a small uncertainty in particle number for a very high certainty in phase.
-See for information chapter 14 in ref. \cite{colemanIntroductionManyBodyPhysics2015}.
-So see that twisting the phase of the condensate is associated with an energy cost.
+where \(\frac{n_{\mathrm{S}}}{2} = \vert \Psi \vert^2\) is the density of single electrons that form the Cooper pairs, also called the superfluid or superconducting density.
+\Cref{eq:GL energy above correlation length} shows that twisting the phase of the condensate is associated with an energy cost.
 This energy cost is characterized by the superfluid phase stiffness \(D_{\mathrm{S}}\).
 
-Take case of frozen amplitude fluctuations, i.e. \(\adif{\vert \Psi (\vb{r}) \vert} = 0\).
-Stationary point condition for \cref{eq:free energy ginzburg-landau theory with phase} gives:
+
+Assuming frozen amplitude fluctuations \(\adif{\vert \Psi (\vb{r}) \vert} = 0\), the stationary point of \cref{eq:free energy ginzburg-landau theory with phase} is
 \begin{equation}
-	\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \adif{\phi} (\vb{r}) \vert^2}
+	\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \adif{\phi} (\vb{r}) \vert^2} \;.
 	\label{eq:breakdown of OP with phase fluctuations}
 \end{equation}
-
 This shows that the superconducting order gets suppressed and eventually destroyed by short-ranged (below \(\xi\)) phase fluctuations.
 By introducing a particular form of phase fluctuations \(\phi = \vb{q} \cdot \vb{r}\) into a microscopic model, it is possible to probe this breakdown of superconductivity and thus gain insight into the nature of superconductivity, in particular this gives access to \(\xi\).
 
-Superconductors: charged superfluids, coupling to electromagnetic fields.
-Free energy with minimal coupling to an electromagnetic field:
+The discussion so far is valid for neutral superfluids, but superconductors are charged superfluids, so they couple to electromagnetic fields.
+The Ginzburg-Landau free energy with minimal coupling to an electromagnetic field is
 \begin{equation}
-	f_{\mathrm{GL}} [\Psi, \vb{A}] = \frac{\hbar^2}{2 m^*} \left\vert \left( \Delta - \frac{\iu e^*}{\hbar} \vb{A} \right) \Psi \right\vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
-	\label{eq:GL energy with minimal coupling to EM field}
+	f_{\mathrm{GL}} [\Psi, \vb{A}] = \frac{\hbar^2}{2 m^*} \left\vert \left( \Delta - \frac{\iu e^*}{\hbar} \vb{A} \right) \Psi \right\vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 + \frac{B^2}{2 \mu_0}
+	\label{eq:GL energy with minimal coupling to EM field} \;.
 \end{equation}
-Describes really two intertwined Ginzburg-Landau theories for \(\Psi\) and \(\vb{A}\) respectively.
-This mean there are two length scales, the coherence length \(\xi\) governing amplitude fluctuations of \(\Psi\) and the London penetration depth \(\lambda_L\), which determines the distance magnetic fields penetrate into the superconductor.
-Can get the current density from the stationary point condition of the free energy for the vector potential \(\vb{A}\):
+with an additional term to include the electromagnetic energy of the magnetic field \(\vb{B} = \nabla \times \vb{A}\).
+It really describes two intertwined Ginzburg-Landau theories for \(\Psi\) and \(\vb{A}\).
+This mean there are two length scales, the coherence length \(\xi\) governing amplitude fluctuations of \(\Psi\) and the London penetration depth \(\lambda_L\) which determines the distance magnetic fields penetrate into the superconductor.
+
+The current density can be calculated from the stationary point condition of the free energy w.r.t. the vector potential \(\vb{A}\)
 \begin{equation}
-	\fdv{f_{\mathrm{GL}}}{\vb{A}} = 0 = -\vb{j} + \frac{1}{\mu_0} \nabla \times \vb{B}
+	\fdv{f_{\mathrm{GL}}}{\vb{A}} = -\vb{j} + \frac{1}{\mu_0} \nabla \times \vb{B} \overset{!}{=} 0
 \end{equation}
-with the supercurrent density
+defining the supercurrent density
 \begin{equation}
 	\vb{j} = -\iu \frac{e\hbar}{m^*} \left(\Psi^* \adif{\Psi} - \Psi \adif{\Psi^*}\right) - \frac{4 e^2}{m^*} \vert \Psi \vert^2 \vb{A} \;.
+	\label{eq:supercurrent density GL theory with phase and vector potential}
 \end{equation}
-Introducing the OP with phase \(\Psi = \vert \Psi \vert e^{\iu \phi}\):
+Introducing the order parameter with a fixed phase \(\Psi = \vert \Psi \vert e^{\iu \phi}\) gives
 \begin{equation}
 	\vb{j} = 2 e \vert \Psi \vert^2 \frac{\hbar}{m^*} \left(\nabla \phi - \frac{2 \pi}{\Phi_0} \vb{A} \right)
 \end{equation}
 with the magnetic flux quantum \(\Phi_0 = \frac{\pi \hbar}{e}\).
-Shows that not only an applied field \(\vb{A}\) can induce a supercurrent, but also the twist of the phase of the condensate.
-The equation can be gauge-transformed to
+This shows that not only an applied field \(\vb{A}\) can induce a supercurrent, but also the phase twist \(\nabla \phi\) of the condensate ground state, which is the remarkable property of superconductors enabling the dissipationless current.
+Where a conventional current is achieved by excitations above the ground state, the superflow is achieved through deformation of the ground-state phase.
+The supercurrent can be gauge-transformed to
 \begin{equation}
-	\vb{j} = -\frac{4e^2 n_S}{m^*} \vb{A} = \tilde{D_S} \vb{A}
+	\vb{j} = -\frac{4e^2 n_S}{m^*} \vb{A} = \tilde{D}_S \vb{A}
 \end{equation}
 which shows that the superfluid phase stiffness
 \begin{equation}
-	D_{\mathrm{S}} = \frac{\hbar^2}{(2e)^2} \tilde{D_S}
+	D_{\mathrm{S}} = \frac{\hbar^2}{(2e)^2} \tilde{D}_S
 \end{equation}
 also encodes the linear response of a system to a small applied vector field \(\vb{A}\).
 \todo{Connection of SF weight and London penetration depth}
 
-Rewriting using \(\vert \Psi \vert^2 = \nicefrac{n_S}{2}\)  and introducing the superfluid velocity \(\vb{v}_S\):
-\begin{equation}
-	\vb{j} = e n_S \vb{v}_S
-\end{equation}
-where even for \(\vb{A} = 0\), there is finite current because of the phase twist of the condensate ground state (which is quite remarkable).
-
-\todo{Section about BCS-BEC crossover? Can especially talk about what is optimised!}
 
 \subsection*{Superconducting Length Scales}
 
-\todo{Write introduction better}
+As already discussed in the last section, access to the breakdown of the order parameter with phase fluctuations can give information on the coherence length \(\xi\) and the London penetration depth \(\lambda_L\).
+This is a method developed by \citeauthor{wittBypassingLatticeBCS2024} for characterizing superconductivity in alkali-doped fullerides, a material with strong electronic correlations.
+The authors find that multiorbital effects enable a superconducting state with a short coherence length but robust stiffness and a domeless rise in critical temperatures with increasing pairing interaction \cite{wittBypassingLatticeBCS2024}.
+Access to the superconducting length scales is especially important in the context of BCS-BEC crossover physics and characterizing new high \(T_C\) superconductors.
+This is discussed in \cref{sec:BCS-BEC crossover}.
 
-One of the challenges in achieving high-temperature superconductivity is the fact that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
-Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperconductivityCrosses2024}.
-The picture of this crossover is the following: for a small attractive interaction, pairs of electrons are very loosely bound and mobile, while for a stronger interaction the pairs are bound together stronger and are not mobile, because hopping of a pair would involve a virtual hopping, thus breaking up the pair.
-This is highly suppressed.
-The crossover region between these two regimes is the BCS-BEC crossover.
-The energy scales characterizing the crossover are the superconducting gap/order parameter describing how strong the order is and the superfluid weight describing how mobile the Cooper pairs are.
-These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}.
-To understand the physics of the BCS-BEC crossover and eventually use it to optimize current and future superconductors it is thus imperative to have access to the superconducting length scales in ab initio approaches 
-\citeauthor{wittBypassingLatticeBCS2024} introduced a framework for doing this \cite{wittBypassingLatticeBCS2024}.
+This section gives an introduction to the method in Ginzburg-Landau theory, the inclusion into microscopic theories like BCS-theory and DMFT will be discussed in the respective sections.
+
+\todo{Work over paragraph}
 As already discussed in the context of \cref{eq:breakdown of OP with phase fluctuations}, strong phase fluctuations destroy superconducting order.
 A particular choice of phase fluctuations would be
 \begin{equation}
 	\phi (\vb{r}) = \vb{q} \cdot \vb{r}
 \end{equation}
 which corresponds to Cooper pairs with a finite momentum \(\vb{q}\).
+
 In most materials: Cooper pairs do not carry finite center-of-mass momentum.
 In presence of e.g.\ external fields or magnetism: SC states with FMP might arise \cite{chenFiniteMomentumCooper2018, wanOrbitalFuldeFerrell2023, yuanSupercurrentDiodeEffect2022}
 
@@ -268,13 +260,12 @@ The temperature dependence of the OP and extracted \(\xi(T)\) gives access to th
 \begin{equation}
 	\xi(T) = \xi_0 \left(1 - \frac{T}{T_C}\right)^{-\frac{1}{2}}
 \end{equation}
-The Cooper pair
-
-\todo{Depairing current from FMP}
-
 The momentum of the Cooper pairs entails a charge supercurrent \(\vb{j}_{\vb{q}}\).
-For small \(q\)
-
+The current coming from the momentum can be calculated from \cref{eq:supercurrent density GL theory with phase and vector potential} (using \(\phi(\vb{r}) = \vb{q} \cdot \vb{r}\) and \(\vb{A} = 0\)):
+\begin{equation}
+	\vb{j}_{\vb{q}} = \frac{2 \hbar e}{m^*} \vert \Psi_{\vb{q}} \vert^2 \vb{q}
+\end{equation}
+The current \(\vb{j}_{\vb{q}}\) is a non-monotonous function of \(\vb{q}\) with a maximum called the depairing current \(j_{dp}\) as can be seen in \cref{sfig:Ginzburg Landau current vs q} \todo{Depairing current connected with correlation length and penetration depth}.
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -288,10 +279,9 @@ For small \(q\)
 		\caption{\hfill\null}\label{sfig:Ginzburg Landau current vs q}
 		\input{images/ginzburg_landau_current_vs_q.pgf}
 	\end{subfigure}
-	\caption{\subref{sfig:Ginzburg Landau OP vs q} and \subref{sfig:Ginzburg Landau current vs q}} 
+	\caption{\textbf{Breakdown of the order parameter with larger \(q\) and superconducting current in Ginzburg-Landau theory}. \textbf{(\subref{sfig:Ginzburg Landau OP vs q})}. \textbf{(\subref{sfig:Ginzburg Landau current vs q})}}
 	\label{fig:Ginzburg Landau OP and current vs q}
 \end{figure}
-
 The depairing current is an upper boundary for the maximal current that can flow through a material, also called the critical current \(\vb{j}_c\).
 The value of \(\vb{j}_c\) is strongly dependent on the geometry of the sample \cite{bardeenCriticalFieldsCurrents1962, xuAchievingTheoreticalDepairing2010}, so \(\vb{j}_{dp}\) is not necessarily experimentally available, but it can be used to calculate the London penetration depth \cite{tinkhamIntroductionSuperconductivity1996}
 \begin{equation}
@@ -337,30 +327,26 @@ This picture still holds today even for high \(T_C\)/unconventional superconduct
 
 \subsection*{Multiband BCS Theory}
 
+\todo{Write chemical potential properly}
 The Hubbard model is the simplest model for interacting electron systems.
-It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963}.
-The Hamiltonian of the  singleband Hubbard model is
-\todo{Kinetic term as well}
+It goes back to works by Hubbard \cite{hubbardElectronCorrelationsNarrow1963}, Kanamori \cite{kanamoriElectronCorrelationFerromagnetism1963} and Gutzweiler \cite{gutzwillerEffectCorrelationFerromagnetism1963} in the 1960s.
+The Hamiltonian of the  single-band Hubbard model is
 \begin{equation}
 	H = H_0 + H_{\mathrm{int}} 
-	= -t \sum_{\langle i j \rangle} + U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
+	= \sum_{\langle i j \rangle \sigma} \left(-t_{i, j} - \mu_{\sigma} \delta_{i, j}\right) c_{i, \sigma}^{\dagger} c_{j, \sigma} + \mathrm{h.c.} + U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
 	\label{eq:Hubbard interaction repulsive}
 \end{equation}
 where \(U > 0\).
 The interaction describes a repulsive interaction between electrons of different spin at the same lattice site.
 
-
-Besides 
-
-\cite{qinHubbardModelComputational2022}
-
-\todo{Some relevance of the repulsive Hubbard model}
+The Hubbard model emphasizes the electronic correlations due to local interactions, but with the discovery of high \(T_C\) SC in the Cuprates, it was quickly realized that the 2D Hubbard model in the intermediate to strong-coupling regime could describe the \ce{CuO2} layers \cite{zhangEffectiveHamiltonianSuperconducting1988} well.
+The Hubbard model has parameter regimes with i.e. \(d_{x^2 - y^2}\) superconductivity, strong antiferromagnetic correlations, stripes, pseudogaps, Fermi liquid, and bad metallic behavior, with the phase diagram lines and observables being similar as a function of doping and temperature. 
+Besides the relevancy of the Hubbard model for the Cuprates, the character of the model as having few parameters and simultaneously a very rich phase diagram with a variety of many-body effects also made it a perfect playground for new numerical tools, among them diagonalization, diagrammatics, tensor network, Quantum Monte Carlo (QMC) methods and DMFT (see \cref{sec:Dynamical Mean-Field Theory}) \cite{qinHubbardModelComputational2022}.
 
 The Hubbard model  in the form of \cref{eq:Hubbard interaction repulsive} can be extended in a multitude of ways to model a variety of physical system.
 Here: extension to multiple orbitals (i.e. atoms in the unit cell for lattice systems) and an attractive interaction, i.e. a negative \(U\).
-Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations that can be described as bosons \cite{micnasSuperconductivityNarrowbandSystems1990}.
-\todo{There are some more specific papers to the specific mechanisms (and also some more mechanism), could cite these here and say some more things}
-The form of the interaction term is then: \todo{Order of operators? -> also in all other equations!}
+Physical motivation for taking a negative-U Hubbard model: electrons can experience a local attraction interaction, for example through electrons coupling with phononic degrees of freedom or with electronic excitations \cite{micnasSuperconductivityNarrowbandSystems1990}.
+The form of the interaction term is then:
 \begin{equation}
 	H_{\mathrm{int}} = -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}
 	\label{eq:Hubbard interaction multiband}
@@ -373,44 +359,50 @@ The review follows ref. \cite{huhtinenSuperconductivityNormalState2023}.
 A more intuitive way based on ref. \cite{bruusManyBodyQuantumTheory2004} discussed here looks at the operators and which one are small. 
 
 Look at interaction term \cref{eq:Hubbard interaction multiband}.
-Mean-field approximation (here specifically for superconductivity i.e. pairing): operators do not deviate much from their average value, i.e. the deviation operators \todo{there are other combinations, talk about that}
-\todo{deviations with small deltas}
+Mean-field approximation: operators \(A\) do not deviate much from their average value \(\braket{A}\), i.e. the deviation \(\fdif{A} = A - \braket{A}\) are small.
+Specifically for superconductivity i.e. pairing, the operators
 \begin{align}
 	d_{i, \alpha} = c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} - \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\
 	e_{i, \alpha} = c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 \end{align}
-are small (dont contribute much to expectation values and correlation functions), so that in the interaction part of the Hamiltonian
+are small (dont contribute much to expectation values and correlation functions).
+So that in the interaction part of the Hamiltonian
 \begin{align}
-	H_{\mathrm{int}} &= -\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \\
-	&= -\sum_{i, \alpha} U_{\alpha} 
+	H_{\mathrm{int}} = &-\sum_{i, \alpha} U_{\alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \\
+	= &-\sum_{i, \alpha} U_{\alpha} 
 	\left( d_{i, \alpha}^{\dagger} + \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \right)
 	\left( e_{i, \alpha} + \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} \right) \\
-	&= -\sum_{i, \alpha} U_{\alpha} (
+	= &-\sum_{i, \alpha} U_{\alpha} (
 		d_{i, \alpha} e_{i, \alpha}
-		+ d_{i, \alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
-		+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\
-		&+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} )
+		+ d_{i, \alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} \nonumber \\
+		&+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}}
+		+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}})
 \end{align}
 the first term is quadratic in the deviation and can be neglected.
 Thus arrive at the approximation
 \begin{align}
-	H_{\mathrm{int}} &\approx -\sum_{i, \alpha} U_{\alpha} \left(
+	H_{\mathrm{int}} \approx &-\sum_{i, \alpha} U_{\alpha} \left(
 	d_{i, \alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
-	+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}}
-	+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
+	+ e_{i, \alpha} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \right. \nonumber \\
+	&\left.+ \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 	\right) \\
-	&= -\sum_{i, \alpha} U_{\alpha} (
+	= &-\sum_{i, \alpha} U_{\alpha} \left(
 		c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
-		+ c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \\	
-	&- \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} ) \\
-	&= \sum_{i, \alpha} \left(\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}}\right)
+		+ c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \right. \nonumber \\
+	&\left.- \braket{c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger}} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} \right) \\
+	= &\sum_{i, \alpha} \left(\Delta_{i, \alpha} c_{i, \alpha, \uparrow}^{\dagger} c_{i, \alpha, \downarrow}^{\dagger} + \Delta_{i, \alpha}^{*} c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow} - \frac{\vert \Delta_{i, \alpha} \vert^2}{U_{\alpha}}\right)
 \end{align}
 with the expectation value
 \begin{align}
 	\Delta_{i, \alpha} = -U_{\alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}}
 \end{align}
 which is called the superconducting gap and is the order parameter introduced in Ginzburg-Landau theory in \cref{sec:Ginzburg-Landau theory of superconductivity}.
-To include finite momentum in BCS theory, take the ansatz of a Fulde-Ferrel (FF) type pairing \cite{kinnunenFuldeFerrellLarkin2018}: \todo{How to include finite momentum, rewrite equations} 
+This results in the mean-field Hamiltonian \todo{MF Hamiltonian, with chemical potential}
+\begin{equation}
+	H_{\mathrm{MF}} = \sum_{\langle i j \rangle \sigma} \left(-t_{i, j} - \mu_{\sigma} \delta_{i, j}\right) c_{i, \sigma}^{\dagger} c_{j, \sigma} + \mathrm{h.c.} + U \sum_{i} c_{i, \uparrow}^{\dagger} c_{i, \downarrow}^{\dagger} c_{i, \downarrow} c_{i, \uparrow}
+\end{equation}
+
+To include finite momentum in BCS theory, take the ansatz of a Fulde-Ferrel (FF) type pairing \cite{kinnunenFuldeFerrellLarkin2018}:
 \begin{equation}
 	\Delta_{i, \alpha} = \Delta_{\alpha} e^{\iu \vb{q} \vb{r}_{i \alpha}}
 \end{equation}
@@ -418,8 +410,7 @@ Using the Fourier transform (with position vectors \(\vb{r}_{i \alpha} = \vb{R}_
 \begin{equation}
 	c_{i \alpha \sigma} = \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \alpha \sigma}
 \end{equation}
-can write mean-field interaction term as
-\todo{Get the remaining terms here}
+can write mean-field Hamiltonian as
 \begin{align}
 	H_{\mathrm{MF}} (\vb{q}) &= \sum_{\vb{k}} \vb{C}_{\vb{q}, \vb{k}}^{\dagger} H_{\mathrm{BdG}} (\vb{q}, \vb{k}) \vb{C}_{\vb{q}, \vb{k}} + K_{\vb{q}} \\
 	C_{\vb{q}, \vb{k}} &= 
@@ -433,17 +424,20 @@ can write mean-field interaction term as
 			\ldots &
 			c_{\vb{q} -\vb{k} n_{\mathrm{orb}} \downarrow}^{\dagger}
 		\end{pmatrix}^{T} \\
-		K_{\vb{q}} &= 
+		K_{\vb{q}} &= \sum_{\vb{k}} \Tr [H_{\vb{k}}^{\downarrow}] - n_{\mathrm{orb}} N \mu - N \sum_{\alpha} \frac{\vert \Delta_{\alpha} (\vb{q}) \vert^2}{U}
 \end{align}
-with the so-called \acrfull{bdg} matrix \todo{BdG matrix correctly}
+with the so-called \acrfull{bdg} matrix
 \begin{equation}
 	H_{\mathrm{BdG}} (\vb{k}) =
 	\begin{pmatrix}
-		H_{0, \uparrow} (\vb{k}) - \mu & \Delta \\
-		\Delta^{\dagger} & - H_{0, \downarrow}^* (-\vb{k}) + \mu
+		H^{\uparrow}_{\vb{q} + \vb{k}} - \mu & \Delta (\vb{q}) \\
+		\Delta^{\dagger} (\vb{q}) & - \left(H^{\downarrow}_{\vb{q} - \vb{k}}\right)^* + \mu
 	\end{pmatrix}
 \end{equation}
-with \(H_{0, \sigma}\) being the F.T. of the kinetic term \todo{F.T. of kinetic term} and \(\Delta = \diag(\Delta_1 (\vb{q}), \Delta_2 (\vb{q}), \ldots, \Delta_{n_{\mathrm{orb}}} (\vb{q}))\).
+with \(H_{0, \sigma}\) being the F.T. of the kinetic term \todo{F.T. of kinetic term} and
+\begin{equation}
+	\Delta = \diag(\Delta_1 (\vb{q}), \Delta_2 (\vb{q}), \ldots, \Delta_{n_{\mathrm{orb}}} (\vb{q}))\;.
+\end{equation}
 For time-reversal symmetric systems, there exists a solution s.t. all \(\Delta_{\alpha}\) are real \cite{peottaSuperfluidityTopologicallyNontrivial2015}.
 The introduction of the \(\vb{q}\) breaks time-reversal symmetry, s.t. in a multiband system, the order parameters in the orbital can develop different phases.
 
@@ -465,12 +459,28 @@ with quasi-particle operators
 
 Using the gap equation
 \todo{gap equation}
-\begin{equation}
-	\Delta_{\alpha} = -U
-\end{equation}
+\begin{align}
+	\Delta_{\alpha} &= -U_{\alpha} \braket{c_{i, \alpha, \downarrow} c_{i, \alpha, \uparrow}} = -\frac{U}{N} \sum_{\vb{k}} \braket{c_{\vb{q}+\vb{k}}} \nonumber \\
+	&= -\frac{U}{N} \\
+	&= -\frac{U}{N} \nonumber
+\end{align}
 the order parameter can be determined self-consistently, i.e. starting from an initial value, the BdG matrix needs to be set up, diagonalized and then used to determine \(\Delta_{\alpha}\) again, until a converged value is found.
 
 \todo{SC current in BCS}
+
+\section{The BCS-BEC Crossover}\label{sec:BCS-BEC crossover}
+
+One of the challenges in achieving high-temperature superconductivity is the fact that the two intrinsic energy scales of superconductors i.e. the pairing amplitude and the phase coherence often compete.
+Can be seen in the phenomenon of BCS-BEC crossover physics \cite{chenWhenSuperconductivityCrosses2024}.
+The picture of this crossover is the following: for a small attractive interaction, pairs of electrons are very loosely bound and mobile, while for a stronger interaction the pairs are bound together stronger and are not mobile, because hopping of a pair would involve a virtual hopping, thus breaking up the pair.
+This is highly suppressed.
+The crossover region between these two regimes is the BCS-BEC crossover.
+The energy scales characterizing the crossover are the superconducting gap/order parameter describing how strong the order is and the superfluid weight describing how mobile the Cooper pairs are.
+These two energy scales are equivalently defined via the coherence length \(\xi_0\) and the London penetration depth introduced in \cref{sub:Landau and Ginzburg-Landau Theory}.
+
+\todo{Section about BCS-BEC crossover}
+
+
 
 \section{Dynamical Mean-Field Theory}\label{sec:Dynamical Mean-Field Theory}
 
@@ -507,31 +517,46 @@ This is done via a so-called Wick rotation of the time variable \(t\) into imagi
 where \(\tau\) is real and has the dimension time.
 This enables the simultaneous expansion of exponential \(e^{-\beta H}\) coming from the thermodynamic average and \(e^{-\iu H t}\) coming from the time evolution of operators.
 
-For our context (translationally invariant and systems), Matsubara GF are defined as
+Matsubara Greens function are defined as
 \begin{equation}
-	G (\vb{k}, \tau) = - \Braket{T_{\tau} (A(\tau) B(0))}
+	G_{\alpha_1 \alpha_2} (\tau_1, \tau_2) = - \Braket{T_{\tau} (c_{\alpha_1}(\tau_1) c^{\dagger}_{\alpha_2} (\tau_2))}
 \end{equation}
-with time-ordering operator in imaginary time \todo{also time-ordering without Delta}:
+with:
+\begin{itemize}
+	\item \(c_{\alpha}, c^{\dagger}_{\alpha}\) fermionic creation/annihilation operators of quantum states \(\alpha\) in the Heisenberg time-evolution picture \(\ope{A} (\tau) = e^{\tau H} \ope{A} e^{-\tau H}\)
+	\item \(\braket{\cdot} = \Tr(\ope{rho} \cdot)\) the thermal expectation value with statistical operator \(\ope{\rho} = \nicefrac{e^{-\beta H}}{Z}\) with partition function \(Z\) and Hamiltonian \(H\)
+	\item Time-ordering operator
+	\begin{align}
+		T_{\tau} (A(\tau) B(\tau^{\prime})) &= \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau) \\
+		&= \begin{cases}
+			A (\tau) B(\tau^{\prime}) & \text{if } \tau < \tau^{\prime} \\
+			B(\tau^{\prime}) A (\tau) & \text{if } \tau^{\prime} < \tau
+		\end{cases}
+	\end{align}
+\end{itemize}
+Thermal equilibrium: Green's function only depends on time differences \(\tau_1 - \tau_2\), so can work with a single time \(\tau = \tau_1 - \tau_2\), shifting \(\tau_2 = 0\).
+Fermionic Matsubara Green's functions are antiperiodic in time with periodicity \(\beta\). For \(-\beta < 0 < 0\), cyclic properties of trace tells:
 \begin{equation}
-	T_{\tau} (A(\tau) B(\tau^{\prime})) = \Theta(\tau - \tau^{\prime}) A(\tau) B(\tau^{\prime}) \pm \Theta(\tau^{\prime} - \tau) B(\tau^{\prime}) A(\tau)
+	G (\tau) = - G (\tau + \beta)
 \end{equation}
-so that operators with later `times' go to the left.
+Restrict to interval \(0 < \tau < \beta\).
+This means that there is a Fourier expansion with discrete frequencies \(\omega_n = \nicefrac{(2n + 1)\pi}{\beta}\):
+\begin{equation}
+	G (\iu \omega_n) = \int_{0}^{\beta} \odif{\tau} G (\tau) e^{\iu \omega_n \tau}
+\end{equation}
+and
+\begin{equation}
+	G (\tau) = \frac{1}{\beta} \sum_{n} G(\iu \omega_n) e^{-\iu \omega_n \tau}
+\end{equation}
 
-Can prove from properties of Matsubara GF, that they are only defined for
+Spatial dependence \(\alpha = \vb{R}\).
+In lattice context (translationally invariant, \(G\) only depends on \(\vb{R}_1 - \vb{R}_2\)), can transform between real-space and crystal momentum representation as 
 \begin{equation}
-	-\beta < \tau < \beta
+	G (\vb{k}, \tau) = \sum_i G(\vb{R}_1) e^{\iu \vb{k} \vb{R}_j}
 \end{equation}
-Due to this, the Fourier transform of the Matsubara GF is defined on discrete values \todo{Definition of Matsubara frequencies}:
+and
 \begin{equation}
-	G_{A B} (\vb{k}, \iu \omega_n) = \int_{0}^{\beta} \odif{\tau}
-\end{equation}
-with fermionic/bosonic Matsubara frequencies
-\begin{equation}
-	\omega_n =
-	\begin{cases}
-		\frac{2n \pi}{\beta} \, \text{for bosons} \\
-		\frac{(2n + 1)\pi}{\beta} \, \text{for fermions}
-	\end{cases}
+	G(\vb{r}) = \frac{1}{N_{\vb{k}}} \sum_{\vb{k}} G(\vb{k}) e^{-\iu \vb{k} \vb{r}}
 \end{equation}
 
 \todo{Connection to experimental observables}
@@ -549,16 +574,20 @@ Can get the retarded GF \(G_{AB}^R (\omega)\) by analytic continuation:
 
 \subsection*{Dyson Equation}
 
-\todo{Dyson equation}
+\todo{Explain non-interacting GF}
+
+\todo{Explain self-energy}
 
 Dyson equation:
 \begin{equation}
 	\mathcal{G}_{\sigma} (\vb{k}, \iu \omega_n) = \frac{\mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n)}{1 - \mathcal{G}_{\sigma}^0 (\vb{k}, \iu \omega_n) \Sigma_{\sigma} (\vb{k}, \iu \omega_n)} = \frac{1}{\iu \omega_n - \xi_{\vb{k} - \Sigma_{\sigma} (\vb{k}, \iu \omega_n)}}
 \end{equation}
 
-\todo{Self energy}
+\todo{Explanation of self-energy as tool of approximations}
 
 \subsection*{Anderson Impurity Model}
+
+\subsection*{DMFT}
 
 \subsection*{Nambu-Gorkov Green's Functions}
 

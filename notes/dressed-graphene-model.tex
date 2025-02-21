@@ -17,33 +17,21 @@ This chapter reviews the lattice structure in \cref{sec:lattice-structure-of-gra
 
 \section{Lattice Structure}\label{sec:lattice-structure-of-graphene}
 
-There exist a few different ways to define the lattice structure of Graphene which are all equivalent, but intermediate steps in calculating tight-binding models look different depending on the definition.
-This review on  follows ref.~\cite{yangStructureGrapheneIts2018}.
-
-Monolayer graphene forms a honeycomb lattice, which is a hexagonal Bravais lattice with a two atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
+Monolayer graphene forms a honeycomb lattice \cite{yangStructureGrapheneIts2018}, which is a hexagonal Bravais lattice with a two atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
 The primitive lattice vectors of the hexagonal lattice are:
 \begin{align}
 	\vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \; \vb{a}_2 = \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
 \end{align}
-\todo{Labels on vectors}
 with lattice constant \(a = \sqrt{3} a_0 \approx \SI{2.46}{\angstrom}\), using the nearest-neighbour distance \(a_0\).
-The vectors to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) from atom \(A\) are
-%\begin{align}
-	%\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
-%\end{align}
+The vectors to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) from atom \(A\) are \todo{clear up NN vectors}
+\begin{align}
+	\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
+\end{align}
 and the vectors to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) from atom \(B\) are
-%\begin{align}
-	%\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 2} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 3} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix} \;.
-%\end{align}
+\begin{align}
+	\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 2} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 3} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix} \;.
+\end{align}
 The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on the same sub lattice are:
-\begin{alignat}{3}
-	&\vb{\delta}_{AA, 1} = \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \;
-	&&\vb{\delta}_{AA, 2} = a \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \;
-	& &\vb{\delta}_{AA, 3} = a \begin{pmatrix} \frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix}, \\
-	&\vb{\delta}_{AA, 4} = a \begin{pmatrix} -\frac{1}{2} \\ -\frac{\sqrt{3}}{2} \end{pmatrix}, \;
-	&&\vb{\delta}_{AA, 5} = a \begin{pmatrix} -1 \\ 0 \end{pmatrix}, \;
-	& &\vb{\delta}_{AA, 6} = a \begin{pmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{pmatrix}
-\end{alignat}
 \begin{figure}[tb]
 	\centering
 	\begin{subfigure}[t]{0.5\textwidth}
@@ -56,10 +44,10 @@ The vectors between the Graphene \(\mathrm{A}\) atom and the six neighbours on t
 		\caption{\hfill\null}\label{sfig:graphene Brillouin zone}
 		\input{images/graphene brillouin_zone.pgf}
 	\end{subfigure}
-	\caption{(\subref{sfig:graphene lattice structure}) Graphene lattice structure and (\subref{sfig:graphene Brillouin zone}) Brilluoin zone} 
+	\caption{(\subref{sfig:graphene lattice structure}) Graphene lattice structure and (\subref{sfig:graphene Brillouin zone}) Brilluoin zone created using lattpy \cite{Jones_lattpy_2022}}
 	\label{fig:Graphene lattice structure and Brilluoin zone}
 \end{figure}
-The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill \todo{labels on vectors}
+The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
 \begin{align}
 	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
 	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0\;,
@@ -80,17 +68,10 @@ The first Brilluoin zone of the hexagonal lattice is shown in \cref{sfig:graphen
 \section{Dressed Graphene Model}\label{sec:dressed graphene model}
 
 The model I am concerned with in this thesis consists of a Hubbard Hamiltonian (as introduced in \cref{sec:bcs-theory}) on a Graphene lattice, with one additional atom at one of the two sites in a unit cell, which I will call X\@.
-This is shown in \cref{fig:eg-x model}.\todo{Work over image for dressed graphene lattice}
-\begin{figure}[tb]
-	\centering
-	\input{images/dressed graphene lattice.pgf}
-	\caption{Dressed Graphene model}
-	\label{fig:eg-x model}
-\end{figure}
+This is shown in \cref{fig:dressed graphene model}.
 The kinetic term is
 \begin{align}
-	H_0 &= -t_{\mathrm{X}} \sum_{\langle ij \rangle, \sigma} d_{i, \sigma}^{\dagger} d_{j, \sigma}
-	-t_{\mathrm{Gr}} \sum_{\langle ij \rangle, \sigma}
+	H_0 &= -t \sum_{\langle ij \rangle, \sigma}
 	c_{i, \sigma}^{(\mathrm{A}), \dagger} c_{j, \sigma}^{(\mathrm{B})}
 	+ V \sum_{i, \sigma \sigma^{\prime}}
 	d_{i, \sigma}^{\dagger} c_{i, \sigma^{\prime}}^{(\mathrm{A})} + \mathrm{h.c.}
@@ -100,44 +81,73 @@ with
 \begin{itemize}
 	\item \(d\) - operators on the X atom
 	\item \(c^{(\epsilon)}\) - operators on the graphene sites (\(\epsilon = \mathrm{A}, \mathrm{B}\))
-	\item \(t_{\mathrm{X}}\) - nearest neighbour hopping for X
-	\item \(t_{\mathrm{Gr}}\) - nearest neighbour hopping between Graphene sites
+	\item \(t\) - nearest neighbour hopping between Graphene sites
 	\item \(V\) - hopping between \(\mathrm{X}\) and Graphene \(\mathrm{A}\) sites.
 \end{itemize}
-The (attractive) Hubbard interaction has the following form:
-\begin{equation}
-	H_{\mathrm{int}} = -U_{\mathrm{X}} \sum_{i} d_{i, \uparrow}^{\dagger} d_{i, \downarrow}^{\dagger} d_{i, \downarrow} d_{i, \uparrow}
-	- U_{\mathrm{Gr}} \sum_{i, \epsilon=A, B} c_{i, \uparrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{(\epsilon) \dagger} c_{i, \downarrow}^{\epsilon} c_{i, \uparrow}^{\epsilon}
-\end{equation}
 The notation using different letters for the sites connects intuitively to the physical picture, but it is more economical and in line with the notation for mean field-theory established in \cref{sec:bcs-theory} to write the Hamiltonian using a sublattice index
 \begin{equation}
 	\alpha = 1, 2, 3
 \end{equation}
 with \(1 \hateq \mathrm{Gr}_{\mathrm{A}}\), \(2 \hateq \mathrm{Gr}_{\mathrm{B}}\), \(3 \hateq \mathrm{X}\).
+\begin{SCfigure}[50][t]
+	\centering
+	\import{images/}{dressed graphene lattice.pdf_tex}
+	\caption{\textbf{Lattice structure of decorated graphene honeycomb lattice.} with impurity X hybridized to sublattice site A. Only hopping t between sublattices A and B as well as V between X and A exist. Created using VESTA \cite{mommaVESTA3Threedimensional2011}.}
+	\label{fig:dressed graphene model}
+\end{SCfigure}
 Then we can write the non-interacting term as
-\begin{equation}
-	H_0 = \sum_{\langle i, j \rangle, \alpha, \beta, \sigma} \left[\mat{t} \right]_{i\alpha,j\beta} c_{i\alpha}^{\dagger} c_{j\beta}
-\end{equation}
-with the matrix in the sublattice indices
-\begin{equation}
-	\mat{t} = \begin{pmatrix}
-		0 & -t_{\mathrm{Gr}} & V \delta_{ij} \\
-		-t_{\mathrm{Gr}} & 0 & 0 \\
-		V \delta_{ij} & 0 & -t_{\mathrm{X}} \\
-	\end{pmatrix}\;
-\end{equation}
-Also write the interaction part as
+\begin{align}
+	H_0 = -t \sum_{\langle ij \rangle, \sigma} c_{\alpha = 1, i, \sigma}^{\dagger} c_{\alpha = 2, j, \sigma}
+	+ V \sum_{i, \sigma}
+	c_{\alpha = 1, i, \sigma}^{\dagger} c_{\alpha = 3, i, \sigma} + \mathrm{h.c.}
+\end{align}
+The (attractive) Hubbard interaction has the following form:
 \begin{equation}
 	H_{\mathrm{int}} = - \sum_{i \alpha} U_{\alpha} c_{i\alpha \uparrow}^{\dagger} c_{i\alpha \downarrow}^{\dagger} c_{i\alpha \downarrow} c_{i\alpha \uparrow}\;.
 \end{equation}
 \todo{Clean up the section from here}
-Using the Fourier transformation \cref{ch:dressed graphene reciprocal space}
+Fourier trafo \todo{Fourier trafo with orbital positions}:
+\begin{align}
+	-t \sum_{\langle ij \rangle, \sigma} c_{i, \sigma}^{(\mathrm{A}), \dagger} c_{j, \sigma}^{(\mathrm{B})}
+	&= -t \sum_{i,\delta_{\mathrm{AB}},\sigma} c_{i, \sigma}^{(\mathrm{A}) \dagger} c_{i + \delta_{\mathrm{AB}}, \sigma}^{(\mathrm{B})} \\
+	&= -\frac{t}{N^2} \sum_{i,\sigma} \sum_{\vb{k}, \vb{k}^{\prime}, \delta_{\mathrm{AB}}} \left(e^{-\iu \vb{k} \vb{r}_i} c_{\vb{k}, \sigma}^{(\mathrm{A}) \dagger}\right) \left(e^{\iu \vb{k}^{\prime} \vb{r}_i +\delta_{AB}} c_{\vb{k}^{\prime}, \sigma}^{(B)} \right) \\
+	&= -\frac{t}{N^2} \sum_{\vb{k}, \vb{k^{\prime}}, \delta_{\mathrm{AB}}, \sigma} c_{\vb{k}, \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}^{\prime}, \sigma}^{(\mathrm{B})} e^{\iu \vb{k}^{\prime} \delta_{\mathrm{AB}}} \sum_{i} e^{-\iu \vb{k} \vb{r}_i} e^{\iu \vb{k}^{\prime} \vb{r}_i} \\
+	&= -\frac{t}{N^2} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma}  c_{\vb{k}, \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}^{\prime}, \sigma}^{(\mathrm{B})} \sum_{\delta_{\mathrm{AB}}} e^{\iu \vb{k}^{\prime} \delta_{\mathrm{AB}}} \left(N^2 \delta_{\vb{k}, \vb{k}^{\prime}} \right)\\
+	&= -t \sum_{\vb{k}, \sigma}  c_{\vb{k}, \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}, \sigma}^{(\mathrm{B})} \sum_{\delta_{\mathrm{AB}}} e^{\iu \vb{k} \delta_{AB}} = \sum_{\vb{k}, \sigma} f_{\vb{k}} c_{\vb{k}, \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}, \sigma}^{(\mathrm{B})}
+\end{align}
+
+\todo{Clear up definition NN vectors and results}
+\begin{align}
+	\vb{k} \cdot \vb{\delta_{AA, 1}} = \begin{pmatrix} k_x \\ k_y \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} = k_x + \sqrt{3} k_y
+\end{align}
+
+\begin{align}
+	f_{\vb{k}} &= -t \sum_{\delta_{AB}} e^{\iu \vb{k} \delta_{AB}} \\
+	&= -t_{\mathrm{Gr}} \left(
+	e^{\iu \frac{a}{\sqrt{3}} k_y} +
+	e^{\iu \frac{a}{2\sqrt{3}} (\sqrt{3} k_x - k_y)} +
+	e^{\iu \frac{a}{2\sqrt{3}} (-\sqrt{3} k_x - k_y)} \right) \\
+	&= -t_{\mathrm{Gr}} \left(
+	e^{\iu \frac{a}{\sqrt{3}} k_y} +
+	e^{-\iu \frac{a}{2\sqrt{3}} k_y} \left(
+	e^{\iu \frac{a}{2} k_x} + e^{-\iu \frac{a}{2} k_x}
+	\right) \right) \\
+	&= -t_{\mathrm{Gr}} \left(
+	e^{\iu \frac{a}{\sqrt{3}} k_y} +
+	2 e^{-\iu \frac{a}{2\sqrt{3}} k_y}
+	\cos{(\frac{a}{2} k_x)} \right)
+\end{align}
+We have \(\delta_{\mathrm{BA}, i} = -\delta_{\mathrm{AB}, i}\), so
+\begin{align}
+	-t \sum_{\delta_{BA}} e^{\iu \vb{k} \delta_{BA}} = -t \sum_{\delta_{AB}} e^{-\iu \vb{k} \delta_{AB}} = \left(-t \sum_{\delta_{AB}} e^{\iu \vb{k} \delta_{AB}}\right)^* = f_{\vb{k}}^*
+\end{align}
+which then gives
 \begin{align}
 	H_0 &= \sum_{\vb{k}, \sigma, \sigma^{\prime}} \begin{pmatrix} c_{k, \sigma}^{A, \dagger} & c_{k, \sigma}^{B, \dagger} & d_{k, \sigma}^{\dagger} \end{pmatrix}
 	\begin{pmatrix}
-		0 & f_{Gr} & V \\
-		f_{Gr}^* & 0 & 0 \\
-		V & 0 & f_{X}
+		0 & f_{\vb{k}} & V \\
+		f_{\vb{k}}^* & 0 & 0 \\
+		V & 0 & 0
 	\end{pmatrix} \begin{pmatrix} c_{k, \sigma}^{A} \\ c_{k, \sigma}^{B} \\ d_{k, \sigma} \end{pmatrix}
 	\label{eq:dressed graphene Hamiltonian non-interacting matrix}
 \end{align}
@@ -146,7 +156,7 @@ This was done in \cref{fig:dressed graphene model non-interacting bands}.
 \begin{figure}[t]
 	\centering
 	 \import{images}{dressed graphene bands.pgf}
-	\caption{Bands of the non-interacting dressed Graphene model, with parameters \(t_{\mathrm{X}} = 0 \cdot t_{\mathrm{Gr}}\)}
+	\caption{Bands of the non-interacting dressed Graphene model}
 	\label{fig:dressed graphene model non-interacting bands}
 \end{figure}
 
