@@ -53,10 +53,12 @@
   \begin{picture}(1,0.58049533)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.4060669,0.35764345){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{dressed graphene lattice.pdf}}%
+    \put(0.39800446,0.34958101){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}A\end{tabular}}}}%
+    \put(0.18338196,0.08217216){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}X\end{tabular}}}}%
     \put(0.26852239,0.27177908){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(t\)\end{tabular}}}}%
     \put(0.11985672,0.17590379){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(V\)\end{tabular}}}}%
-    \put(0.49096919,0.35782289){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}B\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{dressed graphene lattice.pdf}}%
+    \put(0.48290675,0.34976046){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{dressed graphene lattice.pdf}}%
   \end{picture}%
 \endgroup%

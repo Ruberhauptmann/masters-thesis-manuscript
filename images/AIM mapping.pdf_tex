@@ -1,4 +1,4 @@
-%% Creator: Inkscape 1.2-alpha1 (b6a15bb, 2022-02-23), www.inkscape.org
+%% Creator: Inkscape 1.2.2 (b0a8486541, 2022-12-01), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'AIM mapping.pdf' (pdf, eps, ps)
 %%
@@ -50,11 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.45708366)%
+  \begin{picture}(1,0.32757662)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{AIM mapping.pdf}}%
-    \put(0.57839613,0.11772657){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}single site impurity model\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{AIM mapping.pdf}}%
+    \put(0.51381025,0.2714894){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Set \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) \end{tabular}}}}%
+    \put(0.50809186,0.1122007){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small Update parameters of}\\{\small impurity model}\end{tabular}}}}%
+    \put(0.84535275,0.08366322){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small single site}\\{\small impurity model}\end{tabular}}}}%
+    \put(0.21857199,0.0483541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(G_{\mathrm{lat}}^{-1} = G_{\mathrm{lat}, 0}^{-1} - \Sigma_{\mathrm{lat}}\)\end{tabular}}}}%
+    \put(0.78461837,0.15266644){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\Delta (\iu \omega_n)\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%
