@@ -23,8 +23,6 @@ To this end, \cref{sec:Ginzburg-Landau theory of superconductivity} also introdu
 Two of these microscopic theories, \glsxtrfull{bcs} theory and \glsxtrfull{dmft} will be introduced in \cref{sec:bcs-theory} and \cref{sec:Dynamical Mean-Field Theory} respectively.
 
 Furthermore, \cref{sec:quantum-metric} introduces an emerging perspective in the study of novel superconductors: it turns out that the superfluid weight is connected to a property of the electronic band structure called the quantum metric \cite{peottaSuperfluidityTopologicallyNontrivial2015, yuQuantumGeometryQuantum2024}.
-\todo{a few more words on quantum geometry}
-
 
 \section{Ginzburg-Landau Theory of Superconductivity}\label{sec:Ginzburg-Landau theory of superconductivity}
 
@@ -111,6 +109,7 @@ For a stable systems \(r > 0\) is required, so for the order parameter to assume
 When the order parameter can be calculated from a microscopic theory, the critical temperature \(T_C\) can be extracted from the behavior of the order parameter near \(T_C\) via a linear fit of
 \begin{equation}
 	\vert \Psi \vert^2 \propto T_C - T \;.
+	\label{eq:extract T_C via OP}
 \end{equation}
 The Landau free energy for a complex order parameter takes the form
 \begin{equation}
@@ -472,13 +471,24 @@ In the \acrshort{bdg} formulation, the problem is now reduced to diagonalization
 \begin{equation}
 	H_{\mathrm{BdG}} = U_{\vb{q}, \vb{k}} \epsilon_{\vb{q}, \vb{k}} U_{\vb{q}, \vb{k}}^{\dagger}
 \end{equation}
-with the diagonal matrix \(\epsilon_{\vb{q}, \vb{k}} = \diag(\epsilon_1 (\vb{q}, \vb{k}), \epsilon_2 (\vb{q}, \vb{k}), \ldots, \epsilon_n (\vb{q}, \vb{k}))\).
-Using the quasi-particle operators
+with the diagonal matrix \(\epsilon_{\vb{q}, \vb{k}} = \diag(\epsilon_1 (\vb{q}, \vb{k}), \epsilon_2 (\vb{q}, \vb{k}), \ldots, \epsilon_{2 \cdot n_{\mathrm{orb}}} (\vb{q}, \vb{k}))\).
+
+The \acrshort{bdg} formulation defines a linear transformation from the creation and annihilation to a new set of operators
+\begin{align}
+	\gamma_{\vb{q}, \vb{k}} &= 
+	\begin{pmatrix}
+		\gamma_{\vb{q}, \vb{k},  1} &
+		\gamma_{\vb{q}, \vb{k},  2} & 
+		\ldots &
+		\gamma_{\vb{q}, \vb{k},  2 \cdot n_{\mathrm{orb}}} & 
+	\end{pmatrix}^{T}
+\end{align}
+via
 \begin{equation}
-	\gamma_{\vb{q}, \vb{k}} = U_{\vb{q}, \vb{k}}^{\dagger} C_{\vb{q}, \vb{k}}
+	\gamma_{\vb{q}, \vb{k}} = U_{\vb{q}, \vb{k}}^{\dagger} \Psi_{\vb{q}, \vb{k}}
 \end{equation}
-\todo{write exact transformation with the matrices}
-the mean-field Hamiltonian becomes
+which define non-interacting quasi-particles.
+Using these operators, the mean-field Hamiltonian becomes
 \begin{equation}
 	H_{\mathrm{MF}} (\vb{q}) = \sum_{\vb{k}} \gamma_{\vb{q}, \vb{k}} \epsilon_{\vb{q}, \vb{k}} \gamma_{\vb{q}, \vb{k}}^{\dagger}
 \end{equation}
@@ -535,9 +545,11 @@ Using the Fourier transform
 the current can be written as
 \begin{align}
 	\ope{\vb{j}} &= \ope{\vb{j}}_{\mathrm{N}} = \iu \frac{e}{\hbar} \frac{1}{N_k} \sum_{i\alpha, j\beta, vb{k} \vb{k}^{\prime}} (\vb{R}_{i \alpha} - \vb{R}_{j \beta}) t_{i \alpha, j \beta} e^{\iu (\vb{k} \vb{r}_{i \alpha} - \vb{k}^{\prime} \vb{r}_{j \alpha})} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k}^{\prime} \beta} \\
-	&= \iu \frac{e}{\hbar} \frac{1}{N_k} \sum_{i\alpha, j\beta, vb{k} \vb{k}^{\prime}} (\vb{R}_{i \alpha} - \vb{R}_{j \beta}) t_{i \alpha, j \beta} e^{\iu (\vb{k} \vb{r}_{i \alpha} - \vb{k}^{\prime} \vb{r}_{j \alpha})} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k}^{\prime} \beta} \\
+	&= \iu \frac{e}{\hbar} \frac{1}{N_k} \sum_{i\alpha, j\beta, \vb{k} \vb{k}^{\prime}} (\vb{R}_{i \alpha} - \vb{R}_{j \beta}) t_{i \alpha, j \beta} e^{\iu (\vb{k} \vb{r}_{i \alpha} - \vb{k}^{\prime} \vb{r}_{j \alpha})} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k}^{\prime} \beta} \\
+	&\overset{\vb{r}_{i \alpha} \mapsto \vb{r}_{i \alpha} + \vb{r}_{j \beta}}{=} \iu \frac{e}{\hbar} \frac{1}{N_k} \sum_{\vb{r}_{i \alpha} \vb{k} \vb{k}^{\prime} \alpha \beta \sigma} \vb{R}_{i \alpha} t_{i \alpha, j \beta} \sum_{\vb{r}_{j \beta}} e^{\iu (\vb{k} - \vb{k}^{\prime} \vb{r}_{j \beta}} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k}^{\prime} \beta} \\
+	&= \frac{e}{\hbar N_k} \sum_{\vb{k} \alpha \beta \sigma} \iu \sum_{\vb{r}_{i \alpha}} \vb{r}_{i \alpha} t_{\alpha \beta} e^{\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k} \beta} = \frac{e}{\hbar N_k} \sum_{\vb{k} \alpha \beta \sigma} \nabla_{\vb{k}} h(\vb{k})_{\alpha \beta} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k} \beta}
+	&\coloneq \frac{e}{N_k} \sum_{\vb{k} \alpha \beta \sigma} \vb{v}_{\alpha \beta} c_{\vb{k} \alpha}^{\dagger} c_{\vb{k} \beta}
 \end{align}
-\todo{Fourier transform in currents}
 This means current density is
 \begin{align}
 	\vb{j}_{\vb{q}} = \braket{\ope{\vb{j}}}_{\vb{q}} = \frac{e}{N_{\vb{k}}} \sum_{\vb{k} \alpha \beta \sigma} \vb{v}_{\alpha \beta} (\vb{k}) \braket{c_{\vb{k} \alpha \sigma}^{\dagger} c_{\vb{k} \beta \sigma}}_{\vb{q}} = \frac{2 e}{N_{\vb{k}}} \sum_{\vb{k} \alpha \beta} \vb{v}_{\alpha \beta} (\vb{k}) \braket{c_{\vb{k} \alpha \uparrow}^{\dagger} c_{\vb{k} \beta \uparrow}}_{\vb{q}} \;,
@@ -651,8 +663,7 @@ In DMFT, the self-energy is taken to be purely local, which is exact in the limi
 
 \subsection*{Mapping to Impurity Model and DMFT Self-Consistency Loop}
 
-\todo{work over paragraph}
-The central idea of DMFT is to map the full lattice problem onto an problem of a single impurity of the form
+The central idea of DMFT is to map the full lattice problem onto a problem of a single impurity of the form
 \begin{equation}
 	H_{\mathrm{IM}} = H_{\mathrm{imp}} + H_{\mathrm{bath}} + H_{\mathrm{hyb}}
 \end{equation}
@@ -660,37 +671,41 @@ with the terms
 \begin{align}
 	H_{\mathrm{imp}} &= \sum_{\alpha \sigma} \epsilon_{d, \alpha} d_{\alpha \sigma}^{\dagger} d_{\alpha \sigma} + \sum_{\alpha} U_{\alpha} n_{d, \alpha \uparrow} n_{d, \alpha \downarrow} \\
 	H_{\mathrm{bath}} &= \sum_{\vb{k}, n \sigma} \epsilon_{\vb{k}, n} c_{\vb{k} n \sigma}^{\dagger} c_{\vb{k} n \sigma}  \\
-	H_{\mathrm{hyb}} &= \sum_{\vb{k}, \alpha n \sigma} V_{\vb{k}, \alpha n} d_{\alpha \sigma}^{\dagger} c_{\vb{k} n \sigma} + V_{\vb{k}, n \alpha} c_{\vb{k} n \sigma}^{\dagger} d_{\alpha \sigma}
+	H_{\mathrm{hyb}} &= \sum_{\vb{k}, \alpha n \sigma} V_{\vb{k}, \alpha n} d_{\alpha \sigma}^{\dagger} c_{\vb{k} n \sigma} + V_{\vb{k}, n \alpha}^* c_{\vb{k} n \sigma}^{\dagger} d_{\alpha \sigma}
 \end{align}
-Here, \(d\) are the operators for the impurity site and \(c\) are the operators for the bath sites, which are characterized by their energy levels \(\epsilon_{\vb{k}}\) and hybridization to the impurity site \(V_{\vb{k}}\). 
+Here, \(d\) are the operators for the impurity site and \(c\) are the operators for the bath, which is characterized by the energy levels \(\epsilon_{\vb{k}, n}\) and hybridization to the impurity orbitals \(V_{\vb{k}, \alpha n}\).
 
-The non-interacting Green's function of the impurity model is given by
+Using the path-integral formalism, the bath degrees of freedom can be integrated out \cite{georgesDynamicalMeanfieldTheory1996}:
+\begin{align}
+	S_{\mathrm{imp}} = &-\int_{0}^{\beta} \odif{\tau} \odif{\tau^{\prime}} \sum_{\alpha \beta, \sigma} d^*_{\alpha \sigma} (\tau) [G_{\mathrm{imp}, 0}^{-1}]_{\alpha \beta} (\tau - \tau^{\prime}) d_{\beta \sigma} (\tau^{\prime}) \\
+	&+ \int_{0}^{\beta} \odif{\tau} \sum_{\alpha} U_{\alpha} n_{d, \alpha, \uparrow} n_{d, \alpha, \downarrow}
+\end{align}
+with the non-interacting impurity Green's funcion \(G_{\mathrm{imp}, 0}\), given by
 \begin{equation}
-	[G_{\mathrm{imp}, 0}] = \left[\iu \omega_n - \epsilon_{d} - \sum_{\vb{k}} \frac{\vert V_{\vb{k}}^2 \vert}{\iu \omega_n - \epsilon_{\vb{k}}} \right]
+	[G_{\mathrm{imp}, 0}]_{\alpha, \beta} = \left[\iu \omega_n - \epsilon_{d, \alpha} - \sum_{\vb{k}} \frac{V_{\vb{k}, \alpha n}^* V_{\vb{k}, n \beta}}{\iu \omega_n - \epsilon_{\vb{k}, n}} \right]
 \end{equation}
-
 
 The approximation of DMFT lies in the fact that the self-energy of the impurity model \(\Sigma_{\mathrm{imp}} (\iu \omega_n)\) is purely local, where the lattice self-energy \(\Sigma_{\mathrm{lat}} (\iu \omega_n, \vb{k})\) carries a \(\vb{k}\)-dependence.
-As shown in the illustration \cref{fig:DMFT AIM mapping}, these two quantities are set equal to go back to the lattice model:
+As shown in the illustration \cref{fig:DMFT AIM mapping}, these two quantities are set equal to go from the impurity to the lattice model:
 \begin{equation}
-	\Sigma_{\mathrm{lat}} (\iu \omega_n, \vb{k}) \approx \Sigma_{\mathrm{imp}} (\iu \omega_n) \eqcolon \Sigma (\iu \omega_n)
+	\Sigma_{\mathrm{lat}} (\iu \omega_n, \vb{k}) \approx \Sigma_{\mathrm{imp}} (\iu \omega_n) \eqcolon \Sigma (\iu \omega_n) \;.
 \end{equation}
-Using this, the local lattice Greens function is obtained by summing over the \(\vb{k}\)-dependence
+Using this, the local lattice Greens function is obtained by summing over the \(\vb{k}\)-dependence:
 \begin{equation}
-	G_{\mathrm{loc}} (\iu \omega_n) = \frac{1}{N_k} \sum_{\vb{k}} [\iu \omega_n - h(\vb{k}) - \sigma (\iu \omega_n)]^{-1} \overset{!}{=} G_{\mathrm{imp}} (\iu \omega_n)
+	G_{\mathrm{loc}} (\iu \omega_n) = \frac{1}{N_k} \sum_{\vb{k}} [\iu \omega_n - h(\vb{k}) - \Sigma (\iu \omega_n)]^{-1} \overset{!}{=} G_{\mathrm{imp}} (\iu \omega_n) \;.
 	\label{eq:local_lattice_Greens_function}
 \end{equation}
-Demanding that this is equal to the impurity Green's function \(G_{\mathrm{imp}}\), this defines the mapping to the impurity model.
-Using the Dyson equation, the non-interacting Greens function for the impurity problem can be calculated
+By demanding that this is equal to the impurity Green's function \(G_{\mathrm{imp}}\), the mapping to the impurity model is defined.
+Using the Dyson equation, the non-interacting Greens function for the impurity problem can be calculated as
 \begin{equation}
-	G_{\mathrm{imp}, 0} (\iu \omega_n) = [G_{\mathrm{loc}}^{-1} (\iu \omega_n) + \Sigma (\iu \omega_n)]^{-1}
+	G_{\mathrm{imp}, 0} (\iu \omega_n) = [G_{\mathrm{loc}}^{-1} (\iu \omega_n) + \Sigma (\iu \omega_n)]^{-1} \;.
 	\label{eq:non-interacting_impurity_Greens_function}
 \end{equation}
 This sets up an impurity model which can be solved by computational means.
 
 Given a solution to the impurity problem with has been found, this interacting Green's function \(G_{\mathrm{imp}} (\iu \omega_n)\) can be used to calculate the self-energy via
 \begin{equation}
-	\Sigma = G_{\mathrm{imp},0}^{-1} - G_{\mathrm{imp}}^{-1} \;.
+	\Sigma (\iu \omega_n) = G_{\mathrm{imp},0}^{-1} (\iu \omega_n) - G_{\mathrm{imp}}^{-1} (\iu \omega_n) \;.
 	\label{eq:DMFT_loop_get_self-energy}
 \end{equation}
 
@@ -703,19 +718,19 @@ The DMFT self-consistency loop as shown in \cref{fig:DMFT AIM mapping} consists 
 	\item Calculate a new self-energy \(\Sigma (\iu \omega_n)\) via \cref{eq:DMFT_loop_get_self-energy}.
 	\item Check convergence of the self-energy (or alternatively via the condition \(G_{\mathrm{loc}} (\iu \omega_n) = G_{\mathrm{imp}} (\iu \omega_n)\)). Otherwise, use this self-energy as a new input in step 2.
 \end{enumerate}
-
 Step 4, solving the impurity model is the computationally hardest step in the DMFT loop and many different solver methods have been developed over the years with differing use cases, accuracy and numerical demands.
-The TRIQS toolkit \cite{parcolletTRIQSToolboxResearch2015} implements very general ways to work with Green's functions, using different impurity solvers to enable efficient development of DMFT methods.
+
+The TRIQS toolkit \cite{parcolletTRIQSToolboxResearch2015} implements methods to work with Green's functions, using different impurity solvers to enable efficient development of DMFT methods.
 For the calculations in this thesis, \acrfull{ed} as implemented in the EDIpack library \cite{amaricciEDIpackParallelExact2022} has been used.
 It was made available to TRIQS via a compatibility layer by I. Krivenko and L. Crippa \cite{krivenkoKrivenkoEdipack2triqs2025}.
 
 The idea of \acrshort{ed} as introduced by Caffarel and Krauth \cite{caffarelExactDiagonalizationApproach1994} is to represent the bath with a finite number of discrete bath sites \(N_b\).
 This means the Hamiltonian for the impurity model is adjusted to
 \begin{align}
-	H_{\mathrm{bath}} &= \sum_{k \in \{1, \ldots, N_b\}, n \sigma} \epsilon_{k, n} c_{k n \sigma}^{\dagger} c_{k n \sigma}  \\
-	H_{\mathrm{hyb}} &= \sum_{k \in \{1, \ldots, N_b\}, \alpha n \sigma} V_{k, \alpha n} d_{\alpha \sigma}^{\dagger} c_{k n \sigma} + V_{k, n \alpha} c_{k n \sigma}^{\dagger} d_{\alpha \sigma}
+	H_{\mathrm{bath}} &= \sum_{\substack{k \in \{1, \ldots, N_b\} \\ n \sigma}} \epsilon_{k, n} c_{k n \sigma}^{\dagger} c_{k n \sigma}  \\
+	H_{\mathrm{hyb}} &= \sum_{\substack{k \in \{1, \ldots, N_b\} \\ \alpha n \sigma}} V_{k, \alpha n} d_{\alpha \sigma}^{\dagger} c_{k n \sigma} + V_{k, n \alpha} c_{k n \sigma}^{\dagger} d_{\alpha \sigma}
 \end{align}
-In ED, one needs to fit the bath parameters \(\{\epsilon_k, V_k\}\) to optimally represent the lattice system, i.e. find the best fit to approximate the hybridization function \(\Delta (\iu \omega_n)\) of the IM by the discrete hybridization function
+In \acrshort{ed}, one needs to fit the bath parameters \(\{\epsilon_k, V_k\}\) to optimally represent the lattice system, i.e. find the best fit to approximate the hybridization function \(\Delta (\iu \omega_n)\) of the impurity model by the discrete hybridization function
 \begin{equation}
 	\Delta_{\{\epsilon_k, V_k\}} (\iu \omega_n) = \sum_{k=1}^{N_b} \frac{\vert V_k \vert^2}{\iu \omega_n - \epsilon_k}
 \end{equation}
@@ -725,36 +740,44 @@ This is implemented in EDIpack.
 \subsection*{Nambu-Gorkov Green's Functions}
 
 To describe superconductivity in the Green's function formalism, one introduces the Nambu-Gor'kov formalism \cite{georgesDynamicalMeanfieldTheory1996}.
-Introducing the Nambu spinors as in \cref{eq:Nambu spinor BCS theory}
+Using the Nambu spinors as in \cref{eq:Nambu spinor BCS theory}
 \begin{align}
 	\Psi_{\vb{k}, \vb{q}, \alpha} &= 
 	\begin{pmatrix}
 		c_{\vb{k} \alpha \uparrow} & 
 		c_{\vb{q} -\vb{k} \alpha \downarrow}^{\dagger}
-	\end{pmatrix}^{T}
+	\end{pmatrix}^{T} \;,
 \end{align}
 the Green's functions become \(2 \times 2\) matrices in Nambu space
 \begin{align}
-	[\mathcal{G}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} &= -\braket{T_{\tau} \Psi_{\vb{k}, \vb{q}, \alpha} \Psi_{\vb{k}, \vb{q}, \gamma}^{\dagger}} = \begin{pmatrix}
-		-\braket{T_{\tau} c_{\vb{k}, \alpha, \uparrow} c_{\vb{k}, \gamma, \uparrow}^{\dagger}} &
-		-\braket{T_{\tau} c_{\vb{k}, \alpha, \uparrow} c_{\vb{q} - \vb{k}, \gamma, \downarrow}^{\dagger}} \\
-		-\braket{T_{\tau} c_{\vb{q} - \vb{k}, \alpha, \downarrow} c_{\vb{k}, \gamma, \uparrow}^{\dagger}} &
-		-\braket{T_{\tau} c_{\vb{q} - \vb{k}, \alpha, \downarrow} c_{\vb{q} - \vb{k}, \gamma, \downarrow}^{\dagger}}
-	\end{pmatrix} \nonumber \\
+	[\mathcal{G}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} &= -\braket{T_{\tau} \Psi_{\vb{k}, \vb{q}, \alpha} \Psi_{\vb{k}, \vb{q}, \gamma}^{\dagger}} \\ 
 	&= \begin{pmatrix}
 		-\braket{T_{\tau} c_{\vb{k}, \alpha, \uparrow} c_{\vb{k}, \gamma, \uparrow}^{\dagger}} &
-		-\braket{T_{\tau} c_{\vb{k}, \alpha, \uparrow} c_{\vb{q} - \vb{k}, \gamma, \downarrow}^{\dagger}} \\
-		-\braket{T_{\tau} c_{\vb{q} - \vb{k}, \alpha, \downarrow} c_{\vb{k}, \gamma, \uparrow}^{\dagger}} &
+		-\braket{T_{\tau} c_{\vb{k}, \alpha, \uparrow} c_{\vb{q} - \vb{k}, \gamma, \downarrow}} \\
+		-\braket{T_{\tau} c_{\vb{q} - \vb{k}, \alpha, \downarrow}^{\dagger} c_{\vb{k}, \gamma, \uparrow}^{\dagger}} &
 		-\braket{T_{\tau} c_{\vb{q} - \vb{k}, \alpha, \downarrow} c_{\vb{q} - \vb{k}, \gamma, \downarrow}^{\dagger}}
-	\end{pmatrix}
+	\end{pmatrix} \\
+	&= \begin{pmatrix}
+		[\mathcal{G}^{\downarrow \downarrow}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} & [\mathcal{G}^{\uparrow \downarrow}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} \\
+		[\mathcal{G}^{\downarrow \downarrow}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} & [\mathcal{G}^{\uparrow \downarrow}_{\vb{q}} (\tau, \vb{k})]_{\alpha \gamma} \\
+	\end{pmatrix} \;.
 \end{align}
 Due to the definition of the Nambu spinors with \(\vb{q}\) only appearing in the spin-down sector, only \(\mathcal{G}^{\downarrow \downarrow}\) carries the \(\vb{q}\)-dependence.
+The superconducting state is marked by the fact that the so-called anomalous Green's functions \(\mathcal{G}^{\uparrow \downarrow}, \mathcal{G}^{\downarrow \uparrow}\) are non-zero.
 On Matsubara frequencies, the Nambu-Gor'kov Green's functions is set up via
 \begin{align}
-	&[\mathcal{G}_{\vb{q}} (\iu \omega_n, \vb{k})]^{-1} \nonumber \\
+	&[\mathcal{G}_{\vb{q}} (\iu \omega_n, \vb{k})]^{-1} \\
 	&= \begin{pmatrix}
 		(\iu \omega_n + \mu) - h (\vb{k}) - \Sigma^{N} (\iu \omega_n) & -\Sigma^{\mathrm{AN}} (\iu \omega_n) \\
-		-\Sigma^{\mathrm{AN}} (\iu \omega_n) & (\iu \omega_n - \mu) + h (-\vb{k} + \vb{q}) + (\Sigma^{N})^* (\iu \omega_n)
+		-\Sigma^{\mathrm{AN}} (\iu \omega_n) & (\iu \omega_n - \mu) + h (-\vb{k} + \vb{q}) + (\Sigma^{N})^* (\iu \omega_n) \nonumber
+	\end{pmatrix}
+\end{align}
+with the self-energy now being composed of a normal and anomalous part:
+\begin{align}
+	\mathcal{S} (\iu \omega_n) = 
+	\begin{pmatrix}
+		\Sigma^{N} (\iu \omega_n) & \Sigma^{\mathrm{AN}} (\iu \omega_n) \\
+		\Sigma^{\mathrm{AN}} (\iu \omega_n) & -(\Sigma^{N})^* (\iu \omega_n)
 	\end{pmatrix}
 \end{align}
 

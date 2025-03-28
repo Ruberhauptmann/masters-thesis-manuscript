@@ -1,29 +1,234 @@
 \documentclass[../notes.tex]{subfiles}
-\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+%\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
 \raggedbottom
 	
-\chapter{Superconducting Length Scales}
+\chapter{Application of the Finite-Momentum Method}\label{ch:results}
 
-%\todo{Explain how to get the length scales in the different ways}
+\section{Decorated Graphene Model}
 
-%Specifically: take
-%\begin{equation}
-%	\xi(T) = \frac{1}{\sqrt{2} \vert \vb{Q} \vert}
-%\end{equation}
-%with \(\vb{Q}\) such that
-%\begin{equation}
-%	\vert \frac{\psi_{\vb{Q}}(T)}{\psi_0 (T)} \vert = \frac{1}{\sqrt{2}}
-%\end{equation}
+\subsection*{Critical Temperatures}
 
-%Die GL Formel Ψ_q/Ψ_0  = 1 + ξ²q² für spezielles Q auswerten.
-%So im Paper gemacht mit Q für das Ψ_Q/Ψ_0 = 1/sqrt(2) mit ξ  = 1/(Q*sqrt(2)). Prinzipiell auch andere Punkte möglich...
-%Prinzipiell könnte man auch sagen, "ξ = wo Ψ_q verschwindet". Wird schwierig in deinem Fall, außer dass man dann sagen müsste " ξ < Einheitszelle" (für Graphen also ξ < sqrt(3)*a, wo a der C-C Abstand/Gitterkonstante ist). Aber nicht weiter hilfreich...
-%Die GL Formel Ψ_q/Ψ_0  = 1 + ξ²q² anfitten. Ist die Frage, wo man das q_cut setzt für den Fitbereich.
-%Die Krümmung von Ψ_q/Ψ_0 für q-> 0 auswerten, da mit f(q) := Ψ_q/Ψ_0 dann gilt ξ  = - 1/2 * d²f/dq² (in GL Theorie). Ist die Frage, wie genau/gut kann man diese Krümmung numerisch bestimmen kann.
-%Innerhalb von GL Theorie kann man das q_max, wo j_q maximal wird, auch prinzipiell über ξ = 1/(q_max * sqrt(3) ) mit der Kohärenzlänge in Verbindung bringen.
-%Unabhängig von GL Theorie könnte man die volle freie Energie benutzen, aus der man einen allgemeinen Ausdruck für ξ bestimmen kann, der auch außerhalb der Grenzen von niedrigster Ordnung GL Theorie gilt. Das hatte sich Aritas Masterstudent genauer angeschaut, aber der ist jetzt in der Wirtschaft (wollte erst promovieren, aber hat sich beim Schreiben wohl umentschieden :sweat_smile:). Ehrlich gesagt kenne ich die Endergebnisse da auch nicht genau und was damit passieren soll. Muss ich Arita mal fragen... So oder so: In Mean-Field ist es kein Problem, die freie Energie zu berechnen und zu analysieren. In DMFT wird/ist das ecklig :grimacing:
 
-	
+%\begin{SCfigure}[1][t]
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_T_U_0.0010_V_1.60.pgf}
+	\caption{Linear fit for extracting the critical temperature}
+	\label{fig:decorated graphene OP vs T}
+\end{figure}
+%\end{SCfigure}
+Critical temperatures via \cref{eq:extract T_C via OP}:
+\begin{equation}
+	\vert \Psi \vert^2 \propto T_C - T \;.
+\end{equation}
+Fit and corresponding \(T_C\) are shown in \cref{fig:decorated graphene OP vs T}.
+Notable:
+\begin{itemize}
+	\item the gaps \(\Delta_{\alpha}\) have very different orders of magnitude, but fall in the same way, i.e. have the same critical temperature
+\end{itemize}
+
+Can plot critical temperatures against \(V\) and \(U\).
+
+\Cref{fig:decorated Graphene TC and gaps against V} shows \(T_C\) and gaps against \(V\).
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:decorated graphene critical temperatures vs V}
+		\import{images/result_plots/dressed_graphene_MF_critical_temps}{T_C_vs_V_U_0.0100.pgf}
+	\end{subfigure}%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:decorated graphene gaps vs V}
+		\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_V_U_0.0100.pgf}
+	\end{subfigure}
+	\caption{
+		\textbf{T} \textbf{(\subref{sfig:decorated graphene critical temperatures vs V})} Critical temperatures vs V. \textbf{(\subref{sfig:decorated graphene gaps vs V})} Gaps vs V .
+	} 
+	\label{fig:decorated Graphene TC and gaps against V}
+\end{figure}
+Notable:
+\begin{itemize}
+	\item Miminum of \(T_C\) and gaps at some \(V = 1.43\), corresponds with metallic \(V\) in repulsive Hubbard model
+	\item But no gap closure
+	\item TC follows maximal gap
+	\item What is happening at \(V = 0\)? New jobs \todo{This}
+\end{itemize}
+
+%\Cref{fig:decorated Graphene TC and gaps against U} shows \(T_C\) and gaps against \(U\).
+%\begin{figure}[H]
+	%\centering
+	%\begin{subfigure}[b]{0.5\textwidth}
+		%\centering
+		%\caption{\hfill\null}\label{sfig:decorated graphene critical temperatures vs U}
+		%\import{images/result_plots/dressed_graphene_MF_critical_temps}{T_C_vs_U_V_1.3333.pgf}
+	%\end{subfigure}%
+	%\begin{subfigure}[b]{0.5\textwidth}
+		%\centering
+		%\caption{\hfill\null}
+		%\label{sfig:decorated graphene gaps vs U}
+		%\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_U_V_1.3333.pgf}
+	%\end{subfigure}	
+	%\caption{
+		%\textbf{T} \textbf{(\subref{sfig:decorated graphene critical temperatures vs U})} Critical temperatures vs U. \textbf{(\subref{sfig:decorated graphene gaps vs U})} Gaps vs U.
+	%} 
+	%\label{fig:decorated Graphene TC and gaps against U}
+%\end{figure}
+%Notable:
+%\begin{itemize}
+	%\item
+%\end{itemize}
+
+\Cref{fig:decorated Graphene gaps against U for different V} shows \(T_C\) and gaps against \(U\) for different \(V\).
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_U_for_different_V.pgf}
+	\caption{Gaps vs U. for different V} 
+	\label{fig:decorated Graphene gaps against U for different V}
+\end{figure}
+Notable:
+\begin{itemize}
+	\item Low V: flat band on X, high V: flat band on Graphene B, medium V: both
+	\item Linear with interaction strength, typical for flat band in BCS (reference)
+	\item mirrors the switchover seen in the gaps against V and the band structure
+\end{itemize}
+
+
+\subsection*{Extracting the Superconducting Length Scales}
+
+Plot two important gaps against \(q\) in \cref{fig:decorated graphene relevant gaps vs q for medium V} for a medium V
+%\begin{SCfigure}
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{important_gaps_vs_q_medium_V_1.33_U_0.3400.pgf}
+	\caption{Gap vs q}
+	\label{fig:decorated graphene relevant gaps vs q for medium V}
+\end{figure}
+%\end{SCfigure}
+Notable:
+\begin{itemize}
+	\item
+\end{itemize}
+Plot two important gaps against \(q\) in \cref{fig:decorated graphene relevant gaps vs q for low and high V} for a high and low V
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{important_gaps_vs_q_low_and_high_V_0.27_4.00_U_0.3400.pgf}
+	\caption{Gap vs q}
+	\label{fig:decorated graphene relevant gaps vs q for low and high V}
+\end{figure}
+Notable:
+\begin{itemize}
+	\item
+\end{itemize}
+Take
+\begin{equation}
+	\xi(T) = \frac{1}{\sqrt{2} \vert \vb{Q} \vert}
+\end{equation}
+with \(\vb{Q}\) such that
+\begin{equation}
+	\vert \frac{\psi_{\vb{Q}}(T)}{\psi_0 (T)} \vert = \frac{1}{\sqrt{2}}
+\end{equation}
+
+Plot also current against \(q\) \cref{fig:decorated graphene current vs q}
+%\begin{SCfigure}
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{current_vs_q_medium_V_1.33_U_0.3400.pgf}
+	\caption{Current against q}
+	\label{fig:decorated graphene current vs q}
+\end{figure}
+%\end{SCfigure}
+Notable:
+\begin{itemize}
+	\item
+\end{itemize}
+\todo{Plot also current for low and high V}
+
+Calculate \(\xi (T)\) and \(\lambda_{\mathrm{L}} (T)\).
+Plot against \(T\) and fit to get \(\xi_0\), \(\lambda_{L,0}\).
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{lengths_vs_T_1.33_0.3400.pgf}
+	\caption{Temperature fits for xi and lambda}
+	\label{fig:decorated graphene temperature fits for xi and lambda}
+\end{figure}
+\begin{itemize}
+	\item
+\end{itemize}
+
+\subsection*{Length Scales}
+
+\todo{Plot SC length scales vs V, between different gaps}
+
+\todo{More data points for quantum metric, x axis}
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{D_S_comparison_U_0.01.pgf}
+	\caption{DS}
+	\label{fig:decorated graphene compariosn of DS}
+\end{figure}
+
+\section{One-Band Hubbard Model on the Square Lattice}
+
+Can extract \(T_C\) same way as above.
+Plot it against \(U\).
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/OBH_DMFT_critical_temps}{T_C_vs_U.pgf}
+	\caption{TC against U (also mean field results)}
+	\label{fig:DMFT OBH T_C vs U}
+\end{figure}
+Notable:
+\begin{itemize}
+	\item
+\end{itemize}
+
+\subsection*{Extracting Superconducting Length Scales}
+
+Extraction same as before, plot gap and current against \(q\) in \cref{fig:DMFT OBH gap and current vs q}.
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/OBH_DMFT_length_scales}{gap_current_vs_q_U_-2.000.pgf}
+	\label{fig:DMFT OBH gap and current vs q}
+	\caption{Gap and current vs q.}
+\end{figure}
+Notable:
+\begin{itemize}
+	\item
+\end{itemize}
+
+Calculate \(\xi (T)\) and \(\lambda_{\mathrm{L}} (T)\).
+Plot against \(T\) and fit to get \(\xi_0\), \(\lambda_{L,0}\).
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/OBH_DMFT_length_scales}{lengths_vs_T.pgf}
+	\caption{Temperature fits for xi and lambda}
+	\label{fig:DMFT OBH temperature fits for xi and lambda}
+\end{figure}
+\begin{itemize}
+	\item
+\end{itemize}
+
+\subsection*{BCS-BEC Crossover}
+
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/OBH_DMFT_length_scales}{length_scales_vs_U.pgf}
+	\caption{Normalized TC/xi/DS against U (to show BCS-BEC crossover)}
+	\label{fig:DMFT OBH BCS to BEC crossover}
+\end{figure}
+
+\subsection*{Comparison of MF and DMFT Data}
+
+\begin{figure}[H]
+	\centering
+	\import{images/result_plots/OBH_DMFT_length_scales}{different_D_S_vs_U.pgf}
+	\caption{}
+	\label{fig:DS comparison MF and DMFT}
+\end{figure}
+
+\todo{Plot MF and DMFT xi and lambda against U}
+
 \end{document}

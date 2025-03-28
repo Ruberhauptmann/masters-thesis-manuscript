@@ -12,9 +12,9 @@
 
 \input{preamble} % load the tex file with the preamble
 
+\usepackage{layouts}
+
 \input{font-selection}
-%\usepackage{xstring}
-%\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
 
 \input{notation} % load the tex file with the notation shortcuts
 
@@ -56,8 +56,12 @@
 
 \subfile{notes/results}
 
+\subfile{notes/conclusion}
+
 % Appendix
 \appendix
+
+\subfile{notes/other-methods-to-extract-SC-lengths}
 
 \subfile{notes/computational-implementation}
 

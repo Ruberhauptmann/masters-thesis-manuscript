@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="5.2350294"
-     inkscape:cx="201.81358"
-     inkscape:cy="107.44925"
+     inkscape:zoom="3.7017248"
+     inkscape:cx="206.52535"
+     inkscape:cy="126.02233"
      inkscape:window-width="2494"
      inkscape:window-height="1374"
      inkscape:window-x="0"
@@ -147,18 +147,18 @@
          id="tspan3778-7"
          style="fill:#ffa90e;fill-opacity:1;stroke:#ffa90e;stroke-width:0.265;stroke-opacity:1"
          x="38.32217"
-         y="14.721336">\color{petroff2}{HTSC}</tspan></text>
+         y="14.721336">\color{petroff2}{\sffamily{HTSC}}</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;fill:#000000;stroke:none;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
        x="29.304358"
-       y="39.117683"
+       y="39.646851"
        id="text3780-6-5"><tspan
          sodipodi:role="line"
          id="tspan3778-7-3"
          style="fill:#ffa90e;fill-opacity:1;stroke:#ffa90e;stroke-width:0.265;stroke-opacity:1"
          x="29.304358"
-         y="39.117683">\color{petroff1}{LTSC}</tspan></text>
+         y="39.646851">\color{petroff1}{\sffamily{LTSC}}</tspan></text>
     <path
        style="fill:#ffa90e;fill-opacity:0.347121;stroke:#ffa90e;stroke-width:0.254;stroke-opacity:1"
        d="M 32.017959,6.3021696 C 28.660752,5.6576285 14.375943,38.799166 15.454276,40.392482 16.532609,41.985798 48.147459,40.774064 48.590973,39.118288 49.034487,37.462512 35.375166,6.9467107 32.017959,6.3021696 Z"
@@ -172,13 +172,13 @@
     <text
        xml:space="preserve"
        style="font-size:3.175px;fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       x="56.011524"
+       x="56.540691"
        y="44.138992"
        id="text3780-2"><tspan
          sodipodi:role="line"
          id="tspan3778-9"
          style="fill:none;stroke:#000000;stroke-width:0.265;stroke-opacity:1"
-         x="56.011524"
+         x="56.540691"
          y="44.138992">\(H_c\)</tspan></text>
   </g>
 </svg>

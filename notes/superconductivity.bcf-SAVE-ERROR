@@ -2364,13 +2364,12 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">../bibliographynotes.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">colemanIntroductionManyBodyPhysics2015</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">tinkhamIntroductionSuperconductivity1996</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">bruusManyBodyQuantumTheory2004</bcf:citekey>
-    <bcf:citekey order="1" intorder="4">larkinTheoryFluctuationsSuperconductors2005</bcf:citekey>
-    <bcf:citekey order="1" intorder="5">bennemannSuperconductivity2008</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">beekmanIntroductionSpontaneousSymmetry2019</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">colemanIntroductionManyBodyPhysics2015</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">keimerPhysicsQuantumMaterials2017</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">colemanIntroductionManyBodyPhysics2015</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">tinkhamIntroductionSuperconductivity1996</bcf:citekey>
+    <bcf:citekey order="2" intorder="3">bruusManyBodyQuantumTheory2004</bcf:citekey>
+    <bcf:citekey order="2" intorder="4">larkinTheoryFluctuationsSuperconductors2005</bcf:citekey>
+    <bcf:citekey order="2" intorder="5">bennemannSuperconductivity2008</bcf:citekey>
     <bcf:citekey order="3" intorder="1">wittBypassingLatticeBCS2024</bcf:citekey>
     <bcf:citekey order="4" intorder="1">peottaSuperfluidityTopologicallyNontrivial2015</bcf:citekey>
     <bcf:citekey order="4" intorder="2">yuQuantumGeometryQuantum2024</bcf:citekey>
@@ -2378,10 +2377,30 @@
     <bcf:citekey order="6" intorder="1">landauTheoryPhaseTransitions1937</bcf:citekey>
     <bcf:citekey order="7" intorder="1">ginzburgTheorySuperconductivity1950</bcf:citekey>
     <bcf:citekey order="8" intorder="1">ginzburgTheorySuperconductivity1950</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">colemanIntroductionManyBodyPhysics2015</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">chenWhenSuperconductivityCrosses2024</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">chenFiniteMomentumCooper2018</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">wanOrbitalFuldeFerrell2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="3">yuanSupercurrentDiodeEffect2022</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">wittBypassingLatticeBCS2024</bcf:citekey>
     <bcf:citekey order="11" intorder="1">wittBypassingLatticeBCS2024</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">wittBypassingLatticeBCS2024</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">chenFiniteMomentumCooper2018</bcf:citekey>
-    <bcf:citekey order="13" intorder="2">wanOrbitalFuldeFerrell2023</bcf:citekey>
-    <bcf:citekey order="13" intorder="3">yuanSupercurrentDiodeEffect2022</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">kinnunenFuldeFerrellLarkin2018</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">bardeenCriticalFieldsCurrents1962</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">xuAchievingTheoreticalDepairing2010</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">tinkhamIntroductionSuperconductivity1996</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">peottaSuperfluidityTopologicallyNontrivial2015</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">liangBandGeometryBerry2017</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">bardeenTheorySuperconductivity1957</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">hebelNuclearRelaxationSuperconducting1957</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">hebelNuclearSpinRelaxation1959</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">giaeverStudySuperconductorsElectron1961</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">londonNewConceptionSupraconductivity1937</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">zhouHightemperatureSuperconductivity2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">colemanIntroductionManyBodyPhysics2015</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">tinkhamIntroductionSuperconductivity1996</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">hubbardElectronCorrelationsNarrow1963</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">kanamoriElectronCorrelationFerromagnetism1963</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">gutzwillerEffectCorrelationFerromagnetism1963</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">zhangEffectiveHamiltonianSuperconducting1988</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">qinHubbardModelComputational2022</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">micnasSuperconductivityNarrowbandSystems1990</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">kinnunenFuldeFerrellLarkin2018</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">peottaSuperfluidityTopologicallyNontrivial2015</bcf:citekey>

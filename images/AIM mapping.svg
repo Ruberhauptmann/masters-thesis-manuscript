@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="3.7017248"
-     inkscape:cx="240.96875"
-     inkscape:cy="104.14064"
+     inkscape:zoom="2.6175147"
+     inkscape:cx="174.97514"
+     inkscape:cy="119.7701"
      inkscape:window-width="2494"
      inkscape:window-height="1374"
      inkscape:window-x="0"
@@ -37,6 +37,18 @@
      inkscape:showpageshadow="2" />
   <defs
      id="defs2">
+    <rect
+       x="283.83411"
+       y="-60.944985"
+       width="137.25654"
+       height="50.178256"
+       id="rect2333" />
+    <rect
+       x="135.2294"
+       y="-41.618057"
+       width="156.8114"
+       height="34.387475"
+       id="rect2303" />
     <marker
        style="overflow:visible"
        id="TriangleStart"
@@ -479,45 +491,39 @@
          id="tspan12879"
          style="font-size:3.52778px;stroke:none;stroke-width:0.254"
          x="67.446327"
-         y="7.362402">Set \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) </tspan></text>
+         y="7.362402">\sffamily{Set} \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
        x="66.695694"
-       y="28.271751"
+       y="33.034256"
        id="text12881-4"><tspan
          sodipodi:role="line"
-         id="tspan12879-4"
          style="font-size:3.52778px;stroke:none;stroke-width:0.254"
          x="66.695694"
-         y="28.271751">{\small Update parameters of}</tspan><tspan
+         y="33.034256"
+         id="tspan50014">{\small \sffamily{\shortstack{Update parameters of \\ impurity model}}}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
+       x="106.58245"
+       y="38.759975"
+       id="text12881-4-3"><tspan
          sodipodi:role="line"
          style="font-size:3.52778px;stroke:none;stroke-width:0.254"
-         x="66.695694"
-         y="32.681477"
-         id="tspan50014">{\small impurity model}</tspan></text>
+         x="106.58245"
+         y="38.759975"
+         id="tspan50014-6">{\small \sffamily{\shortstack{single site \\ impurity model}}}</tspan></text>
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text22381"
-       style="font-size:13.3333px;text-align:center;white-space:pre;shape-inside:url(#rect22383);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1" />
+       style="font-size:13.3333px;text-align:center;white-space:pre;shape-inside:url(#rect22383);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text22490"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;white-space:pre;shape-inside:url(#rect22492);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1" />
-    <text
-       xml:space="preserve"
-       id="text25104"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;white-space:pre;shape-inside:url(#rect25106);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1"
-       transform="matrix(0.26458333,0,0,0.26458333,-16.923465,-11.121911)"><tspan
-         x="426.05208"
-         y="163.04765"
-         id="tspan54285">{\small single site}
-</tspan><tspan
-         x="409.44546"
-         y="179.71428"
-         id="tspan54287">{\small impurity model}</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;white-space:pre;shape-inside:url(#rect22492);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
@@ -540,5 +546,15 @@
          style="stroke-width:0.254"
          x="102.9945"
          y="22.959934">\(\Delta (\iu \omega_n)\)</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2301"
+       style="fill:#000000;stroke-width:0.95999998;text-align:center;font-size:13.33333333px;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;white-space:pre;shape-inside:url(#rect2303)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2331"
+       style="fill:#000000;stroke-width:0.95999998;text-align:center;font-size:13.33333333px;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;white-space:pre;shape-inside:url(#rect2333)" />
   </g>
 </svg>

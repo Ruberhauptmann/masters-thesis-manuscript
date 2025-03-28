@@ -1,6 +1,6 @@
 pgf.preamble: \usepackage{fontspec}\usepackage{unicode-math}\setmathfont{texgyrepagella-math.otf}\setmainfont{texgyrepagella-math}\usepackage{nicefrac}
 pgf.texsystem: lualatex
 pgf.rcfonts: False
-font.family: serif
+font.family: sans-serif
 text.usetex: True
 font.size: 11

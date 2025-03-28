@@ -74,13 +74,13 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=2.151414in,y=0.781168in,,top]{\color{textcolor}{\rmfamily\fontsize{11.000000}{13.200000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$\Psi$}}%
+\pgftext[x=2.151414in,y=0.781168in,,top]{\color{textcolor}{\sffamily\fontsize{11.000000}{13.200000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$\Psi$}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=1.303166in,y=2.107914in,,bottom]{\color{textcolor}{\rmfamily\fontsize{11.000000}{13.200000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$f_{\mathrm{L}}$}}%
+\pgftext[x=1.303166in,y=2.107914in,,bottom]{\color{textcolor}{\sffamily\fontsize{11.000000}{13.200000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$f_{\mathrm{L}}$}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.041670in}{0.041670in}}{\pgfqpoint{2.174993in}{2.174993in}}%
@@ -475,19 +475,19 @@
 \definecolor{textcolor}{rgb}{1.000000,0.662745,0.054902}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.195524in, y=2.199477in, left, base,rotate=280.000000]{\color{textcolor}{\rmfamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T < T_C$}}%
+\pgftext[x=0.190962in, y=2.203305in, left, base,rotate=280.000000]{\color{textcolor}{\sffamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T < T_C$}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \definecolor{textcolor}{rgb}{0.741176,0.121569,0.003922}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.801886in, y=2.199477in, left, base,rotate=280.000000]{\color{textcolor}{\rmfamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T > T_C$}}%
+\pgftext[x=0.797323in, y=2.203305in, left, base,rotate=280.000000]{\color{textcolor}{\sffamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T > T_C$}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \definecolor{textcolor}{rgb}{0.580392,0.643137,0.635294}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.406432in, y=2.198599in, left, base,rotate=280.000000]{\color{textcolor}{\rmfamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T = T_C$}}%
+\pgftext[x=0.401870in, y=2.202427in, left, base,rotate=280.000000]{\color{textcolor}{\sffamily\fontsize{9.163000}{10.995600}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}$T = T_C$}}%
 \end{pgfscope}%
 \end{pgfpicture}%
 \makeatother%

@@ -4,17 +4,18 @@
 \begin{document}
 \raggedbottom
 
-\chapter{Decorated Graphene Model}
+\chapter{Decorated Graphene Model}\label{ch:decorated graphene model}
 
-Following the 2018 discovery of superconductivity in twisted Bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}, graphene-based systems gained a renewed interest as a platform for strongly correlated physics.
+Following the 2018 discovery of superconductivity in twisted bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}, graphene-based systems gained a renewed interest as a platform for strongly correlated physics.
 Two methods to engineer strong electron correlations emerged: twisted multilayer systems  \cite{caoUnconventionalSuperconductivityMagicangle2018, tanakaSuperfluidStiffnessMagicangle2025, tormaSuperconductivitySuperfluidityQuantum2022, andreiGrapheneBilayersTwist2020, xieTopologyBoundedSuperfluidWeight2020} and multilayer systems without twisting, such as Bernal bilayer, ABC or ABCA layered systems \cite{pantaleonSuperconductivityCorrelatedPhases2023}.
 Through different means, electrons in these systems become localized so that interaction effects get more strongly pronounced.
 Connecting both kind of systems is the strong quantum geometry coming from the Graphene Dirac cones \cite{wehlingDiracMaterials2014}, which plays a role in stabilizing superconducting \cite{liangBandGeometryBerry2017, tanakaSuperfluidStiffnessMagicangle2025} and magnetic order \cite{abouelkomsanQuantumMetricInduced2023, liuOrbitalMagneticStates2021}.
 
-\citeauthor{wittQuantumGeometryLocal2025} suggested another platform for strongly correlated physics based on Graphene with the same strong quantum geometry coming from the Graphene band structure \cite{wittQuantumGeometryLocal2025}.
-It follows an earlier experiment \cite{ghosalElectronicCorrelationsEpitaxial2024} showing a flat band in a system of a \ce{SiC}(0001) substrate with a single layer of Graphene on top and \ce{Sn} as an intercalant\footnote{An intercalant is an atom or molecule inserted between the layers of layered system.}.
-By using different group-IV intercalants (\ce{C}, \ce{Si}, \ce{Ge}, \ce{Sn}, \ce{Pb}) between the graphene sheet and the semiconducting \ce{SiC}(0001) substrate, different distances to the Graphene sheet occur in the ground state.
-Band structures obtained from Density Functional Theory show a relatively flat band at the Fermi level from the intercalant’s \(p_z\) orbitals hybridized to the Dirac bands of graphene for all intercalants, with the hybridization strength being tuned by the equilibrium distance of the Graphene sheet and the intercalants.
+\citeauthor{wittQuantumGeometryLocal2025} suggested another platform for strongly correlated physics based on Graphene with the same strong quantum geometry, but higher intrinsic energy scales and thus also higher critical temperatures for strong correlation phenomena \cite{wittQuantumGeometryLocal2025}.
+The model is inspired by an earlier experiment \cite{ghosalElectronicCorrelationsEpitaxial2024} of a \ce{SiC}(0001) substrate with a single layer of Graphene on top and \ce{Sn} as an intercalant\footnote{An intercalant is an atom or molecule inserted between the layers of layered system.} between the substrate and the Graphene layer.
+The system shows signs of Mott-Hubbard bands, a hallmark of strong correlation physics.
+\citeauthor{wittQuantumGeometryLocal2025} suggested that by using different group-IV intercalants (\ce{C}, \ce{Si}, \ce{Ge}, \ce{Sn}, \ce{Pb}) between the graphene sheet and the semiconducting \ce{SiC}(0001) substrate, different distances to the Graphene sheet occur in the ground state.
+Band structures obtained from \acrfull{dft} show a relatively flat band at the Fermi level from the intercalant’s \(p_z\) orbitals hybridized to the Dirac bands of graphene for all intercalants, with the hybridization strength being tuned by the equilibrium distance of the Graphene sheet and the intercalants.
 
 In this thesis I will be treating an elemental model introduced in the work by \citeauthor{wittQuantumGeometryLocal2025} capturing the essential flat band character of the system.
 The lattice structure can be seen in \cref{fig:decorated graphene model}.
@@ -27,23 +28,25 @@ Here, the hopping \(V\) models the hybridization
 	\label{fig:decorated graphene model}
 \end{SCfigure}
 
-This elemental model shows two symmetry distinct Mott states for the small and large \(V\) regimes: in the low \(V\) regime, development of local moments and Mottness is at the \(X\) sites, where in the high \(V\) limit, this occurs at the \(B\) sites.
-Between these Mott states emerges a metallic state, similar to the topological phase transition of non-interacting bands in the Su-Schrieffer-Heger model \cite{suSolitonExcitationsPolyacetylene1980}. 
-In contrast to the twisted or untwisted multilayer systems, the energy scale of emergence of flat bands in this model is set by the hopping \(t\), i.e. in the range of \(\unit{\electronvolt}\) for Graphene, so the correlated flat band physics might persist to higher temperatures.
+This elemental model shows two symmetry distinct Mott states for the small and large \(V\) regimes: in the low \(V\) regime, the \(\mathrm{X}\) are responsible for the development of local moments and Mottness occurs at, where in the high \(V\) limit, the \(\mathrm{B}\) atom are responsible.
+Between these Mott states emerges a metallic state, similar to the topological phase transition of non-interacting bands in the Su-Schrieffer-Heger model \cite{suSolitonExcitationsPolyacetylene1980}.
+
+In twisted or untwisted multilayer Graphene systems, the energy scale for the emergence of ordered phases is \(\mathcal{O} (\unit{\milli\electronvolt})\), corresponding to temperatures of a few \unit{\kelvin} \cite{nuckollsMicroscopicPerspectiveMoire2024, pantaleonSuperconductivityCorrelatedPhases2023a}.
+In contrast, the energy scale in this decorated Graphene model is set by the hopping \(t\), i.e. \(\mathcal{O} (\unit{\electronvolt})\) for Graphene, so that the correlated flat band physics might persist to higher temperatures.
 
 \section{Lattice Structure}\label{sec:lattice and band structure}
 
-Monolayer graphene forms a honeycomb lattice \cite{yangStructureGrapheneIts2018}, which is a hexagonal Bravais lattice with a two atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
+Monolayer graphene forms a honeycomb lattice \cite{yangStructureGrapheneIts2018}, which is a hexagonal Bravais lattice with a two-atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
 The primitive lattice vectors of the hexagonal lattice are:
 \begin{align}
 	\vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \; \vb{a}_2 = \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
 \end{align}
-with lattice constant \(a = \sqrt{3} a_0 \approx \SI{2.46}{\angstrom}\), using the nearest-neighbour distance \(a_0\).
-The vectors to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) from atom \(A\) are
+with lattice constant \(a = \sqrt{3} a_0 \approx \SI{2.46}{\angstrom}\), using the nearest-neighbor distance \(a_0\).
+The vectors from atom \(A\) to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) are
 \begin{align}
 	\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
 \end{align}
-and the vectors to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) from atom \(B\) are
+and the vectors from atom \(B\) to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) are
 \begin{align}
 	\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 2} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 3} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix} \;.
 \end{align}
@@ -59,10 +62,10 @@ and the vectors to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) from at
 		\caption{\hfill\null}\label{sfig:graphene Brillouin zone}
 		\input{images/graphene brillouin_zone.pgf}
 	\end{subfigure}
-	\caption{(\subref{sfig:graphene lattice structure}) Graphene lattice structure and (\subref{sfig:graphene Brillouin zone}) Brilluoin zone created using lattpy \cite{Jones_lattpy_2022}}
+	\caption{(\subref{sfig:graphene lattice structure}) Graphene lattice structure with primitive lattice vectors \(\vb{a}_1\), \(\vb{a}_2\) and (\subref{sfig:graphene Brillouin zone}) Brillouin zone with reciprocal vectors \(\vb{b}_1\), \(\vb{b}_2\). Both images created with lattpy \cite{Jones_lattpy_2022}}
 	\label{fig:Graphene lattice structure and Brilluoin zone}
 \end{figure}
-The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill
+The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill:
 \begin{align}
 	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
 	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0\;,
@@ -72,7 +75,7 @@ so that
 	\vb{b}_1 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
 	\vb{b}_2 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix} \;.
 \end{align}
-The first Brilluoin zone of the hexagonal lattice is shown in \cref{sfig:graphene Brillouin zone}, with the points of high symmetry
+The first Brillouin zone of the hexagonal lattice is shown in \cref{sfig:graphene Brillouin zone}, with the points of high symmetry
 \begin{align}
 	\Gamma = \begin{pmatrix} 0 \\ 0 \end{pmatrix},\;
 	\mathrm{M} = \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
@@ -91,7 +94,7 @@ with
 \begin{itemize}
 	\item \(d\) - operators on the X atom
 	\item \(c^{(\epsilon)}\) - operators on the graphene sites (\(\epsilon = \mathrm{A}, \mathrm{B}\))
-	\item \(t\) - nearest neighbour hopping between Graphene sites
+	\item \(t\) - nearest neighbor hopping between Graphene sites
 	\item \(V\) - hopping between \(\mathrm{X}\) and Graphene \(\mathrm{A}\) sites.
 \end{itemize}
 
@@ -140,7 +143,9 @@ which then gives
 	 C_{\vb{k}, \sigma} &= \begin{pmatrix} c_{\vb{k}, \sigma}^{A, \dagger} & c_{\vb{k}, \sigma}^{B, \dagger} & d_{\vb{k}, \sigma}^{\dagger} \end{pmatrix}^T
 \end{align}
 The band structure for the non-interacting decorated graphene model is obtained by diagonalizing the matrix in \cref{eq:decorated graphene Hamiltonian non-interacting matrix}.
-This was done in \cref{fig:decorated graphene model non-interacting bands}.
+\todo{Write more about the bands}
+\todo{Derirative of h(k)}
+%This was done in \cref{fig:decorated graphene model non-interacting bands}.
 \begin{figure}[t]
 	\centering
 	 \import{images}{dressed graphene bands.pgf}

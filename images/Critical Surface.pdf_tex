@@ -56,9 +56,9 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Critical Surface.pdf}}%
     \put(0.51209032,0.67346236){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(j_c\)\end{tabular}}}}%
     \put(0.13125852,0.09885209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(T_c\)\end{tabular}}}}%
-    \put(0.58388034,0.51099835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\color{petroff2}{HTSC}\end{tabular}}}}%
-    \put(0.44648406,0.13929322){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\color{petroff1}{LTSC}\end{tabular}}}}%
+    \put(0.58388034,0.51099835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\color{petroff2}{\sffamily{HTSC}}\end{tabular}}}}%
+    \put(0.44648406,0.13123078){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\color{petroff1}{\sffamily{LTSC}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{Critical Surface.pdf}}%
-    \put(0.85339707,0.06278807){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(H_c\)\end{tabular}}}}%
+    \put(0.86145951,0.06278807){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(H_c\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%
