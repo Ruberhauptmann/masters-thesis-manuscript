@@ -2,124 +2,122 @@
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
-\raggedbottom
 	
 \chapter{Introduction}
 
 The United Nations declared 2025 the `International Year of Quantum Science and Technology' \cite{unitednationsInternationalYearQuantum2024}.
 This is an effort is to raise awareness of the importance of quantum science and its applications, which focuses in 3 key areas: quantum computing, quantum communications and quantum sensors.
-One effect underlying many of these applications is the phenomenon of superconductivity.
+
+One effect underlying many of these applications is the phenomenon of superconductivity, a phase of matter characterized by vanishing electrical resistance and expulsion of magnetic field.
 For example, superconducting qubits are a promising platform for scalable quantum computing \cite{huangSuperconductingQuantumComputing2020, aruteQuantumSupremacyUsing2019} and the Josephson effect \cite{josephsonPossibleNewEffects1962} can be used to build extremely sensitive measurement devices for magnetic fields \cite{faleyHighTcSQUIDBiomagnetometers2017} or voltages \cite{klushinPresentFutureHightemperature2020}.
 
-Superconductivity was discovered in 1911, when Heike Onnes measured that the electrical resistance of Mercury suddenly vanished completely when cooling it below \qty{4}{\kelvin} \cite{onnesFurtherExperimentsLiquid1991}.
-In the following decades, more effects in superconducting materials were discovered such as the Meissner effect, the perfect expulsion of external magnetic fields \cite{meissnerNeuerEffektBei1933}.
-The theoretical description 
+\subsection*{Superconductivity}
 
-\todo{Description: macroscopic quantum mechanics}
+Superconductivity was discovered in 1911, when Heike Onnes measured that the electrical resistance of Mercury vanished completely when cooling it below \qty{4}{\kelvin} \cite{onnesFurtherExperimentsLiquid1991}.
+In the following decades, more properties in superconducting materials were discovered such as the Meissner effect, the perfect expulsion of magnetic fields \cite{meissnerNeuerEffektBei1933}.
+The phenomenological theory by London described the superconducting as a single wave function \cite{londonNewConceptionSupraconductivity1937} which explained the Meissner effect.
+In 1957, Bardeen, Cooper and Schrieffer published their theory of superconductivity \cite{bardeenTheorySuperconductivity1957}, which describes it as the result of condensation of electrons into (so called Cooper-)pairs via an phonon-mediated attractive interaction.
+This condensate plays the role of the wave function in the London theory and thus explained the Meissner effect from a microscopic theory.
 
-\todo{BCS theory}
+Based on \gls{bcs} theory, \citeauthor{cohenCommentsMaximumSuperconducting1972} derived a maximal \(T_{\mathrm{C}}\) of \qty{30}{\kelvin} \cite{cohenCommentsMaximumSuperconducting1972}, which was broken in 1986 by the discovery of superconductivity in cuprates \cite{bednorzPossibleHighTc1986,uchidaHighTcSuperconductivity1987}.
+Since then, many different families of superconductors have been discovered.
+Commonly, superconducting materials are characterized along four dimensions \cite{wittElectronCorrelationsUnconventional}:
+\begin{itemize}
+	\item \textbf{conventional/unconventional}: there are different concrete definition that capture essentially the same thing, most commonly `conventional' superconductors are materials that can be described by the phonon mediated attraction in \gls{bcs} theory
+	\item \textbf{low/high temperature}: while the Cuprates were the first high temperature superconductors, today the boiling point of liquid nitrogen (\qty{77}{\kelvin}) is set as the separation between low and high temperature superconductors.
+	\item \textbf{weak/strong coupling}: in the context of superconductivity, coupling strength refers to the strength of the interaction driving the pair condensation. Independent of the specific mechanism, the coupling strength is used to characterize the spatial extent of the electron pairs.
+	\item \textbf{weakly/strongly correlated}: the correlation strength describes how strong the influence electron-electron interactions are in comparison to the kinetic energy. Similarly to the coupling strength, stronger electron-electron interactions are associated with electron localization.
+\end{itemize}
+High temperature superconductors not only have higher \(T_{\mathrm{C}}\) so that lower-cost cooling methods can be employed, they typically also support stronger currents and can withstand higher magnetic fields until the superconducting order breaks down.
+These three parameters span the critical surface (see \cref{fig:Critical Surface of a SC}).
 
-%As such, superconductivity is one of the important examples of quantum mechanical effects manifesting on a macroscopical scale.
-
-
-\subsection*{Unconventional Superconductivity}
-
-In 1986 and 1987, superconductivity with very high \(T_C\) of \qty{30}{\kelvin} (the highest \(T_C\) until then was \qty{23.7}{\kelvin} in \ce{Nb3Ge}) was discovered in cuprates \cite{bednorzPossibleHighTc1986,uchidaHighTcSuperconductivity1987}.
-Cuprate superconductors are made up of layers of cooper oxide and charge reservoirs in between.
-The specific charge reservoir layers determine the properties of the superconducting and varying them lead to the discovery of a rich zoo of materials with high \(T_C\) \cite{rybickiPerspectivePhaseDiagram2016}.
-Cuprates are the prime example of the class of superconductors that cannot be explained by BCS theory.
-They are called unconventional.
-Mechanisms of pairing are something else that the electron-phonon interaction in BCS-theory, i.e. purely electronic mechanisms.
-In Cuprates, parent state is a Mott insular (insulator emerging from strong electronic correlations).
-This means it cannot be explained by BCS theory, because there the parent state is a Fermi liquid.
-\todo{Some more words on characterization: unconventional, high TC, strongly correlated/coupling}
-
-HTSC not only have higher \(T_C\), so that lower-cost cooling methods can be employed, they also support stronger currents and can withstand higher magnetic fields until SC breaks down.
-These three parameters span the critical surface (see \cref{fig:Critical Surface of a SC}), should be largest for technical applications.
-\begin{SCfigure}[50]
+The critical field and critical current are deeply connected to two intrinsic length scales of superconductors: coherence length \(\xi_0\) and the London penetration depth \(\lambda_{\mathrm{L}, 0}\)).
+They are accessible in \gls{bcs} theory, but inaccessible in the presence of strong electronic correlations.
+\begin{SCfigure}[50][t]
 	\centering
 	\import{images/}{Critical Surface.pdf_tex}
-	\caption{\textbf{Critical surface of a superconductor.} For practical applications, this surface is desired to be as large as possible, making it possible to carry high currents and generate strong magnetic fields while not needing to cool the superconductor to very low temperatures. This generally is the case for high-temperature superconductors in comparison to low-temperature superconductors. }
+	\caption[Critical surface of a superconductor.]{\textbf{Critical surface of a superconductor.} For practical applications, this surface is desired to be as large as possible, making it possible to carry high currents and generate strong magnetic fields while not needing to cool the superconductor to very low temperatures. This generally is the case for high-temperature superconductors (HTSC) in comparison to low-temperature superconductors (LTSC).}
 	\label{fig:Critical Surface of a SC}
 \end{SCfigure}
-So for HTSC, largest commercial application to date is in magnetic resonance imaging, a medical technique using strong magnetic fields and field gradients \cite{rinckMagneticResonanceMedicine}.
-There is cable development \cite{schmidtOperationExperienceFurther2012, konstantopoulouDesignOptimizationEvaluation2019} utilizing the high critical currents.
-
-Critical currents and magnetic fields closely linked to two length scales in SCs: the coherence length \(\xi_0\) and the London penetration depth \(\lambda_{L,0}\).
-Coherence length is linked to size of Cooper pairs, London penetration depth describes how far magnetic fields penetrate into a SC.
-These length scales are a further characterization of SCs.
-For example, SC can be split up into type I and type II.
-The difference is in the response to magnetic fields.
-In type I SC, sc order is destroyed for fields higher than a critical magnetic field \(H_{C}\).
-Type II superconductors have two critical fields \(H_{C_1, C_2}\), \(H_{C_1} > H_{C_2}\).
-For fields higher than \(H_{C_1}\), the superconducting state is completely destroyed.
-For fields higher than \(H_{C_2}\) but lower than \(H_{C_1}\), the superconducting order is not destroyed, but magnetic field lines penetrate the material.
-\todo{Experimental measurement of length scales}
-To characterize SC materials, especially SCs with strong correlations it is very desirable to calculate the length scales in ab-initio frameworks.
 
 \subsection*{BCS-BEC Crossover}
 
 \begin{SCfigure}[50]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/BCS-BEC crossover.png}
-	\caption{\textbf{BCS-BEC crossover.} Reprinted figure with permission from \cite{chenWhenSuperconductivityCrosses2024}. Copyright 2024 by the
-		American Physical Society.}
+	\includegraphics[width=0.42\textwidth]{images/BCS-BEC crossover.png}
+	\caption[BCS-BEC crossover.]{
+		\textbf{BCS-BEC crossover.} This is a general illustration of the crossover between loosely bound (BCS regime) and tightly bound (BEC regime) pairs in superconductors. 
+		The crossover begins at the point where the pair creation temperature \(T^*\) diverges from the superconducting transition temperature \(T_{\mathrm{C}}\), at which the pairs condense.
+		Reprinted figure with permission from \cite{chenWhenSuperconductivityCrosses2024}. Copyright 2024 by the American Physical Society.}
 	\label{fig:BCS-BEC-crossover}
 \end{SCfigure}
-Topic in the context of high \(T_C\) SCs.
-Framework independent of pairing mechanism.
-Two regimes can be connected by \todo{Regimes}
+One topic emerging in the context of high \(T_{\mathrm{C}}\) superconductors is the description in the BCS-BEC crossover \cite{chenWhenSuperconductivityCrosses2024}.
+It is a framework independent of the specific pairing mechanism and characterizes superconductivity on the axis of weak to strong coupling.
+\Cref{fig:BCS-BEC-crossover} shows the two regimes that can be connected by tuning the generalized coupling: the BCS regime with large electron pairs and the Bose-Einstein condensate regime with tightly bound pairs.
+The \(T_{\mathrm{C}}\) in \cref{fig:BCS-BEC-crossover} has a dome-shape going from the weak to strong pairing, which is reminiscent of the dome shape against doping in many unconventional superconductors such as the Cuprates as well as the pseudogap parent state.
 
-\Cref{fig:BCS-BEC-crossover} shows the \todo{describe figure}
+The intermediate region is characterized by the fact that despite the electron pairing up (marked by \(T^*\)), there is no superconductivity.
+This is due to the fact that besides pairing, also phase coherence is needed for superconducting order which is suppressed when the stronger attraction impairs pair mobility.
+The BCS-BEC crossover phenomenology gives qualitative insights in what limits \(T_{\mathrm{C}}\), which is again strongly connected to the superconducting length scales: in the BCS regime, the energy scale that limits \(T_{\mathrm{C}}\) is the pairing energy \(\Delta\) which is related to the coherence length \(\xi_0\) while in the BEC regime it is the phase coherence energy \(D_S\), which is directly related to the London penetration depth \(\lambda_{\mathrm{L}, 0}\) via \(D_S = \lambda_{\mathrm{L}, 0}^{-2}\)
+This gives a possible route to raising \(T_{\mathrm{C}}\) by evading the constraints of the BCS-BEC crossover in the strong-coupling regime \cite{emeryImportancePhaseFluctuations1995, kivelsonMakingHighTc2002}.
+This is explored for the example of Alkali-doped fullerides in ref. \cite{wittBypassingLatticeBCS2024}: by exploiting the high degrees of freedom in this multi-orbital system, the typical constraint on the superfluid stiffness imposed by the lattice can be evaded, enabling high \(T_{\mathrm{C}}\) in this regime.
 
-The intermediate region is characterized by the fact that the \todo{difference between condensing and SC}
+\subsection*{Strong Correlations in Graphene Based Systems}
 
-\todo{BEC regime: TC is given by DS}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Uemura plot Niklas.png}
+	\caption[Uemura plot.]{\textbf{Uemura plot.} 
+		Comparison of Fermi temperature \(T_{\mathrm{F}}\) and critical temperature \(T_{\mathrm{C}}\) for various families of superconductors on a logarithmic plot.
+		The gray shaded region marks the regime where most unconventional superconductors are located (here \(T_{\mathrm{C}} = 0.04 T_{\mathrm{BEC}}\) to \(T_{\mathrm{C}} = 0.25 T_{\mathrm{BEC}}\)).
+		The lines marks different limits for \(T_{\mathrm{C}}\): the solid line being \(T_{\mathrm{C}} = T_{\mathrm{F}}\), the dashed line is the critical temperature of a non-interacting BEC (\(T_{\mathrm{BEC}} = \nicefrac{T_{\mathrm{F}}}{4.16}\)) and the upper limit for the Berezinski–Kosterlitz–Thouless transition of free electrons in two dimensions \(T_{\mathrm{C}} = \nicefrac{T_{\mathrm{F}}}{8}\) as a dotted line.
+		Taken from \cite{wittElectronCorrelationsUnconventional} with data from  \cite{nakagawaGatecontrolledBCSBECCrossover2021, uemuraDynamicSuperconductivityResponses2019, pantaleonSuperconductivityCorrelatedPhases2023a}.
+	}
+	\label{fig:Uemura plot}
+\end{figure}
 
-\todo{Optimization of TC, need access to SC length scales}
+Graphene, the two-dimensional allotrope of Carbon was first synthesized in 2004 \cite{novoselovElectricFieldEffect2004}.
+It sparked the field of 2D materials, which shows unique properties due to the confinement in one dimension and extensive tunability with environmental dielectric screening, electrostatic doping or tuning with external fields \cite{geimVanWaalsHeterostructures2013}.
 
-\cite{chenWhenSuperconductivityCrosses2024}
+Over time, another tuning parameter emerged: it turned out that two graphene layer twisted against each other as seen in \cref{sfig:3D printed twisted graphene} host localized electrons with pronounced interaction effects for certain twist angles.
+In 2018, \citeauthor{caoUnconventionalSuperconductivityMagicangle2018} measured superconductivity in this setup with a phase diagram very similar to the Cuprates \cite{caoUnconventionalSuperconductivityMagicangle2018}.
+Another method to enhance interaction effects in graphene based systems are multilayer systems without twisting, such as Bernal bilayer, ABC or ABCA layered systems \cite{pantaleonSuperconductivityCorrelatedPhases2023}.
 
-\subsection*{Graphene Structures as a Platform for Correlated Physics}
+Especially in these flat band systems exhibiting superconductivity, the geometry of the space spanned by the electronic Bloch states (the so-called quantum geometry) is crucial for stabilizing the superconducting state.
+This is due to the fact that for a single band, the superfluid weight is given by the curvature of the band, so zero in the flat band case.
+In multiband systems, the quantum geometry gives a contribution that can be non-zero even for flat-band systems \cite{peottaSuperfluidityTopologicallyNontrivial2015}.
 
-%The last family of superconductors which we want to discuss comprises twodimensional (2D) materials. Since the successful exfoliation of graphene in 2004 [157],  the field of (quasi) 2D materials is thriving [158–160]. These materials characterize by  their unique properties arising from quantum confinement and their high tunability  via mechanisms such as environmental dielectric screening, electrostatic doping,  heterostructuring capabilities, or external field tuning
-
-\todo{Introduction to Graphene historically}
-
-Following the 2018 discovery of superconductivity in twisted bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}, graphene-based systems gained a renewed interest as a platform for strongly correlated physics.
-Two methods to engineer strong electron correlations emerged: twisted multilayer systems  \cite{caoUnconventionalSuperconductivityMagicangle2018, tanakaSuperfluidStiffnessMagicangle2025, tormaSuperconductivitySuperfluidityQuantum2022, andreiGrapheneBilayersTwist2020, xieTopologyBoundedSuperfluidWeight2020} and multilayer systems without twisting, such as Bernal bilayer, ABC or ABCA layered systems \cite{pantaleonSuperconductivityCorrelatedPhases2023}.
-Through different means, electrons in these systems become localized so that interaction effects get more strongly pronounced.
-Connecting both kind of systems is the strong quantum geometry coming from the Graphene Dirac cones \cite{wehlingDiracMaterials2014}, which plays a role in stabilizing superconducting \cite{liangBandGeometryBerry2017, tanakaSuperfluidStiffnessMagicangle2025} and magnetic order \cite{abouelkomsanQuantumMetricInduced2023, liuOrbitalMagneticStates2021}.
-
-
-One interesting development in is in twisted multilayer systems, first realized as twisted bilayer Graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}.
-In comparison to the complex crystal structure of e.g. the Cuprates, twisted multilayer systems have a very simple structure and can be tuned very easily: the angle of twist between the layers can be easily accessed experimentally.
-The defining feature of these systems are flat electronic bands due to folding of the Brilluoin zone.
-Superconductivity in these systems is enhanced due to the fact that in the flat bands, interactions between the electrons are very strongly enhanced.
-Thus these systems are a very interesting playground to study strongly correlation effects in general and superconductivity in particular.
-
+For the graphene systems discussed above, the strong quantum geometry comes from the graphene Dirac cones \cite{wehlingDiracMaterials2014}, playing a role in stabilizing superconducting \cite{peottaSuperfluidityTopologicallyNontrivial2015, liangBandGeometryBerry2017, tanakaSuperfluidStiffnessMagicangle2025} and magnetic order \cite{abouelkomsanQuantumMetricInduced2023, liuOrbitalMagneticStates2021} in the multilayer systems.
 \begin{figure}
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
-		\caption{\hfill\null}\label{sfig:3D printed twisted Graphene}
-		\includegraphics[width=0.75\textwidth]{images/Twisted 3D printed Graphene.png}
+		\caption{\hfill\null}\label{sfig:3D printed twisted graphene}
+		\includegraphics[width=0.75\textwidth]{images/Twisted 3D printed graphene small.png}
 	\end{subfigure}%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
 		\caption{\hfill\null}\label{sfig:unconventional SC MATBG}
 		\includegraphics[width=1.0\textwidth]{images/cao_unvoncentional_SC_MATBG.png}
 	\end{subfigure}%
-	\caption{\textbf{(\subref{sfig:3D printed twisted Graphene})} Twisted Bilayer Graphene \textbf{(\subref{sfig:unconventional SC MATBG})} Reproduced from \cite{caoUnconventionalSuperconductivityMagicangle2018} with permission from Springer Nature.}
+	\caption[Twisted Bilayer graphene.]{
+		\textbf{Twisted Bilayer graphene.} \textbf{(\subref{sfig:3D printed twisted graphene})} Moiré pattern formed by imposing two hexagonal lattices on top of each other with a twist angle. The emerging pattern has brighter regions where the layer approximately align and darker regions where the top-layer atoms in the \(\mathrm{A}\) sublattice sit roughly above the \(\mathrm{B}\) atoms in the bottom layer, but the top-layer \(\mathrm{B}\) atoms have no partner in the bottom layer.
+		\textbf{(\subref{sfig:unconventional SC MATBG})} Phase diagram of the twisted Bilayer graphene showing the dependence of \(T_{\mathrm{C}}\) on the carrier density in the partially filled flat band.
+		Reproduced from \cite{caoUnconventionalSuperconductivityMagicangle2018} with permission from Springer Nature.
+	}
 \end{figure}
+
+In the Uemura plot \cref{fig:Uemura plot}, twisted Bilayer and Trilayer graphene are very close to the theoretical 2D limit  and they lie outside the line of most unconventional superconductors.
+This makes them very `efficient': they show a high \(T_{\mathrm{C}}\) for their low Fermi temperature/carrier density, so further efforts in the class of graphene based flat band systems might lead to key insights into superconductivity with even higher \(T_{\mathrm{C}}\).
 
 \subsection*{Organization of this thesis}
 
-\cref{ch:superconductivity} 
+The graphene structures discussed above are an interesting class for novel superconductors in itself and the insight gained from them informs many other avenues to better superconducting materials.
+In light of this, the goal of this thesis is to develop \gls{fmp} method in \gls{bcs} theory, apply it to a flat band model in decorated graphene and then compared to application of the \gls{dmft} method on the one band Hubbard model.
 
-\cref{ch:decorated graphene model}
-
-\cref{ch:results}
-
-\cref{ch:conclusion}
+\Cref{ch:superconductivity} reviews aspects of the theoretical description of superconductors, in particular the Ginzburg-Landau theory which is the foundation for the \gls{fmp} method.
+Furthermore, \gls{bcs} theory and \gls{dmft} under the \gls{fmp} constraint are explained.
+The decorated graphene model and its experimental basis are reviewed in \cref{ch:decorated graphene model}.
+The \gls{fmp} method is then applied in \cref{ch:results}, in the \gls{bcs} formulation for the decorated graphene model and in the \gls{dmft} formulation for the simpler one band Hubbard model on the square lattice.
+In the last chapter (\cref{ch:conclusion}), further pathways for investigation using the tools discussed in the thesis are presented.
 
 \end{document}

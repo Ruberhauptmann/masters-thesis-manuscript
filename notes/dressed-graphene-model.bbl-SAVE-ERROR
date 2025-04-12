@@ -19,6 +19,1137 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{caoUnconventionalSuperconductivityMagicangle2018}{article}{}
+      \name{author}{7}{}{%
+        {{hash=2923de2da7f9b32b957552e414b6bc16}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0b67b79ffddf861a67ef1ac3b977151c}{%
+           family={Fatemi},
+           familyi={F\bibinitperiod},
+           given={Valla},
+           giveni={V\bibinitperiod}}}%
+        {{hash=409225084688edae00b313fd7da87835}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Shiang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ec13cda2cbfddcda8775a94455efdce0}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5a856342313a0ed8d5c7c0315c53a88f}{%
+           family={Taniguchi},
+           familyi={T\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a54e5ea13c0cb48a4212aee979629c7e}{%
+           family={Kaxiras},
+           familyi={K\bibinitperiod},
+           given={Efthimios},
+           giveni={E\bibinitperiod}}}%
+        {{hash=104adca655c0c282c6fcedc11db38805}{%
+           family={Jarillo-Herrero},
+           familyi={J\bibinithyphendelim H\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{cab467ac8ef40058d16c2e962776b32a}
+      \strng{fullhash}{f218afc73f56314566734d42ab424500}
+      \strng{bibnamehash}{cab467ac8ef40058d16c2e962776b32a}
+      \strng{authorbibnamehash}{cab467ac8ef40058d16c2e962776b32a}
+      \strng{authornamehash}{cab467ac8ef40058d16c2e962776b32a}
+      \strng{authorfullhash}{f218afc73f56314566734d42ab424500}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The behaviour of strongly correlated materials, and in particular unconventional superconductors, has been studied extensively for decades, but is still not well understood. This lack of theoretical understanding has motivated the development of experimental techniques for studying such behaviour, such as using ultracold atom lattices to simulate quantum materials. Here we report the realization of intrinsic unconventional superconductivity—which cannot be explained by weak electron–phonon interactions—in a two-dimensional superlattice created by stacking two sheets of graphene that are twisted relative to each other by a small angle. For twist angles of about 1.1°—the first ‘magic’ angle—the electronic band structure of this ‘twisted bilayer graphene’ exhibits flat bands near zero Fermi energy, resulting in correlated insulating states at half-filling. Upon electrostatic doping of the material away from these correlated insulating states, we observe tunable zero-resistance states with a critical temperature of up to 1.7 kelvin. The temperature–carrier-density phase diagram of twisted bilayer graphene is similar to that of copper oxides (or cuprates), and includes dome-shaped regions that correspond to superconductivity. Moreover, quantum oscillations in the longitudinal resistance of the material indicate the presence of small Fermi surfaces near the correlated insulating states, in analogy with underdoped cuprates. The relatively high superconducting critical temperature of twisted bilayer graphene, given such a small Fermi surface (which corresponds to a carrier density of about 1011 per square centimetre), puts it among the superconductors with the strongest pairing strength between electrons. Twisted bilayer graphene is a precisely tunable, purely carbon-based, two-dimensional superconductor. It is therefore an ideal material for investigations of strongly correlated phenomena, which could lead to insights into the physics of high-critical-temperature superconductors and quantum spin liquids.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{7699}
+      \field{title}{Unconventional Superconductivity in Magic-Angle Graphene Superlattices}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{556}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{43\bibrangedash 50}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1038/nature26160
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/VZRNS7U5/Cao et al. - 2018 - Unconventional superconductivity in magic-angle gr.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nature26160
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nature26160
+      \endverb
+      \keyw{Pass 2 (closed)}
+    \endentry
+    \entry{tanakaSuperfluidStiffnessMagicangle2025}{article}{}
+      \name{author}{19}{}{%
+        {{hash=24348bb93742198f2c0d63bdb1ed00a6}{%
+           family={Tanaka},
+           familyi={T\bibinitperiod},
+           given={Miuko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=40783f60463d7f7e122774de3778fa9c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Joel\bibnamedelima Î-j},
+           giveni={J\bibinitperiod\bibinitdelim Î\bibinithyphendelim j\bibinitperiod}}}%
+        {{hash=d913be35a73a544226ee13988f476e92}{%
+           family={Dinh},
+           familyi={D\bibinitperiod},
+           given={Thao\bibnamedelima H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7ecc128cb29e3f01a471377ab45ae05b}{%
+           family={Rodan-Legrain},
+           familyi={R\bibinithyphendelim L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fe7c5f15685adde3082263363bdf6c92}{%
+           family={Zaman},
+           familyi={Z\bibinitperiod},
+           given={Sameia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=33ebf57ede90b5ba3247a543ad265fab}{%
+           family={Hays},
+           familyi={H\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0c3e88f5ac428dc6fdce742dfc899472}{%
+           family={Almanakly},
+           familyi={A\bibinitperiod},
+           given={Aziza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f24fa4d7460a8c0740b0f2760b8c1b70}{%
+           family={Kannan},
+           familyi={K\bibinitperiod},
+           given={Bharath},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8d92b55523356ac80293bb975163709d}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6c8ab529ae9af2cc42bee325f5f515b6}{%
+           family={Niedzielski},
+           familyi={N\bibinitperiod},
+           given={Bethany\bibnamedelima M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4add6a2bff8acbdd8cce6577c7a94967}{%
+           family={Serniak},
+           familyi={S\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a6c1b96c3d0bd1aa52feca98d3255a5e}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Mollie\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ec13cda2cbfddcda8775a94455efdce0}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5a856342313a0ed8d5c7c0315c53a88f}{%
+           family={Taniguchi},
+           familyi={T\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dc1f1c0d0c86459353a756744a94074f}{%
+           family={Orlando},
+           familyi={O\bibinitperiod},
+           given={Terry\bibnamedelima P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=0dc496bfe7bb780dacac78a79c352060}{%
+           family={Gustavsson},
+           familyi={G\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c82aaae874fc5ba5d83bea14d6d5308b}{%
+           family={Grover},
+           familyi={G\bibinitperiod},
+           given={Jeffrey\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=104adca655c0c282c6fcedc11db38805}{%
+           family={Jarillo-Herrero},
+           familyi={J\bibinithyphendelim H\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7e0fdfb97a5d24e12cfe5768c4fcf567}{%
+           family={Oliver},
+           familyi={O\bibinitperiod},
+           given={William\bibnamedelima D.},
+           giveni={W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{e64b70992b1618aa3362665f41dc5b75}
+      \strng{fullhash}{b29573f18861d3e94f6610ce7dd77eae}
+      \strng{bibnamehash}{e64b70992b1618aa3362665f41dc5b75}
+      \strng{authorbibnamehash}{e64b70992b1618aa3362665f41dc5b75}
+      \strng{authornamehash}{e64b70992b1618aa3362665f41dc5b75}
+      \strng{authorfullhash}{b29573f18861d3e94f6610ce7dd77eae}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The physics of superconductivity in magic-angle twisted bilayer graphene (MATBG) is a topic of keen interest in moiré systems research, and it may provide an insight into the pairing mechanism of other strongly correlated materials such as high-critical-temperature superconductors. Here we use d.c. transport and microwave circuit quantum electrodynamics to directly measure the superfluid stiffness of superconducting MATBG through its kinetic inductance. We find the superfluid stiffness to be much larger than expected from conventional Fermi liquid theory. Rather, it is comparable to theoretical predictions1 and recent experimental indications2 of quantum geometric effects that are dominant at the magic angle. The temperature dependence of the superfluid stiffness follows a power law, which contraindicates an isotropic Bardeen–Cooper–Schrieffer (BCS) model. Instead, the extracted power-law exponents indicate an anisotropic superconducting gap, whether interpreted in the Fermi liquid framework or by considering the quantum geometry of flat-band superconductivity. Moreover, a quadratic dependence of the superfluid stiffness on both d.c. and microwave current is observed, which is consistent with the Ginzburg–Landau theory. Taken together, our findings show that MATBG is an unconventional superconductor with an anisotropic gap and strongly suggest a connection between quantum geometry, superfluid stiffness and unconventional superconductivity in MATBG. The combined d.c.–microwave measurement platform used here is applicable to the investigation of other atomically thin superconductors.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{8049}
+      \field{title}{Superfluid Stiffness of Magic-Angle Twisted Bilayer Graphene}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{638}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{99\bibrangedash 105}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/s41586-024-08494-7
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/UY8MLT58/Tanaka et al. - 2025 - Superfluid stiffness of magic-angle twisted bilayer graphene.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41586-024-08494-7
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41586-024-08494-7
+      \endverb
+      \keyw{Pass 2 (closed)}
+    \endentry
+    \entry{tormaSuperconductivitySuperfluidityQuantum2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=40440d90311127925683bd37f186a3b2}{%
+           family={Bernevig},
+           familyi={B\bibinitperiod},
+           given={Bogdan\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{fullhash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{bibnamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authorbibnamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authornamehash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \strng{authorfullhash}{27c62e1aa7a6c433f9b208cdefc7c15d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Superconductivity has been observed in moiré systems such as twisted bilayer graphene, which host flat, dispersionless electronic bands. In parallel, theory work has discovered that superconductivity and superfluidity of flat-band systems can be made possible by the quantum geometry and topology of the band structure. These recent key developments are merging into a flourishing research topic: understanding the possible connection and ramifications of quantum geometry on the induced superconductivity and superfluidity in moiré multilayer and other flat-band systems. This article presents an introduction to how quantum geometry governs superconductivity and superfluidity in platforms including, and beyond, graphene. Ultracold gases are introduced as a complementary platform for quantum geometric effects and a comparison is made to moiré materials. An outlook sketches the prospects of twisted multilayer systems in providing the route to room-temperature superconductivity.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{Superconductivity, Superfluidity and Quantum Geometry in Twisted Multilayer Systems}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{4}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{528\bibrangedash 542}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1038/s42254-022-00466-y
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/QJ7966AD/Törmä et al_2022_Superconductivity, superfluidity and quantum geometry in twisted multilayer.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s42254-022-00466-y
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s42254-022-00466-y
+      \endverb
+      \keyw{Aalto,Pass 1 (closed)}
+    \endentry
+    \entry{andreiGrapheneBilayersTwist2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=087bf3206615e4558d13c43bb914236d}{%
+           family={Andrei},
+           familyi={A\bibinitperiod},
+           given={Eva\bibnamedelima Y.},
+           giveni={E\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=e61177dc966d10b2f2ff169265427bb3}{%
+           family={MacDonald},
+           familyi={M\bibinitperiod},
+           given={Allan\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{55c7c380b079440081535f83a9e62933}
+      \strng{fullhash}{55c7c380b079440081535f83a9e62933}
+      \strng{bibnamehash}{55c7c380b079440081535f83a9e62933}
+      \strng{authorbibnamehash}{55c7c380b079440081535f83a9e62933}
+      \strng{authornamehash}{55c7c380b079440081535f83a9e62933}
+      \strng{authorfullhash}{55c7c380b079440081535f83a9e62933}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Near a magic twist angle, bilayer graphene transforms from a weakly correlated Fermi liquid to a strongly correlated two-dimensional electron system with properties that are extraordinarily sensitive to carrier density and to controllable environmental factors such as the proximity of nearby gates and twist-angle variation. Among other phenomena, magic-angle twisted bilayer graphene hosts superconductivity, interaction-induced insulating states, magnetism, electronic nematicity, linear-in-temperature low-temperature resistivity and quantized anomalous Hall states. We highlight some key research results in this field, point to important questions that remain open and comment on the place of magic-angle twisted bilayer graphene in the strongly correlated quantum matter world.}
+      \field{issn}{1476-4660}
+      \field{journaltitle}{Nature Materials}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{Nat. Mater.}
+      \field{title}{Graphene Bilayers with a Twist}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{19}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1265\bibrangedash 1275}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1038/s41563-020-00840-0
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/88C9N3NK/Andrei and MacDonald - 2020 - Graphene bilayers with a twist.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41563-020-00840-0
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41563-020-00840-0
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{xieTopologyBoundedSuperfluidWeight2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=14ee33eb35224352c0c08559934bcd8c}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Fang},
+           giveni={F\bibinitperiod}}}%
+        {{hash=51d1383908eadcfb6794d673433d4017}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Zhida},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=229bb8528e15f5219d283bfc062c5c23}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Biao},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8016f8821f21d07f0089bb3ab683a3be}{%
+           family={Bernevig},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi Andrei},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{890c305a19cb9bcd0ae361f19ef75d28}
+      \strng{fullhash}{bd13e9f22599ca8e6a2b274d9be3d9ac}
+      \strng{bibnamehash}{890c305a19cb9bcd0ae361f19ef75d28}
+      \strng{authorbibnamehash}{890c305a19cb9bcd0ae361f19ef75d28}
+      \strng{authornamehash}{890c305a19cb9bcd0ae361f19ef75d28}
+      \strng{authorfullhash}{bd13e9f22599ca8e6a2b274d9be3d9ac}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{While regular flat bands are good for enhancing the density of states and hence the gap, they are detrimental to the superfluid weight. We show that the predicted nontrivial topology of the two lowest flat bands of twisted bilayer graphene (TBLG) plays an important role in the enhancement of the superfluid weight and hence of superconductivity. We derive the superfluid weight (phase stiffness) of the TBLG superconducting flat bands with a uniform pairing, and show that it can be expressed as an integral of the Fubini-Study metric of the flat bands. This mirrors results already obtained for nonzero Chern number bands even though the TBLG flat bands have zero Chern number. We further show that the metric integral is lower bounded by the topological C2zT Wilson loop winding number of TBLG flat bands, which renders that the superfluid weight is also bounded by this topological index. In contrast, trivial flat bands have a zero superfluid weight. The superfluid weight is crucial in determining the Berezinskii-Kosterlitz-Thouless transition temperature of the superconductor. Based on the transition temperature measured in TBLG experiments, we estimate the topological contribution of the superfluid weight in TBLG.}
+      \field{day}{24}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{4}
+      \field{number}{16}
+      \field{shortjournal}{Phys. Rev. Lett.}
+      \field{title}{Topology-{{Bounded Superfluid Weight}} in {{Twisted Bilayer Graphene}}}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{124}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{167002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.124.167002
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/75WLHJ64/Xie et al_2020_Topology-Bounded Superfluid Weight in Twisted Bilayer Graphene.pdf;/home/tjark/Zotero/storage/TQ9Y7GHF/PhysRevLett.124.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.124.167002
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.124.167002
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{pantaleonSuperconductivityCorrelatedPhases2023}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f67ed94ec7ea654b2fd992cb69330500}{%
+           family={Pantaleón},
+           familyi={P\bibinitperiod},
+           given={Pierre\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=812e15fc72521bb1e64e5b4f9028ea01}{%
+           family={Jimeno-Pozo},
+           familyi={J\bibinithyphendelim P\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ec52e30253801cdf138c8ff833192c8f}{%
+           family={Sainz-Cruz},
+           familyi={S\bibinithyphendelim C\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ef75404cfcc1a7b46f474c3feeb22800}{%
+           family={Phong},
+           familyi={P\bibinitperiod},
+           given={Võ\bibnamedelima Tiến},
+           giveni={V\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f4e1f279c6666cdc3130803a913382e1}{%
+           family={Cea},
+           familyi={C\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c9231fa5e008c1129681a9dab96cfbb3}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{fullhash}{efb4d6e1316c225d0e28595d9aa3ab3f}
+      \strng{bibnamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authorbibnamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authornamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authorfullhash}{efb4d6e1316c225d0e28595d9aa3ab3f}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Twisted bilayer graphene has a rich phase diagram, including superconductivity. Recently, an unexpected discovery has been the observation of superconductivity in non-twisted graphene bilayers and trilayers. In this Perspective, we give an overview of the search for uncommon phases in non-twisted graphene systems. We first contextualize these recent results within earlier work in the field, before examining the new experimental findings. Finally, we analyse the numerous theoretical models that study the underlying physical processes in these systems.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{Superconductivity and Correlated Phases in Non-Twisted Bilayer and Trilayer Graphene}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{304\bibrangedash 315}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s42254-023-00575-2
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/RE89ZI9M/Pantaleón et al. - 2023 - Superconductivity and correlated phases in non-twisted bilayer and trilayer graphene.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s42254-023-00575-2
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s42254-023-00575-2
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{wehlingDiracMaterials2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3d48715bea79b058bb11974ec6257e15}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={T.O.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7a344a84e0315d10d2e126ff77663643}{%
+           family={Black-Schaffer},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={A.M.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d5547841177967dc7b245505f264e1a8}{%
+           family={Balatsky},
+           familyi={B\bibinitperiod},
+           given={A.V.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{e103d9fa7250cb8b798943aa19d74749}
+      \strng{fullhash}{e103d9fa7250cb8b798943aa19d74749}
+      \strng{bibnamehash}{e103d9fa7250cb8b798943aa19d74749}
+      \strng{authorbibnamehash}{e103d9fa7250cb8b798943aa19d74749}
+      \strng{authornamehash}{e103d9fa7250cb8b798943aa19d74749}
+      \strng{authorfullhash}{e103d9fa7250cb8b798943aa19d74749}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A wide range of materials, like d-wave superconductors, graphene, and topological insulators, share a fundamental similarity: their low-energy fermionic excitations behave as massless Dirac particles rather than fermions obeying the usual Schrödinger Hamiltonian. This emergent behavior of Dirac fermions in condensed matter systems defines the unifying framework for a class of materials we call “Dirac materials.” In order to establish this class of materials, we illustrate how Dirac fermions emerge in multiple entirely different condensed matter systems and we discuss how Dirac fermions have been identified experimentally using electron spectroscopy techniques (angle-resolved photoemission spectroscopy and scanning tunneling spectroscopy). As a consequence of their common low-energy excitations, this diverse set of materials shares a significant number of universal properties in the low-energy (infrared) limit. We review these common properties including nodal points in the excitation spectrum, density of states, specific heat, transport, thermodynamic properties, impurity resonances, and magnetic field responses, as well as discuss many-body interaction effects. We further review how the emergence of Dirac excitations is controlled by specific symmetries of the material, such as time-reversal, gauge, and spin–orbit symmetries, and how by breaking these symmetries a finite Dirac mass is generated. We give examples of how the interaction of Dirac fermions with their distinct real material background leads to rich novel physics with common fingerprints such as the suppression of back scattering and impurity-induced resonant states.}
+      \field{day}{2}
+      \field{issn}{0001-8732}
+      \field{journaltitle}{Advances in Physics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Dirac Materials}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{volume}{63}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 76}
+      \range{pages}{76}
+      \verb{doi}
+      \verb 10.1080/00018732.2014.927109
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/WLHZLCTC/Wehling et al_2014_Dirac materials.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/00018732.2014.927109
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/00018732.2014.927109
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{liangBandGeometryBerry2017}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b0da78f85d2efcbce861e4d52e343481}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4360c3180623f5c01fee41d5a873ecd7}{%
+           family={Vanhala},
+           familyi={V\bibinitperiod},
+           given={Tuomas\bibnamedelima I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=432d73f4326cbbb1b7ee84c6bbeddf99}{%
+           family={Siro},
+           familyi={S\bibinitperiod},
+           given={Topi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5628abb2fc5213ef1a7a66c85f0b4e4f}{%
+           family={Harju},
+           familyi={H\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{fullhash}{cca2177327c1d70034c66bbb647ed862}
+      \strng{bibnamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authorbibnamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authornamehash}{2edd339db70dc67edc16a5751d27e6d4}
+      \strng{authorfullhash}{cca2177327c1d70034c66bbb647ed862}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a theory of the superfluid weight in multiband attractive Hubbard models within the Bardeen-Cooper-Schrieffer (BCS) mean-field framework. We show how to separate the geometric contribution to the superfluid weight from the conventional one, and that the geometric contribution is associated with the interband matrix elements of the current operator. Our theory can be applied to systems with or without time-reversal symmetry. In both cases the geometric superfluid weight can be related to the quantum metric of the corresponding noninteracting systems. This leads to a lower bound on the superfluid weight given by the absolute value of the Berry curvature. We apply our theory to the attractive Kane-Mele-Hubbard and Haldane-Hubbard models, which can be realized in ultracold atom gases. Quantitative comparisons are made to state of the art dynamical mean-field theory and exact diagonalization results.}
+      \field{day}{27}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{1}
+      \field{number}{2}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Band Geometry, {{Berry}} Curvature, and Superfluid Weight}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{95}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{024515}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.95.024515
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/W5PFHHG2/Liang et al. - 2017 - Band geometry, Berry curvature, and superfluid wei.pdf;/home/tjark/Zotero/storage/CH2YFC4S/PhysRevB.95.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.95.024515
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.95.024515
+      \endverb
+      \keyw{Pass 1}
+    \endentry
+    \entry{abouelkomsanQuantumMetricInduced2023}{article}{}
+      \name{author}{3}{}{%
+        {{hash=719a52123eab0000f015060d259d443e}{%
+           family={Abouelkomsan},
+           familyi={A\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b0750e17850d5d0de82617ebb71777ec}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Kang},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e54f8086355c2fdac537557aa2177da2}{%
+           family={Bergholtz},
+           familyi={B\bibinitperiod},
+           given={Emil\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{358e346de0ec55ed44c4931532f90a8d}
+      \strng{fullhash}{358e346de0ec55ed44c4931532f90a8d}
+      \strng{bibnamehash}{358e346de0ec55ed44c4931532f90a8d}
+      \strng{authorbibnamehash}{358e346de0ec55ed44c4931532f90a8d}
+      \strng{authornamehash}{358e346de0ec55ed44c4931532f90a8d}
+      \strng{authorfullhash}{358e346de0ec55ed44c4931532f90a8d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that, quite generally, quantum geometry plays a major role in determining the low-energy physics in strongly correlated lattice models at fractional band fillings. We identify limits in which the Fubini-Study metric dictates the ground states and show that this is highly relevant for Moiré materials leading to symmetry breaking and interaction driven Fermi liquids. This phenomenology stems from a remarkable interplay between the quantum geometry and interaction which is absent in continuum Landau levels but generically present in lattice models where these terms tend to destabilize, e.g., fractional Chern insulators. We explain this as a consequence of the fundamental asymmetry between electrons and holes for band projected normal ordered interactions, as well as from the perspective of a self-consistent Hartree-Fock calculation. These basic insights about the role of the quantum metric, when dominant, turn an extremely strongly coupled problem into an effectively weakly coupled one, and may also serve as a guiding principle for designing material setups. We argue that this is a key ingredient for understanding symmetry-breaking phenomena recently observed in Moiré materials.}
+      \field{day}{10}
+      \field{journaltitle}{Physical Review Research}
+      \field{month}{2}
+      \field{number}{1}
+      \field{shortjournal}{Phys. Rev. Res.}
+      \field{title}{Quantum Metric Induced Phases in {{Moir}}\textbackslash 'e Materials}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{L012015}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevResearch.5.L012015
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/W2VJ7I66/Abouelkomsan et al. - 2023 - Quantum metric induced phases in Moir'e materials.pdf;/home/tjark/Zotero/storage/EA6SGC6Z/PhysRevResearch.5.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevResearch.5.L012015
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevResearch.5.L012015
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{liuOrbitalMagneticStates2021}{article}{}
+      \name{author}{2}{}{%
+        {{hash=03ce8f885165639f50d006bfe8f10787}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jianpeng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=35f461711266e6d82cf27944c0751936}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \strng{fullhash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \strng{bibnamehash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \strng{authorbibnamehash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \strng{authornamehash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \strng{authorfullhash}{5b480e2a8d226d98dd14dab79ce2f539}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Moiré graphene systems have attracted considerable attention in the past 3\,years because they exhibit exotic phenomena including correlated insulating states, unconventional superconductivity and the quantum anomalous Hall effect. All these phenomena are intimately related to the valley-spin-degenerate and topologically non-trivial flat bands in moiré graphene systems. When time-reversal symmetry is broken spontaneously, such flavour-degenerate topological flat bands exhibit unconventional orbital magnetism associated with real-space current-loop patterns on the moiré length scale. In this Perspective, we first survey key experimental progress on the correlated insulating states and the quantum anomalous Hall phenomena. Most of these phenomena are related to the moiré orbital magnetic states, which originate from the topological nature of the moiré flat bands. Finally, we discuss theoretical progress in the understanding of the correlated insulating and quantum anomalous Hall phenomena from the perspective of spontaneous symmetry breaking.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{Orbital Magnetic States in Moiré Graphene Systems}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{367\bibrangedash 382}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1038/s42254-021-00297-3
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/6YW7WEZ5/Liu and Dai - 2021 - Orbital magnetic states in moiré graphene systems.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s42254-021-00297-3
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s42254-021-00297-3
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{wittQuantumGeometryLocal2025}{online}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=52b7217b78bd8022d179738906aabcbd}{%
+           family={Ryee},
+           familyi={R\bibinitperiod},
+           given={Siheon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f466d1051ab718be4c2d18c42aa2fced}{%
+           family={Klebl},
+           familyi={K\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=51467cdaff9bbb09b9446484741aba15}{%
+           family={Cano},
+           familyi={C\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+        {{hash=17b8bfa354a7a73c0d2c98f2fdc99418}{%
+           family={Sangiovanni},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Graphene-based multilayer systems serve as versatile platforms for exploring the interplay between electron correlation and topology, thanks to distinctive low-energy bands marked by significant quantum metric and Berry curvature from graphene's Dirac bands. Here, we investigate Mott physics and local spin moments in Dirac bands hybridized with a flat band of localized orbitals in functionalized graphene. Via hybridization control, a topological transition is realized between two symmetry-distinct site-selective Mott states featuring local moments in different Wyckoff positions, with a geometrically enforced metallic state emerging in between. We find that this geometrically controlled local moment ``swapover'' and associated metal-insulator physics may be realized through proximity coupling of epitaxial graphene on SiC(0001) with group IV intercalants, where the Mott state faces geometrical obstruction in the large-hybridization limit. Our work shows that chemically functionalized graphene provides a correlated electron platform, very similar to the topological heavy fermions in graphene moir\textbackslash 'e systems but at significantly enhanced characteristic energy scales.}
+      \field{day}{5}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{pubstate}{prepublished}
+      \field{title}{Quantum Geometry and Local Moment Swapover in Correlated Graphene Heterostructures}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.03700
+      \endverb
+      \verb{eprint}
+      \verb 2503.03700
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/CHK7B4H6/Witt et al. - 2025 - Quantum geometry and local moment swapover in correlated graphene heterostructures.pdf;/home/tjark/Zotero/storage/J5EZS9N7/2503.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{ghosalElectronicCorrelationsEpitaxial2024}{online}{}
+      \name{author}{6}{}{%
+        {{hash=aba2c8ab0e5999e8c01cd3583f64688d}{%
+           family={Ghosal},
+           familyi={G\bibinitperiod},
+           given={Chitran},
+           giveni={C\bibinitperiod}}}%
+        {{hash=52b7217b78bd8022d179738906aabcbd}{%
+           family={Ryee},
+           familyi={R\bibinitperiod},
+           given={Siheon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0dc4b23eeb36426e5ca84468affd7dcd}{%
+           family={Mamiyev},
+           familyi={M\bibinitperiod},
+           given={Zamin},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=460f7ba95bf3d29d45678e051e32b4a9}{%
+           family={Tegenkamp},
+           familyi={T\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9e166dc544c6ecab67c9db50d0fbfb4}
+      \strng{fullhash}{2b4fceaae958a1aac9b075758c82bf92}
+      \strng{bibnamehash}{b9e166dc544c6ecab67c9db50d0fbfb4}
+      \strng{authorbibnamehash}{b9e166dc544c6ecab67c9db50d0fbfb4}
+      \strng{authornamehash}{b9e166dc544c6ecab67c9db50d0fbfb4}
+      \strng{authorfullhash}{2b4fceaae958a1aac9b075758c82bf92}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Graphene, renowned for its exceptional electronic and optical properties as a robust 2D material, traditionally lacks electronic correlation effects. Proximity coupling offers a promising method to endow quantum materials with novel properties. In this study, we achieve such a proximity coupling by intercalating Sn between the buffer layer of graphene on SiC(0001), allowing us to explore the coupling between a correlated 2D electron gas and a Dirac metal. This results in the stabilization of Sn-\$\textbackslash sqrt\{3\}\$ superlattice structures at the interface, which reveal Mott-Hubbard bands, in excellent agreement with both experimental observations and theoretical predictions. Additionally, we found signatures of quasiparticle peaks close to the Fermi energy, in detail depending on the hybridization strength and doping level.}
+      \field{day}{2}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{month}{12}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{Electronic Correlations in Epitaxial Graphene}
+      \field{title}{Electronic Correlations in Epitaxial Graphene: {{Mott}} States Proximitized to a Relativistic Electron Gas}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2412.01329
+      \endverb
+      \verb{eprint}
+      \verb 2412.01329
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/3SAD7RC2/Ghosal et al. - 2024 - Electronic correlations in epitaxial graphene Mott states proximitized to a relativistic electron g.pdf;/home/tjark/Zotero/storage/MBH26PT2/2412.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2412.01329
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2412.01329
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{mommaVESTA3Threedimensional2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=260d1646c5753a3f191964271ea119f4}{%
+           family={Momma},
+           familyi={M\bibinitperiod},
+           given={Koichi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5060be891f687b585a679fd259c120e7}{%
+           family={Izumi},
+           familyi={I\bibinitperiod},
+           given={Fujio},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \strng{fullhash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \strng{bibnamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \strng{authorbibnamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \strng{authornamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \strng{authorfullhash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{VESTA is a three-dimensional visualization system for crystallographic studies and electronic state calculations. It has been upgraded to the latest version, VESTA\>3 implementing new features including drawing the external morphology of crystals; superimposing multiple structural models, volumetric data and crystal faces; calculation of electron and nuclear densities from structure parameters; calculation of Patterson functions from structure parameters or volumetric data; integration of electron and nuclear densities by Voronoi tessellation; visualization of isosurfaces with multiple levels; determination of the best plane for selected atoms; an extended bond-search algorithm to enable more sophisticated searches in complex molecules and cage-like structures; undo and redo in graphical user interface operations; and significant performance improvements in rendering isosurfaces and calculating slices.}
+      \field{day}{1}
+      \field{issn}{0021-8898}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{12}
+      \field{number}{6}
+      \field{shortjournal}{J Appl Crystallogr}
+      \field{title}{{{{\mkbibemph{VESTA}}}}{\mkbibemph{ 3}} for Three-Dimensional Visualization of Crystal, Volumetric and Morphology Data}
+      \field{urlday}{19}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{44}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1272\bibrangedash 1276}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1107/S0021889811038970
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.iucr.org/paper?S0021889811038970
+      \endverb
+      \verb{url}
+      \verb https://journals.iucr.org/paper?S0021889811038970
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{suSolitonExcitationsPolyacetylene1980}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4c86d9d176f195a3da6852247227d6ac}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi P.},
+           giveni={W\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
+           family={Schrieffer},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=a6f8ce1bd7664e4c519292c6be5e8074}{%
+           family={Heeger},
+           familyi={H\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \strng{fullhash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \strng{bibnamehash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \strng{authorbibnamehash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \strng{authornamehash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \strng{authorfullhash}{a3aa7a58c82d00c2378be2ab391a5726}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A theoretical analysis of the excitation spectrum of long-chain polyenes is presented. Because of the twofold degeneracy of the ground state of the dimerized chain, elementary excitations corresponding to topological solitons are obtained. The solitons can have three charge states 𝑄 =0. ±𝑒. The neutral soliton has spin one-half while the charged solitons have spin zero. One electronic state is localized at the gap center for each soliton or antisoliton present. The soliton's energy of formation, length, mass, activation energy for motion, and electronic properties are calculated. These results are compared with experiment.}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{8}
+      \field{number}{4}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Soliton Excitations in Polyacetylene}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2099\bibrangedash 2111}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.22.2099
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/BKD56KWL/Su et al. - 1980 - Soliton excitations in polyacetylene.pdf;/home/tjark/Zotero/storage/IZQLRR7L/PhysRevB.22.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.22.2099
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.22.2099
+      \endverb
+      \keyw{Pass 1 (closed)}
+    \endentry
+    \entry{nuckollsMicroscopicPerspectiveMoire2024}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9deb450dae476cec60601bddfed098a9}{%
+           family={Nuckolls},
+           familyi={N\bibinitperiod},
+           given={Kevin\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=cebfde270e2b1175f3606926461c2a19}{%
+           family={Yazdani},
+           familyi={Y\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{f56d851647406a5436d864fe423cc9d5}
+      \strng{fullhash}{f56d851647406a5436d864fe423cc9d5}
+      \strng{bibnamehash}{f56d851647406a5436d864fe423cc9d5}
+      \strng{authorbibnamehash}{f56d851647406a5436d864fe423cc9d5}
+      \strng{authornamehash}{f56d851647406a5436d864fe423cc9d5}
+      \strng{authorfullhash}{f56d851647406a5436d864fe423cc9d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Contemporary quantum materials research is guided by themes of topology and electronic correlations. A confluence of these two themes is engineered in moiré materials, an emerging class of highly tunable, strongly correlated 2D materials designed by the rotational or lattice misalignment of atomically thin crystals. In moiré materials, dominant Coulomb interactions among electrons give rise to collective electronic phases, often with robust topological properties. Identifying the mechanisms responsible for these exotic phases is fundamental to our understanding of strongly interacting quantum systems and to our ability to engineer new material properties for potential future technological applications. In this Review, we highlight the contributions of local spectroscopic, thermodynamic and electromagnetic probes to the budding field of moiré materials research. These techniques have not only identified many of the underlying mechanisms of the correlated insulators, generalized Wigner crystals, unconventional superconductors, moiré ferroelectrics and topological orbital ferromagnets found in moiré materials, but have~also uncovered fragile quantum phases that have evaded spatially averaged global probes. Furthermore, we highlight recently developed local probe techniques, including local charge sensing and quantum interference probes, that have uncovered new physical observables in moiré materials.}
+      \field{issn}{2058-8437}
+      \field{journaltitle}{Nature Reviews Materials}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{Nat Rev Mater}
+      \field{title}{A Microscopic Perspective on Moiré Materials}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{460\bibrangedash 480}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1038/s41578-024-00682-1
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/WKS7PIUP/Nuckolls and Yazdani - 2024 - A microscopic perspective on moiré materials.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41578-024-00682-1
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41578-024-00682-1
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{pantaleonSuperconductivityCorrelatedPhases2023a}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f67ed94ec7ea654b2fd992cb69330500}{%
+           family={Pantaleón},
+           familyi={P\bibinitperiod},
+           given={Pierre\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=812e15fc72521bb1e64e5b4f9028ea01}{%
+           family={Jimeno-Pozo},
+           familyi={J\bibinithyphendelim P\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ec52e30253801cdf138c8ff833192c8f}{%
+           family={Sainz-Cruz},
+           familyi={S\bibinithyphendelim C\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ef75404cfcc1a7b46f474c3feeb22800}{%
+           family={Phong},
+           familyi={P\bibinitperiod},
+           given={Võ\bibnamedelima Tiến},
+           giveni={V\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f4e1f279c6666cdc3130803a913382e1}{%
+           family={Cea},
+           familyi={C\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c9231fa5e008c1129681a9dab96cfbb3}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{fullhash}{efb4d6e1316c225d0e28595d9aa3ab3f}
+      \strng{bibnamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authorbibnamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authornamehash}{870549b1fa363e7dcb13eed784856b6b}
+      \strng{authorfullhash}{efb4d6e1316c225d0e28595d9aa3ab3f}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Twisted bilayer graphene has a rich phase diagram, including superconductivity. Recently, an unexpected discovery has been the observation of superconductivity in non-twisted graphene bilayers and trilayers. In this Perspective, we give an overview of the search for uncommon phases in non-twisted graphene systems. We first contextualize these recent results within earlier work in the field, before examining the new experimental findings. Finally, we analyse the numerous theoretical models that study the underlying physical processes in these systems.}
+      \field{issn}{2522-5820}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Nat Rev Phys}
+      \field{title}{Superconductivity and Correlated Phases in Non-Twisted Bilayer and Trilayer Graphene}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{304\bibrangedash 315}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s42254-023-00575-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s42254-023-00575-2
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s42254-023-00575-2
+      \endverb
+      \keyw{Backlog}
+    \endentry
     \entry{yangStructureGrapheneIts2018}{article}{}
       \name{author}{4}{}{%
         {{hash=c5c387a798aa6bbd6432377345e0834e}{%
@@ -54,7 +1185,7 @@
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Monolayer graphene exhibits extraordinary properties owing to the unique, regular arrangement of atoms in it. However, graphene is usually modified for specific applications, which introduces disorder. This article presents details of graphene structure, including sp2 hybridization, critical parameters of the unit cell, formation of σ and π bonds, electronic band structure, edge orientations, and the number and stacking order of graphene layers. We also discuss topics related to the creation and configuration of disorders in graphene, such as corrugations, topological defects, vacancies, adatoms and sp3-defects. The effects of these disorders on the electrical, thermal, chemical and mechanical properties of graphene are analyzed subsequently. Finally, we review previous work on the modulation of structural defects in graphene for specific applications.,}
       \field{day}{29}
-      \field{eprinttype}{pmid}
+      \field{eprinttype}{pubmed}
       \field{issn}{1468-6996}
       \field{journaltitle}{Science and Technology of Advanced Materials}
       \field{month}{8}
@@ -102,8 +1233,8 @@
       \strng{authorbibnamehash}{35785ea56eec6b9b4058827146fee500}
       \strng{authornamehash}{35785ea56eec6b9b4058827146fee500}
       \strng{authorfullhash}{35785ea56eec6b9b4058827146fee500}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
@@ -118,54 +1249,57 @@
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry
-    \entry{mommaVESTA3Threedimensional2011}{article}{}
+    \entry{songMagicAngleTwistedBilayer2022}{article}{}
       \name{author}{2}{}{%
-        {{hash=260d1646c5753a3f191964271ea119f4}{%
-           family={Momma},
-           familyi={M\bibinitperiod},
-           given={Koichi},
-           giveni={K\bibinitperiod}}}%
-        {{hash=5060be891f687b585a679fd259c120e7}{%
-           family={Izumi},
-           familyi={I\bibinitperiod},
-           given={Fujio},
-           giveni={F\bibinitperiod}}}%
+        {{hash=4cbafc0943de5c65ed21e66f329360ad}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Zhi-Da},
+           giveni={Z\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=8016f8821f21d07f0089bb3ab683a3be}{%
+           family={Bernevig},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi Andrei},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \strng{fullhash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \strng{bibnamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \strng{authorbibnamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \strng{authornamehash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \strng{authorfullhash}{3e6c9717306a7b1ef81c46fd31e6a9aa}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{38c78cba6dee12f24b556eeb88be9361}
+      \strng{fullhash}{38c78cba6dee12f24b556eeb88be9361}
+      \strng{bibnamehash}{38c78cba6dee12f24b556eeb88be9361}
+      \strng{authorbibnamehash}{38c78cba6dee12f24b556eeb88be9361}
+      \strng{authornamehash}{38c78cba6dee12f24b556eeb88be9361}
+      \strng{authorfullhash}{38c78cba6dee12f24b556eeb88be9361}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{VESTA is a three-dimensional visualization system for crystallographic studies and electronic state calculations. It has been upgraded to the latest version, VESTA\>3 implementing new features including drawing the external morphology of crystals; superimposing multiple structural models, volumetric data and crystal faces; calculation of electron and nuclear densities from structure parameters; calculation of Patterson functions from structure parameters or volumetric data; integration of electron and nuclear densities by Voronoi tessellation; visualization of isosurfaces with multiple levels; determination of the best plane for selected atoms; an extended bond-search algorithm to enable more sophisticated searches in complex molecules and cage-like structures; undo and redo in graphical user interface operations; and significant performance improvements in rendering isosurfaces and calculating slices.}
-      \field{day}{1}
-      \field{issn}{0021-8898}
-      \field{journaltitle}{Journal of Applied Crystallography}
-      \field{month}{12}
-      \field{number}{6}
-      \field{shortjournal}{J Appl Crystallogr}
-      \field{title}{{{{\mkbibemph{VESTA}}}}{\mkbibemph{ 3}} for Three-Dimensional Visualization of Crystal, Volumetric and Morphology Data}
-      \field{urlday}{19}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
-      \field{volume}{44}
-      \field{year}{2011}
+      \field{day}{19}
+      \field{issn}{0031-9007, 1079-7114}
+      \field{journaltitle}{Physical Review Letters}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{4}
+      \field{shortjournal}{Phys. Rev. Lett.}
+      \field{title}{Magic-{{Angle Twisted Bilayer Graphene}} as a {{Topological Heavy Fermion Problem}}}
+      \field{urlday}{12}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{129}
+      \field{year}{2022}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{1272\bibrangedash 1276}
-      \range{pages}{5}
+      \field{pages}{047601}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.1107/S0021889811038970
+      \verb 10.1103/PhysRevLett.129.047601
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/NNUPRDBZ/Song and Bernevig - 2022 - Magic-Angle Twisted Bilayer Graphene as a Topologi.pdf
       \endverb
       \verb{urlraw}
-      \verb https://journals.iucr.org/paper?S0021889811038970
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.129.047601
       \endverb
       \verb{url}
-      \verb https://journals.iucr.org/paper?S0021889811038970
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.129.047601
       \endverb
       \keyw{Pass 1 (closed)}
     \endentry

@@ -21,7 +21,7 @@
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
 \usepackage{subfiles}
-\addbibresource{\subfix{bibliographynotes.bib}}
+\addbibresource{\subfix{bibliography.bib}}
 
 \hypersetup{
 	hidelinks,
@@ -32,9 +32,11 @@
 \graphicspath{images/} % setup path for inclusion of images
 
 \begin{document}
-\raggedbottom
 \frontmatter
 \clearpage
+
+\subfile{chapters/abstract.tex}
+\glsresetall
 
 % Print the table of contents (without link boxes)
 \setcounter{tocdepth}{1}
@@ -50,9 +52,9 @@
 
 \subfile{notes/introduction}
 
-\subfile{notes/superconductivity}
+\subfile{chapters/superconductivity.tex}
 
-\subfile{notes/dressed-graphene-model}
+\subfile{chapters/decorated graphene model.tex}
 
 \subfile{notes/results}
 
@@ -61,9 +63,7 @@
 % Appendix
 \appendix
 
-\subfile{notes/other-methods-to-extract-SC-lengths}
-
-\subfile{notes/computational-implementation}
+%\subfile{notes/computational-implementation}
 
 \nocite{*}
 
@@ -83,8 +83,9 @@
 %\addcontentsline{toc}{section}{\listtablename}
 %\listoftables
 
+\addcontentsline{toc}{section}{List of Acronyms}
 \setglossarysection{section}
-\printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
+\printnoidxglossary[type=\acronymtype,title={List of Acronyms}]
 
 
 \end{document}

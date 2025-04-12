@@ -1,0 +1,197 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+
+\begin{document}
+
+\chapter{Decorated Graphene Model}\label{ch:decorated graphene model}
+
+Following the 2018 discovery of superconductivity in twisted bilayer graphene \cite{caoUnconventionalSuperconductivityMagicangle2018}, graphene-based systems gained a renewed interest as a platform for strongly correlated physics.
+Two methods to engineer strong electron correlations emerged: twisted multilayer systems  \cite{caoUnconventionalSuperconductivityMagicangle2018, tanakaSuperfluidStiffnessMagicangle2025, tormaSuperconductivitySuperfluidityQuantum2022, andreigrapheneBilayersTwist2020, xieTopologyBoundedSuperfluidWeight2020} and multilayer systems without twisting, such as Bernal bilayer, ABC or ABCA layered systems \cite{pantaleonSuperconductivityCorrelatedPhases2023}.
+Through different means, electrons in these systems become localized so that interaction effects get more strongly pronounced.
+Connecting both kind of systems is the strong quantum geometry coming from the graphene Dirac cones \cite{wehlingDiracMaterials2014}, which plays a role in stabilizing superconducting \cite{liangBandGeometryBerry2017, tanakaSuperfluidStiffnessMagicangle2025} and magnetic order \cite{abouelkomsanQuantumMetricInduced2023, liuOrbitalMagneticStates2021}.
+
+\citeauthor{wittQuantumGeometryLocal2025} suggested another platform for strongly correlated physics based on graphene with the same strong quantum geometry, but higher intrinsic energy scales and thus also higher critical temperatures for strong correlation phenomena \cite{wittQuantumGeometryLocal2025}.
+The model is inspired by an earlier experiment \cite{ghosalElectronicCorrelationsEpitaxial2024} of a \ce{SiC}(0001) substrate with a single layer of graphene on top and \ce{Sn} as an intercalant\footnote{An intercalant is an atom or molecule inserted between the layers of layered system.} between the substrate and the graphene layer.
+The system shows signs of Mott-Hubbard bands, a hallmark of strong correlation physics.
+\citeauthor{wittQuantumGeometryLocal2025} suggested that by using different group-IV intercalants (\ce{C}, \ce{Si}, \ce{Ge}, \ce{Sn}, \ce{Pb}) between the graphene sheet and the semiconducting \ce{SiC}(0001) substrate, different distances to the graphene sheet occur in the ground state.
+Band structures obtained from \gls{dft} show a relatively flat band at the Fermi level from the intercalant’s \(p_z\) orbitals hybridized to the Dirac bands of graphene for all intercalants, with the hybridization strength being tuned by the equilibrium distance of the graphene sheet and the intercalants.
+
+In this thesis I will be treating an elemental model introduced in the work by \citeauthor{wittQuantumGeometryLocal2025} capturing the essential flat band character of the system.
+The lattice structure can be seen in \cref{fig:decorated graphene model}.
+It consists of the usual hexagonal graphene lattice, with an additional atom at one of the sublattice sites providing the flat band.
+Here, the hopping \(V\) models the hybridization 
+\begin{SCfigure}[50][t]
+	\centering
+	\import{images/}{dressed graphene lattice.pdf_tex}
+	\caption[Lattice structure of decorated graphene honeycomb lattice.]{\textbf{Lattice structure of decorated graphene honeycomb lattice.} with impurity X hybridized to sublattice site A. There is only hopping \(t\) between sublattices \(\mathrm{A}\) and \(\mathrm{B}\) as well as \(V\) between \(\mathrm{X}\) and \(\mathrm{A}\) atoms. Created using VESTA \cite{mommaVESTA3Threedimensional2011}.}
+	\label{fig:decorated graphene model}
+\end{SCfigure}
+
+This elemental model shows two symmetry distinct Mott states for the small and large \(V\) regimes: in the low \(V\) regime, the \(\mathrm{X}\) are responsible for the development of local moments and Mottness occurs at, where in the high \(V\) limit, the \(\mathrm{B}\) atom are responsible.
+Between these Mott states emerges a metallic state, similar to the topological phase transition of non-interacting bands in the Su-Schrieffer-Heger model \cite{suSolitonExcitationsPolyacetylene1980}.
+
+In twisted or untwisted multilayer graphene systems, the energy scale for the emergence of ordered phases is \(\mathcal{O} (\unit{\milli\electronvolt})\), corresponding to temperatures of a few \unit{\kelvin} \cite{nuckollsMicroscopicPerspectiveMoire2024, pantaleonSuperconductivityCorrelatedPhases2023a}.
+In contrast, the energy scale in this decorated graphene model is set by the hopping \(t\), i.e. \(\mathcal{O} (\unit{\electronvolt})\) for graphene, so that the correlated flat band physics might persist to higher temperatures.
+
+\section{Lattice Structure}\label{sec:lattice and band structure}
+
+Monolayer graphene forms a honeycomb lattice \cite{yangStructuregrapheneIts2018}, which is a hexagonal Bravais lattice with a two-atom basis, as can be seen in \cref{sfig:graphene lattice structure}.
+The primitive lattice vectors of the hexagonal lattice are:
+\begin{align}
+	\vb{a}_1 = \frac{a}{2} \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix}, \; \vb{a}_2 = \frac{a}{2} \begin{pmatrix} 1 \\ -\sqrt{3} \end{pmatrix}
+\end{align}
+with lattice constant \(a = \sqrt{3} a_0 \approx \SI{2.46}{\angstrom}\), using the nearest-neighbor distance \(a_0\).
+The vectors from atom \(A\) to the nearest-neighbor atoms \(B_i\) (\(i = 1, 2, 3,\)) are
+\begin{align}
+	\vb{\delta}_{AB, 1} = \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 2} = \begin{pmatrix} \frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{AB, 3} = \begin{pmatrix} -\frac{a}{2} \\ -\frac{a}{2\sqrt{3}} \end{pmatrix}
+\end{align}
+and the vectors from atom \(B\) to the nearest-neighbor atoms \(A_i\) (\(i = 1, 2, 3,\)) are
+\begin{align}
+	\vb{\delta}_{BA, 1} = \begin{pmatrix} 0 \\ -\frac{a}{\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 2} = \begin{pmatrix} -\frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix},\; \vb{\delta}_{BA, 3} = \begin{pmatrix} \frac{a}{2} \\ \frac{a}{2\sqrt{3}} \end{pmatrix} \;.
+\end{align}
+\begin{figure}[tb]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:graphene lattice structure}
+		\input{images/graphene lattice.pgf}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:graphene Brillouin zone}
+		\input{images/graphene brillouin_zone.pgf}
+	\end{subfigure}
+	\caption[Graphene lattice structure and Brillouin zone.]{\textbf{Graphene lattice structure and Brillouin zone.} \textbf{(\subref{sfig:graphene lattice structure})} graphene lattice structure with primitive lattice vectors \(\vb{a}_1\), \(\vb{a}_2\) and \textbf{(\subref{sfig:graphene Brillouin zone})} Brillouin zone with reciprocal vectors \(\vb{b}_1\), \(\vb{b}_2\). Both images created with lattpy \cite{Jones_lattpy_2022}.}
+	\label{fig:graphene lattice structure and Brilluoin zone}
+\end{figure}
+The primitive reciprocal lattice vectors \(\vb{b}_1\), \(\vb{b}_2\) fulfill:
+\begin{align}
+	\vb{a}_1 \cdot \vb{b}_1 &= \vb{a}_2 \cdot \vb{b}_2 = 2\pi \\
+	\vb{a}_1 \cdot \vb{b}_2 &= \vb{a}_2 \cdot \vb{b}_1 = 0\;,
+\end{align}
+so that
+\begin{align}
+	\vb{b}_1 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
+	\vb{b}_2 = \frac{2\pi}{a} \begin{pmatrix} 1 \\ - \frac{1}{\sqrt{3}} \end{pmatrix} \;.
+\end{align}
+The first Brillouin zone of the hexagonal lattice is shown in \cref{sfig:graphene Brillouin zone}, with the points of high symmetry
+\begin{align}
+	\Gamma = \begin{pmatrix} 0 \\ 0 \end{pmatrix},\;
+	\mathrm{M} = \frac{\pi}{a} \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix},\;
+	\mathrm{K} = \frac{4\pi}{3 a} \begin{pmatrix} 1 \\ 0 \end{pmatrix}\;.
+\end{align}
+
+The elemental model as shown in \cref{fig:decorated graphene model} has the following kinetic terms:
+\begin{align}
+	H_0 &= -t \sum_{\langle ij \rangle, \sigma}
+	c_{i \sigma}^{(\mathrm{A}), \dagger} c_{j \sigma}^{(\mathrm{B})}
+	+ V \sum_{i \sigma \sigma^{\prime}}
+	d_{i \sigma}^{\dagger} c_{i \sigma^{\prime}}^{(\mathrm{A})} + \mathrm{h.c.}
+	\label{eq:EG-X model Hamiltonian non-interacting}
+\end{align}
+with
+\begin{itemize}
+	\item \(d\) - operators on the X atom
+	\item \(c^{(\epsilon)}\) - operators on the graphene sites (\(\epsilon = \mathrm{A}, \mathrm{B}\))
+	\item \(t\) - nearest neighbor hopping between graphene sites
+	\item \(V\) - hopping between \(\mathrm{X}\) and graphene \(\mathrm{A}\) sites.
+\end{itemize}
+
+Using the Fourier transformation
+\begin{equation}
+	c_{i \alpha \sigma} = \frac{1}{\sqrt{N}} \sum_{\vb{k}} e^{\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \alpha \sigma} \;,
+\end{equation}
+the hopping term becomes
+\begin{align}
+	&-t \sum_{\langle ij \rangle, \sigma} c_{i \sigma}^{(\mathrm{A}), \dagger} c_{j \sigma}^{(\mathrm{B})} \\
+	&= -t \sum_{i \delta_{\mathrm{AB}} \sigma} c_{i \sigma}^{(\mathrm{A}) \dagger} c_{i + \delta_{\mathrm{AB}}, \sigma}^{(\mathrm{B})} \\
+	&= -\frac{t}{N^2} \sum_{i,\sigma} \sum_{\vb{k}, \vb{k}^{\prime}, \delta_{\mathrm{AB}}} \left(e^{-\iu \vb{k} \vb{r}_{i \alpha}} c_{\vb{k} \sigma}^{(\mathrm{A}) \dagger}\right) \left(e^{\iu \vb{k}^{\prime} \vb{r}_{i \alpha} +\delta_{AB}} c_{\vb{k}^{\prime} \sigma}^{(B)} \right) \\
+	&= -\frac{t}{N^2} \sum_{\vb{k}, \vb{k^{\prime}}, \delta_{\mathrm{AB}}, \sigma} c_{\vb{k} \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}^{\prime} \sigma}^{(\mathrm{B})} e^{\iu \vb{k}^{\prime} \delta_{\mathrm{AB}}} e^{\iu (\vb{k} (\delta_A - \delta_B) + \vb{k}^{\prime} (\delta_A - \delta_B))} \sum_{i} e^{-\iu \vb{k} \vb{R}_i} e^{\iu \vb{k}^{\prime} \vb{R}_i} \\
+	&= -\frac{t}{N^2} \sum_{\vb{k}, \vb{k^{\prime}}, \sigma}  c_{\vb{k} \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k}^{\prime} \sigma}^{(\mathrm{B})} \sum_{\delta_{\mathrm{AB}}} e^{\iu \vb{k}^{\prime} \delta_{\mathrm{AB}}} e^{\iu (\vb{k} (\delta_A - \delta_B) + \vb{k}^{\prime} (\delta_A - \delta_B))} \left(N^2 \delta_{\vb{k}, \vb{k}^{\prime}} \right)\\
+	&= -t \sum_{\vb{k}, \sigma}  c_{\vb{k} \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k} \sigma}^{(\mathrm{B})} \sum_{\delta_{\mathrm{AB}}} e^{\iu (\vb{k} \delta_{AB} + 2 k_y a)} = \sum_{\vb{k}, \sigma} f_{\vb{k}} c_{\vb{k} \sigma}^{(\mathrm{A}) \dagger} c_{\vb{k} \sigma}^{(\mathrm{B})} \;.
+\end{align}
+The factor \(f_{\vb{k}}\) can be written out explicitly using the nearest-neighbor vectors, for example
+\begin{align}
+	\vb{k} \cdot \vb{\delta_{AB, 1}} = \begin{pmatrix} k_x \\ k_y \end{pmatrix} \cdot \begin{pmatrix} 0 \\ \frac{a}{\sqrt{3}} \end{pmatrix} = \frac{1}{\sqrt{3}} k_y \;.
+\end{align}
+This gives:
+\begin{align}
+	f_{\vb{k}} &= -t \sum_{\delta_{AB}} e^{\iu (\vb{k} \delta_{AB} + 2 k_y a)} \\
+	&= -t e^{2 \iu k_y a} \left(
+	e^{\iu \frac{a}{\sqrt{3}} k_y} +
+	e^{\iu \frac{a}{2\sqrt{3}} (\sqrt{3} k_x - k_y)} +
+	e^{\iu \frac{a}{2\sqrt{3}} (-\sqrt{3} k_x - k_y)} \right) \\
+	&= -t e^{2 \iu k_y a} \left(
+	e^{\iu \frac{a}{\sqrt{3}} k_y} +
+	2 e^{-\iu \frac{a}{2\sqrt{3}} k_y}
+	\cos{(\frac{a}{2} k_x)} \right) \;.
+\end{align}
+Using the fact that \(\delta_{\mathrm{BA}, i} = -\delta_{\mathrm{AB}, i}\), it follows
+\begin{align}
+	-t \sum_{\delta_{BA}} e^{\iu \vb{k} \delta_{BA}} = -t \sum_{\delta_{AB}} e^{-\iu \vb{k} \delta_{AB}} = \left(-t \sum_{\delta_{AB}} e^{\iu \vb{k} \delta_{AB}}\right)^* = f_{\vb{k}}^* \;,
+\end{align}
+which then gives
+\begin{align}
+	H_0 &= \sum_{\vb{k}, \sigma} C_{\vb{k} \sigma}^{\dagger}
+	\begin{pmatrix}
+		0 & f_{\vb{k}} & V \\
+		f_{\vb{k}}^* & 0 & 0 \\
+		V & 0 & 0
+	\end{pmatrix} C_{\vb{k} \sigma}
+	\label{eq:decorated graphene Hamiltonian non-interacting matrix} \\
+	C_{\vb{k} \sigma} &= \begin{pmatrix} c_{\vb{k} \sigma}^{A, \dagger} & c_{\vb{k} \sigma}^{B, \dagger} & d_{\vb{k} \sigma}^{\dagger} \end{pmatrix}^T
+\end{align}
+For the Hamiltonian in \cref{eq:EG-X model Hamiltonian non-interacting} at half-filling, there always is a zero energy eigenstate with a gap separating the other bands from the zero energy band for any finite value, as shown in \cref{fig:decorated graphene model non-interacting bands}.
+For \(V \to \infty\), the eigenstate is \(\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}^T\) meaning it is completely localized at the atoms of the non-decorated sublattice \(\mathrm{B}\).
+The maximally localized Wannier function associated with this state is centered and completely peaked in the \(\mathrm{B}\) sublattice.
+In the opposite case of \(V \to 0^+\), the eigenstate is \(\begin{pmatrix} 0 & 0^+ & \nicefrac{f_{\vb{k}}}{f_{\vb{k}}} \end{pmatrix}^T\) except for the nodal points where \(f_{\vb{k}} = 0\).
+This means that the spectral weight of the flat band is located at the \(\mathrm{X}\) atoms.
+\begin{figure}[t]
+	\centering
+	\import{images}{dressed graphene bands.pgf}
+	\caption[Decorated graphene band structure.]{\textbf{Decorated graphene band structure.} The orbital weight \(W_{\vb{k}}\) is marked in color, showing how the flat band switches over from being of \(\mathrm{X}\) character to being of \(\mathrm{Gr}\) character when tuning the hybridization \(V\).}
+	\label{fig:decorated graphene model non-interacting bands}
+\end{figure}
+
+The orbital weight of a Bloch state \(\ket{\psi_n (\vb{k})}\) corresponding to a band \(n\) can be calculated using
+\begin{equation}
+	\vert w_{\vb{k} m}^n \vert^2 = \vert \braket{\Psi_n (\vb{k}) \vert m} \vert^2
+\end{equation}
+where \(m \in \{\mathrm{Gr}_{\mathrm{A}}, \mathrm{Gr}_{\mathrm{B}}, \mathrm{X}\}\) marks the orbital:
+\begin{equation}
+	\ket{\mathrm{Gr}_{\mathrm{A}}} = \begin{pmatrix} 1 & 0 & 0 \end{pmatrix}^T,\;
+	\ket{\mathrm{Gr}_{\mathrm{B}}} = \begin{pmatrix} 0 & 1 & 0 \end{pmatrix}^T,\;
+	\ket{\mathrm{X}} = \begin{pmatrix} 0 & 0 & 1 \end{pmatrix}^T \;.
+\end{equation} 
+The orbital character of the bands in \cref{fig:decorated graphene model non-interacting bands} is calculated via
+\begin{equation}
+	W_{\vb{k}} = w_{\vb{k}, \mathrm{X}} - (w_{\vb{k}, \mathrm{Gr}_{\mathrm{A}}} + w_{\vb{k}, \mathrm{Gr}_{\mathrm{A}}})\;.
+\end{equation}
+It shows how the flat band switches over from being completely of \(\mathrm{X}\) character to being of \(\mathrm{Gr}\) character.
+
+%For calculation of the quantum metric and the superconducting current, the derivative of \cref{eq:EG-X model Hamiltonian non-interacting} is needed: \todo{Derivative of h(k)}
+%\begin{align}
+%	H
+%\end{align}
+
+\section{Quantum Geometry}\label{sec:decorated graphene quantum metric}
+
+Between the edge cases of \(V \to \infty\) and \(V \to 0^+\), there is no gap closure when keeping \(V > 0\), which means that the Wannier center must not have moved.
+Instead, the maxima of the Wannier centers shift to the three neighboring \(\mathrm{X}\) sites.
+As already discussed in \cref{sec:quantum-metric}, this behavior of the Wannier spread is dictated by the quantum metric.
+\Cref{fig:decorated graphene model quantum metric} shows how the \(\mathrm{X}\)-orbital weight of the flat band follows the integrated quantum metric
+\begin{equation}
+	M = \frac{1}{N_{\vb{k}}} \sum_{\vb{k}} g_{xx} (\vb{k}) + g_{yy} (\vb{k})
+\end{equation}
+being finite for low \(V\) and then going to 0 for large \(V\).
+This mean that following \cref{sec:quantum-metric}, the model does not support superconductivity for high \(V\) because there is no geometric contribution to the superfluid weight at the flat band.
+For low \(V\) there will be a geometric contribution, so superconductivity can be expected in that parameter regime.
+\begin{SCfigure}[1][t]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{quantum_metric_vs_V.pgf}
+	\caption[Orbital weight of the flat band and integrated quantum metric.]{\textbf{Orbital weight of the flat band and integrated quantum metric.} The orbital weight is calculated as \(w_m = \sum_{\vb{k}} \vert w_{\vb{k} m} \vert^2\) (\(m \in \{\mathrm{Gr}_{\mathrm{A}}, \mathrm{Gr}_{\mathrm{B}}, \mathrm{X}\}\)) and the integrated quantum metric \(M\) is marked as a dotted line.}
+	\label{fig:decorated graphene model quantum metric}
+\end{SCfigure}
+The structure of localized orbitals hybridizing with Dirac states is similar to other strongly correlated graphene systems, such as in the heavy Fermion description of magic angle twisted bilayer graphene \cite{songMagicAngleTwistedBilayer2022}.
+	
+\end{document}

@@ -112,21 +112,39 @@ font=\normalfont\Huge
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[
+	backend=biber,
     style=numeric-comp,
     sorting=none,
-    giveninits=true,
+    %giveninits=true,
     backref=true,
 ]{biblatex} % use biblatex with a numeric (compact) style, given in the order of citation and abbreviation of given names
+
+% Redefine the macro for online entries (arXiv preprints)
 \renewbibmacro*{doi+eprint+url}{
-    \printfield{doi}
-    \newunit\newblock
-    \iffieldundef{doi}{
-        \usebibmacro{eprint}
-        \iffieldundef{eprint}{\usebibmacro{url+urldate}}{}%
-    }{}
-}% only print URL if there is no DOI
+	\iffieldundef{eprint}{%
+		\iffieldundef{doi}{%
+			\usebibmacro{url}  % If no DOI or eprint, print URL
+		}{%
+			\printfield{doi}  % Print DOI if no arXiv eprint
+		}%
+	}{%
+		\iffieldequalstr{eprinttype}{arXiv}{%
+			arXiv preprint (\thefield{year}),  % Print arXiv preprint and year in the correct order
+			\newunit
+			\printfield{doi}  % Then print DOI if available
+		}{}%
+	}%
+}
+% Display only the year for articles and online entries
+\DeclareFieldFormat[online]{date}{}
+\DeclareFieldFormat[article]{date}{\thefield{year}}
+
+\DeclareFieldFormat[online,unpublished]{title}{\mkbibquote{#1}}
+\DeclareFieldFormat{pubstate}{}
+
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\renewcommand*{\bibfont}{\small}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Color definitions
@@ -188,6 +206,7 @@ font=\normalfont\Huge
 } % setup the caption for floats
 \usepackage{subcaption} % For placing figures side by side
 \usepackage{sidecap} % For placing caption besides figures
+\sidecaptionvpos{figure}{c}
 
 \usepackage{booktabs} % package to typeset prettier tables
 
@@ -223,21 +242,9 @@ font=\normalfont\Huge
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setup of the glossary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[symbols,nogroupskip,sort=use,indexonlyfirst]{glossaries-extra}
+\usepackage[nogroupskip,sort=use]{glossaries}
 \makenoidxglossaries
-\newglossarystyle{symbolstyle}{%
- \setglossarystyle{long3col}% base it on the long3col style
-  \renewenvironment{theglossary}%
-    {\begin{longtable}{@{\extracolsep{\fill}}llc}}%
-    {\end{longtable}}%
- \renewcommand*{\glossaryheader}{%
-  \bfseries Symbol&\bfseries Meaning&
-  \bfseries Definition\tabularnewline\endhead}%
-  \renewcommand{\glossentry}[2]{%
-    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
-    \glossentrydesc{##1} \glsentryuseri{##1} & ##2\tabularnewline
-  }%
-}
+\setacronymstyle{long-short}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % To put in todos

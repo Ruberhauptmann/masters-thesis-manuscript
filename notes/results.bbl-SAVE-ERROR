@@ -16,5 +16,163 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{wittQuantumGeometryLocal2025}{online}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=52b7217b78bd8022d179738906aabcbd}{%
+           family={Ryee},
+           familyi={R\bibinitperiod},
+           given={Siheon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f466d1051ab718be4c2d18c42aa2fced}{%
+           family={Klebl},
+           familyi={K\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=51467cdaff9bbb09b9446484741aba15}{%
+           family={Cano},
+           familyi={C\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+        {{hash=17b8bfa354a7a73c0d2c98f2fdc99418}{%
+           family={Sangiovanni},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Graphene-based multilayer systems serve as versatile platforms for exploring the interplay between electron correlation and topology, thanks to distinctive low-energy bands marked by significant quantum metric and Berry curvature from graphene's Dirac bands. Here, we investigate Mott physics and local spin moments in Dirac bands hybridized with a flat band of localized orbitals in functionalized graphene. Via hybridization control, a topological transition is realized between two symmetry-distinct site-selective Mott states featuring local moments in different Wyckoff positions, with a geometrically enforced metallic state emerging in between. We find that this geometrically controlled local moment ``swapover'' and associated metal-insulator physics may be realized through proximity coupling of epitaxial graphene on SiC(0001) with group IV intercalants, where the Mott state faces geometrical obstruction in the large-hybridization limit. Our work shows that chemically functionalized graphene provides a correlated electron platform, very similar to the topological heavy fermions in graphene moir\textbackslash 'e systems but at significantly enhanced characteristic energy scales.}
+      \field{day}{5}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{pubstate}{prepublished}
+      \field{title}{Quantum Geometry and Local Moment Swapover in Correlated Graphene Heterostructures}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.03700
+      \endverb
+      \verb{eprint}
+      \verb 2503.03700
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/CHK7B4H6/Witt et al. - 2025 - Quantum geometry and local moment swapover in correlated graphene heterostructures.pdf;/home/tjark/Zotero/storage/J5EZS9N7/2503.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{wittBypassingLatticeBCS2024}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0131987e0e4f4ce264d88580af2fb36c}{%
+           family={Nomura},
+           familyi={N\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=65bb03a5da61f72b4bac1b815a7ac7de}{%
+           family={Brener},
+           familyi={B\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=65f88bc7e50377682ecc93d607dca9f3}{%
+           family={Arita},
+           familyi={A\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3c88645d57ffec17a297e9b94eeee5e5}{%
+           family={Lichtenstein},
+           familyi={L\bibinitperiod},
+           given={Alexander\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Superconductivity emerges from the spatial coherence of a macroscopic condensate of Cooper pairs. Increasingly strong binding and localization of electrons into these pairs compromises the condensate’s phase stiffness, thereby limiting critical temperatures – a phenomenon known as the BCS–BEC crossover in lattice systems. In this study, we demonstrate enhanced superconductivity in a multiorbital model of alkali-doped fullerides (A3C60) that goes beyond the limits of the lattice BCS–BEC crossover. We identify that the interplay of strong correlations and multiorbital effects results in a localized superconducting state characterized by a short coherence length but robust stiffness and a domeless rise in critical temperature with increasing pairing interaction. To derive these insights, we introduce a new theoretical framework allowing us to calculate the fundamental length scales of superconductors, namely the coherence length (ξ0) and the London penetration depth (λL), even in presence of strong electron correlations.}
+      \field{day}{10}
+      \field{issn}{2397-4648}
+      \field{journaltitle}{npj Quantum Materials}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{npj Quantum Mater.}
+      \field{title}{Bypassing the Lattice {{BCS}}–{{BEC}} Crossover in Strongly Correlated Superconductors through Multiorbital Physics}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1038/s41535-024-00706-7
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/EYEN73KB/Witt et al. - 2024 - Bypassing the lattice BCS–BEC crossover in strongly correlated superconductors through multiorbital.pdf;/home/tjark/Zotero/storage/RYAEF35I/41535_2024_706_MOESM1_ESM.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \keyw{Backlog}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

@@ -25,8 +25,6 @@
 \usepackage{import}
 
 \input{font-selection}
-\usepackage{xstring}
-\IfEndWith*{\jobname}{-online}{\input{font-selection-online}}
 
 \loadglsentries[main]{glossary.tex} % load glossary entries
 
@@ -64,12 +62,14 @@
 % Beginning of the content
 \mainmatter
 
-% Load motivation
-\subfile{chapters/motivation.tex}
-\newpage
+\subfile{chapters/introduction.tex}
 
 % Inclusion of all the chapters
 \subfile{chapters/superconductivity.tex}
+
+\subfile{chapters/decorated graphene model.tex}
+
+\subfile{chapters/results.tex}
 
 \subfile{chapters/conclusion.tex}
 
@@ -100,8 +100,7 @@
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
 
 % Include the acknowledgement
-\chapter*{Acknowledgment}
-\addcontentsline{toc}{chapter}{Acknowledgment}
+%\addcontentsline{toc}{chapter}{Acknowledgment}
 %\subfile{chapters/acknowledgement.tex}
 
 % Include the Selbstständigkeitserklärung
