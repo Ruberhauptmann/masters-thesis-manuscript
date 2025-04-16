@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="131.267mm"
-   height="43mm"
-   viewBox="0 0 131.26699 43"
+   width="5.5999999in"
+   height="1.8344291in"
+   viewBox="0 0 142.23999 46.594501"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.6175147"
-     inkscape:cx="174.97514"
-     inkscape:cy="119.7701"
+     inkscape:zoom="1.8508624"
+     inkscape:cx="286.62314"
+     inkscape:cy="108.32788"
      inkscape:window-width="2494"
      inkscape:window-height="1374"
      inkscape:window-x="0"
@@ -39,15 +39,15 @@
      id="defs2">
     <rect
        x="283.83411"
-       y="-60.944985"
-       width="137.25654"
-       height="50.178256"
+       y="-60.944984"
+       width="137.25655"
+       height="50.178257"
        id="rect2333" />
     <rect
        x="135.2294"
        y="-41.618057"
        width="156.8114"
-       height="34.387475"
+       height="34.387474"
        id="rect2303" />
     <marker
        style="overflow:visible"
@@ -132,7 +132,7 @@
        fx="111.17903"
        fy="-17.426832"
        r="13.569629"
-       gradientTransform="matrix(0.73970055,0.03500053,-0.06190962,0.97227375,15.091971,-10.770409)"
+       gradientTransform="matrix(0.85214373,0.04032101,-0.07132061,1.1200708,14.149151,-9.8947168)"
        gradientUnits="userSpaceOnUse" />
     <marker
        style="overflow:visible"
@@ -178,37 +178,37 @@
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="fill:url(#radialGradient6887);fill-opacity:1;stroke-width:0.18227;stroke-opacity:0.485944"
+       style="fill:url(#radialGradient6887);fill-opacity:1;stroke-width:0.209977;stroke-opacity:0.485944"
        id="path184"
-       cx="98.410057"
-       cy="-23.822739"
-       rx="10.052571"
-       ry="17.331324"
+       cx="110.13256"
+       cy="-24.931154"
+       rx="11.58068"
+       ry="19.965887"
        transform="matrix(0.93082652,0.36546135,-0.54673526,0.83730553,0,0)" />
     <circle
-       style="fill:#ffa90e;fill-opacity:1;stroke:#000000;stroke-width:0.189944;stroke-opacity:1"
+       style="fill:#ffa90e;fill-opacity:1;stroke:#000000;stroke-width:0.218818;stroke-opacity:1"
        id="path5512-4-3"
-       cx="104.93105"
-       cy="15.761199"
-       r="2" />
+       cx="116.49483"
+       cy="19.078178"
+       r="2.3040235" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184)"
-       d="M 90.48142,27.80475 C 77.81034,39.497447 56.407136,39.166308 42.861632,27.419256"
+       style="fill:none;stroke:#000000;stroke-width:0.305283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184)"
+       d="M 99.848688,32.95249 C 85.251458,46.422614 60.594716,46.041138 44.990137,32.508396"
        id="path552-7"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184-0);marker-end:url(#TriangleStart)"
-       d="m 102.9103,18.403351 c -1.11184,1.24945 -3.584713,1.357097 -4.855825,0.237267"
+       style="fill:none;stroke:#000000;stroke-width:0.305283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184-0);marker-end:url(#TriangleStart)"
+       d="m 114.16691,22.121968 c -1.28085,1.439381 -4.12963,1.563392 -5.59397,0.273334"
        id="path552-7-0"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184-4)"
-       d="M 43.304734,10.39393 C 55.975818,-1.2987645 77.379022,-0.96762548 90.924526,10.779424"
+       style="fill:none;stroke:#000000;stroke-width:0.305283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker10184-4)"
+       d="M 45.500596,12.895021 C 60.097833,-0.57509959 84.754575,-0.19362359 100.35916,13.339115"
        id="path552-7-1"
        sodipodi:nodetypes="cc" />
     <g
        id="g6738"
-       transform="translate(-5.9348772,-8.4888447)">
+       transform="matrix(1.1520117,0,0,1.1520117,-11.224014,-8.8581562)">
       <g
          id="g6441">
         <circle
@@ -483,36 +483,36 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
-       x="66.987717"
-       y="7.362402"
+       style="font-size:4.06404px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292611;stroke-opacity:1"
+       x="72.783669"
+       y="9.4026651"
        id="text12881"><tspan
          sodipodi:role="line"
          id="tspan12879"
-         style="font-size:3.52778px;stroke:none;stroke-width:0.254"
-         x="67.446327"
-         y="7.362402">\sffamily{Set} \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) </tspan></text>
+         style="font-size:4.06404px;stroke:none;stroke-width:0.292611"
+         x="73.311996"
+         y="9.4026651">\sffamily{Set} \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) </tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
-       x="66.695694"
-       y="33.034256"
+       style="font-size:4.06404px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292611;stroke-opacity:1"
+       x="72.447258"
+       y="38.976944"
        id="text12881-4"><tspan
          sodipodi:role="line"
-         style="font-size:3.52778px;stroke:none;stroke-width:0.254"
-         x="66.695694"
-         y="33.034256"
+         style="font-size:4.06404px;stroke:none;stroke-width:0.292611"
+         x="72.447258"
+         y="38.976944"
          id="tspan50014">{\small \sffamily{\shortstack{Update parameters of \\ impurity model}}}</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
-       x="106.58245"
-       y="38.759975"
+       style="font-size:4.06404px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292611;stroke-opacity:1"
+       x="118.39727"
+       y="45.57304"
        id="text12881-4-3"><tspan
          sodipodi:role="line"
-         style="font-size:3.52778px;stroke:none;stroke-width:0.254"
-         x="106.58245"
-         y="38.759975"
+         style="font-size:4.06404px;stroke:none;stroke-width:0.292611"
+         x="118.39727"
+         y="45.57304"
          id="tspan50014-6">{\small \sffamily{\shortstack{single site \\ impurity model}}}</tspan></text>
     <text
        xml:space="preserve"
@@ -526,35 +526,35 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;white-space:pre;shape-inside:url(#rect22492);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
-       x="28.691288"
-       y="36.652702"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06403px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292611;stroke-opacity:1"
+       x="28.665733"
+       y="43.145435"
        id="text31105"><tspan
          sodipodi:role="line"
          id="tspan31103"
-         style="stroke-width:0.254"
-         x="28.691288"
-         y="36.652702">\(G_{\mathrm{lat}}^{-1} = G_{\mathrm{lat}, 0}^{-1} - \Sigma_{\mathrm{lat}}\)</tspan></text>
+         style="stroke-width:0.292611"
+         x="28.665733"
+         y="43.145435">\(G_{\mathrm{lat}}^{-1} = G_{\mathrm{lat}, 0}^{-1} - \Sigma_{\mathrm{lat}}\)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-opacity:1"
-       x="102.9945"
-       y="22.959934"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.06403px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292611;stroke-opacity:1"
+       x="114.26391"
+       y="27.371206"
        id="text40103"><tspan
          sodipodi:role="line"
          id="tspan40101"
-         style="stroke-width:0.254"
-         x="102.9945"
-         y="22.959934">\(\Delta (\iu \omega_n)\)</tspan></text>
+         style="stroke-width:0.292611"
+         x="114.26391"
+         y="27.371206">\(\Delta (\iu \omega_n)\)</tspan></text>
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text2301"
-       style="fill:#000000;stroke-width:0.95999998;text-align:center;font-size:13.33333333px;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;white-space:pre;shape-inside:url(#rect2303)" />
+       style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;white-space:pre;shape-inside:url(#rect2303);display:inline;fill:#000000;stroke-width:0.96" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text2331"
-       style="fill:#000000;stroke-width:0.95999998;text-align:center;font-size:13.33333333px;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;white-space:pre;shape-inside:url(#rect2333)" />
+       style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;white-space:pre;shape-inside:url(#rect2333);display:inline;fill:#000000;stroke-width:0.96" />
   </g>
 </svg>

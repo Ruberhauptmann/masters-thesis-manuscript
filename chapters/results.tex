@@ -1,0 +1,248 @@
+\documentclass[../notes.tex]{subfiles}
+%\graphicspath{{\subfix{../images/}}, {\subfix{../}}}
+
+\begin{document}
+	
+\chapter{Application of the Finite-Momentum Pairing Method}\label{ch:results}
+
+\Cref{ch:superconductivity} introduced the method of enforcing a finite momentum on the order parameter to gain access to the coherence length \(\xi_0\) and the London penetration depth \(\lambda_{L, 0}\).
+
+In this chapter, it will be applied in two ways.
+In \cref{sec:results decorated graphene model} for the decorated graphene model on the mean-field level.
+Here, the influence of the quantum geometry on superconductivity as explained in \cref{sec:quantum-metric} will be explored.
+
+In \cref{sec:results OBH}, it is then applied to the one-band attractive Hubbard model on the square lattice, both on the mean-field level and using \gls{dmft}.
+It has one parameter tuning the attractive interaction between electrons, making it the prime example for demonstrating the BCS-BEC crossover phenomenon in the \gls{dmft} implementation.
+
+
+\section{Decorated Graphene Model}\label{sec:results decorated graphene model}
+
+By self-consistently solving the gap equation \cref{eq:gap equation} for a set of external parameters, the behavior of the gap values \(\Delta_{\alpha}\) for the three orbitals \(\alpha \in \{\mathrm{Gr}_{\mathrm{A}}, \mathrm{Gr}_{\mathrm{B}}, \mathrm{X}\}\) can be analyzed.
+In the case of the decorated graphene model, these are the Hubbard interaction \(U\) (here set the same for all orbitals), the hybridization \(V\), temperature \(T\) and Cooper pair momentum \(\vb{q}\).
+All steps are shown for an example value of \(U = 0.1t\), results for the superconducting length scales will later be compared between different \(U\).
+
+\subsection*{Critical Temperatures}
+
+The zero-temperature lengths \(\xi_0, \lambda_{L,0}\) are extracted from the temperature dependence \(\xi (T), \lambda_L (T)\) in \cref{eq:correlation length GL theory} and \cref{eq:London penetration depth from current and temperature dependence} (which both depend on the ration \(\nicefrac{T}{T_{\mathrm{C}}}\)).
+This means the first step in the analysis is to find the critical temperature \(T_{\mathrm{C}}\) for \(\vb{q} = 0\).
+
+Because the calculations near \(T_{\mathrm{C}}\) are hard to converge, finding \(T_{\mathrm{C}}\) by analyzing the point at which the gap vanishes is not feasible.
+Instead, from the Ginzburg-Landau theory expression \cref{eq:extract TC via OP} (which is valid for \(T \simeq T_{\mathrm{C}}\)), the \(T_{\mathrm{C}}\) can be extracted from the linear behavior of the order parameter near the phase transition:
+\begin{equation}
+	\vert \Delta_{\alpha} \vert^2 \propto T_{\mathrm{C}} - T \;.
+\end{equation}
+This is shown in \cref{fig:decorated graphene OP vs T}.
+Notable here is that even though \(\Delta_{\mathrm{A}}\) is orders of magnitude smaller than \(\Delta_{\mathrm{B}}\) and \(\Delta_{\mathrm{X}}\), \(T_{\mathrm{C}}\) is the same for every orbital.
+This is the case for all values of \(V\), as shown in \cref{sfig:decorated graphene critical temperatures vs V}.
+\Cref{sfig:decorated graphene gaps vs V} shows that \(T_{\mathrm{C}}\) follows the maximal value of the \(\Delta_{\alpha}\), switching over from \(\mathrm{X}\) to \(\mathrm{Gr}_{\mathrm{B}}\) at \(V = 1.46t\).
+\begin{figure}[tb]
+	\centering
+	\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_T_U_0.1000_V_1.60.pgf}
+	\caption
+	[Extraction of \(T_{\mathrm{C}}\) from the linear behavior of the order parameter.]{
+		\textbf{Extraction of \(T_{\mathrm{C}}\) from the linear behavior of the order parameter.}
+		Shown is the square of the gap \(\Delta_{\alpha}\) near \(T_{\mathrm{C}}\) for \(U = 0.1 t\), \(V = 1.6 t\) and \(\vb{q} = 0\). The linear fit for extracting \(T_{\mathrm{C}}\) is shown in tan, the corresponding \(T_{\mathrm{C}}\) is marked by the dashed gray line.
+	}
+	\label{fig:decorated graphene OP vs T}
+\end{figure}
+
+The value of \(\Delta_{\alpha}\) follows the corresponding orbital weight \(w_{\alpha}, \alpha \in \{\mathrm{Gr}_{\mathrm{A}}, \mathrm{Gr}_{\mathrm{B}}, \mathrm{X}\}\) of the flat band as shown in \cref{fig:decorated graphene model non-interacting bands}.
+In contrast to a repulsive Hubbard interaction \cite{wittQuantumGeometryLocal2025} there is no gap closure for a medium \(V\), there is just a minimum of the maximal gap value at \(V = 1.46t\).
+
+\begin{figure}[tb]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:decorated graphene critical temperatures vs V}
+		\import{images/result_plots/dressed_graphene_MF_critical_temps}{T_C_vs_V_U_0.1000.pgf}
+	\end{subfigure}%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:decorated graphene gaps vs V}
+		\import{images/result_plots/dressed_graphene_MF_critical_temps}{OP_vs_V_U_0.1000.pgf}
+	\end{subfigure}
+	\caption[Critical temperatures and gaps against \(V\).]{
+		\textbf{Critical temperatures and gaps against \(V\).}
+		\textbf{(\subref{sfig:decorated graphene critical temperatures vs V})} \(T_{\mathrm{C}}\) against hybridization \(V\), the same for all three orbitals. \textbf{(\subref{sfig:decorated graphene gaps vs V})} Gaps \(\Delta_{\alpha}\) for the same values of \(V\). The dashed lines are the orbital weight of the flat band as defined in \cref{sec:decorated graphene quantum metric}. The dashed value \(V = 1.46t\) is taken from the minimum of \(T_{\mathrm{C}} (V)\), coinciding with the switchover of the orbital character. Both plots are for the same \(U = 0.1t\) and \(\vb{q} = 0\).
+	} 
+	\label{fig:decorated graphene TC and gaps against V}
+\end{figure}
+
+%\clearpage
+\subsection*{Extracting the Superconducting Length Scales}
+
+The correlation length \(\xi (T)\) is associated with the breakdown of the order parameter:
+\begin{equation}
+	\vert \Psi_{\vb{q}} \vert^2 = \vert \Psi_{0} \vert^2 \left(1 - \xi(T)^2 q^2\right) \;,
+\end{equation}
+which means that the \(q_C\) where the order parameter breaks down is related to the correlation length via
+\begin{equation}
+	\xi = \frac{1}{q_C}\;.
+\end{equation}
+The momentum \(\vb{q}\) is chosen as \(\vb{q} = q \cdot \vb{b}_1\) with the reciprocal vector \(\vb{b}_1\) and \(q \in [0, 0.5]\).
+For \(q > 0.5\), the vector is outside of the first Brillouin zone and the behavior of \(\Delta_{\alpha} (\vb{q})\) is periodic from that point.
+This means the maximal \(\xi\) that can be resolved in this method is given by
+\begin{equation}
+	\xi = \frac{1}{0.5 \cdot \vert \vb{b}_1 \vert} = \frac{\sqrt{3} a}{2 \pi} = \frac{3 a_0}{2 \pi}\;.
+\end{equation}
+
+Similar to finding \(T_{\mathrm{C}}\), numerical calculations near \(q_{\mathrm{C}}\) are hard to converge, so instead the criterion employed here is to choose \(\vb{Q}\) such that
+\begin{equation}
+	\left\vert \frac{\psi_{\vb{Q}}(T)}{\psi_0 (T)} \right\vert = \frac{1}{\sqrt{2}}\;,
+\end{equation}
+and then take
+\begin{equation}
+	\xi = \frac{1}{\sqrt{2} \vert \vb{Q} \vert}\;.
+\end{equation}
+This is not the only way to extract information from the \(\vb{q}\)-dependence of the order parameter, compare ref. \cite{wittBypassingLatticeBCS2024} for discussion about this method and comparison to other methods.
+
+As shown in \cref{sfig:decorated graphene gaps vs V}, only \(\Delta_{\mathrm{B}}\) and \(\Delta_{\mathrm{X}}\) have a significant magnitude in the parameter range of \(U\) considered here.
+So for these two, the \(\vb{q}\)-dependence is shown in \cref{fig:decorated graphene relevant gaps vs q for medium V}.
+Chosen here is \(V = 1.5t\), so in the parameter regime switching over between dominating \(\mathrm{X}\) and \(\mathrm{B}\) contribution.
+Both gaps have a \(q_{\mathrm{C}}\) for which the gap vanishes as shown in \cref{sfig:Ginzburg Landau OP vs q}.
+For higher temperatures \(q_C\) goes to 0, showing how the correlation length diverges for \(T \to T_{\mathrm{C}}\).
+\begin{figure}[tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{important_gaps_vs_q_medium_V_1.50_U_0.1000.pgf}
+	\caption[Suppression of the order parameter with \(\vb{q}\) for \(V = 1.5t\) and \(U = 0.1t\).]{
+		\textbf{Suppression of the order parameter with \(\vb{q}\) for \(V = 1.5t\) and \(U = 0.1t\).} The x-axis is marked in relative lattice units, i.e. \(\vb{q} = q \cdot \vb{b}_1\) for the reciprocal unit vector \(\vb{b}_1\). Marked in gray are the points at which the gaps have fallen off to \(\nicefrac{1}{\sqrt{2}}\) of their value at \(\vb{q} = 0\).}
+	\label{fig:decorated graphene relevant gaps vs q for medium V}
+\end{figure}
+
+In the case of high and low \(V\), the superconducting order is dominated by one of \(\Delta_{\mathrm{A}}, \Delta_{\mathrm{X}}\).
+\Cref{fig:decorated graphene relevant gaps vs q for low and high V} shows that the gap does not fully go down to 0 for \(\vb{q} = \nicefrac{1}{2} \cdot \vb{b}_1\), meaning that in these cases the correlation length calculated in Ginzburg-Landau theory is smaller than \(\nicefrac{3 a_0}{2 \pi}\).
+
+The Ginzburg-Landau free energy is an quadratic expansion in the order parameter and thus only applicable near \(T_{\mathrm{C}}\) and for low \(\vb{q}\).
+\Cref{fig:decorated graphene relevant gaps vs q for low and high V} shows cases where this is not the case and the picture in \cref{sfig:decorated graphene gaps vs V} does not hold true.
+It is still possible to extract values for \(\vert \vb{Q} \vert\) especially for \(T \to T_{\mathrm{C}}\), but it should be kept in mind that in the low and high \(V\) limit, the analysis loses its foundation.
+
+\begin{figure}[tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{important_gaps_vs_q_low_and_high_V_0.50_4.00_U_0.1000.pgf}
+	\caption[Suppression of the order parameter with \(\vb{q}\) for \(V = 0.5t\) and \(V = 4t\) (both for \(U = 0.1t\)).]{
+		\textbf{Suppression of the order parameter with \(\vb{q}\) for \(V = 0.5t\) and \(V = 4t\) (both for \(U = 0.1t\)).} In contrast to \cref{fig:decorated graphene relevant gaps vs q for medium V}, in this parameter regime the order parameter is fully suppressed for the maximal \(q = 0.5\).}
+	\label{fig:decorated graphene relevant gaps vs q for low and high V}
+\end{figure}
+
+To calculate the London penetration depth \(\lambda_{\mathrm{L}}\) via
+\begin{equation}
+	\lambda_{\mathrm{L}} (T) = \sqrt{\frac{\Phi_0}{3 \sqrt{3} \pi \mu_0 \xi (T) j_{\mathrm{dp}} (T)}}\;,
+\end{equation}
+also the depairing current \(j_{\mathrm{dp}}\), the maximum of the superconducting current \(\vb{j} (\vb{q})\) is needed.
+\Cref{fig:decorated graphene current vs q} shows the current \(j (\vb{q}) = \vert \vb{j} (\vb{q}) \vert\) with the maximum marked for every temperature.
+\begin{figure}[tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{current_vs_q_U_0.1000.pgf}
+	\caption[Superconducting current from a finite \(\vb{q}\) for \(U = 0.1 t\).]{
+		\textbf{Superconducting current from a finite \(\vb{q}\) for \(U = 0.1 t\).} For calculation of the London penetration depth \(\lambda_{\mathrm{L}}\), the maximum \(j_{\mathrm{dp}}\) of the current is needed, marked here in gray .
+	}
+	\label{fig:decorated graphene current vs q}
+\end{figure}
+Similar to the gaps, the current shows the behavior sketched in \cref{sfig:Ginzburg Landau current vs q} for \(V = 1.5t\), but for the low and high \(V\) values, the current is not fully suppressed for the lower temperatures and at \(q = 0.5\).
+Still, a maximum can be extracted, but a similar caveat as in the discussion of the gaps about the applicability of the Ginzburg-Landau expressions applies.
+
+\Cref{fig:decorated graphene temperature fits for xi and lambda} shows the temperature dependence for \(\xi (T)\) and \(\lambda_{\mathrm{L}} (T)\) for \(V = 1.5t\).
+These can be fit to the Ginzburg-Landau expressions
+\begin{align}
+	\xi(T) = \xi_0 \left(1 - \frac{T}{T_{\mathrm{C}}}\right)^{-\frac{1}{2}}
+\end{align}
+and
+\begin{align}
+	\lambda_{\mathrm{L}} (T) = 	\lambda_{\mathrm{L}, 0} \left(1 - \frac{T}{T_{\mathrm{C}}}\right)^{-\frac{1}{2}}
+\end{align}
+to obtain the zero-temperature values \(\xi_0\) and \(\lambda_{\mathrm{L}, 0}\).
+\begin{figure}[tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{lengths_vs_T_V_1.50_U_0.1000.pgf}
+	\caption[Temperature dependence of the correlation length \(\xi\) and London penetration depth \(\lambda_{\mathrm{L}}\) for \(V = 1.50t\) and \(U  = 0.1t\).]{\textbf{Temperature dependence of the correlation length \(\xi\) and London penetration depth \(\lambda_{\mathrm{L}}\) for \(V = 1.50t\) and \(U  = 0.1t\).} The fits for extracting the zero-temperature values \(\xi_0\), \(\lambda_{\mathrm{L}, 0}\) and the corresponding values are marked as dashed lines.}
+	\label{fig:decorated graphene temperature fits for xi and lambda}
+\end{figure}
+
+%For the low and and high \(V\) (\cref{fig:decorated graphene relevant gaps vs q for low and high V}): extraction of \(xi (T)\) is not properly possible due to the behaviour of the gaps against \(q\).
+%One can try to extract information from the criterium, but the temperature dependence does not follow the fit. \todo{Make that properly}
+
+%\todo{Put this figure into a subplot}
+%\begin{figure}[!b]
+	%\centering
+	%\import{images/result_plots/DG_MF_length_scales}{lengths_vs_T_V_0.50_U_1.0000.pgf}
+	%\caption{\textbf{}}
+	%\label{fig:decorated graphene temperature fits for xi and lambda for problematic V}
+%\end{figure}
+
+%\clearpage
+\subsection*{Length Scales}
+
+\Cref{fig:decorated graphene length scales} shows the extracted length scales for two different values of the attractive interaction \(U\).
+For the coherence length, the behavior is similar between the two values: the orbital with the largest gap value has the shortest coherence length, with a switchover between the small and large \(V\) values at around \(V = 1.46t\), the point at which the dominating gap switches over from the \(\mathrm{X}\) to the \(\mathrm{B}\) orbital. %\todo{Length scale plot into one plot without subfigure}
+\begin{figure}[!tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{length_scales_comparison.pgf}
+	\caption[Superconducting length scales.]{
+		\textbf{Superconducting length scales for \(U = 0.1t\) and \(U = 4.0t\).} Marked in gray is \(V = 1.46t\), the point at which the dominating gap switches over from the \(\mathrm{X}\) to the \(\mathrm{B}\) orbital.
+	}
+	\label{fig:decorated graphene length scales}
+\end{figure}
+Between \cref{sfig:decorated graphene length scales U 0.10} and \cref{sfig:decorated graphene length scales U 4.00}, the larger attractive interaction leads to a smaller coherence length around \(V = 1.46t\).
+Interestingly, the orbitals with vanishing gap in the large \(V\)-limit go to the same value of \(\xi_0\), independent of \(U\).
+The London penetration depth has a minimum around the switchover point \(V = 1.46t\) that is smaller with larger \(U\).
+This shows that the superfluid weight
+\begin{equation}
+	D_{\mathrm{S}} \propto \lambda_{\mathrm{L}, 0}^{-2}
+\end{equation}
+is suppressed for large values of \(V\).
+
+Another way to calculate the superfluid weight from linear response theory was introduced in \cref{sec:quantum-metric}.
+\Cref{fig:decorated graphene comparison of DS normalized} shows the superfluid weight from the \(\vb{q}\)-dependence and the linear response formula, specifically \(D_{\mathrm{S}, xx} + D_{\mathrm{S}, yy}\).
+This is be split up between the geometric and the conventional contribution.
+Also shown is the minimal quadratic Wannier spread
+\begin{equation}
+	\Omega_{\mathrm{I}} = \Tr M_{\mu \nu} = \frac{1}{N_{\vb{k}}} \sum_{\vb{k}} g_{xx} (\vb{k}) + g_{yy} (\vb{k})
+\end{equation}
+calculated from the quantum metric \(g_{\mu \nu} (\vb{k})\).
+\begin{figure}[!tb]
+	\centering
+	\import{images/result_plots/DG_MF_length_scales}{D_S_comparison_norm.pgf}
+	\caption[Comparison of the superfluid weight calculated by different methods.]{
+		\textbf{Comparison of the superfluid weight calculated by different methods.} All quantities are normalized to analyze the general trend in comparison to the minimal quadratic Wannier spread \(\Omega_{\mathrm{I}}\).
+		For the calculation coming from linear response theory (see \cref{sec:quantum-metric}), the geometric and conventional contributions are marked separately.
+	}
+	\label{fig:decorated graphene comparison of DS normalized}
+\end{figure}
+It shows that the condition under which the superfluid weight is entirely determined by the geometric contribution \cite{peottaSuperfluidityTopologicallyNontrivial2015} occurs in the case of an isolated flat band: for \(U\) smaller than the gap separating the flat band from the dispersive bands (which is \(\mathcal{O} (V)\), this condition holds.
+However, for instance, when \(U = 1.0t\), the conventional contribution increases, and for \(U = 6.0t\), it becomes dominant until \(U \sim V\).
+
+The results from the \gls{fmp} method agree with the linear response insofar that they show a peak in the intermediate \(V\)-regime and go to zero for \(V \to 0\) and \(V \to \infty\), but the location of this peak is not the same between the two methods.
+
+The critical temperatures in BCS theory as seen in \cref{sfig:decorated graphene critical temperatures vs V} shows a minimum in the intermediate \(V\) region, while the superfluid weight has its maximum in this region.
+In consequence, because a finite superfluid weight is needed to support superconductivity, the analysis from BCS theory suggests that the optimum for superconductivity is in this region and not for \(V \to 0\) or \(V \to \infty\) where \(T_{\mathrm{C}}\) is largest.
+
+\section{One-Band Hubbard Model}\label{sec:results OBH}
+
+\Acrshort{dmft} gives insight into the phenomenon of the BCS-BEC crossover \cite{amaricciInhomogeneousBCSBECCrossover2014, suDynamicalClusterQuantum2010, delreDynamicalVertexApproximation2019, petersLocalOriginPseudogap2015}.
+To study this, the \gls{fmp} method is applied for a simpler model in the Hubbard model on the square lattice with only one orbital per unit cell.
+\(T_{\mathrm{C}}\) can be extracted from the linear behavior of \(\Delta^2\) the same way as above, \cref{sfig:DMFT OBH T_C vs U} shows \(T_{\mathrm{C}}\) against \(U\) calculated in both BCS and DMFT.
+This shows how the BCS \(T_{\mathrm{C}}\) only describes the pairing temperature and in DMFT, also phase coherence is captured.
+The DMFT curve shows the typical dome-shape of the BCS-BEC crossover with stronger attractive interaction.
+
+The extraction of the superconducting length scales works the same as in \cref{sec:results decorated graphene model}.
+\Cref{sfig:DMFT OBH BCS to BEC crossover} shows how these length scales characterize the BCS-BEC crossover phenomenon: the coherence length goes to a constant value when going into the BEC regime, marking how the Cooper pairs become strongly localized.
+For \(U \sim 1.0t\) the DMFT calculations were difficult to converge, so especially the values for \(\lambda_{\mathrm{L}, 0}\) vary in this regime, but regardless the superfluid weight has its maximal value for low \(U\) and goes to zero for stronger attractive interaction.
+\begin{figure}[tb]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:DMFT OBH T_C vs U}
+		\import{images/result_plots/OBH_DMFT_critical_temps}{T_C_vs_U.pgf}
+	\end{subfigure}%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:DMFT OBH BCS to BEC crossover}
+		\import{images/result_plots/OBH_DMFT_length_scales}{normalized_length_scales_vs_U.pgf}
+	\end{subfigure}
+	\caption[\(T_{\mathrm{C}}\) and superconducting length scales for the one-band Hubbard model.]{
+		\textbf{\(T_{\mathrm{C}}\) and superconducting length scales for the one-band Hubbard model.} \textbf{(\subref{sfig:DMFT OBH T_C vs U})} \(T_{\mathrm{C}}\) calculated from mean-field theory and \gls{dmft} respectively. It shows the characteristic dome of the BCS-BEC crossover that is not captured in mean-field theory. \textbf{(\subref{sfig:DMFT OBH BCS to BEC crossover})} Critical temperature \(T_{\mathrm{C}}\), coherence length \(\xi_0\) and superfluid weight \(D_{\mathrm{S}} \propto \lambda_{\mathrm{L}, 0}^{-2}\) normalized to its maximal value. In the crossover to the BEC-regime, the superfluid weight goes to \(0\) and the coherence length goes to a constant value. 
+	}
+	\label{fig:DMFT OBH BCS BEC crossover and T_C vs U}
+\end{figure}
+
+\end{document}

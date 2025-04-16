@@ -1,18 +1,18 @@
 \documentclass[
-    a4paper,
+    paper=a4,
     11pt,
-    DIV=calc,
+    DIV=10,
+    BCOR=5mm,
     numbers=noenddot,
     headinclude,
+    footinclude=false,
     titlepage=firstiscover,
     bibliography=totoc,
     listof=leveldown,
-    twoside=false
+    twoside=true
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
-
-\usepackage{layouts}
 
 \input{font-selection}
 
@@ -30,6 +30,8 @@
 }
 
 \graphicspath{images/} % setup path for inclusion of images
+
+\usepackage{layouts}
 
 \begin{document}
 \frontmatter
@@ -50,15 +52,15 @@
 % Beginning of the content
 \mainmatter
 
-\subfile{notes/introduction}
+\subfile{chapters/introduction}
 
 \subfile{chapters/superconductivity.tex}
 
 \subfile{chapters/decorated graphene model.tex}
 
-\subfile{notes/results}
+\subfile{chapters/results}
 
-\subfile{notes/conclusion}
+\subfile{chapters/conclusion}
 
 % Appendix
 \appendix

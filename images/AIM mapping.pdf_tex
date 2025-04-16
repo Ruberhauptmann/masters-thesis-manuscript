@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{372.09542823bp}%
+    \setlength{\unitlength}{403.19999313bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,14 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.32757662)%
+  \begin{picture}(1,0.32757664)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{AIM mapping.pdf}}%
-    \put(0.51381024,0.2714894){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\sffamily{Set} \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) \end{tabular}}}}%
-    \put(0.50809185,0.07591965){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small \sffamily{\shortstack{Update parameters of \\ impurity model}}}\end{tabular}}}}%
-    \put(0.81195159,0.03230077){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small \sffamily{\shortstack{single site \\ impurity model}}}\end{tabular}}}}%
-    \put(0.21857199,0.0483541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(G_{\mathrm{lat}}^{-1} = G_{\mathrm{lat}, 0}^{-1} - \Sigma_{\mathrm{lat}}\)\end{tabular}}}}%
-    \put(0.78461837,0.15266644){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\Delta (\iu \omega_n)\)\end{tabular}}}}%
+    \put(0.51541054,0.26147241){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\sffamily{Set} \(\Sigma_{\mathrm{lat}} = \Sigma_{\mathrm{imp}}\) \end{tabular}}}}%
+    \put(0.50933111,0.05355425){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small \sffamily{\shortstack{Update parameters of \\ impurity model}}}\end{tabular}}}}%
+    \put(0.83237677,0.00718124){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}{\small \sffamily{\shortstack{single site \\ impurity model}}}\end{tabular}}}}%
+    \put(0.20153074,0.02424821){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(G_{\mathrm{lat}}^{-1} = G_{\mathrm{lat}, 0}^{-1} - \Sigma_{\mathrm{lat}}\)\end{tabular}}}}%
+    \put(0.80331771,0.13514689){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\Delta (\iu \omega_n)\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%

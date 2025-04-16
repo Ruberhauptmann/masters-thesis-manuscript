@@ -1,15 +1,15 @@
 \documentclass[
-    a4paper,
-    11pt,
-    DIV=calc,
-    numbers=noenddot,
-    bibliography=totoc,
-    listof=leveldown,
-    headinclude,
-    titlepage=firstiscover,
-    %toc=flat,
-    listof=leveldown,
-    twoside=false
+	paper=a4,
+	11pt,
+	DIV=10,
+	BCOR=5mm,
+	numbers=noenddot,
+	headinclude,
+	footinclude=false,
+	titlepage=firstiscover,
+	bibliography=totoc,
+	listof=leveldown,
+	twoside=true
 ]{scrbook}
 
 \input{preamble} % load the tex file with the preamble
@@ -40,12 +40,6 @@
 % Load the titlepage
 \subfile{titlepage.tex}
 
-%\KOMAoptions{twoside=false}
-
-% List the todos (comment this out in the final version!)
-%\listoftodos
-%\clearpage
-
 % Include the abstract
 \subfile{chapters/abstract.tex}
 
@@ -64,7 +58,6 @@
 
 \subfile{chapters/introduction.tex}
 
-% Inclusion of all the chapters
 \subfile{chapters/superconductivity.tex}
 
 \subfile{chapters/decorated graphene model.tex}
@@ -79,12 +72,8 @@
 % Print the bibliography
 \cleardoublepage
 
-\nocite{*}
-
 \phantomsection
 \printbibliography[title={Bibliography},category=cited]
-
-\printbibliography[title={Not cited},notcategory=cited]
 
 % Beginning of the backmatter
 \backmatter
@@ -97,11 +86,12 @@
 %\listoftables
 
 \setglossarysection{section}
+\addcontentsline{toc}{section}{List of Abbreviations}
 \printnoidxglossary[type=\acronymtype,title={List of Abbreviations}]
 
 % Include the acknowledgement
 %\addcontentsline{toc}{chapter}{Acknowledgment}
-%\subfile{chapters/acknowledgement.tex}
+\subfile{chapters/acknowledgement.tex}
 
 % Include the Selbstständigkeitserklärung
 \includepdf{eidesstattlicheerklaerung.pdf}

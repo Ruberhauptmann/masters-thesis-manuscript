@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{165.59999657bp}%
+    \setlength{\unitlength}{201.59999657bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -54,8 +54,8 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{GL free energy.pdf}}%
-    \put(0.53794276,1.01208008){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(f_{\mathrm{L}}\)\end{tabular}}}}%
-    \put(0.67216233,0.07526103){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\mathrm{Im} (\Psi)\)\end{tabular}}}}%
-    \put(0.10030007,0.32896966){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\mathrm{Re} (\Psi)\)\end{tabular}}}}%
+    \put(0.58069042,0.95438357){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(f_{\mathrm{L}}\)\end{tabular}}}}%
+    \put(0.71389243,0.02466683){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\mathrm{Im} (\Psi)\)\end{tabular}}}}%
+    \put(0.14636566,0.27645208){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\mathrm{Re} (\Psi)\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%

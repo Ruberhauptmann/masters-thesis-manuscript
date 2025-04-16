@@ -2,10 +2,65 @@
 \graphicspath{{\subfix{../images/}}, {\subfix{../}}}
 
 \begin{document}
+	
 \chapter{Conclusion}\label{ch:conclusion}
 
 \subsection*{Summary}
 
+The goal of this thesis was to explore the superconductivity in flat-band systems and characterize the coherence length and the London penetration depth, which connect to the pairing temperature and the superfluid phase stiffness respectively.
+This was done by placing an \gls{fmp} constraint on the order parameter and analyzing the suppression of the order parameter and the superconducting current.
+
+The \gls{fmp} method is based on the phenomenological Ginzburg-Landau theory, which is reviewed in the theoretical foundations.
+It is then explained how introducing a finite momentum to the order parameter gives access to the superconducting length scales.
+To calculate the length scales in microscopic theories, a way to introduce the finite momentum into these theories is needed.
+In the thesis, this is done for two theories: \gls{bcs} theory and \gls{dmft}.
+This chapter also introduces how the geometry of the space of quantum states (characterized by the quantum metric) connects to the superfluid weight, which is especially important in the context of superconductors with flat electronic bands.
+
+The next chapter introduces a decorated graphene model which hosts a flat band and inherits robust quantum geometry from the underlying graphene band structure.
+
+In the last chapter, the \gls{fmp} method is applied.
+For the decorated graphene model, the hybridization \(V\) between the \(\mathrm{Gr}_{\mathrm{A}}\) and \(\mathrm{X}\) sites is shown to be important for superconductivity.
+The magnitude of the superconducting gap is given by the orbital weight of the flat band for the corresponding orbital.
+When \(V\) is increased, the flat band switches from \(\mathrm{X}\) to \(\mathrm{Gr}_{\mathrm{B}}\) character, so in turn the largest value of the superconducting gap between the orbitals switches over from the \(\mathrm{X}\) to the \(\mathrm{Gr}_{\mathrm{B}}\).
+The superconducting transition temperature \(T_{\mathrm{C}}\) follows this maximum, so it has a minium at the point of the switchover \(V = 1.46t\).
+
+The coherence length \(\xi_0\) similarly follows the orbital weight: the orbital with the largest gap shows the shortest coherence length.
+It is demonstrated that in line with previous works on flat-band systems that there is just the geometric contribution to the superfluid weight when the gap separating the flat and dispersive bands is smaller than the interaction \(U\).
+The results for the superfluid weight from the \gls{fmp} method only qualitatively agree with these results calculated from linear response theory, but especially in the low \(V\) regime in which the the superfluid weight is peaked, the \gls{fmp} does not give reliable results.
+
+In the \gls{dmft} implementation of the \gls{fmp} method, the phenomenon of the BCS-BEC crossover (here implemented for the one-band Hubbard model) is investigated.
+In particular it is demonstrated that the pairing temperature (from mean-field theory) diverges from the superconducting transition temperature \(T_{\mathrm{C}}\) when pair condensation is suppressed by the attractive interaction. 
+At the same time, the coherence length \(\xi_0\) is reduced and reaches a constant value and the superfluid weight \(D_{\mathrm{S}} \propto \lambda_{\mathrm{L}, 0}^{-2}\) goes from a constant value to \(0\) for larger interaction.
+
 \subsection*{Outlook}
+
+The decorated graphene model investigated in this thesis is a toy model for the graphene adatom heterostructures realized in ref. \cite{ghosalElectronicCorrelationsEpitaxial2024}.
+A more realistic model that is also explored in ref. \cite{wittQuantumGeometryLocal2025} is a model with a smaller density of \(\mathrm{X}\) atoms in the unit cell, as shown in \cref{sfig:extended decorated graphene lattice}.
+In this case, the quantum metric does not vanish for \(V \to \infty\), compare \cref{sfig:extended decorated graphene orbital weight}.
+This is due to the fact that the orbital weight spreads over all \(\mathrm{B}\) sublattice sites.
+As shown in \cref{sec:results decorated graphene model}, a robust quantum metric supports superconductivity, so investigating this model is an interesting further pathway.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:extended decorated graphene lattice}
+		\includegraphics[width=\textwidth]{images/extended decorated graphene lattice}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.6\textwidth}
+		\centering
+		\caption{\hfill\null}\label{sfig:extended decorated graphene orbital weight}
+		\includegraphics[width=\textwidth]{images/extended decorated graphene orbital weight}
+	\end{subfigure}
+	\label{fig:decorated graphene extended unit cell}
+	\caption[Decorated graphene with smaller impurity density.]{
+		\textbf{Decorated graphene with smaller impurity density.} \textbf{(\subref{sfig:extended decorated graphene lattice})} Unit cell with \(\nicefrac{1}{8}\) impurity coverage. \textbf{(\subref{sfig:extended decorated graphene orbital weight})} Site-resolved orbital weight \(w_m\) and minimal Wannier spread \(\Omega_l\) of the flat band. Importantly, \(\Omega_l\) does not vanish for \(V \to \infty\). Taken from \cite{wittQuantumGeometryLocal2025}.
+	}
+\end{figure}
+
+As seen in \cref{sec:results OBH}, including the full local fluctuations with \gls{dmft} reveals physics beyond the mean-field level, so investigating the decorated graphene model in both the structure treated in this thesis and with the smaller impurity density is an interesting next step.
+
+In twisted Bilayer graphene, the fact that quantum geometry is important for superconductivity in the material is well established \cite{tanakaSuperfluidStiffnessMagicangle2025}.
+The pairing mechanism in twisted bilayer graphene is still an open question so using the \gls{fmp} method to calculate \(\xi_0\) and \(\lambda_{\mathrm{L}, 0}\) to enable a more rigorous comparison to experiment can guide in this exploration, and using the \gls{fmp} method on the mean-field level as developed in this thesis can be a tool for exploration with lower computational cost.
 
 \end{document}

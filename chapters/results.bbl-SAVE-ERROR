@@ -1,0 +1,480 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{wittQuantumGeometryLocal2025}{online}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=52b7217b78bd8022d179738906aabcbd}{%
+           family={Ryee},
+           familyi={R\bibinitperiod},
+           given={Siheon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f466d1051ab718be4c2d18c42aa2fced}{%
+           family={Klebl},
+           familyi={K\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=51467cdaff9bbb09b9446484741aba15}{%
+           family={Cano},
+           familyi={C\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+        {{hash=17b8bfa354a7a73c0d2c98f2fdc99418}{%
+           family={Sangiovanni},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{d5c9bf54ab054b5411610969c20e3023}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Graphene-based multilayer systems serve as versatile platforms for exploring the interplay between electron correlation and topology, thanks to distinctive low-energy bands marked by significant quantum metric and Berry curvature from graphene's Dirac bands. Here, we investigate Mott physics and local spin moments in Dirac bands hybridized with a flat band of localized orbitals in functionalized graphene. Via hybridization control, a topological transition is realized between two symmetry-distinct site-selective Mott states featuring local moments in different Wyckoff positions, with a geometrically enforced metallic state emerging in between. We find that this geometrically controlled local moment ``swapover'' and associated metal-insulator physics may be realized through proximity coupling of epitaxial graphene on SiC(0001) with group IV intercalants, where the Mott state faces geometrical obstruction in the large-hybridization limit. Our work shows that chemically functionalized graphene provides a correlated electron platform, very similar to the topological heavy fermions in graphene moir\textbackslash 'e systems but at significantly enhanced characteristic energy scales.}
+      \field{day}{5}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{pubstate}{prepublished}
+      \field{title}{Quantum Geometry and Local Moment Swapover in Correlated Graphene Heterostructures}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.03700
+      \endverb
+      \verb{eprint}
+      \verb 2503.03700
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/CHK7B4H6/Witt et al. - 2025 - Quantum geometry and local moment swapover in correlated graphene heterostructures.pdf;/home/tjark/Zotero/storage/J5EZS9N7/2503.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2503.03700
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{wittBypassingLatticeBCS2024}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f674ade44650e4f8be0c6b9ebf7c32b3}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0131987e0e4f4ce264d88580af2fb36c}{%
+           family={Nomura},
+           familyi={N\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=65bb03a5da61f72b4bac1b815a7ac7de}{%
+           family={Brener},
+           familyi={B\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=65f88bc7e50377682ecc93d607dca9f3}{%
+           family={Arita},
+           familyi={A\bibinitperiod},
+           given={Ryotaro},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3c88645d57ffec17a297e9b94eeee5e5}{%
+           family={Lichtenstein},
+           familyi={L\bibinitperiod},
+           given={Alexander\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b507f77dd463e2a2c7258ee2fa47ae0f}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Tim\bibnamedelima O.},
+           giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{fullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \strng{bibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorbibnamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authornamehash}{c59a22e9f7f21e60f1d043e2d7ac0722}
+      \strng{authorfullhash}{5d36ee98fddc4fe8cd998b3448140c03}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Superconductivity emerges from the spatial coherence of a macroscopic condensate of Cooper pairs. Increasingly strong binding and localization of electrons into these pairs compromises the condensate’s phase stiffness, thereby limiting critical temperatures – a phenomenon known as the BCS–BEC crossover in lattice systems. In this study, we demonstrate enhanced superconductivity in a multiorbital model of alkali-doped fullerides (A3C60) that goes beyond the limits of the lattice BCS–BEC crossover. We identify that the interplay of strong correlations and multiorbital effects results in a localized superconducting state characterized by a short coherence length but robust stiffness and a domeless rise in critical temperature with increasing pairing interaction. To derive these insights, we introduce a new theoretical framework allowing us to calculate the fundamental length scales of superconductors, namely the coherence length (ξ0) and the London penetration depth (λL), even in presence of strong electron correlations.}
+      \field{day}{10}
+      \field{issn}{2397-4648}
+      \field{journaltitle}{npj Quantum Materials}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{npj Quantum Mater.}
+      \field{title}{Bypassing the Lattice {{BCS}}–{{BEC}} Crossover in Strongly Correlated Superconductors through Multiorbital Physics}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1038/s41535-024-00706-7
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/EYEN73KB/Witt et al. - 2024 - Bypassing the lattice BCS–BEC crossover in strongly correlated superconductors through multiorbital.pdf;/home/tjark/Zotero/storage/RYAEF35I/41535_2024_706_MOESM1_ESM.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41535-024-00706-7
+      \endverb
+      \keyw{Backlog}
+    \endentry
+    \entry{peottaSuperfluidityTopologicallyNontrivial2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=504f660300ef110cdee78d28448e9bba}{%
+           family={Peotta},
+           familyi={P\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=505f3a3b6f338ac4ef20ffac05881d4d}{%
+           family={Törmä},
+           familyi={T\bibinitperiod},
+           given={Päivi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{fullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{bibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorbibnamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authornamehash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \strng{authorfullhash}{ef7cbf6f79a31e4cacef62f3b4000427}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Topological invariants built from the periodic Bloch functions characterize new phases of matter, such as topological insulators and topological superconductors. The most important topological invariant is the Chern number that explains the quantized conductance of the quantum Hall effect. Here we provide a general result for the superfluid weight Ds of a multiband superconductor that is applicable to topologically nontrivial bands with nonzero Chern number C. We find that the integral over the Brillouin-zone of the quantum metric, an invariant calculated from the Bloch functions, gives the superfluid weight in a flat band, with the bound Ds⩾|C|. Thus, even a flat band can carry finite superfluid current, provided the Chern number is nonzero. As an example, we provide Ds for the time-reversal invariant attractive Harper–Hubbard model that can be experimentally tested in ultracold gases. In general, our results establish that a topologically nontrivial flat band is a promising concept for increasing the critical temperature of the superconducting transition.}
+      \field{day}{20}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{1}
+      \field{shortjournal}{Nat Commun}
+      \field{title}{Superfluidity in Topologically Nontrivial Flat Bands}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8944}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/ncomms9944
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/7IFZ84QL/Peotta and Törmä - 2015 - Superfluidity in topologically nontrivial flat ban.pdf;/home/tjark/Zotero/storage/JPYEZYLE/Peotta_Törmä_2015_Superfluidity in topologically nontrivial flat bands.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/ncomms9944
+      \endverb
+      \keyw{Aalto,Pass 1 (closed)}
+    \endentry
+    \entry{amaricciInhomogeneousBCSBECCrossover2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ff53e6acef0c532f038d624192e04946}{%
+           family={Amaricci},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=630766e70f05e6c180bbd501f2733518}{%
+           family={Privitera},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bb4c270301b28cef0027fc08457dbcaa}{%
+           family={Capone},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \strng{fullhash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \strng{bibnamehash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \strng{authorbibnamehash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \strng{authornamehash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \strng{authorfullhash}{d219bed9dcfee1f7470991ccbde5c1b2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The BCS-BEC (Bose-Einstein condensation) crossover in a lattice is a powerful paradigm that describes how a superconductor deviates from the Bardeen-Cooper-Schrieffer physics as the attractive interaction increases. Optical lattices loaded with binary mixtures of cold atoms allow one to access this phenomenon experimentally in a clean and controlled way. We show that, however, the possibility to study this phenomenon in actual cold-atoms experiments is limited by the effect of the trapping potential. Real-space dynamical mean-field theory calculations show indeed that interactions and the confining potential conspire to pack the fermions in the center of the trap, which approaches a band insulator when the attraction becomes sizeable. Interestingly, the energy gap is spatially more homogeneous than the superfluid condensate order parameter. We show how this physics reflects in several observables, and we propose an alternative strategy to disentangle the effect of the harmonic potential and measure the intrinsic properties resulting from the interaction strength.}
+      \field{day}{7}
+      \field{journaltitle}{Physical Review A}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Phys. Rev. A}
+      \field{title}{Inhomogeneous {{BCS-BEC}} Crossover for Trapped Cold Atoms in Optical Lattices}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{89}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{053604}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevA.89.053604
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/97G9UVEN/Amaricci et al. - 2014 - Inhomogeneous BCS-BEC crossover for trapped cold atoms in optical lattices.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.89.053604
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.89.053604
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{suDynamicalClusterQuantum2010}{article}{}
+      \name{author}{4}{}{%
+        {{hash=15170e90141561b6c2eeb8c520396a31}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Shi-Quan},
+           giveni={S\bibinithyphendelim Q\bibinitperiod}}}%
+        {{hash=abeaab6bd372675b515cf732bd6a2e8c}{%
+           family={Sheehy},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=36a773c28d91d10b0d03b1df51f2f582}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Juana},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5437548e9d8f462c99c67361e2f3572f}{%
+           family={Jarrell},
+           familyi={J\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{3e4d9816ea46e3b4a8e63a54f7a00d41}
+      \strng{fullhash}{e499d0a17ab0db09f9e260101ef386c2}
+      \strng{bibnamehash}{3e4d9816ea46e3b4a8e63a54f7a00d41}
+      \strng{authorbibnamehash}{3e4d9816ea46e3b4a8e63a54f7a00d41}
+      \strng{authornamehash}{3e4d9816ea46e3b4a8e63a54f7a00d41}
+      \strng{authorfullhash}{e499d0a17ab0db09f9e260101ef386c2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the single-particle spectral function of resonantly interacting fermions in the unitary regime, as described by the three-dimensional attractive Hubbard model in the dilute limit. Our approach, based on the dynamical cluster approximation and the maximum entropy method, shows the emergence of a gap with decreasing temperature, as reported in recent cold-atom photoemission experiments, for coupling values that span the BEC-BCS crossover. By comparing the behavior of the spectral function to that of the imaginary time dynamical pairing susceptibility, we attribute the development of the gap to the formation of local bound atom pairs.}
+      \field{day}{11}
+      \field{journaltitle}{Physical Review A}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Phys. Rev. A}
+      \field{title}{Dynamical Cluster Quantum {{Monte Carlo}} Study of the Single-Particle Spectra of Strongly Interacting Fermion Gases}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{81}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{051604}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevA.81.051604
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/E9F9ZKP8/Su et al. - 2010 - Dynamical cluster quantum Monte Carlo study of the single-particle spectra of strongly interacting f.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.81.051604
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.81.051604
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{delreDynamicalVertexApproximation2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=83b382f1cc3319245e9fe4699605fc8a}{%
+           family={Del\bibnamedelima Re},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=741baaf86f17043053f3ed6ecbeb69b4}{%
+           family={Capone},
+           familyi={C\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2b3dac8ee03dab73193f894417df3e40}{%
+           family={Toschi},
+           familyi={T\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{740986219b875f4c2b3420e63540ec0e}
+      \strng{fullhash}{740986219b875f4c2b3420e63540ec0e}
+      \strng{bibnamehash}{740986219b875f4c2b3420e63540ec0e}
+      \strng{authorbibnamehash}{740986219b875f4c2b3420e63540ec0e}
+      \strng{authornamehash}{740986219b875f4c2b3420e63540ec0e}
+      \strng{authorfullhash}{740986219b875f4c2b3420e63540ec0e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we adapt the formalism of the dynamical vertex approximation (D⁢Γ⁢A), a diagrammatic approach including many-body correlations beyond the dynamical mean-field theory, to the case of attractive on-site interactions. We start by exploiting the ladder approximation of the D⁢Γ⁢A scheme, in order to derive the corresponding equations for the nonlocal self-energy and vertex functions of the attractive Hubbard model. Second, we prove the validity of our derivation by showing that the results obtained in the particle-hole symmetric case fully preserve the exact mapping between the attractive and the repulsive models. It will be shown how this property can be related to the structure of the ladders, which makes our derivation applicable for any approximation scheme based on ladder diagrams. Finally, we apply our D⁢Γ⁢A algorithm to the attractive Hubbard model in three dimensions, for different fillings and interaction values. Specifically, we focus on the parameters region in the proximity of the second-order transition to the superconducting and charge-density wave phases, respectively, and calculate (i) their phase-diagrams, (ii) their critical behavior, as well as (iii) the effects of the strong nonlocal correlations on the single-particle properties.}
+      \field{day}{24}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{1}
+      \field{number}{4}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Dynamical Vertex Approximation for the Attractive {{Hubbard}} Model}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{99}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{045137}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.99.045137
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/RUD67UUK/Del Re et al. - 2019 - Dynamical vertex approximation for the attractive Hubbard model.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.99.045137
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.99.045137
+      \endverb
+      \keyw{Inbox}
+    \endentry
+    \entry{petersLocalOriginPseudogap2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c06bf707a4432ed8789dc66a0c12fb89}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c904f0510a8a2625e4d445eb4e36967e}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{3d936fa60b5aee62516fbf89be7df458}
+      \strng{fullhash}{3d936fa60b5aee62516fbf89be7df458}
+      \strng{bibnamehash}{3d936fa60b5aee62516fbf89be7df458}
+      \strng{authorbibnamehash}{3d936fa60b5aee62516fbf89be7df458}
+      \strng{authornamehash}{3d936fa60b5aee62516fbf89be7df458}
+      \strng{authorfullhash}{3d936fa60b5aee62516fbf89be7df458}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We provide a fresh perspective on the pseudogap physics for attractive fermions as described by the three-dimensional Hubbard model. The pseudogap in the single-particle spectral function, which occurs for temperatures above the critical temperature 𝑇𝑐 of the superfluid transition, is often interpreted in terms of preformed uncondensed pairs. Here we show that the occurrence of pseudogap physics can be consistently understood as due to local excitations which lead to a splitting of the quasiparticle peak for sufficiently large interaction. This effect becomes prominent at intermediate and high temperatures when the quantum-mechanical hopping is incoherent. We demonstrate the absence of the conjectured pairing temperature below which pseudogap physics is expected to occur. Our results are based on approximating the physics of the three-dimensional Hubbard model by dynamical mean-field theory calculations and a momentum independent self-energy. Our predictions can be tested with ultracold atoms in optical lattices with currently available temperatures and spectroscopic techniques.}
+      \field{day}{22}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{7}
+      \field{number}{1}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Local Origin of the Pseudogap in the Attractive {{Hubbard}} Model}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{92}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{014511}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.92.014511
+      \endverb
+      \verb{file}
+      \verb /home/tjark/Zotero/storage/4GLLXW22/Peters and Bauer - 2015 - Local origin of the pseudogap in the attractive Hubbard model.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.92.014511
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.92.014511
+      \endverb
+      \keyw{Inbox}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
