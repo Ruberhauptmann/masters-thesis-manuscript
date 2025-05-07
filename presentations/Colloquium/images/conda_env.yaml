@@ -1,0 +1,12 @@
+name: thesis-plots
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3
+  - jupyter
+  - numpy
+  - scipy
+  - pip:
+      - lattpy
+      - quant-met

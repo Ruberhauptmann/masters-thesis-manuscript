@@ -1,4 +1,3 @@
-%\documentclass[aspectratio=169, handout]{beamer}
 \documentclass[aspectratio=169]{beamer}
 
 \include{preamble}
@@ -9,10 +8,10 @@
 
 \DeclareMathOperator{\Tr}{Tr}
 
-\title{}
+\title{Superconducting Phase Stiffness and Coherence Length From a Finite Momentum Pairing Constraint}
 \author{Tjark Sievers}
 \date{May 2025}
-\institute[I. ITP - Computational Condensed Matter Theory]{I. Institute of Theoretical Physics}
+\institute[]{Master's Colloquium}
 
 \usetheme{CCMT}
 
@@ -28,30 +27,278 @@
 \addtocounter{framenumber}{-1}
 
 \begin{frame}
-	\frametitle{Twisted Bilayer Graphene\footnote[frame]{\citeauthor{caoUnconventionalSuperconductivityMagicangle2018},  \href{https://doi.org/10.1038/nature26160}{10.1038/nature26160} (\citeyear{caoUnconventionalSuperconductivityMagicangle2018})}\footnote[frame]{Band structure taken from \citeauthor{tormaSuperconductivitySuperfluidityQuantum2022},  \href{https://doi.org/10.1038/s42254-022-00466-y}{10.1038/s42254-022-00466-y} (\citeyear{tormaSuperconductivitySuperfluidityQuantum2022})}}
+	\frametitle{Flat band Graphene systems}
 	
-	Example for tunable flat-band system: flat bands can be tuned by changing the twist angle
-	
-	\begin{columns}[T]
-		\begin{column}{0.5\textwidth}
+		
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
 			\begin{center}
-				\includegraphics[width=0.8\textwidth]{figs/TBG band structure}
+				\includegraphics[width=\textwidth]{images/TBG band structure}
 			\end{center}
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.55\textwidth}
+			\begin{itemize}
+				\item Flat bands: quenched kinetic energy, enhanced interaction effects
+				\item On the left: twisted Bilayer Graphene at the magic angle\footnote[frame]{Band structure taken from \citeauthor{tormaSuperconductivitySuperfluidityQuantum2022},  \href{https://doi.org/10.1038/s42254-022-00466-y}{10.1038/s42254-022-00466-y} (\citeyear{tormaSuperconductivitySuperfluidityQuantum2022})} (MATBG)
+				\item Interesting topology due to hybridization of localized and extended topological orbitals 
+				(topological heavy fermion model\footnote[frame]{\citeauthor{songMagicAngleTwistedBilayer2022} \href{https://doi.org/10.1103/PhysRevLett.129.047601}{10.1103/PhysRevLett.129.047601} (\citeyear{songMagicAngleTwistedBilayer2022})})
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Superconductivity\footnote[frame]{\citeauthor{caoUnconventionalSuperconductivityMagicangle2018},  \href{https://doi.org/10.1038/nature26160}{10.1038/nature26160} (\citeyear{caoUnconventionalSuperconductivityMagicangle2018})}}
+	
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
 			\begin{center}
-				\includegraphics[width=0.8\textwidth]{figs/TBG SC experiment}
+				\includegraphics[width=\textwidth]{images/TBG SC experiment}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{itemize}
+				\item Superconductivity 
+			\end{itemize}
+	\end{column}
+	\end{columns}
+\end{frame}
+
+%\begin{frame}
+%	\begin{columns}
+%		\begin{column}{0.45\textwidth}
+%			\begin{center}
+%				\includegraphics[width=\textwidth]{images/Uemura_plot}
+%			\end{center}
+%		\end{column}
+%		\begin{column}{0.55\textwidth}
+%			\begin{itemize}
+%				\item TODO: mark graphene based systems
+%				\item Uemura plot\footnote[frame]{Plot from \citeauthor{wittElectronCorrelationsUnconventional2024} \href{https://nbn-resolving.org/urn\%3Anbn\%3Ade\%3Agbv\%3A18-ediss-125247}{urn:nbn:de:gbv:18-ediss-125247} (\citeyear{wittElectronCorrelationsUnconventional2024}) with data from \citeauthor{nakagawaGatecontrolledBCSBECCrossover2021} \href{https://doi.org/10.1126/science.abb9860}{10.1126/science.abb9860} (\citeyear{nakagawaGatecontrolledBCSBECCrossover2021}), \citeauthor{uemuraDynamicSuperconductivityResponses2019} \href{https://doi.org/10.1103/PhysRevMaterials.3.104801}{10.1103/PhysRevMaterials.3.104801} (\citeyear{uemuraDynamicSuperconductivityResponses2019}), \citeauthor{pantaleonSuperconductivityCorrelatedPhases2023} \href{https://doi.org/10.1038/s42254-023-00575-2}{10.1038/s42254-023-00575-2} (\citeyear{pantaleonSuperconductivityCorrelatedPhases2023})}: \(T_{\mathrm{C}}\) compared to density of charge carriers (characterized by \(T_{\mathrm{F}}\))
+%				\item 
+%			\end{itemize}
+%		\end{column}
+%	\end{columns}
+%\end{frame}
+
+\begin{frame}
+	\frametitle{
+		Proximity Coupling\footnote[frame]{
+			\citeauthor{ghosalElectronicCorrelationsEpitaxial2024}\href{https://doi.org/10.48550/arXiv.2412.01329}{10.48550/arXiv.2412.01329} (\citeyear{ghosalElectronicCorrelationsEpitaxial2024})
+		}\footnote[frame]{
+		\citeauthor{wittQuantumGeometryLocal2025}\href{https://doi.org/10.48550/arXiv.2503.03700}{10.48550/arXiv.2503.03700} (\citeyear{wittQuantumGeometryLocal2025})
+		}
+	}
+	
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\textwidth]{images/intercalated graphene experiment}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/epitaxial graphene DFT different elements"}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Decorated Graphene model\footnote[frame]{
+			\citeauthor{wittQuantumGeometryLocal2025}\href{https://doi.org/10.48550/arXiv.2503.03700}{10.48550/arXiv.2503.03700} (\citeyear{wittQuantumGeometryLocal2025})
+		}
+	}
+	
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=0.7\textwidth]{images/decorated graphene lattice}
+			\end{center}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/decorated graphene band structure"}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/decorated graphene orbital weight"}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ginzburg-Landau Theory}
+	
+	Two ingredients:
+	\begin{itemize}
+		\item Order parameter:
+		\begin{equation}
+			\vert \Psi \vert =
+			\begin{cases}
+				0 & T \geq T_{\mathrm{C}} \\
+				\vert \Psi_0 \vert > 0 & T < T_{\mathrm{C}}
+			\end{cases} \;.
+		\end{equation}
+		\item Free energy: thermodynamic potential, minimized in thermodynamic equilibrium
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Ginzburg-Landau free energy (expansion of free energy in order parameter):
+		\begin{equation}
+			f_{\mathrm{GL}} [\Psi, \nabla \Psi] = \frac{\hbar^2}{2m^*} \vert \nabla \Psi \vert^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4
+		\end{equation}
+		\item Writing \(\Psi = \vert \Psi \vert e^{\iu \phi}\):
+		\begin{equation}
+			f_{\mathrm{GL}}  = \frac{\hbar^2}{2m^*} \vert \Psi \vert^2 (\nabla \phi)^2 + \left[ \frac{\hbar^2}{2m^*} (\nabla \vert \Psi \vert)^2 + r \vert \Psi \vert^2 + \frac{u}{2} \vert \Psi \vert^4 \right]
+		\end{equation}
+		\item Correlation length:
+		\begin{equation}
+			\xi = \sqrt{\frac{\hbar^2}{2m^* \vert r \vert}} = \xi_0 \left(1 - \frac{T}{T_{\mathrm{C}}}\right)^{-\frac{1}{2}}
+		\end{equation}
+		with coherence length \(\xi_0 = \xi(T=0) = \sqrt{\frac{\hbar^2}{2 m a T_{\mathrm{C}}}}\)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Coupling to electromagnetic field via vector potential \(\vb{A}\), i.e. \(f_{\mathrm{GL}} [\Psi, \vb{A}]\)
+		\item Another characteristic length scales for variations of \(\vb{A}\): London penetration depth \(\lambda_{\mathrm{L}, 0}\)
+		\item 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why are these length scales important?}
+	
+	\begin{columns}
+		\begin{column}{0.4\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/critical current and magnetic fields"}
+			\end{center}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\begin{itemize}
+				\item Critical fields and currents
+				\item Characterize what is driving the pairing: superfluid weight
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Stationary point of Ginzburg-Landau energy:
+		\begin{equation}
+			\vert \Psi \vert = \vert \Psi_0 \vert \sqrt{1 - \xi^2 \vert \nabla \phi (\vb{r}) \vert^2}
+		\end{equation}
+		\item \textbf{Breakdown of order parameter with phase fluctuations \(\to\) correlation length \(\xi\)}
+		\item Easiest choice:
+		\item Finite momentum \(\to\) current \(\vb{j}_{\vb{q}}\), can get 
+		\begin{equation}
+			\lambda_{\mathrm{L}, 0}
+		\end{equation}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	Summary so far:
+	
+	\begin{itemize}
+		\item Introduced length scales \(\lambda_{\mathrm{L}, 0}\) and coherence length \(\xi_0\)
+		\item Connect to critical fields and currents and can help characterize pairing
+		\item Can get information on length scales from the breakdown of the order parameter with phase fluctuations
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{FMP method in microscopic theories}
+	
+	BCS theory
+	\begin{itemize}
+		\item \(H_{\mathrm{int}} \approx \sum_{i, \alpha} \left(\Delta_{i \alpha} c_{i \alpha \uparrow}^{\dagger} c_{i \alpha \downarrow}^{\dagger} + \Delta_{i \alpha}^{*} c_{i \alpha \downarrow} c_{i \alpha \uparrow}\right)\)
+		\item 
+	\end{itemize}
+	DMFT
+	\begin{itemize}
+		\item  
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Results: FMP Method in BCS Theory}
+	
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/q breakdown of gap"}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/sc current with q"}
 			\end{center}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 \begin{frame}
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/q breakdown of gap"}
+			\end{center}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{"images/sc current with q"}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Outlook}
+	
+	\begin{itemize}
+		\item Current project: benchmark FMP method in DMFT for one band Hubbard model
+		\item Compare FMP method in BCS with other results in flat band systems (e.g. Lieb lattice\footnote{\citeauthor{penttilaFlatbandRatioQuantum2025} \href{https://doi.org/10.1038/s42005-025-01964-y}{10.1038/s42005-025-01964-y} (\citeyear{penttilaFlatbandRatioQuantum2025})} as a standard example), clear up the discrepancies
+		\item Apply FMP method to (more realistic) extended decorated Graphene model
+	\end{itemize}
+
+	\begin{center}
+		\includegraphics[width=0.55\linewidth]{"images/extended decorated graphene"}
+	\end{center}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Summary}
 	
 	\begin{itemize}
-		\item
-	\end{itemize}	
+		\item Showed  
+		\item Introduced finite-momentum pairing method to calculate superconducting length scales
+		\item 
+	\end{itemize}
 \end{frame}
 
 
